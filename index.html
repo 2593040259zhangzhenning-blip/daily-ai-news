@@ -123,6 +123,28 @@ button{font:inherit;color:inherit}
   .card.lead h4{font-size:28px}
   .list{padding-inline:24px}
 }
+/* 版面：窄屏单列；宽屏（≥1200）左边头条和必看，右边一栏放更多动态、接下来、往期 */
+.cols{display:flex;flex-direction:column;gap:32px}
+.mainc,.side{display:contents}
+.cols .scan{order:10}
+.cols .arch{order:11}
+.arch{display:flex;flex-direction:column;gap:2px}
+.arch h3{margin:0 0 8px;font:700 13px/1 var(--sans);letter-spacing:.06em;color:var(--sub)}
+.arch button{border:0;background:none;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:3px;padding:10px 12px;border-radius:12px}
+.arch button:hover{background:var(--card)}
+.arch button[aria-current="date"]{background:var(--card)}
+.arch .d{font:600 12.5px/1 var(--sans);color:var(--sub)}
+.arch button[aria-current="date"] .d{color:var(--link)}
+.arch .h{font:500 14px/1.4 var(--sans);color:var(--ink)}
+@media (min-width:1200px){
+  .wrap{max-width:1440px}
+  .cols{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:40px;align-items:start}
+  .mainc,.side{display:flex;flex-direction:column;gap:32px;min-width:0}
+  .side{position:sticky;top:24px;max-height:calc(100vh - 48px);overflow-y:auto;scrollbar-width:none;gap:24px}
+  .side::-webkit-scrollbar{display:none}
+  .cols .scan,.cols .arch{order:0}
+  .head h2{font-size:40px}
+}
 @media (prefers-reduced-motion:reduce){.list summary::after{transition:none}}
 </style>
 </head>
@@ -145,7 +167,7 @@ button{font:inherit;color:inherit}
 const CATS={model:["模型","模型发布","--k-model"],policy:["政策","政策治理","--k-policy"],product:["产品","产品动态","--k-product"],biz:["商业","融资商业","--k-biz"],china:["中国","中国 AI","--k-china"],research:["研究","研究突破","--k-research"]};
 const TIER={lead:0,must:1,brief:2};
 const WK=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
-let dates=[],selDate=new URLSearchParams(location.search).get("d");
+let dates=[],dateInfo={},selDate=new URLSearchParams(location.search).get("d");
 const dayCache={}; // 已加载过的日期内容
 
 function h(tag,a,...kids){const e=document.createElement(tag);for(const[k,v]of Object.entries(a||{})){if(k==="style")e.setAttribute("style",v);else if(k.startsWith("on"))e.addEventListener(k.slice(2),v);else e.setAttribute(k,v)}for(const c of kids.flat()){if(c==null||c===false)continue;e.append(c.nodeType?c:document.createTextNode(String(c)))}return e}
@@ -239,17 +261,22 @@ function render(day){
   const rest=items.filter(it=>tierOf(it)==="brief");
   const eveCount=evening.reduce((n,x)=>n+(x.items||[]).length,0);
   const watch=[...new Set(day.flatMap(x=>Array.isArray(x.watch)?x.watch:[]))];
-  main.replaceChildren(
-    h("div",{class:"head"},
-      h("h2",{},morning.headline||""),
-      h("div",{class:"sub"},h("span",{class:"meta"},
-        `${hhmm(morning.createdAt)} 更新`+(eveCount?` · 晚间新增 ${eveCount} 条`:"")),
-        fresh.size?h("button",{type:"button",class:"fresh",onclick:jumpToFresh},`你上次打开后新增 ${fresh.size} 条 ›`):null)),
-    top.length?h("section",{class:"sec"},h("h3",{},"今日必看"),h("div",{class:"grid"},top.map((it,i)=>card(it,it===lead)))):null,
-    rest.length?h("section",{class:"sec"},h("h3",{},"更多动态"),h("div",{class:"list"},rest.map(row))):null,
-    watch.length?h("section",{class:"watch"},h("h3",{},"接下来"),h("ul",{},watch.map(w=>h("li",{},w)))):null,
-    scanNote(day)
-  );
+  const archive=[...dates].reverse().slice(0,7);
+  main.replaceChildren(h("div",{class:"cols"},
+    h("div",{class:"mainc"},
+      h("div",{class:"head"},
+        h("h2",{},morning.headline||""),
+        h("div",{class:"sub"},h("span",{class:"meta"},
+          `${hhmm(morning.createdAt)} 更新`+(eveCount?` · 晚间新增 ${eveCount} 条`:"")),
+          fresh.size?h("button",{type:"button",class:"fresh",onclick:jumpToFresh},`你上次打开后新增 ${fresh.size} 条 ›`):null)),
+      top.length?h("section",{class:"sec"},h("h3",{},"今日必看"),h("div",{class:"grid"},top.map((it,i)=>card(it,it===lead)))):null,
+      scanNote(day)),
+    h("aside",{class:"side"},
+      rest.length?h("section",{class:"sec"},h("h3",{},"更多动态"),h("div",{class:"list"},rest.map(row))):null,
+      watch.length?h("section",{class:"watch"},h("h3",{},"接下来"),h("ul",{},watch.map(w=>h("li",{},w)))):null,
+      archive.length>1?h("nav",{class:"arch","aria-label":"往期"},h("h3",{},"往期"),archive.map(d=>h("button",{type:"button",...(d===selDate?{"aria-current":"date"}:{}),onclick:()=>go(d)},
+        h("span",{class:"d"},dateCN(d)),h("span",{class:"h"},(dateInfo[d]||{}).headline||"")))):null)
+  ));
 }
 
 document.getElementById("prev").onclick=()=>{const i=dates.indexOf(selDate);if(i>0)go(dates[i-1])};
@@ -262,6 +289,7 @@ async function load(){
     if(!r.ok)throw new Error(r.status);
     const j=await r.json();
     dates=(j.dates||[]).map(x=>x.date).sort();
+    dateInfo=Object.fromEntries((j.dates||[]).map(x=>[x.date,x]));
     await show(true);
   }catch(e){
     if(!dates.length)document.getElementById("main").replaceChildren(h("div",{class:"empty"},h("strong",{},"没加载出来"),"检查网络后下拉刷新，或稍后再打开。"));
