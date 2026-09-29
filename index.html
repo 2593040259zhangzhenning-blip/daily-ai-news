@@ -145,7 +145,8 @@ button{font:inherit;color:inherit}
 const CATS={model:["模型","模型发布","--k-model"],policy:["政策","政策治理","--k-policy"],product:["产品","产品动态","--k-product"],biz:["商业","融资商业","--k-biz"],china:["中国","中国 AI","--k-china"],research:["研究","研究突破","--k-research"]};
 const TIER={lead:0,must:1,brief:2};
 const WK=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
-let issues=[],dates=[],selDate=new URLSearchParams(location.search).get("d");
+let dates=[],selDate=new URLSearchParams(location.search).get("d");
+const dayCache={}; // 已加载过的日期内容
 
 function h(tag,a,...kids){const e=document.createElement(tag);for(const[k,v]of Object.entries(a||{})){if(k==="style")e.setAttribute("style",v);else if(k.startsWith("on"))e.addEventListener(k.slice(2),v);else e.setAttribute(k,v)}for(const c of kids.flat()){if(c==null||c===false)continue;e.append(c.nodeType?c:document.createTextNode(String(c)))}return e}
 const kv=c=>`--k:var(${(CATS[c]||CATS.model)[2]})`;
@@ -199,19 +200,37 @@ function scanNote(day){
     h("p",{},checked.join("、")));
 }
 
-function go(d){selDate=d;history.replaceState(null,"","?d="+d);render();window.scrollTo({top:0})}
+function go(d){selDate=d;history.replaceState(null,"","?d="+d);show();window.scrollTo({top:0})}
 
-function render(){
+async function fetchDay(date,fresh){
+  if(!fresh&&dayCache[date])return dayCache[date];
+  const r=await fetch(`data/days/${date}.json?t=${Date.now()}`,{cache:"no-store"});
+  if(!r.ok)throw new Error(r.status);
+  const j=await r.json();
+  return (dayCache[date]=j.issues||[]);
+}
+async function show(fresh){
   const main=document.getElementById("main");
-  if(!issues.length){main.replaceChildren(h("div",{class:"empty"},h("strong",{},"还没有内容"),"每天早上 7 点更新，晚上有重要新动态时会补进当天。"));return}
+  if(!dates.length){main.replaceChildren(h("div",{class:"empty"},h("strong",{},"还没有内容"),"每天早上 7 点更新，晚上有重要新动态时会补进当天。"));return}
   if(!selDate||!dates.includes(selDate))selDate=dates[dates.length-1];
-  const day=issues.filter(i=>i.date===selDate);
-  const morning=day.find(i=>i.edition==="morning")||day[0];
-  const evening=day.filter(i=>i.edition==="evening");
   const di=dates.indexOf(selDate);
   document.getElementById("prev").disabled=di<=0;
   document.getElementById("next").disabled=di>=dates.length-1;
   document.getElementById("date").textContent=dateCN(selDate);
+  const want=selDate;
+  try{
+    const day=await fetchDay(want,fresh);
+    if(want===selDate)render(day);
+    const near=[dates[di-1],dates[di+1]].filter(Boolean); // 顺手预取前后一天，翻页更快
+    near.forEach(d=>fetchDay(d).catch(()=>{}));
+  }catch(e){
+    if(want===selDate)main.replaceChildren(h("div",{class:"empty"},h("strong",{},"这一天没加载出来"),"检查网络后刷新页面。"));
+  }
+}
+function render(day){
+  const main=document.getElementById("main");
+  const morning=day.find(i=>i.edition==="morning")||day[0];
+  const evening=day.filter(i=>i.edition==="evening");
 
   const items=sorted(day.flatMap(x=>(x.items||[]).map(it=>({...it,_key:x.key,_eve:x.edition==="evening"}))));
   fresh=markFresh(selDate,items);
@@ -239,14 +258,13 @@ document.addEventListener("keydown",e=>{if(e.target.closest("input,textarea"))re
 
 async function load(){
   try{
-    const r=await fetch("data/issues.json?t="+Date.now(),{cache:"no-store"});
+    const r=await fetch("data/index.json?t="+Date.now(),{cache:"no-store"});
     if(!r.ok)throw new Error(r.status);
     const j=await r.json();
-    issues=j.issues||[];
-    dates=[...new Set(issues.map(i=>i.date))].sort();
-    render();
+    dates=(j.dates||[]).map(x=>x.date).sort();
+    await show(true);
   }catch(e){
-    if(!issues.length)document.getElementById("main").replaceChildren(h("div",{class:"empty"},h("strong",{},"没加载出来"),"检查网络后下拉刷新，或稍后再打开。"));
+    if(!dates.length)document.getElementById("main").replaceChildren(h("div",{class:"empty"},h("strong",{},"没加载出来"),"检查网络后下拉刷新，或稍后再打开。"));
   }
 }
 load();

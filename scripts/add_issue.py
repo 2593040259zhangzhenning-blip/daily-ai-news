@@ -6,7 +6,7 @@
   python3 scripts/add_issue.py path/to/issue.json --force  # 覆盖同名一期
   python3 scripts/add_issue.py --exists 2026-09-30-1morning  # 已存在则退出码 0，否则 1
   python3 scripts/add_issue.py --recent 3                  # 打印最近 N 期（定时任务去重用）
-  python3 scripts/add_issue.py --rebuild                   # 只重建 data/issues.json 和 data/latest.json
+  python3 scripts/add_issue.py --rebuild                   # 只重建 data/index.json、data/days/ 和 data/latest.json
 
 每条新闻必须有：
   cat    model | policy | product | biz | china | research
@@ -21,7 +21,8 @@
 
 写入的文件：
   data/issues/<key>.json   单期原始数据
-  data/issues.json         网页读取：最近 120 期，新的在前
+  data/index.json          网页读取的日期目录：每天有哪几期、当天标题（很小）
+  data/days/<date>.json    网页按需加载的某一天全部内容（早间 + 晚间）
   data/latest.json         小组件读取：最新一期的摘要
 """
 import json, re, sys
@@ -34,7 +35,6 @@ CATS = {"model", "policy", "product", "biz", "china", "research"}
 TIERS = {"lead": 0, "must": 1, "brief": 2}
 EDITIONS = {"morning": "1", "evening": "2"}
 KEY_RE = re.compile(r"^\d{4}-\d{2}-\d{2}-[12](morning|evening)$")
-MAX_INDEX = 120
 
 
 def fail(msg):
@@ -103,10 +103,27 @@ def load_all():
 
 def rebuild():
     issues = load_all()
-    (ROOT / "data" / "issues.json").write_text(
+    # 网页先读一份很小的日期目录，翻到哪天再加载那一天的文件，所有历史都能翻到
+    days_dir = ROOT / "data" / "days"
+    days_dir.mkdir(parents=True, exist_ok=True)
+    by_date = {}
+    for x in issues:
+        by_date.setdefault(x["date"], []).append(x)
+    index = []
+    for date in sorted(by_date):
+        day = sorted(by_date[date], key=lambda x: x["key"])
+        (days_dir / f"{date}.json").write_text(
+            json.dumps({"date": date, "issues": day}, ensure_ascii=False, indent=1), encoding="utf-8")
+        main = next((x for x in day if x["edition"] == "morning"), day[0])
+        index.append({"date": date, "headline": main["headline"],
+                      "updatedAt": max(x["createdAt"] for x in day),
+                      "count": sum(len(x["items"]) for x in day)})
+    (ROOT / "data" / "index.json").write_text(
         json.dumps({"generatedAt": datetime.now().astimezone().isoformat(timespec="seconds"),
-                    "issues": issues[:MAX_INDEX]}, ensure_ascii=False, indent=1),
-        encoding="utf-8")
+                    "dates": index}, ensure_ascii=False, indent=1), encoding="utf-8")
+    old = ROOT / "data" / "issues.json"
+    if old.exists():
+        old.unlink()
 
     latest = {"date": None, "headline": "", "updatedAt": None, "count": 0, "lead": None, "items": []}
     if issues:

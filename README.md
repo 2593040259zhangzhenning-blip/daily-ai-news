@@ -4,7 +4,8 @@
 
 ## 文件
 - `index.html` 网页
-- `data/issues/<key>.json` 单期数据；`data/issues.json` 网页索引；`data/latest.json` 小组件数据
+- `data/issues/<key>.json` 单期原始数据（永久保存）
+- `data/index.json` 日期目录；`data/days/<date>.json` 每天的内容，网页按需加载；`data/latest.json` 小组件数据
 - `scripts/add_issue.py` 校验并写入新一期，自动排序、重建索引
 - `widget/daily-ai-news-widget.js` iPhone / Mac 桌面小组件（Scriptable）
 
