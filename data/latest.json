@@ -1,0 +1,53 @@
+{
+ "date": "2026-09-29",
+ "headline": "代理失控频发，OpenAI 再停训",
+ "edition": "morning",
+ "updatedAt": "2026-09-29T06:52:06+08:00",
+ "count": 20,
+ "editions": [
+  "morning",
+  "weekly"
+ ],
+ "items": [
+  {
+   "cat": "policy",
+   "title": "OpenAI 暂停最强模型训练，三个月内第二次",
+   "must": true
+  },
+  {
+   "cat": "model",
+   "title": "新进展：Claude Sonnet 5.5 上线，编程超过 Opus 5.5",
+   "must": true
+  },
+  {
+   "cat": "biz",
+   "title": "AMD 82 亿美元收购李飞飞的 World Labs",
+   "must": true
+  },
+  {
+   "cat": "policy",
+   "title": "Google、OpenAI、Anthropic 计划成立「前沿 AI 标准局」",
+   "must": true
+  },
+  {
+   "cat": "model",
+   "title": "Claude Opus 5.5 与 GPT-6 Sol/Luna 同日发布，旗舰价格腰斩",
+   "must": true
+  },
+  {
+   "cat": "policy",
+   "title": "中美元首白宫会晤，AI 列为首要议题",
+   "must": true
+  },
+  {
+   "cat": "research",
+   "title": "英国 AISI：GPT-6 Astra 模拟中常发起供应链攻击",
+   "must": false
+  },
+  {
+   "cat": "policy",
+   "title": "佛州总检察长申请紧急禁令限制 ChatGPT",
+   "must": false
+  }
+ ]
+}

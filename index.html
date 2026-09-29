@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AI 每日情报</title>
+<meta name="description" content="每天两期的 AI 领域要闻简报，由 Claude 自动搜集整理。">
+<meta name="theme-color" content="#f3f5f8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1117" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="AI 情报">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+:root{
+  --bg:#f3f5f8; --surface:#ffffff; --ink:#131821; --muted:#5b6475; --line:#dde2ea;
+  --accent:#2446d8; --accent-soft:#e6ebfd; --hot:#c2410c; --hot-soft:#fdeee4;
+  --c-model:#2446d8; --c-policy:#8a3ffc; --c-product:#0f8a6a; --c-biz:#b45309; --c-china:#c0262d; --c-research:#0e7490;
+  --display:"Songti SC","STSong","Noto Serif SC","Source Han Serif SC",serif;
+  --body:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0e1117; --surface:#161b24; --ink:#e7ebf2; --muted:#98a2b3; --line:#262d3a;
+  --accent:#7d97ff; --accent-soft:#1c2442; --hot:#fb923c; --hot-soft:#2d1d12;
+  --c-model:#7d97ff; --c-policy:#b794ff; --c-product:#34d3a6; --c-biz:#f5b454; --c-china:#ff7a7f; --c-research:#4fc9e0;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1117; --surface:#161b24; --ink:#e7ebf2; --muted:#98a2b3; --line:#262d3a;
+  --accent:#7d97ff; --accent-soft:#1c2442; --hot:#fb923c; --hot-soft:#2d1d12;
+  --c-model:#7d97ff; --c-policy:#b794ff; --c-product:#34d3a6; --c-biz:#f5b454; --c-china:#ff7a7f; --c-research:#4fc9e0;
+  color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.65;
+  padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}
+[hidden]{display:none!important}
+.wrap{max-width:760px;margin:0 auto;padding-inline:16px;padding-block:20px 48px;display:flex;flex-direction:column;gap:20px}
+header.mast{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.mast h1{font-family:var(--display);font-weight:900;font-size:1.75rem;line-height:1.2;margin:0;letter-spacing:.02em}
+.mast .sched{font-family:var(--mono);font-size:.75rem;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap}
+.mast .sched b{color:var(--ink);font-weight:600}
+.strip{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.day{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;padding:6px 12px;font:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;min-width:64px}
+.day .d{font-family:var(--mono);font-weight:600;font-size:.95rem;font-variant-numeric:tabular-nums}
+.day .w{font-size:.72rem;color:var(--muted)}
+.day[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.day[aria-pressed="true"] .w{color:inherit;opacity:.75}
+.day:focus-visible,.chip:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:3px 11px;font:inherit;font-size:.8rem;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.chip[aria-pressed="true"]{color:var(--ink);border-color:var(--ink)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--c,var(--muted));flex:none}
+.edition{display:flex;flex-direction:column;gap:14px}
+.ed-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:6px}
+.ed-head h2{font-family:var(--display);font-weight:700;font-size:1.3rem;margin:0;text-wrap:balance}
+.badge{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;padding:2px 8px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+.badge.ev{background:var(--hot-soft);color:var(--hot)}
+.ed-head time{font-family:var(--mono);font-size:.75rem;color:var(--muted);margin-left:auto}
+.lede{margin:0;color:var(--muted)}
+.must{display:flex;flex-direction:column;gap:10px}
+.must h3,.wire h3,.watch h3{font-size:.72rem;letter-spacing:.12em;color:var(--muted);margin:0;font-weight:600}
+.must-card{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--hot);border-radius:0 10px 10px 0;padding:12px 14px;display:flex;flex-direction:column;gap:4px}
+.item-title{font-weight:650;font-size:1rem;line-height:1.45;margin:0;display:flex;gap:8px;align-items:baseline}
+.item-title .dot{transform:translateY(-2px)}
+.item-body{margin:0;color:var(--ink);opacity:.88}
+.src{display:flex;gap:10px;flex-wrap:wrap;font-size:.78rem}
+.src a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+.wire{display:flex;flex-direction:column;gap:8px}
+.cat-group{display:flex;flex-direction:column}
+.cat-label{display:flex;align-items:center;gap:8px;font-size:.82rem;font-weight:600;color:var(--c);padding-block:6px}
+.row{display:flex;flex-direction:column;gap:3px;padding-block:10px;border-top:1px solid var(--line);min-width:0}
+.cat-group .row:first-of-type{border-top:none}
+.watch{background:var(--accent-soft);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.watch ul{margin:0;padding-left:1.2em}
+.empty{background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:28px 18px;text-align:center;color:var(--muted)}
+.empty strong{display:block;color:var(--ink);font-family:var(--display);font-size:1.1rem;margin-bottom:4px}
+footer{font-size:.75rem;color:var(--muted);font-family:var(--mono)}
+@media (prefers-reduced-motion:no-preference){.edition{animation:in .25s ease-out}@keyframes in{from{opacity:.6;transform:translateY(4px)}to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <h1>AI 每日情报</h1>
+    <div class="sched"><span>早刊 <b>07:00</b></span><span>晚间增刊 <b>21:30</b></span><span>北京时间</span></div>
+  </header>
+  <nav class="strip" id="strip" aria-label="按日期浏览"></nav>
+  <div class="chips" id="chips" role="group" aria-label="按类别筛选"></div>
+  <main id="main">
+    <div class="empty"><strong>简报加载中</strong>每天 07:00 自动生成早刊，21:30 有新动态时追加晚间增刊。</div>
+  </main>
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const CATS={model:["模型发布","--c-model"],policy:["政策治理","--c-policy"],product:["产品动态","--c-product"],biz:["融资商业","--c-biz"],china:["中国 AI","--c-china"],research:["研究突破","--c-research"]};
+const ED={weekly:["周回顾",""],morning:["早刊",""],evening:["晚间增刊","ev"]};
+const EDORDER={weekly:0,morning:1,evening:2};
+const WK=["周日","周一","周二","周三","周四","周五","周六"];
+let issues=[],selDate=new URLSearchParams(location.search).get("d"),selCat="all";
+
+function h(tag,attrs,...kids){const e=document.createElement(tag);for(const[k,v]of Object.entries(attrs||{})){if(k==="style")e.setAttribute("style",v);else if(k.startsWith("on"))e.addEventListener(k.slice(2),v);else e.setAttribute(k,v)}for(const c of kids.flat()){if(c==null||c===false)continue;e.append(c.nodeType?c:document.createTextNode(String(c)))}return e}
+function catDot(c){const v=(CATS[c]||[null,"--muted"])[1];return h("span",{class:"dot",style:`--c:var(${v})`})}
+function sources(list){if(!Array.isArray(list)||!list.length)return null;return h("div",{class:"src"},list.filter(s=>s&&/^https?:\/\//.test(s.url||"")).map(s=>h("a",{href:s.url,target:"_blank",rel:"noopener"},s.name||"来源")))}
+function itemTitle(it){return h("p",{class:"item-title"},catDot(it.cat),h("span",{},it.title||""))}
+function fmtTime(iso){try{return new Date(iso).toLocaleString("zh-CN",{timeZone:"Asia/Shanghai",month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false})+" 更新"}catch(e){return""}}
+
+function renderStrip(){
+  const strip=document.getElementById("strip");strip.replaceChildren();
+  const dates=[...new Set(issues.map(i=>i.date))].sort().reverse();
+  for(const d of dates){
+    const dt=new Date(d+"T00:00:00+08:00");
+    strip.append(h("button",{class:"day",type:"button","aria-pressed":String(d===selDate),onclick:()=>{selDate=d;history.replaceState(null,"","?d="+d);render()}},
+      h("span",{class:"d"},`${dt.getMonth()+1}/${dt.getDate()}`),
+      h("span",{class:"w"},WK[dt.getDay()]+" · "+issues.filter(i=>i.date===d).sort((a,b)=>EDORDER[a.edition]-EDORDER[b.edition]).map(i=>(ED[i.edition]||["期"])[0]).join("/"))));
+  }
+}
+function renderChips(){
+  const chips=document.getElementById("chips");chips.replaceChildren();
+  const add=(key,label,v)=>chips.append(h("button",{class:"chip",type:"button","aria-pressed":String(selCat===key),onclick:()=>{selCat=key;render()}},v?h("span",{class:"dot",style:`--c:var(${v})`}):null,label));
+  add("all","全部");
+  for(const[k,[l,v]]of Object.entries(CATS))add(k,l,v);
+}
+function renderEdition(is){
+  const items=(is.items||[]).filter(it=>selCat==="all"||it.cat===selCat);
+  const must=items.filter(it=>it.must),rest=items.filter(it=>!it.must);
+  const[edLabel,edCls]=ED[is.edition]||["简报",""];
+  const sec=h("section",{class:"edition"});
+  sec.append(h("div",{class:"ed-head"},h("span",{class:"badge "+edCls},edLabel),h("h2",{},is.headline||""),is.createdAt?h("time",{datetime:is.createdAt},fmtTime(is.createdAt)):null));
+  if(is.period)sec.append(h("p",{class:"lede"},"覆盖范围："+is.period));
+  if(must.length)sec.append(h("div",{class:"must"},h("h3",{},"必看"),must.map(it=>h("article",{class:"must-card"},itemTitle(it),h("p",{class:"item-body"},it.body||""),sources(it.sources)))));
+  if(rest.length){
+    const wire=h("div",{class:"wire"},h("h3",{},"全部动态"));
+    for(const c of Object.keys(CATS)){
+      const g=rest.filter(it=>it.cat===c);if(!g.length)continue;
+      wire.append(h("div",{class:"cat-group"},h("div",{class:"cat-label",style:`--c:var(${CATS[c][1]})`},catDot(c),CATS[c][0]),g.map(it=>h("article",{class:"row"},h("p",{class:"item-title"},it.title||""),h("p",{class:"item-body"},it.body||""),sources(it.sources)))));
+    }
+    sec.append(wire);
+  }
+  if(!items.length)sec.append(h("p",{class:"lede"},"这一期没有该类别的动态。"));
+  if(selCat==="all"&&Array.isArray(is.watch)&&is.watch.length)sec.append(h("div",{class:"watch"},h("h3",{},"接下来关注"),h("ul",{},is.watch.map(w=>h("li",{},w)))));
+  return sec;
+}
+function render(){
+  const main=document.getElementById("main");
+  renderStrip();renderChips();
+  if(!issues.length){main.replaceChildren(h("div",{class:"empty"},h("strong",{},"还没有简报"),"每天 07:00 自动生成早刊，21:30 有新动态时追加晚间增刊。"));return}
+  if(!selDate||!issues.some(i=>i.date===selDate))selDate=issues[0].date;
+  const day=issues.filter(i=>i.date===selDate).sort((a,b)=>(EDORDER[b.edition]??9)-(EDORDER[a.edition]??9));
+  main.replaceChildren(h("div",{style:"display:flex;flex-direction:column;gap:32px"},day.map(renderEdition)));
+  document.getElementById("foot").textContent=`共 ${issues.length} 期 · 由 Claude 自动搜集整理，来源见各条链接`;
+}
+async function load(){
+  try{
+    const r=await fetch("data/issues.json?t="+Date.now(),{cache:"no-store"});
+    if(!r.ok)throw new Error(r.status);
+    const j=await r.json();
+    issues=(j.issues||[]).sort((a,b)=>String(b.key).localeCompare(String(a.key)));
+    render();
+  }catch(e){
+    if(!issues.length)document.getElementById("main").replaceChildren(h("div",{class:"empty"},h("strong",{},"加载失败"),"检查网络后刷新页面重试。"));
+  }
+}
+load();
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")load()});
+</script>
+</body>
+</html>
