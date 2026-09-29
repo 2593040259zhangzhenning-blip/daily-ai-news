@@ -105,12 +105,16 @@ button{font:inherit;color:inherit}
 @media (min-width:720px){
   .wrap{padding-inline:40px;padding-block:40px 72px}
   .head h2{font-size:40px}
-  .grid{grid-template-columns:1fr 1fr}
-  .grid .lead{grid-column:1 / -1;flex-direction:row}
-  .grid .lead .panel{aspect-ratio:auto;flex:0 0 46%;min-height:300px}
-  .grid .lead .panel span{font-size:64px}
-  .grid .lead .body{padding:28px 30px;justify-content:center;gap:12px}
-  .grid .lead h4{font-size:28px}
+  /* 电脑宽度：所有必看都做成横向卡片、单列往下排，条数单双都不会留空 */
+  .grid{grid-template-columns:1fr}
+  .card{flex-direction:row}
+  .card .panel{aspect-ratio:auto;flex:0 0 220px;min-height:150px}
+  .card .panel span{font-size:40px}
+  .card .body{padding:20px 24px;justify-content:center}
+  .card.lead .panel{flex:0 0 42%;min-height:280px}
+  .card.lead .panel span{font-size:64px}
+  .card.lead .body{padding:28px 30px;gap:12px}
+  .card.lead h4{font-size:28px}
   .list{padding-inline:24px}
 }
 @media (prefers-reduced-motion:reduce){.list summary::after{transition:none}}
