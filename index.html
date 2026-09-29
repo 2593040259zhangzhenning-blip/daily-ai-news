@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>每日AI资讯</title>
-<meta name="description" content="每天早晚两期的 AI 要闻，按重要度排好，由 Claude 自动整理。">
+<title>Signal</title>
+<meta name="description" content="Signal：每天早晚两次，从 AI 圈的噪音里筛出值得看的消息。">
 <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="AI资讯">
+<meta name="apple-mobile-web-app-title" content="Signal">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
@@ -43,7 +43,13 @@ button{font:inherit;color:inherit}
 .wrap{max-width:980px;margin:0 auto;padding-inline:20px;padding-block:22px 56px;display:flex;flex-direction:column;gap:32px}
 
 .bar{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{margin:0;font:600 15px/1 var(--display);letter-spacing:.01em}
+.brand{margin:0;display:inline-flex;align-items:center;gap:.34em;font:700 21px/1 var(--display);letter-spacing:-.01em}
+/* 标志：三个从大到小的点，对应头条、必看、其余动态 */
+.mark{display:inline-flex;align-items:center;gap:.16em}
+.mark i{display:block;border-radius:50%}
+.mark i:nth-child(1){width:.46em;height:.46em;background:var(--k-model)}
+.mark i:nth-child(2){width:.3em;height:.3em;background:var(--k-policy)}
+.mark i:nth-child(3){width:.18em;height:.18em;background:var(--k-biz)}
 .nav{display:flex;align-items:center;gap:2px;font:500 14px/1 var(--sans);color:var(--sub);font-variant-numeric:tabular-nums}
 .nav button{border:0;background:none;width:32px;height:32px;border-radius:50%;color:var(--link);cursor:pointer;font-size:22px;line-height:1;display:grid;place-items:center}
 .nav button:disabled{color:var(--faint);cursor:default}
@@ -151,7 +157,7 @@ button{font:inherit;color:inherit}
 <body>
 <div class="wrap">
   <div class="bar">
-    <h1 class="brand">每日AI资讯</h1>
+    <h1 class="brand"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>Signal</h1>
     <div class="nav">
       <button type="button" id="prev" aria-label="前一天" disabled>‹</button>
       <span id="date">　</span>

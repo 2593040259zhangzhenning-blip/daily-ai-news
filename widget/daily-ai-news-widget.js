@@ -1,4 +1,4 @@
-// 每日AI资讯 · 桌面小组件（Scriptable）
+// Signal · 桌面小组件（Scriptable）
 // 用法：在 Scriptable 里新建脚本，整段粘贴，命名为「每日AI资讯」。
 // 然后长按主屏 → 添加小组件 → Scriptable → 选尺寸 → 编辑小组件 → Script 选「每日AI资讯」。
 // 小号：头条；中号：头条 + 两条必看；大号：头条 + 一句摘要 + 4 条动态。锁屏也能用。点小组件打开网页。
@@ -138,11 +138,11 @@ async function build() {
 
   // 锁屏
   if (fam === "accessoryInline") {
-    w.addText(data ? data.lead.title : "每日AI资讯");
+    w.addText(data ? data.lead.title : "Signal");
     return w;
   }
   if (fam === "accessoryRectangular") {
-    text(w, data ? `${shortDate(data.date)} · ${cat(data.lead.cat)[2]}` : "每日AI资讯", Font.semiboldSystemFont(11), Color.white());
+    text(w, data ? `${shortDate(data.date)} · ${cat(data.lead.cat)[2]}` : "Signal", Font.semiboldSystemFont(11), Color.white());
     text(w, data ? data.lead.title : "暂无内容", Font.systemFont(13), Color.white(), 2);
     return w;
   }
@@ -159,7 +159,7 @@ async function build() {
 
   if (!data) {
     w.setPadding(15, 15, 15, 15);
-    text(w, "每日AI资讯", Font.semiboldSystemFont(12), C.sub);
+    text(w, "Signal", Font.semiboldSystemFont(12), C.sub);
     w.addSpacer();
     text(w, "联网后会自动显示今天的内容。", Font.systemFont(13), C.ink);
     w.addSpacer();

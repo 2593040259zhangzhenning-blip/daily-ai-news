@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""每日AI资讯 数据脚本。
+"""Signal（每日AI资讯）数据脚本。
 
 用法：
   python3 scripts/add_issue.py path/to/issue.json          # 校验并写入一期，然后重建索引

@@ -1,4 +1,4 @@
-// 每日AI资讯 · Mac 桌面小组件（Übersicht）
+// Signal · Mac 桌面小组件（Übersicht）
 // 读网站上的同一份数据，设计和手机上的大号小组件一致。每 30 分钟刷新一次。
 // 轻点：在默认浏览器里打开网站。按住拖动：移动位置，松手后吸附到系统小组件的网格并记住。
 // 网格按这台 Mac 上原生小组件量出：单位 163、间距 17（每格 180），整列离屏幕右边 34。
@@ -166,7 +166,7 @@ export const render = ({ data, error }) => {
       <div className="dan" onMouseDown={onMouseDown}>
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
         <div className="dan-empty">
-          <b>每日AI资讯</b>
+          <b>Signal</b>
           {error ? "暂时连不上网站，联网后会自动刷新。" : "正在加载…"}
         </div>
       </div>
@@ -174,7 +174,7 @@ export const render = ({ data, error }) => {
   }
   const lead = data.lead;
   return (
-    <div className="dan" onMouseDown={onMouseDown} title="点一下打开每日AI资讯，按住可拖动">
+    <div className="dan" onMouseDown={onMouseDown} title="点一下打开 Signal，按住可拖动">
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <Panel c={lead.cat}>
         <span className="dan-d">{longDate(data.date)}</span>

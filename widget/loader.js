@@ -1,4 +1,4 @@
-// 每日AI资讯 · 小组件加载器（Scriptable）
+// Signal · 小组件加载器（Scriptable）
 // 这段只需要粘贴一次。每次刷新时，它会从网站取最新的小组件代码来运行，
 // 以后改小组件的设计，手机和 Mac 上会自动跟着变，不用再重新粘贴。
 // 断网时用上次取到的代码。
@@ -24,7 +24,7 @@ if (code) {
   await eval("(async () => {\n" + code + "\n})()");
 } else {
   const w = new ListWidget();
-  const t = w.addText("每日AI资讯：联网后会自动显示");
+  const t = w.addText("Signal：联网后会自动显示");
   t.font = Font.systemFont(13);
   if (config.runsInWidget) Script.setWidget(w);
   else await w.presentMedium();
