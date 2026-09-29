@@ -1,6 +1,6 @@
 // 每日AI资讯 · Mac 桌面小组件（Übersicht）
-// 读网站上的同一份数据，设计和手机上的大号小组件一致。点击任意位置在默认浏览器里打开网站。
-// 位置：改下面 className 里的 top / right（或 left / bottom）。每 30 分钟刷新一次。
+// 读网站上的同一份数据，设计和手机上的大号小组件一致。每 30 分钟刷新一次。
+// 轻点：在默认浏览器里打开网站。按住拖动：移动位置，松手后自动记住。
 
 import { run } from "uebersicht";
 
@@ -8,10 +8,53 @@ const SITE = "https://2593040259zhangzhenning-blip.github.io/daily-ai-news/";
 
 export const refreshFrequency = 30 * 60 * 1000;
 
-export const className = `
-  top: 64px;
-  right: 40px;
-`;
+// 位置记在本机，拖动后下次启动还在原处
+const POS_KEY = "daily-ai-news-pos";
+const loadPos = () => {
+  try {
+    const p = JSON.parse(localStorage.getItem(POS_KEY) || "null");
+    if (p && Number.isFinite(p.left) && Number.isFinite(p.top)) return p;
+  } catch (e) {}
+  return null;
+};
+const saved = loadPos();
+
+export const className = saved
+  ? `left: ${saved.left}px; top: ${saved.top}px;`
+  : `top: 64px; right: 40px;`;
+
+// 按住移动超过 4 像素算拖动，否则算点击
+let dragging = null;
+const onMouseDown = (e) => {
+  if (e.button !== 0) return;
+  const box = e.currentTarget.parentElement; // Übersicht 包在外面、带定位的那一层
+  const rect = box.getBoundingClientRect();
+  dragging = { box, dx: e.clientX - rect.left, dy: e.clientY - rect.top, x0: e.clientX, y0: e.clientY, moved: false };
+  const move = (ev) => {
+    if (!dragging) return;
+    if (!dragging.moved && Math.hypot(ev.clientX - dragging.x0, ev.clientY - dragging.y0) < 4) return;
+    dragging.moved = true;
+    const left = Math.max(0, Math.min(window.innerWidth - 60, ev.clientX - dragging.dx));
+    const top = Math.max(0, Math.min(window.innerHeight - 60, ev.clientY - dragging.dy));
+    Object.assign(dragging.box.style, { left: left + "px", top: top + "px", right: "auto", bottom: "auto" });
+  };
+  const up = () => {
+    window.removeEventListener("mousemove", move);
+    window.removeEventListener("mouseup", up);
+    const d = dragging;
+    dragging = null;
+    if (!d) return;
+    if (d.moved) {
+      const r = d.box.getBoundingClientRect();
+      try { localStorage.setItem(POS_KEY, JSON.stringify({ left: Math.round(r.left), top: Math.round(r.top) })); } catch (err) {}
+    } else {
+      open();
+    }
+  };
+  window.addEventListener("mousemove", move);
+  window.addEventListener("mouseup", up);
+  e.preventDefault();
+};
 
 export const initialState = { data: null, error: null };
 
@@ -50,7 +93,7 @@ const open = () => run(`open "${SITE}"`);
 const CSS = `
 .dan { --bg:#ffffff; --ink:#1d1d1f; --sub:#6e6e73; --line:#e5e5ea; --shadow:rgba(0,0,0,.18);
   width: 338px; border-radius: 22px; overflow: hidden; background: var(--bg); color: var(--ink);
-  box-shadow: 0 10px 30px var(--shadow); cursor: pointer; user-select: none;
+  box-shadow: 0 10px 30px var(--shadow); cursor: grab; user-select: none;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", sans-serif;
   -webkit-font-smoothing: antialiased; }
 .dan .k-dark { display: none; }
@@ -105,7 +148,7 @@ const Panel = ({ c, children }) => (
 export const render = ({ data, error }) => {
   if (!data || !data.lead) {
     return (
-      <div className="dan" onClick={open}>
+      <div className="dan" onMouseDown={onMouseDown}>
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
         <div className="dan-empty">
           <b>每日AI资讯</b>
@@ -116,7 +159,7 @@ export const render = ({ data, error }) => {
   }
   const lead = data.lead;
   return (
-    <div className="dan" onClick={open} title="打开每日AI资讯">
+    <div className="dan" onMouseDown={onMouseDown} title="点一下打开每日AI资讯，按住可拖动">
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <Panel c={lead.cat}>
         <span className="dan-d">{longDate(data.date)}</span>
