@@ -13,7 +13,10 @@
   title  标题（30 字以内）
   body   1–3 句说明
   score  重要度 1–10（打分标准见 README）
-  tier   lead（头条，每期恰好 1 条）| must（必看，0–3 条）| brief（其余）
+  tier   lead（头条）| must（必看，0–3 条）| brief（其余）
+         早间一期恰好 1 条 lead；晚间一期没有 lead，只有 must / brief
+  summary 仅头条需要：一句话摘要（40 字以内），小组件大号显示
+每期还要有 scan：{"checked": [实际检查过的来源名称], "candidates": 看过的候选条数}，见 sources.md
 写入时按 头条 → 必看 → 其余、同档内按 score 从高到低 自动排序。
 
 写入的文件：
@@ -29,8 +32,8 @@ ROOT = Path(__file__).resolve().parent.parent
 ISSUES = ROOT / "data" / "issues"
 CATS = {"model", "policy", "product", "biz", "china", "research"}
 TIERS = {"lead": 0, "must": 1, "brief": 2}
-EDITIONS = {"weekly": "0", "morning": "1", "evening": "2"}
-KEY_RE = re.compile(r"^\d{4}-\d{2}-\d{2}-[012](weekly|morning|evening)$")
+EDITIONS = {"morning": "1", "evening": "2"}
+KEY_RE = re.compile(r"^\d{4}-\d{2}-\d{2}-[12](morning|evening)$")
 MAX_INDEX = 120
 
 
@@ -72,13 +75,23 @@ def normalize(d):
         it.pop("must", None)
     leads = [it for it in items if it["tier"] == "lead"]
     musts = [it for it in items if it["tier"] == "must"]
-    if len(leads) != 1:
-        fail(f"头条（lead）必须恰好 1 条，现在是 {len(leads)} 条")
+    for it in leads:
+        if not it.get("summary") or len(it["summary"]) > 45:
+            fail("头条需要 summary（一句话摘要，40 字以内）")
+    want = 1 if d["edition"] == "morning" else 0
+    if len(leads) != want:
+        fail(f"{'早间一期的头条（lead）必须恰好 1 条' if want else '晚间一期不能有头条（lead）'}，现在是 {len(leads)} 条")
     if len(musts) > 3:
         fail(f"必看（must）最多 3 条，现在是 {len(musts)} 条")
     items.sort(key=lambda it: (TIERS[it["tier"]], -it["score"]))
     if "watch" in d and not isinstance(d["watch"], list):
         fail("watch 必须是数组")
+    scan = d.get("scan")
+    if scan is not None:
+        if not isinstance(scan.get("checked"), list) or not all(isinstance(x, str) for x in scan["checked"]):
+            fail("scan.checked 必须是来源名称的数组")
+        if not isinstance(scan.get("candidates"), int) or scan["candidates"] < len(items):
+            fail("scan.candidates 必须是整数，且不少于收录条数")
     return d
 
 
@@ -95,26 +108,28 @@ def rebuild():
                     "issues": issues[:MAX_INDEX]}, ensure_ascii=False, indent=1),
         encoding="utf-8")
 
-    latest = {"date": None, "edition": None, "headline": "", "updatedAt": None, "count": 0, "items": []}
+    latest = {"date": None, "headline": "", "updatedAt": None, "count": 0, "lead": None, "items": []}
     if issues:
-        # 小组件显示当天的主刊（早刊，没有就取当天最新一期）；晚间增刊的头条和必看并进来
+        # 一天一页：当天的早间和晚间合在一起
         day = issues[0]["date"]
         todays = [x for x in issues if x["date"] == day]
-        main = next((x for x in todays if x["edition"] == "morning"), todays[0])
-        extra = [x for x in todays if x["edition"] == "evening" and x is not main]
-        top = [it for x in [main] + extra for it in x["items"] if it["tier"] in ("lead", "must")]
-        top.sort(key=lambda it: (TIERS[it["tier"]], -it["score"]))
+        main = next((x for x in todays if x["edition"] == "morning"), todays[-1])
+        items = [it for x in todays for it in x["items"]]
+        items.sort(key=lambda it: (TIERS[it["tier"]], -it["score"]))
+        lead = next((it for it in items if it["tier"] == "lead"), items[0])
+        first = re.split(r"(?<=[。！？])", lead["body"])[0].strip()
         latest = {
             "date": day,
-            "edition": main["edition"],
             "headline": main["headline"],
             "updatedAt": max(x["createdAt"] for x in todays),
-            "hasEvening": bool(extra),
-            "count": sum(len(x["items"]) for x in [main] + extra),
-            "items": [{"cat": it["cat"], "title": it["title"], "tier": it["tier"]} for it in top[:6]],
+            "count": len(items),
+            "lead": {"cat": lead["cat"], "title": lead["title"],
+                     "summary": lead.get("summary") or (first if len(first) <= 50 else first[:48] + "…")},
+            "items": [{"cat": it["cat"], "title": it["title"], "tier": it["tier"]}
+                      for it in items if it is not lead][:5],
         }
     (ROOT / "data" / "latest.json").write_text(json.dumps(latest, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"已重建：{len(issues)} 期，最新 {latest['date']} {latest['edition']}")
+    print(f"已重建：{len(issues)} 期，最新 {latest['date']}，共 {latest['count']} 条")
 
 
 def main(argv):

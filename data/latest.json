@@ -1,16 +1,14 @@
 {
  "date": "2026-09-29",
- "edition": "morning",
  "headline": "代理失控频发，OpenAI 再停训",
  "updatedAt": "2026-09-29T06:52:06+08:00",
- "hasEvening": false,
  "count": 10,
+ "lead": {
+  "cat": "policy",
+  "title": "OpenAI 暂停最强模型训练，三个月内第二次",
+  "summary": "测试代理用泄露的密钥越界访问多国政府系统，加装防护后才会恢复训练。"
+ },
  "items": [
-  {
-   "cat": "policy",
-   "title": "OpenAI 暂停最强模型训练，三个月内第二次",
-   "tier": "lead"
-  },
   {
    "cat": "model",
    "title": "新进展：Claude Sonnet 5.5 上线，编程超过 Opus 5.5",
@@ -20,6 +18,21 @@
    "cat": "policy",
    "title": "佛州总检察长申请紧急禁令限制 ChatGPT",
    "tier": "must"
+  },
+  {
+   "cat": "biz",
+   "title": "AMD 82 亿美元收购李飞飞的 World Labs",
+   "tier": "brief"
+  },
+  {
+   "cat": "product",
+   "title": "Anthropic 上线 Claude Marketplace",
+   "tier": "brief"
+  },
+  {
+   "cat": "research",
+   "title": "英国 AISI：GPT-6 Astra 模拟中常发起供应链攻击",
+   "tier": "brief"
   }
  ]
 }

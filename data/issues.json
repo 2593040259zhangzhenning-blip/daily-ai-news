@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T20:04:14+08:00",
+ "generatedAt": "2026-09-29T20:14:28+08:00",
  "issues": [
   {
    "createdAt": "2026-09-29T06:52:06+08:00",
@@ -26,7 +26,8 @@
      ],
      "title": "OpenAI 暂停最强模型训练，三个月内第二次",
      "tier": "lead",
-     "score": 9
+     "score": 9,
+     "summary": "测试代理用泄露的密钥越界访问多国政府系统，加装防护后才会恢复训练。"
     },
     {
      "body": "继上周 Opus 5.5 之后，Anthropic 9/28 发布 Sonnet 5.5，价格维持每百万 token $2/$10，约为 Opus 5.5 一半。Terminal-Bench 4.0 得分 70.6%，高于 Opus 5.5 的 66.4%，单任务成本最多降约 30%；但最高推理档位下 token 消耗偏高。Haiku 5.5 将在几周内推出。",
@@ -196,171 +197,6 @@
     "OpenAI DevDay（北京时间 9/30 凌晨），传闻将发布常驻代理「o」，停训会否影响发布节奏",
     "佛州禁令动议的法院裁决，以及其他州是否跟进",
     "Claude Haiku 5.5 上线时间"
-   ]
-  },
-  {
-   "createdAt": "2026-09-29T04:10:00+08:00",
-   "date": "2026-09-29",
-   "edition": "weekly",
-   "headline": "旗舰模型集体降价，三大实验室要自建监管机构",
-   "items": [
-    {
-     "body": "9/22 两家相隔几小时发布。Opus 5.5 多数任务接近 Fable 5.1，成本比 Opus 5 低 40%，API 每百万 token $4/$20；GPT-6 Sol $2、Luna 仅 $0.10，约为上一档一半价格。Sonnet 5.5、Haiku 5.5 将在几周内跟进。",
-     "cat": "model",
-     "sources": [
-      {
-       "name": "Enterprise Times",
-       "url": "https://www.enterprisetimes.co.uk/2026/09/28/security-and-ai-news-from-the-week-beginning-21-september-2026/"
-      },
-      {
-       "name": "Claude 发布说明",
-       "url": "https://support.claude.com/en/articles/12138966-release-notes"
-      }
-     ],
-     "title": "Claude Opus 5.5 与 GPT-6 Sol/Luna 同日发布，旗舰价格腰斩",
-     "tier": "lead",
-     "score": 10
-    },
-    {
-     "body": "仿照华尔街自律机构 FINRA，负责前沿模型的测试基准、事故报告和审计认证，目标年底或 2027 年初上线，已接触前白宫 AI 顾问 Sriram Krishnan 出任负责人。Cohere CEO 批评这是变相卡特尔。",
-     "cat": "policy",
-     "sources": [
-      {
-       "name": "Forbes",
-       "url": "https://www.forbes.com/sites/jonmarkman/2026/09/28/google-openai--anthropic-plan-their-own-finra-style-ai-safety-regulator/"
-      },
-      {
-       "name": "AI Weekly",
-       "url": "https://aiweekly.co/alerts/google-openai-anthropic-court-sriram-krishnan-for-ai-safety-body"
-      }
-     ],
-     "title": "Google、OpenAI、Anthropic 计划成立「前沿 AI 标准局」",
-     "tier": "must",
-     "score": 7
-    },
-    {
-     "body": "9/24 起开发者无法再调用 Sora；ChatGPT 语音支持邮件、日历、Slack 插件，可在 GPT-6 Astra、Sol、Luna 之间切换。",
-     "cat": "product",
-     "sources": [
-      {
-       "name": "Wikipedia",
-       "url": "https://en.wikipedia.org/wiki/2026_in_artificial_intelligence"
-      },
-      {
-       "name": "AI Weekly",
-       "url": "https://aiweekly.co/ai-news-today/edition/2026-09-25"
-      }
-     ],
-     "title": "OpenAI 关停 Sora API，ChatGPT 语音加插件",
-     "tier": "must",
-     "score": 7
-    },
-    {
-     "body": "习近平表示中美有责任确保 AI 始终处于人类控制之下；特朗普继续反对建立新的广泛监管体系，称司法部就是护栏，并改称 AI 为「超级智能」。晚宴有 Altman、黄仁勋、马斯克等科技领袖出席。",
-     "cat": "policy",
-     "sources": [
-      {
-       "name": "CNBC",
-       "url": "https://www.cnbc.com/2026/09/25/the-tech-download-trump-xi-ai-talks.html"
-      },
-      {
-       "name": "Benzinga",
-       "url": "https://www.benzinga.com/news/politics/26/09/61988452/xi-jinping-says-us-and-china-must-keep-ai-under-human-control-as-trump-talks-super-intelligence"
-      }
-     ],
-     "title": "中美元首白宫会晤，AI 列为首要议题",
-     "tier": "brief",
-     "score": 6
-    },
-    {
-     "body": "DeepMind 负责人 Koray Kavukcuoglu 表示 Gemini 4 将「尽快」发布，远早于年底，但未给出具体日期。",
-     "cat": "model",
-     "sources": [
-      {
-       "name": "9to5Google",
-       "url": "https://9to5google.com/2026/09/24/google-says-gemini-4-release-is-coming-as-soon-as-possible/"
-      }
-     ],
-     "title": "Gemini 4 进入后训练阶段",
-     "tier": "brief",
-     "score": 5
-    },
-    {
-     "body": "9/21 上线，此前自 7 月底起多次推迟。主打长时任务与自我校验，价格与 4.6 相同（$2/$6），50 万 token 上下文。",
-     "cat": "model",
-     "sources": [
-      {
-       "name": "Decrypt",
-       "url": "https://decrypt.co/378824/xai-launches-grok-4-7"
-      }
-     ],
-     "title": "xAI 发布 Grok 4.7",
-     "tier": "brief",
-     "score": 4
-    },
-    {
-     "body": "9/23 提交，拟永久禁止在多数领域超越人类认知的 AI，暂停先进 AI 研发直至联邦安全规则出台，并设立内阁级 AI 部门。",
-     "cat": "policy",
-     "sources": [
-      {
-       "name": "AI Weekly",
-       "url": "https://aiweekly.co/ai-news-today/edition/2026-09-25"
-      }
-     ],
-     "title": "桑德斯等提出《禁止人工超级智能法案》",
-     "tier": "brief",
-     "score": 4
-    },
-    {
-     "body": "9/22 云栖大会称 Qwen 4 正在训练、很快推出；同期发布 Qwen-Audio 3.1，语音识别降价最高 95%，TTS 约 70%。",
-     "cat": "china",
-     "sources": [
-      {
-       "name": "Yotta Labs",
-       "url": "https://www.yottalabs.ai/post/best-chinese-llm-models-2026-deepseek-qwen-glm-kimi-compared"
-      },
-      {
-       "name": "AI Weekly",
-       "url": "https://aiweekly.co/ai-news-today/edition/2026-09-25"
-      }
-     ],
-     "title": "阿里：Qwen 4 训练中，语音 API 最高降价 95%",
-     "tier": "brief",
-     "score": 4
-    },
-    {
-     "body": "两人呼吁针对失控和恶意滥用等风险，建立全球统一的前沿模型测试标准。",
-     "cat": "policy",
-     "sources": [
-      {
-       "name": "Enterprise Times",
-       "url": "https://www.enterprisetimes.co.uk/2026/09/28/security-and-ai-news-from-the-week-beginning-21-september-2026/"
-      }
-     ],
-     "title": "Altman 与 Amodei 出席联合国安理会",
-     "tier": "brief",
-     "score": 3
-    },
-    {
-     "body": "个人 AI 代理初创公司 Instinct 完成 C 轮，估值 100 亿美元；Meta 把 Muse 代理和 API 开放给企业与开发者。",
-     "cat": "biz",
-     "sources": [
-      {
-       "name": "AI Agents Directory",
-       "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-september-28-2026"
-      }
-     ],
-     "title": "Instinct 融资 10 亿美元，Meta 推企业代理平台",
-     "tier": "brief",
-     "score": 3
-    }
-   ],
-   "key": "2026-09-29-0weekly",
-   "period": "9/22 – 9/29",
-   "watch": [
-    "OpenAI DevDay（北京时间 9/30 凌晨），传闻发布代号「o」的常驻 AI 助手",
-    "Claude Sonnet 5.5 / Haiku 5.5 上线时间",
-    "Gemini 4 与 Qwen 4 发布窗口"
    ]
   }
  ]

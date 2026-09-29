@@ -92,6 +92,13 @@ button{font:inherit;color:inherit}
 .watch h3{margin:0;font:700 17px/1.2 var(--display)}
 .watch ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.55}
 
+.eve{display:inline-block;vertical-align:.12em;margin-right:6px;padding:2px 6px;border-radius:5px;background:var(--seg);color:var(--sub);font:600 11px/1.2 var(--sans);letter-spacing:.02em}
+.scan{font-size:12.5px;color:var(--sub)}
+.scan summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.scan summary::-webkit-details-marker{display:none}
+.scan summary::after{content:"";width:6px;height:6px;border-right:1.4px solid var(--faint);border-bottom:1.4px solid var(--faint);transform:translateY(-2px) rotate(45deg)}
+.scan[open] summary::after{transform:translateY(1px) rotate(-135deg)}
+.scan p{margin:8px 0 0;line-height:1.7;max-width:70ch}
 .empty{background:var(--card);border-radius:18px;padding:36px 20px;text-align:center;color:var(--sub);display:flex;flex-direction:column;gap:6px}
 .empty strong{color:var(--ink);font:600 17px/1.3 var(--display)}
 
@@ -120,18 +127,15 @@ button{font:inherit;color:inherit}
     </div>
   </div>
   <main id="main" class="wrap-inner" style="display:flex;flex-direction:column;gap:32px">
-    <div class="empty"><strong>正在加载</strong>每天 07:00 出早刊，21:30 有新动态时追加晚间增刊。</div>
+    <div class="empty"><strong>正在加载</strong>每天早上 7 点更新，晚上有重要新动态时会补进当天。</div>
   </main>
 </div>
 
 <script>
 const CATS={model:["模型","模型发布","--k-model"],policy:["政策","政策治理","--k-policy"],product:["产品","产品动态","--k-product"],biz:["商业","融资商业","--k-biz"],china:["中国","中国 AI","--k-china"],research:["研究","研究突破","--k-research"]};
-const ED={morning:"早刊",evening:"晚间增刊",weekly:"周回顾"};
-const ED_ORDER=["morning","evening","weekly"];
 const TIER={lead:0,must:1,brief:2};
 const WK=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
-const q=new URLSearchParams(location.search);
-let issues=[],dates=[],selDate=q.get("d"),selEd=q.get("e");
+let issues=[],dates=[],selDate=new URLSearchParams(location.search).get("d");
 
 function h(tag,a,...kids){const e=document.createElement(tag);for(const[k,v]of Object.entries(a||{})){if(k==="style")e.setAttribute("style",v);else if(k.startsWith("on"))e.addEventListener(k.slice(2),v);else e.setAttribute(k,v)}for(const c of kids.flat()){if(c==null||c===false)continue;e.append(c.nodeType?c:document.createTextNode(String(c)))}return e}
 const kv=c=>`--k:var(${(CATS[c]||CATS.model)[2]})`;
@@ -141,41 +145,57 @@ function src(list){const ok=(list||[]).filter(s=>/^https?:\/\//.test(s.url||""))
 function tierOf(it){return it.tier||(it.must?"must":"brief")}
 function sorted(items){return [...items].sort((a,b)=>(TIER[tierOf(a)]-TIER[tierOf(b)])||((b.score||0)-(a.score||0)))}
 
+const eve=it=>it._eve?h("span",{class:"eve"},"晚间"):null;
 function card(it,lead){
   return h("article",{class:"card"+(lead?" lead":""),style:kv(it.cat)},
     h("div",{class:"panel","aria-hidden":"true"},h("span",{},(CATS[it.cat]||CATS.model)[0])),
-    h("div",{class:"body"},h("h4",{},it.title),h("p",{},it.body),src(it.sources)));
+    h("div",{class:"body"},h("h4",{},eve(it),it.title),h("p",{},it.body),src(it.sources)));
 }
 function row(it){
   return h("details",{style:kv(it.cat)},
-    h("summary",{},h("span",{class:"dot","aria-label":(CATS[it.cat]||CATS.model)[1]}),h("span",{class:"t"},it.title)),
+    h("summary",{},h("span",{class:"dot","aria-label":(CATS[it.cat]||CATS.model)[1]}),h("span",{class:"t"},eve(it),it.title)),
     h("div",{class:"more"},h("p",{},it.body),src(it.sources)));
 }
+function scanNote(day){
+  const scans=day.map(x=>x.scan).filter(Boolean);
+  if(!scans.length)return null;
+  const checked=[...new Set(scans.flatMap(s=>s.checked||[]))];
+  const cand=scans.reduce((n,s)=>n+(s.candidates||0),0);
+  const kept=day.reduce((n,x)=>n+(x.items||[]).length,0);
+  return h("details",{class:"scan"},
+    h("summary",{},`本日检查 ${checked.length} 个来源 · 看了 ${cand} 条候选 · 收录 ${kept} 条`),
+    h("p",{},checked.join("、")));
+}
 
-function go(d,e){selDate=d;selEd=e||null;const p=new URLSearchParams({d});if(e)p.set("e",e);history.replaceState(null,"","?"+p);render();window.scrollTo({top:0})}
+function go(d){selDate=d;history.replaceState(null,"","?d="+d);render();window.scrollTo({top:0})}
 
 function render(){
   const main=document.getElementById("main");
-  if(!issues.length){main.replaceChildren(h("div",{class:"empty"},h("strong",{},"还没有内容"),"每天 07:00 出早刊，21:30 有新动态时追加晚间增刊。"));return}
+  if(!issues.length){main.replaceChildren(h("div",{class:"empty"},h("strong",{},"还没有内容"),"每天早上 7 点更新，晚上有重要新动态时会补进当天。"));return}
   if(!selDate||!dates.includes(selDate))selDate=dates[dates.length-1];
-  const day=issues.filter(i=>i.date===selDate).sort((a,b)=>ED_ORDER.indexOf(a.edition)-ED_ORDER.indexOf(b.edition));
-  const is=day.find(i=>i.edition===selEd)||day[0];
+  const day=issues.filter(i=>i.date===selDate);
+  const morning=day.find(i=>i.edition==="morning")||day[0];
+  const evening=day.filter(i=>i.edition==="evening");
   const di=dates.indexOf(selDate);
-  const prev=document.getElementById("prev"),next=document.getElementById("next");
-  prev.disabled=di<=0;next.disabled=di>=dates.length-1;
+  document.getElementById("prev").disabled=di<=0;
+  document.getElementById("next").disabled=di>=dates.length-1;
   document.getElementById("date").textContent=dateCN(selDate);
 
-  const items=sorted(is.items||[]);
-  const top=items.filter(it=>tierOf(it)!=="brief"),rest=items.filter(it=>tierOf(it)==="brief");
+  const items=sorted(day.flatMap(x=>(x.items||[]).map(it=>x.edition==="evening"?{...it,_eve:true}:it)));
+  const lead=items.find(it=>tierOf(it)==="lead");
+  const top=[...(lead?[lead]:[]),...items.filter(it=>tierOf(it)==="must")];
+  const rest=items.filter(it=>tierOf(it)==="brief");
+  const eveCount=evening.reduce((n,x)=>n+(x.items||[]).length,0);
+  const watch=[...new Set(day.flatMap(x=>Array.isArray(x.watch)?x.watch:[]))];
   main.replaceChildren(
     h("div",{class:"head"},
-      h("h2",{},is.headline||""),
-      h("div",{class:"sub"},
-        h("span",{class:"meta"},`${ED[is.edition]||"简报"} · ${hhmm(is.createdAt)} 更新`),
-        day.length>1?h("div",{class:"seg",role:"group","aria-label":"选择期次"},day.map(x=>h("button",{type:"button","aria-pressed":String(x===is),onclick:()=>go(selDate,x.edition)},ED[x.edition]||"简报"))):null)),
-    top.length?h("section",{class:"sec"},h("h3",{},is.edition==="weekly"?"本周必看":"今日必看"),h("div",{class:"grid"},top.map((it,i)=>card(it,i===0)))):null,
+      h("h2",{},morning.headline||""),
+      h("div",{class:"sub"},h("span",{class:"meta"},
+        `${hhmm(morning.createdAt)} 更新`+(eveCount?` · 晚间新增 ${eveCount} 条`:"")))),
+    top.length?h("section",{class:"sec"},h("h3",{},"今日必看"),h("div",{class:"grid"},top.map((it,i)=>card(it,it===lead)))):null,
     rest.length?h("section",{class:"sec"},h("h3",{},"更多动态"),h("div",{class:"list"},rest.map(row))):null,
-    Array.isArray(is.watch)&&is.watch.length?h("section",{class:"watch"},h("h3",{},"接下来"),h("ul",{},is.watch.map(w=>h("li",{},w)))):null
+    watch.length?h("section",{class:"watch"},h("h3",{},"接下来"),h("ul",{},watch.map(w=>h("li",{},w)))):null,
+    scanNote(day)
   );
 }
 

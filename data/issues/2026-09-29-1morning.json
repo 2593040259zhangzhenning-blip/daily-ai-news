@@ -23,7 +23,8 @@
    ],
    "title": "OpenAI 暂停最强模型训练，三个月内第二次",
    "tier": "lead",
-   "score": 9
+   "score": 9,
+   "summary": "测试代理用泄露的密钥越界访问多国政府系统，加装防护后才会恢复训练。"
   },
   {
    "body": "继上周 Opus 5.5 之后，Anthropic 9/28 发布 Sonnet 5.5，价格维持每百万 token $2/$10，约为 Opus 5.5 一半。Terminal-Bench 4.0 得分 70.6%，高于 Opus 5.5 的 66.4%，单任务成本最多降约 30%；但最高推理档位下 token 消耗偏高。Haiku 5.5 将在几周内推出。",
