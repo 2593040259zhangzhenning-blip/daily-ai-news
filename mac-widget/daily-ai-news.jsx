@@ -1,6 +1,7 @@
 // 每日AI资讯 · Mac 桌面小组件（Übersicht）
 // 读网站上的同一份数据，设计和手机上的大号小组件一致。每 30 分钟刷新一次。
-// 轻点：在默认浏览器里打开网站。按住拖动：移动位置，松手后自动记住。
+// 轻点：在默认浏览器里打开网站。按住拖动：移动位置，松手后吸附到系统小组件的网格并记住。
+// 网格按这台 Mac 上原生小组件量出：单位 163、间距 17（每格 180），整列离屏幕右边 34。
 
 import { run } from "uebersicht";
 
@@ -17,11 +18,21 @@ const loadPos = () => {
   } catch (e) {}
   return null;
 };
+// 和原生大号小组件同尺寸，吸附到原生小组件的网格
+const SIZE = 343;
+const GRID = { pitch: 180, right: 34, top: 127 }; // top 127：天气小组件（487）上方一格
+const snap = (left, top) => {
+  const W = window.innerWidth;
+  const k = Math.max(0, Math.round((W - GRID.right - (left + SIZE)) / GRID.pitch));
+  const j = Math.max(0, Math.round((top - GRID.top) / GRID.pitch));
+  return { left: W - GRID.right - k * GRID.pitch - SIZE, top: GRID.top + j * GRID.pitch };
+};
 const saved = loadPos();
+const start = saved ? snap(saved.left, saved.top) : null;
 
-export const className = saved
-  ? `left: ${saved.left}px; top: ${saved.top}px;`
-  : `top: 64px; right: 40px;`;
+export const className = start
+  ? `left: ${start.left}px; top: ${start.top}px;`
+  : `right: ${GRID.right}px; top: ${GRID.top}px;`;
 
 // 按住移动超过 4 像素算拖动，否则算点击
 let dragging = null;
@@ -46,7 +57,11 @@ const onMouseDown = (e) => {
     if (!d) return;
     if (d.moved) {
       const r = d.box.getBoundingClientRect();
-      try { localStorage.setItem(POS_KEY, JSON.stringify({ left: Math.round(r.left), top: Math.round(r.top) })); } catch (err) {}
+      const p = snap(r.left, r.top);
+      d.box.style.transition = "left .18s ease, top .18s ease";
+      Object.assign(d.box.style, { left: p.left + "px", top: p.top + "px" });
+      setTimeout(() => { d.box.style.transition = ""; }, 220);
+      try { localStorage.setItem(POS_KEY, JSON.stringify(p)); } catch (err) {}
     } else {
       open();
     }
@@ -91,18 +106,18 @@ const longDate = (d) => {
 const open = () => run(`open "${SITE}"`);
 
 const CSS = `
-.dan { --bg:#ffffff; --ink:#1d1d1f; --sub:#6e6e73; --line:#e5e5ea; --shadow:rgba(0,0,0,.18);
-  width: 338px; border-radius: 22px; overflow: hidden; background: var(--bg); color: var(--ink);
-  box-shadow: 0 10px 30px var(--shadow); cursor: grab; user-select: none;
+.dan { --bg:#ffffff; --ink:#1d1d1f; --sub:#6e6e73; --line:#e5e5ea; --shadow:rgba(0,0,0,.12);
+  width: 343px; height: 343px; display: flex; flex-direction: column; border-radius: 22px; overflow: hidden;
+  background: var(--bg); color: var(--ink); box-shadow: 0 4px 16px var(--shadow); cursor: grab; user-select: none;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", sans-serif;
   -webkit-font-smoothing: antialiased; }
 .dan .k-dark { display: none; }
 @media (prefers-color-scheme: dark) {
-  .dan { --bg:#1c1c1e; --ink:#f5f5f7; --sub:#98989d; --line:#38383a; --shadow:rgba(0,0,0,.45); }
+  .dan { --bg:#1c1c1e; --ink:#f5f5f7; --sub:#98989d; --line:#38383a; --shadow:rgba(0,0,0,.35); }
   .dan .k-light { display: none; }
   .dan .dan-pan.k-dark { display: flex; }
   .dan .dan-dot.k-dark { display: block; } }
-.dan-pan { position: relative; height: 118px; padding: 11px 15px 12px; display: flex; flex-direction: column;
+.dan-pan { position: relative; height: 100px; padding: 11px 15px 12px; display: flex; flex-direction: column;
   justify-content: space-between; color: #fff; overflow: hidden; }
 .dan-pan::before { content: ""; position: absolute; inset: 0;
   background: radial-gradient(120% 90% at 90% 0%, rgba(255,255,255,.3), transparent 60%),
@@ -110,13 +125,13 @@ const CSS = `
 .dan-pan > * { position: relative; }
 .dan-d { font: 600 11px/1 -apple-system, sans-serif; opacity: .92; }
 .dan-k { font: 700 40px/1 -apple-system, "PingFang SC", sans-serif; letter-spacing: .02em; }
-.dan-b { padding: 13px 15px 15px; display: flex; flex-direction: column; gap: 6px; }
-.dan-t { font: 700 17px/1.32 -apple-system, "PingFang SC", sans-serif; display: -webkit-box;
+.dan-b { flex: 1; min-height: 0; padding: 12px 15px 14px; display: flex; flex-direction: column; gap: 5px; }
+.dan-t { flex: none; font: 700 17px/1.32 -apple-system, "PingFang SC", sans-serif; display: -webkit-box;
   -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.dan-s { font: 400 13px/1.45 -apple-system, "PingFang SC", sans-serif; color: var(--sub); display: -webkit-box;
+.dan-s { flex: none; font: 400 13px/1.45 -apple-system, "PingFang SC", sans-serif; color: var(--sub); display: -webkit-box;
   -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.dan-rows { margin-top: 8px; padding-top: 10px; border-top: 1px solid var(--line); display: flex;
-  flex-direction: column; gap: 8px; }
+.dan-rows { flex: none; margin-top: auto; padding-top: 9px; border-top: 1px solid var(--line); display: flex;
+  flex-direction: column; gap: 7px; }
 .dan-row { display: flex; align-items: center; gap: 7px; font: 500 13px/1.25 -apple-system, "PingFang SC", sans-serif; min-width: 0; }
 .dan-dot { width: 6px; height: 6px; border-radius: 50%; flex: none; }
 .dan-row span:last-child { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
@@ -132,7 +147,7 @@ const Dot = ({ c }) => (
   </span>
 );
 const Panel = ({ c, children }) => (
-  <div style={{ position: "relative" }}>
+  <div style={{ position: "relative", flex: "none" }}>
     {[0, 1].map((i) => (
       <div
         key={i}
