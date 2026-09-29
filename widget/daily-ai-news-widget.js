@@ -92,17 +92,27 @@ function panel(parent, lead, dateLabel, size, bigSize, horizontal) {
     col.addSpacer();
     text(col, cat(lead.cat)[2], Font.boldSystemFont(bigSize), Color.white());
   } else {
+    // 宽度设为 0 时，Scriptable 的 stack 会缩到内容宽度；每一行里加一个弹性空白，让色块撑满整行
     p.layoutVertically();
-    text(p, dateLabel, Font.semiboldSystemFont(11), Color.white());
+    const top = p.addStack();
+    top.layoutHorizontally();
+    text(top, dateLabel, Font.semiboldSystemFont(11), Color.white());
+    top.addSpacer();
     p.addSpacer();
-    text(p, cat(lead.cat)[2], Font.boldSystemFont(bigSize), Color.white());
+    const bottom = p.addStack();
+    bottom.layoutHorizontally();
+    text(bottom, cat(lead.cat)[2], Font.boldSystemFont(bigSize), Color.white());
+    bottom.addSpacer();
   }
   return p;
 }
 
 function rows(parent, items, size) {
+  // 分隔线同理：用弹性空白把它撑满整行，否则宽度为 0 看不见
   const d = parent.addStack();
   d.size = new Size(0, 1);
+  d.layoutHorizontally();
+  d.addSpacer();
   d.backgroundColor = C.line;
   parent.addSpacer(8);
   items.forEach((it, i) => {
