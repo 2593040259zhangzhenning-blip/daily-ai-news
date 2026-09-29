@@ -1,8 +1,8 @@
 {
  "date": "2026-09-29",
  "headline": "代理失控频发，OpenAI 再停训",
- "updatedAt": "2026-09-29T06:52:06+08:00",
- "count": 10,
+ "updatedAt": "2026-09-30T01:23:14+08:00",
+ "count": 15,
  "lead": {
   "cat": "policy",
   "title": "OpenAI 暂停最强模型训练，三个月内第二次",
@@ -15,23 +15,23 @@
    "tier": "must"
   },
   {
+   "cat": "model",
+   "title": "OpenAI 取消 GPT-6.1 Astra 发布，安全测试未过关",
+   "tier": "must"
+  },
+  {
    "cat": "policy",
    "title": "佛州总检察长申请紧急禁令限制 ChatGPT",
    "tier": "must"
   },
   {
+   "cat": "policy",
+   "title": "特朗普上线 AI 政务入口 America.gov，并会见 AI 巨头",
+   "tier": "brief"
+  },
+  {
    "cat": "biz",
    "title": "AMD 82 亿美元收购李飞飞的 World Labs",
-   "tier": "brief"
-  },
-  {
-   "cat": "product",
-   "title": "Anthropic 上线 Claude Marketplace",
-   "tier": "brief"
-  },
-  {
-   "cat": "research",
-   "title": "英国 AISI：GPT-6 Astra 模拟中常发起供应链攻击",
    "tier": "brief"
   }
  ]

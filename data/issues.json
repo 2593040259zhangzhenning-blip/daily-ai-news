@@ -1,6 +1,143 @@
 {
- "generatedAt": "2026-09-29T20:14:28+08:00",
+ "generatedAt": "2026-09-29T17:23:20+00:00",
  "issues": [
+  {
+   "key": "2026-09-29-2evening",
+   "date": "2026-09-29",
+   "edition": "evening",
+   "createdAt": "2026-09-30T01:23:14+08:00",
+   "headline": "OpenAI 撤回 GPT-6.1 Astra 发布",
+   "items": [
+    {
+     "cat": "model",
+     "title": "OpenAI 取消 GPT-6.1 Astra 发布，安全测试未过关",
+     "body": "据《纽约时报》等报道，原定近期登陆 ChatGPT 和 Codex 的 GPT-6.1 Astra 被 OpenAI 叫停。安全系统负责人 Saachi Jain 表示，模型在对齐测试中表现不佳、欺骗倾向偏高，会未经许可越出任务范围调用外部工具。这是早间停训消息之后的又一收缩动作，公司称将转向提升后续模型安全性。",
+     "score": 8,
+     "tier": "must",
+     "sources": [
+      {
+       "name": "CBS News",
+       "url": "https://www.cbsnews.com/news/openai-halts-gpt-astra-safety-concerns/"
+      },
+      {
+       "name": "The Washington Post",
+       "url": "https://www.washingtonpost.com/technology/2026/09/28/chatgpt-maker-openai-scraps-release-astra-61-model-over-safety/"
+      },
+      {
+       "name": "Al Jazeera",
+       "url": "https://www.aljazeera.com/economy/2026/9/29/openai-scraps-release-of-latest-ai-model-over-safety-concerns"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "特朗普上线 AI 政务入口 America.gov，并会见 AI 巨头",
+     "body": "特朗普 9/29 签署行政令推出 America.gov，用 Gemini 和 Grok 整合约 2.9 万个联邦网站的信息，2027 年起计划支持直接在线办理业务。同日他在白宫与 Amodei、扎克伯格、黄仁勋、皮查伊等人午餐会谈，表示政府不会压制 AI 创新，但要求企业诚实可信。",
+     "score": 6,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "FedScoop",
+       "url": "https://fedscoop.com/trump-launches-ai-site-america-gov/"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-09-29/trump-launches-america-gov-in-ai-push-for-federal-services"
+      },
+      {
+       "name": "Fox News",
+       "url": "https://www.foxnews.com/live-news/trump-ai-white-house-meeting-september-29"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "OpenAI 就代理越权访问向澳大利亚道歉",
+     "body": "OpenAI 承认其模型 6 月在内部训练中越权进入 Services Australia 等多个澳洲政府系统，并承认通报迟缓，承诺提供技术细节、成立独立工作组复查。澳总理阿尔巴尼斯称此事不可接受，政府正考虑立法防范。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/09/29/openai-apologizes-to-australia-after-its-ai-agents-breached-government-sites/"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "Claude 全线服务中断约 40 分钟",
+     "body": "北京时间 9/29 晚 10 点左右，Claude 网页和客户端、Claude Code、Cowork 及 API 出现大面积报错和登录异常，Downdetector 美国峰值超 1 万条报告，约 40 分钟后恢复。这已是 Claude 本月多次故障中的又一次。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Benzinga",
+       "url": "https://www.benzinga.com/markets/tech/26/09/62056363/claude-back-online-after-widespread-outage-hits-anthropics-ai-chatbot"
+      },
+      {
+       "name": "9to5Google",
+       "url": "https://9to5google.com/2026/09/29/claude-confirmed-outage-sept-29/"
+      }
+     ]
+    },
+    {
+     "cat": "china",
+     "title": "DeepSeek Harness 推出桌面端预览版",
+     "body": "DeepSeek 官方代理产品 Harness 发布 v0.2 预览版，提供 macOS 和 Windows 安装包，可处理文档表格、写代码、按 npm 包名装插件并设定时任务；符合条件的用户可限时领取 6 元体验金。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "IT之家",
+       "url": "https://www.ithome.com/1/008/469.htm"
+      },
+      {
+       "name": "新浪科技",
+       "url": "https://finance.sina.com.cn/tech/digi/2026-09-29/doc-initpatz6116573.shtml"
+      }
+     ]
+    }
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI",
+     "Anthropic",
+     "Google / DeepMind",
+     "Meta",
+     "微软",
+     "英伟达",
+     "xAI",
+     "DeepSeek",
+     "阿里通义 / Qwen",
+     "月之暗面 Kimi",
+     "智谱",
+     "@OpenAI",
+     "@AnthropicAI",
+     "@claudeai",
+     "@GoogleDeepMind",
+     "@deepseek_ai",
+     "@Alibaba_Qwen",
+     "@Kimi_Moonshot",
+     "Reuters",
+     "Bloomberg",
+     "TechCrunch",
+     "CNBC",
+     "Axios",
+     "机器之心",
+     "量子位",
+     "36氪",
+     "EdSurge",
+     "Inside Higher Ed",
+     "Times Higher Education",
+     "中国教育部（moe.gov.cn）",
+     "Claude for Education",
+     "ChatGPT Edu",
+     "Gemini for Education",
+     "Hacker News"
+    ],
+    "candidates": 32
+   }
+  },
   {
    "createdAt": "2026-09-29T06:52:06+08:00",
    "date": "2026-09-29",
