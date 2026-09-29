@@ -1,8 +1,23 @@
-# AI 每日情报
+# 每日AI资讯
 
-每天两期的 AI 要闻简报：早刊 07:00，晚间增刊约 21:30（北京时间），由 Claude 定时任务自动搜集、写入并推送到本仓库，GitHub Pages 自动发布。
+每天早晚两期的 AI 要闻：早刊 07:00，晚间增刊约 21:30（北京时间，有重要新动态时才出）。由 Claude 定时任务搜集、打分、写入本仓库，GitHub Pages 自动发布。
 
+## 文件
 - `index.html` 网页
 - `data/issues/<key>.json` 单期数据；`data/issues.json` 网页索引；`data/latest.json` 小组件数据
-- `scripts/add_issue.py` 校验并写入新一期，自动重建索引
-- `widget/ai-daily-widget.js` iPhone / Mac 桌面小组件（Scriptable）
+- `scripts/add_issue.py` 校验并写入新一期，自动排序、重建索引
+- `widget/daily-ai-news-widget.js` iPhone / Mac 桌面小组件（Scriptable）
+
+## 重要度打分（每条 1–10 分）
+按四项综合判断：
+1. **影响面**：影响多少人、多少公司，是否改变行业格局
+2. **新颖度**：首次发布或实质进展，高于跟进报道和评论
+3. **确定性**：官方公布、多家主流媒体证实，高于单一来源或传闻
+4. **与读者的相关度**（加权）：读者重点关注
+   - 自己在用的 AI 工具：Claude、ChatGPT 等产品和模型的更新、价格、功能变化
+   - AI 与教育：教学、语言学习、留学、学生使用 AI 的政策和应用
+
+分档：
+- **头条 lead**：当期最重要的 1 条
+- **必看 must**：7 分及以上的其余条目，最多 3 条
+- **其余 brief**：4–6 分；3 分及以下原则上不收，新闻少的日子宁缺毋滥

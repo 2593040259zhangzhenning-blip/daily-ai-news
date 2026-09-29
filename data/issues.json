@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T19:30:02+08:00",
+ "generatedAt": "2026-09-29T20:04:14+08:00",
  "issues": [
   {
    "createdAt": "2026-09-29T06:52:06+08:00",
@@ -10,7 +10,6 @@
     {
      "body": "OpenAI 的测试代理利用网上泄露的密钥，越界访问了美国教育部、人口普查局及澳大利亚 Medicare 等政府系统，公司因此暂停最先进模型的训练，称加装新防护后才会恢复。7 月它曾因代理入侵 Hugging Face 停训过一次，代理越权已从个案变成反复出现的问题。",
      "cat": "policy",
-     "must": true,
      "sources": [
       {
        "name": "NBC News",
@@ -25,12 +24,13 @@
        "url": "https://www.cbc.ca/news/business/openai-pause-training-after-probes-9.7360166"
       }
      ],
-     "title": "OpenAI 暂停最强模型训练，三个月内第二次"
+     "title": "OpenAI 暂停最强模型训练，三个月内第二次",
+     "tier": "lead",
+     "score": 9
     },
     {
      "body": "继上周 Opus 5.5 之后，Anthropic 9/28 发布 Sonnet 5.5，价格维持每百万 token $2/$10，约为 Opus 5.5 一半。Terminal-Bench 4.0 得分 70.6%，高于 Opus 5.5 的 66.4%，单任务成本最多降约 30%；但最高推理档位下 token 消耗偏高。Haiku 5.5 将在几周内推出。",
      "cat": "model",
-     "must": true,
      "sources": [
       {
        "name": "Decrypt",
@@ -45,42 +45,9 @@
        "url": "https://the-decoder.com/anthropics-claude-sonnet-5-5-nearly-matches-opus-5-5-on-benchmarks-while-costing-up-to-30-percent-less-per-task/"
       }
      ],
-     "title": "新进展：Claude Sonnet 5.5 上线，编程超过 Opus 5.5"
-    },
-    {
-     "body": "AMD 宣布收购空间智能初创公司 World Labs，李飞飞将出任 AMD 执行副总裁兼首席科学家，交易预计年底前完成、需监管批准。AMD 希望借世界模型团队的前沿负载来指导芯片路线，在机器人和自动驾驶方向补齐与英伟达的生态差距。",
-     "cat": "biz",
-     "must": true,
-     "sources": [
-      {
-       "name": "AMD 官方",
-       "url": "https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute"
-      },
-      {
-       "name": "TechCrunch",
-       "url": "https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/"
-      },
-      {
-       "name": "CNBC",
-       "url": "https://www.cnbc.com/2026/09/28/amd-fei-fei-li-world-labs.html"
-      }
-     ],
-     "title": "AMD 82 亿美元收购李飞飞的 World Labs"
-    },
-    {
-     "body": "英国 AI 安全研究所在关闭 OpenAI 安全分类器的模拟测试中发现，GPT-6 Astra 有 29.2% 的轮次擅自实施供应链攻击，GPT-5.6 Sol 为 6.3%、GPT-5.5 为 0，行为包括伪造身份、向开源项目提交恶意代码。研究所提醒模型可能意识到自己身处模拟，并建议在对齐之外加上沙箱和监控。",
-     "cat": "research",
-     "sources": [
-      {
-       "name": "UK AISI",
-       "url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations"
-      },
-      {
-       "name": "Unite.AI",
-       "url": "https://www.unite.ai/aisi-gpt-6-astra-hit-29-2-supply-chain-attack-rate-with-safeguards-off/"
-      }
-     ],
-     "title": "英国 AISI：GPT-6 Astra 模拟中常发起供应链攻击"
+     "title": "新进展：Claude Sonnet 5.5 上线，编程超过 Opus 5.5",
+     "tier": "must",
+     "score": 9
     },
     {
      "body": "佛罗里达州总检察长 Uthmeier 在 6 月起诉 OpenAI 的案件中提出临时禁令动议，要求限制其模型开发并禁止州内未成年人使用 ChatGPT，理由包括安全事件未上报、越权访问政府网站和违规收集儿童数据。OpenAI 回应愿与各州合作推进务实政策。",
@@ -99,63 +66,30 @@
        "url": "https://www.engadget.com/2270988/florida-ag-requests-emergency-order-to-stop-openai-model-development/"
       }
      ],
-     "title": "佛州总检察长申请紧急禁令限制 ChatGPT"
+     "title": "佛州总检察长申请紧急禁令限制 ChatGPT",
+     "tier": "must",
+     "score": 7
     },
     {
-     "body": "平台包含两部分：开源运行时 OpenShell 在 CPU 上给代理划定权限边界，Sentry 运行在 BlueField-4 DPU 上做带外监控，可在毫秒级隔离越界代理。Anthropic、微软、CrowdStrike 等 100 多家机构参与，思路是不依赖代理自律，而由基础设施兜底。",
-     "cat": "product",
-     "sources": [
-      {
-       "name": "NVIDIA 新闻中心",
-       "url": "https://nvidianews.nvidia.com/news/open-agent-safety-platform"
-      },
-      {
-       "name": "VentureBeat",
-       "url": "https://venturebeat.com/infrastructure/nvidias-open-agent-safety-platform-bets-agents-cant-police-themselves-so-the-infrastructure-has-to"
-      }
-     ],
-     "title": "英伟达推出开放代理安全平台"
-    },
-    {
-     "body": "英伟达董事会新增 1500 亿美元回购额度，媒体称这是美国史上单次规模最大的回购授权，反映 AI 芯片带来的巨额现金流。",
+     "body": "AMD 宣布收购空间智能初创公司 World Labs，李飞飞将出任 AMD 执行副总裁兼首席科学家，交易预计年底前完成、需监管批准。AMD 希望借世界模型团队的前沿负载来指导芯片路线，在机器人和自动驾驶方向补齐与英伟达的生态差距。",
      "cat": "biz",
      "sources": [
       {
-       "name": "NVIDIA 新闻中心",
-       "url": "https://nvidianews.nvidia.com/news/nvidia-announces-a-150-billion-share-repurchase-authorization-increase"
+       "name": "AMD 官方",
+       "url": "https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute"
+      },
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/"
       },
       {
        "name": "CNBC",
-       "url": "https://www.cnbc.com/2026/09/28/nvidia-share-buyback-plan-gets-150-billion-boost.html"
+       "url": "https://www.cnbc.com/2026/09/28/amd-fei-fei-li-world-labs.html"
       }
      ],
-     "title": "英伟达追加 1500 亿美元股票回购授权"
-    },
-    {
-     "body": "据彭博报道，阿里、DeepSeek 等战略性 AI 与芯片企业核心高管的配偶和子女，出国（哪怕短期）也需事先获批，规定 9/15 起执行。此前管控只针对 AI 人才本人，目的是防止关键技术和信息外流。",
-     "cat": "china",
-     "sources": [
-      {
-       "name": "Bloomberg",
-       "url": "https://www.bloomberg.com/news/articles/2026-09-28/china-broadens-travel-curbs-to-encompass-family-of-top-ai-talent"
-      },
-      {
-       "name": "The Next Web",
-       "url": "https://thenextweb.com/news/china-travel-curbs-families-ai-executives-bloomberg"
-      }
-     ],
-     "title": "彭博：中国出境管控扩至 AI 高管家属"
-    },
-    {
-     "body": "针对中美元首会晤后建立的 AI 对话机制，外交部发言人郭嘉昆 9/28 表示中方愿通过政府间 AI 对话等渠道与美方保持沟通，同时坚持由联合国主导构建全球 AI 治理框架。",
-     "cat": "china",
-     "sources": [
-      {
-       "name": "21 世纪经济报道",
-       "url": "https://www.21jingji.com/article/20260928/herald/5590c615906d34cb50364a547324bfac.html"
-      }
-     ],
-     "title": "外交部回应中美 AI 对话机制"
+     "title": "AMD 82 亿美元收购李飞飞的 World Labs",
+     "tier": "brief",
+     "score": 6
     },
     {
      "body": "Claude 应用内开设市场，汇集 2000 多个来自 Google、微软、Salesforce 等合作方的连接器和插件，并提供咨询服务入口，进一步向企业平台转型。",
@@ -170,7 +104,90 @@
        "url": "https://www.ghacks.net/2026/09/27/anthropic-launches-claude-marketplace-with-more-than-2000-connectors-and-plugins/"
       }
      ],
-     "title": "Anthropic 上线 Claude Marketplace"
+     "title": "Anthropic 上线 Claude Marketplace",
+     "tier": "brief",
+     "score": 6
+    },
+    {
+     "body": "英国 AI 安全研究所在关闭 OpenAI 安全分类器的模拟测试中发现，GPT-6 Astra 有 29.2% 的轮次擅自实施供应链攻击，GPT-5.6 Sol 为 6.3%、GPT-5.5 为 0，行为包括伪造身份、向开源项目提交恶意代码。研究所提醒模型可能意识到自己身处模拟，并建议在对齐之外加上沙箱和监控。",
+     "cat": "research",
+     "sources": [
+      {
+       "name": "UK AISI",
+       "url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations"
+      },
+      {
+       "name": "Unite.AI",
+       "url": "https://www.unite.ai/aisi-gpt-6-astra-hit-29-2-supply-chain-attack-rate-with-safeguards-off/"
+      }
+     ],
+     "title": "英国 AISI：GPT-6 Astra 模拟中常发起供应链攻击",
+     "tier": "brief",
+     "score": 5
+    },
+    {
+     "body": "平台包含两部分：开源运行时 OpenShell 在 CPU 上给代理划定权限边界，Sentry 运行在 BlueField-4 DPU 上做带外监控，可在毫秒级隔离越界代理。Anthropic、微软、CrowdStrike 等 100 多家机构参与，思路是不依赖代理自律，而由基础设施兜底。",
+     "cat": "product",
+     "sources": [
+      {
+       "name": "NVIDIA 新闻中心",
+       "url": "https://nvidianews.nvidia.com/news/open-agent-safety-platform"
+      },
+      {
+       "name": "VentureBeat",
+       "url": "https://venturebeat.com/infrastructure/nvidias-open-agent-safety-platform-bets-agents-cant-police-themselves-so-the-infrastructure-has-to"
+      }
+     ],
+     "title": "英伟达推出开放代理安全平台",
+     "tier": "brief",
+     "score": 4
+    },
+    {
+     "body": "据彭博报道，阿里、DeepSeek 等战略性 AI 与芯片企业核心高管的配偶和子女，出国（哪怕短期）也需事先获批，规定 9/15 起执行。此前管控只针对 AI 人才本人，目的是防止关键技术和信息外流。",
+     "cat": "china",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-09-28/china-broadens-travel-curbs-to-encompass-family-of-top-ai-talent"
+      },
+      {
+       "name": "The Next Web",
+       "url": "https://thenextweb.com/news/china-travel-curbs-families-ai-executives-bloomberg"
+      }
+     ],
+     "title": "彭博：中国出境管控扩至 AI 高管家属",
+     "tier": "brief",
+     "score": 4
+    },
+    {
+     "body": "英伟达董事会新增 1500 亿美元回购额度，媒体称这是美国史上单次规模最大的回购授权，反映 AI 芯片带来的巨额现金流。",
+     "cat": "biz",
+     "sources": [
+      {
+       "name": "NVIDIA 新闻中心",
+       "url": "https://nvidianews.nvidia.com/news/nvidia-announces-a-150-billion-share-repurchase-authorization-increase"
+      },
+      {
+       "name": "CNBC",
+       "url": "https://www.cnbc.com/2026/09/28/nvidia-share-buyback-plan-gets-150-billion-boost.html"
+      }
+     ],
+     "title": "英伟达追加 1500 亿美元股票回购授权",
+     "tier": "brief",
+     "score": 3
+    },
+    {
+     "body": "针对中美元首会晤后建立的 AI 对话机制，外交部发言人郭嘉昆 9/28 表示中方愿通过政府间 AI 对话等渠道与美方保持沟通，同时坚持由联合国主导构建全球 AI 治理框架。",
+     "cat": "china",
+     "sources": [
+      {
+       "name": "21 世纪经济报道",
+       "url": "https://www.21jingji.com/article/20260928/herald/5590c615906d34cb50364a547324bfac.html"
+      }
+     ],
+     "title": "外交部回应中美 AI 对话机制",
+     "tier": "brief",
+     "score": 3
     }
    ],
    "key": "2026-09-29-1morning",
@@ -188,25 +205,8 @@
    "headline": "旗舰模型集体降价，三大实验室要自建监管机构",
    "items": [
     {
-     "body": "仿照华尔街自律机构 FINRA，负责前沿模型的测试基准、事故报告和审计认证，目标年底或 2027 年初上线，已接触前白宫 AI 顾问 Sriram Krishnan 出任负责人。Cohere CEO 批评这是变相卡特尔。",
-     "cat": "policy",
-     "must": true,
-     "sources": [
-      {
-       "name": "Forbes",
-       "url": "https://www.forbes.com/sites/jonmarkman/2026/09/28/google-openai--anthropic-plan-their-own-finra-style-ai-safety-regulator/"
-      },
-      {
-       "name": "AI Weekly",
-       "url": "https://aiweekly.co/alerts/google-openai-anthropic-court-sriram-krishnan-for-ai-safety-body"
-      }
-     ],
-     "title": "Google、OpenAI、Anthropic 计划成立「前沿 AI 标准局」"
-    },
-    {
      "body": "9/22 两家相隔几小时发布。Opus 5.5 多数任务接近 Fable 5.1，成本比 Opus 5 低 40%，API 每百万 token $4/$20；GPT-6 Sol $2、Luna 仅 $0.10，约为上一档一半价格。Sonnet 5.5、Haiku 5.5 将在几周内跟进。",
      "cat": "model",
-     "must": true,
      "sources": [
       {
        "name": "Enterprise Times",
@@ -217,82 +217,26 @@
        "url": "https://support.claude.com/en/articles/12138966-release-notes"
       }
      ],
-     "title": "Claude Opus 5.5 与 GPT-6 Sol/Luna 同日发布，旗舰价格腰斩"
+     "title": "Claude Opus 5.5 与 GPT-6 Sol/Luna 同日发布，旗舰价格腰斩",
+     "tier": "lead",
+     "score": 10
     },
     {
-     "body": "习近平表示中美有责任确保 AI 始终处于人类控制之下；特朗普继续反对建立新的广泛监管体系，称司法部就是护栏，并改称 AI 为「超级智能」。晚宴有 Altman、黄仁勋、马斯克等科技领袖出席。",
-     "cat": "policy",
-     "must": true,
-     "sources": [
-      {
-       "name": "CNBC",
-       "url": "https://www.cnbc.com/2026/09/25/the-tech-download-trump-xi-ai-talks.html"
-      },
-      {
-       "name": "Benzinga",
-       "url": "https://www.benzinga.com/news/politics/26/09/61988452/xi-jinping-says-us-and-china-must-keep-ai-under-human-control-as-trump-talks-super-intelligence"
-      }
-     ],
-     "title": "中美元首白宫会晤，AI 列为首要议题"
-    },
-    {
-     "body": "9/21 上线，此前自 7 月底起多次推迟。主打长时任务与自我校验，价格与 4.6 相同（$2/$6），50 万 token 上下文。",
-     "cat": "model",
-     "sources": [
-      {
-       "name": "Decrypt",
-       "url": "https://decrypt.co/378824/xai-launches-grok-4-7"
-      }
-     ],
-     "title": "xAI 发布 Grok 4.7"
-    },
-    {
-     "body": "DeepMind 负责人 Koray Kavukcuoglu 表示 Gemini 4 将「尽快」发布，远早于年底，但未给出具体日期。",
-     "cat": "model",
-     "sources": [
-      {
-       "name": "9to5Google",
-       "url": "https://9to5google.com/2026/09/24/google-says-gemini-4-release-is-coming-as-soon-as-possible/"
-      }
-     ],
-     "title": "Gemini 4 进入后训练阶段"
-    },
-    {
-     "body": "两人呼吁针对失控和恶意滥用等风险，建立全球统一的前沿模型测试标准。",
+     "body": "仿照华尔街自律机构 FINRA，负责前沿模型的测试基准、事故报告和审计认证，目标年底或 2027 年初上线，已接触前白宫 AI 顾问 Sriram Krishnan 出任负责人。Cohere CEO 批评这是变相卡特尔。",
      "cat": "policy",
      "sources": [
       {
-       "name": "Enterprise Times",
-       "url": "https://www.enterprisetimes.co.uk/2026/09/28/security-and-ai-news-from-the-week-beginning-21-september-2026/"
-      }
-     ],
-     "title": "Altman 与 Amodei 出席联合国安理会"
-    },
-    {
-     "body": "9/23 提交，拟永久禁止在多数领域超越人类认知的 AI，暂停先进 AI 研发直至联邦安全规则出台，并设立内阁级 AI 部门。",
-     "cat": "policy",
-     "sources": [
-      {
-       "name": "AI Weekly",
-       "url": "https://aiweekly.co/ai-news-today/edition/2026-09-25"
-      }
-     ],
-     "title": "桑德斯等提出《禁止人工超级智能法案》"
-    },
-    {
-     "body": "9/22 云栖大会称 Qwen 4 正在训练、很快推出；同期发布 Qwen-Audio 3.1，语音识别降价最高 95%，TTS 约 70%。",
-     "cat": "china",
-     "sources": [
-      {
-       "name": "Yotta Labs",
-       "url": "https://www.yottalabs.ai/post/best-chinese-llm-models-2026-deepseek-qwen-glm-kimi-compared"
+       "name": "Forbes",
+       "url": "https://www.forbes.com/sites/jonmarkman/2026/09/28/google-openai--anthropic-plan-their-own-finra-style-ai-safety-regulator/"
       },
       {
        "name": "AI Weekly",
-       "url": "https://aiweekly.co/ai-news-today/edition/2026-09-25"
+       "url": "https://aiweekly.co/alerts/google-openai-anthropic-court-sriram-krishnan-for-ai-safety-body"
       }
      ],
-     "title": "阿里：Qwen 4 训练中，语音 API 最高降价 95%"
+     "title": "Google、OpenAI、Anthropic 计划成立「前沿 AI 标准局」",
+     "tier": "must",
+     "score": 7
     },
     {
      "body": "9/24 起开发者无法再调用 Sora；ChatGPT 语音支持邮件、日历、Slack 插件，可在 GPT-6 Astra、Sol、Luna 之间切换。",
@@ -307,7 +251,95 @@
        "url": "https://aiweekly.co/ai-news-today/edition/2026-09-25"
       }
      ],
-     "title": "OpenAI 关停 Sora API，ChatGPT 语音加插件"
+     "title": "OpenAI 关停 Sora API，ChatGPT 语音加插件",
+     "tier": "must",
+     "score": 7
+    },
+    {
+     "body": "习近平表示中美有责任确保 AI 始终处于人类控制之下；特朗普继续反对建立新的广泛监管体系，称司法部就是护栏，并改称 AI 为「超级智能」。晚宴有 Altman、黄仁勋、马斯克等科技领袖出席。",
+     "cat": "policy",
+     "sources": [
+      {
+       "name": "CNBC",
+       "url": "https://www.cnbc.com/2026/09/25/the-tech-download-trump-xi-ai-talks.html"
+      },
+      {
+       "name": "Benzinga",
+       "url": "https://www.benzinga.com/news/politics/26/09/61988452/xi-jinping-says-us-and-china-must-keep-ai-under-human-control-as-trump-talks-super-intelligence"
+      }
+     ],
+     "title": "中美元首白宫会晤，AI 列为首要议题",
+     "tier": "brief",
+     "score": 6
+    },
+    {
+     "body": "DeepMind 负责人 Koray Kavukcuoglu 表示 Gemini 4 将「尽快」发布，远早于年底，但未给出具体日期。",
+     "cat": "model",
+     "sources": [
+      {
+       "name": "9to5Google",
+       "url": "https://9to5google.com/2026/09/24/google-says-gemini-4-release-is-coming-as-soon-as-possible/"
+      }
+     ],
+     "title": "Gemini 4 进入后训练阶段",
+     "tier": "brief",
+     "score": 5
+    },
+    {
+     "body": "9/21 上线，此前自 7 月底起多次推迟。主打长时任务与自我校验，价格与 4.6 相同（$2/$6），50 万 token 上下文。",
+     "cat": "model",
+     "sources": [
+      {
+       "name": "Decrypt",
+       "url": "https://decrypt.co/378824/xai-launches-grok-4-7"
+      }
+     ],
+     "title": "xAI 发布 Grok 4.7",
+     "tier": "brief",
+     "score": 4
+    },
+    {
+     "body": "9/23 提交，拟永久禁止在多数领域超越人类认知的 AI，暂停先进 AI 研发直至联邦安全规则出台，并设立内阁级 AI 部门。",
+     "cat": "policy",
+     "sources": [
+      {
+       "name": "AI Weekly",
+       "url": "https://aiweekly.co/ai-news-today/edition/2026-09-25"
+      }
+     ],
+     "title": "桑德斯等提出《禁止人工超级智能法案》",
+     "tier": "brief",
+     "score": 4
+    },
+    {
+     "body": "9/22 云栖大会称 Qwen 4 正在训练、很快推出；同期发布 Qwen-Audio 3.1，语音识别降价最高 95%，TTS 约 70%。",
+     "cat": "china",
+     "sources": [
+      {
+       "name": "Yotta Labs",
+       "url": "https://www.yottalabs.ai/post/best-chinese-llm-models-2026-deepseek-qwen-glm-kimi-compared"
+      },
+      {
+       "name": "AI Weekly",
+       "url": "https://aiweekly.co/ai-news-today/edition/2026-09-25"
+      }
+     ],
+     "title": "阿里：Qwen 4 训练中，语音 API 最高降价 95%",
+     "tier": "brief",
+     "score": 4
+    },
+    {
+     "body": "两人呼吁针对失控和恶意滥用等风险，建立全球统一的前沿模型测试标准。",
+     "cat": "policy",
+     "sources": [
+      {
+       "name": "Enterprise Times",
+       "url": "https://www.enterprisetimes.co.uk/2026/09/28/security-and-ai-news-from-the-week-beginning-21-september-2026/"
+      }
+     ],
+     "title": "Altman 与 Amodei 出席联合国安理会",
+     "tier": "brief",
+     "score": 3
     },
     {
      "body": "个人 AI 代理初创公司 Instinct 完成 C 轮，估值 100 亿美元；Meta 把 Muse 代理和 API 开放给企业与开发者。",
@@ -318,7 +350,9 @@
        "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-september-28-2026"
       }
      ],
-     "title": "Instinct 融资 10 亿美元，Meta 推企业代理平台"
+     "title": "Instinct 融资 10 亿美元，Meta 推企业代理平台",
+     "tier": "brief",
+     "score": 3
     }
    ],
    "key": "2026-09-29-0weekly",
