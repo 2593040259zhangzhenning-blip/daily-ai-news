@@ -1,0 +1,32 @@
+# 让网站跟上仓库：有新推送就重新发布；另外每 15 分钟检查一次，网站落后就补发。
+# （定时任务用自动化账号推送时，GitHub 不会自动重新发布网站，所以需要这个。）
+name: 发布网站
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+permissions:
+  pages: write
+  contents: read
+concurrency:
+  group: pages-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 网站落后于仓库时重新发布
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          head=$(gh api "repos/$REPO/commits/main" --jq .sha)
+          built=$(gh api "repos/$REPO/pages/builds/latest" --jq .commit 2>/dev/null || echo none)
+          echo "仓库最新 $head，网站当前 $built"
+          if [ "$head" != "$built" ]; then
+            gh api -X POST "repos/$REPO/pages/builds" --jq .status
+          else
+            echo "网站已是最新"
+          fi
