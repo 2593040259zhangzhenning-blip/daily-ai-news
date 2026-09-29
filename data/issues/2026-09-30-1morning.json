@@ -1,0 +1,149 @@
+{
+ "key": "2026-09-30-1morning",
+ "date": "2026-09-30",
+ "edition": "morning",
+ "createdAt": "2026-09-30T01:27:33+08:00",
+ "headline": "Anthropic 招股书曝光，AI 双雄账本见光",
+ "items": [
+  {
+   "cat": "biz",
+   "title": "Anthropic 招股书草稿曝光：巨亏与高增长并存",
+   "body": "据路透社获得的 S-1 草稿，Anthropic 2025 年收入约 46 亿美元、净亏损约 420 亿美元（主要是非现金的可转债融资费用），今年二季度收入跃升至 115 亿美元并连续两季经营盈利。公司计划在云服务和数据中心上投入约 5180 亿美元，估值目标据报超过 2 万亿美元，风险章节篇幅超过三分之一。这是 Claude 背后公司首次较完整地公开财务底牌。",
+   "score": 9,
+   "tier": "lead",
+   "summary": "S-1 草稿显示去年净亏 420 亿美元，今年二季度已经营盈利。",
+   "sources": [
+    {
+     "name": "CNBC（转引 Reuters）",
+     "url": "https://www.cnbc.com/2026/09/28/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-reuters.html"
+    },
+    {
+     "name": "Fortune",
+     "url": "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/"
+    },
+    {
+     "name": "The Next Web",
+     "url": "https://thenextweb.com/news/anthropic-ipo-prospectus-42bn-loss-518bn-compute"
+    }
+   ]
+  },
+  {
+   "cat": "biz",
+   "title": "OpenAI 年化收入逼近 700 亿美元",
+   "body": "据 Axios 独家报道，OpenAI 年化经常性收入接近 700 亿美元，三季度以来增长超七成，企业端收入翻倍以上，三季度新增的消费者收入已超过 2025 全年。报道未披露支出情况，在停训和撤回新模型的风波中，这组数字显示 ChatGPT 的商业基本盘仍在快速扩张。",
+   "score": 7,
+   "tier": "must",
+   "sources": [
+    {
+     "name": "Axios",
+     "url": "https://www.axios.com/2026/09/29/scoop-openais-annual-recurring-revenue-nears-70b"
+    },
+    {
+     "name": "Reuters（Investing.com 转载）",
+     "url": "https://www.investing.com/news/stock-market-news/openais-annual-recurring-revenue-nears-70-billion-axios-reports-4923088"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "Meta 成立企业 AI 平台，前 MongoDB CEO 掌舵",
+   "body": "Meta 推出 Meta Enterprise Platform，整合 Muse 助手、Meta Business Agent、API 和基础设施向企业出售，由前 MongoDB CEO CJ Desai 负责。这标志着 Meta 开始把巨额 AI 投入直接变现，与微软、谷歌争夺企业客户。",
+   "score": 6,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Meta 官方",
+     "url": "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/"
+    },
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/09/28/meta-launches-enterprise-ai-platform-hires-mongodb-ceo-to-lead-new-initiative/"
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "NPR：美国学校大举采购 AI，效果证据却很少",
+   "body": "NPR 调查显示，多个学区每年花数万美元采购 AI 教学工具，但难以量化成效；斯坦福梳理 800 多篇论文后认为相关证据极为有限，专门设计的工具比通用聊天机器人更有希望。纽约、洛杉矶已限制学生使用 AI，威奇托则按年级分层逐步开放。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "NPR（WWNO 转载）",
+     "url": "https://www.wwno.org/npr-news/2026-09-28/schools-are-experimenting-with-ai-with-little-evidence-or-policy-to-guide-them"
+    },
+    {
+     "name": "NPR（WFYI 转载）",
+     "url": "https://www.wfyi.org/education/2026-09-29/schools-are-experimenting-with-ai-with-little-evidence-or-policy-to-guide-them"
+    }
+   ]
+  },
+  {
+   "cat": "model",
+   "title": "ElevenLabs 发布 v4 语音模型，支持 90 多种语言",
+   "body": "ElevenLabs 推出 v4 和 v4 Turbo，语种从 70 种扩到 90 多种，中文普通话、粤语和日语提升明显，10 秒音频即可克隆声音，延迟也更低。对用 AI 练口语、做听力材料的人来说，更自然的多语种语音意味着更好的练习素材。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/09/28/elevenlabs-new-v4-speech-model-supports-more-expression-control-and-90-languages/"
+    }
+   ]
+  },
+  {
+   "cat": "biz",
+   "title": "个人 AI 代理公司 Instinct 融资 10 亿美元",
+   "body": "个人 AI 代理初创公司 Instinct 完成 10 亿美元 C 轮融资，估值升至 100 亿美元，红杉、Benchmark、Coatue 参投。在代理安全事故频发之际，资本仍在押注个人代理赛道。",
+   "score": 4,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/"
+    },
+    {
+     "name": "Bloomberg",
+     "url": "https://www.bloomberg.com/news/articles/2026-09-28/ai-agent-startup-instinct-raises-1-billion-at-10-billion-value"
+    }
+   ]
+  }
+ ],
+ "watch": [
+  "OpenAI DevDay 主题演讲正在进行（北京时间 9/30 凌晨），官方预告 20 多项发布，常驻代理「o」是否亮相留待下期",
+  "Anthropic 正式公开递交招股书及上市时间表",
+  "Claude Haiku 5.5 上线时间"
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI",
+   "Anthropic",
+   "Google / DeepMind",
+   "Meta",
+   "微软",
+   "xAI",
+   "DeepSeek",
+   "阿里通义 / Qwen",
+   "月之暗面 Kimi",
+   "智谱",
+   "@OpenAI",
+   "@OpenAIDevs",
+   "@AnthropicAI",
+   "@claudeai",
+   "Reuters",
+   "Bloomberg",
+   "TechCrunch",
+   "CNBC",
+   "Axios",
+   "36氪",
+   "EdSurge",
+   "Inside Higher Ed",
+   "中国教育部（moe.gov.cn）",
+   "ChatGPT Edu",
+   "Claude for Education",
+   "Gemini for Education",
+   "Techmeme"
+  ],
+  "candidates": 30
+ }
+}

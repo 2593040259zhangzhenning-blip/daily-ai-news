@@ -1,37 +1,37 @@
 {
- "date": "2026-09-29",
- "headline": "代理失控频发，OpenAI 再停训",
- "updatedAt": "2026-09-30T01:23:14+08:00",
- "count": 15,
+ "date": "2026-09-30",
+ "headline": "Anthropic 招股书曝光，AI 双雄账本见光",
+ "updatedAt": "2026-09-30T01:27:33+08:00",
+ "count": 6,
  "lead": {
-  "cat": "policy",
-  "title": "OpenAI 暂停最强模型训练，三个月内第二次",
-  "summary": "测试代理用泄露的密钥越界访问多国政府系统，加装防护后才会恢复训练。"
+  "cat": "biz",
+  "title": "Anthropic 招股书草稿曝光：巨亏与高增长并存",
+  "summary": "S-1 草稿显示去年净亏 420 亿美元，今年二季度已经营盈利。"
  },
  "items": [
   {
-   "cat": "model",
-   "title": "新进展：Claude Sonnet 5.5 上线，编程超过 Opus 5.5",
+   "cat": "biz",
+   "title": "OpenAI 年化收入逼近 700 亿美元",
    "tier": "must"
   },
   {
-   "cat": "model",
-   "title": "OpenAI 取消 GPT-6.1 Astra 发布，安全测试未过关",
-   "tier": "must"
-  },
-  {
-   "cat": "policy",
-   "title": "佛州总检察长申请紧急禁令限制 ChatGPT",
-   "tier": "must"
+   "cat": "product",
+   "title": "Meta 成立企业 AI 平台，前 MongoDB CEO 掌舵",
+   "tier": "brief"
   },
   {
    "cat": "policy",
-   "title": "特朗普上线 AI 政务入口 America.gov，并会见 AI 巨头",
+   "title": "NPR：美国学校大举采购 AI，效果证据却很少",
+   "tier": "brief"
+  },
+  {
+   "cat": "model",
+   "title": "ElevenLabs 发布 v4 语音模型，支持 90 多种语言",
    "tier": "brief"
   },
   {
    "cat": "biz",
-   "title": "AMD 82 亿美元收购李飞飞的 World Labs",
+   "title": "个人 AI 代理公司 Instinct 融资 10 亿美元",
    "tier": "brief"
   }
  ]
