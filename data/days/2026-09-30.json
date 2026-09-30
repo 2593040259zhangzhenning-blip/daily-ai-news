@@ -151,5 +151,91 @@
    }
   }
  ],
- "specials": []
+ "specials": [
+  {
+   "slug": "openai-devday-2026",
+   "date": "2026-09-30",
+   "title": "OpenAI DevDay 2026",
+   "org": "OpenAI",
+   "cat": "product",
+   "eventTime": "北京时间 9/30 01:00",
+   "createdAt": "2026-09-30T18:40:00+08:00",
+   "summary": "OpenAI 把重心从聊天转向「替你干活」：推出常驻云端的智能体 Dots、更便宜的 GPT-6.1 Sol，并把 Codex 和团队协作功能大举搬上云端。",
+   "highlights": [
+    {
+     "title": "Dots：常驻云端、持续干活的智能体",
+     "body": "每个 Dot 基于 GPT-6 Astra，有自己的云端电脑和浏览器，会学习用户的优先事项并长期跟进任务，可从 ChatGPT、Slack、Teams 或语音调用。Pro 与 Business Premium 订阅附送一个，更多需另购；Edu 等企业版以测试形式开放。",
+     "score": 9
+    },
+    {
+     "title": "GPT-6.1 Sol：接近旗舰、价格五分之一",
+     "body": "GPT-6 Sol 的升级版，强化了智能体编程和电脑操作能力。官方称智能接近 GPT-6 Astra，token 价格只有其五分之一，API 与 Plus、Pro、Business、Enterprise、Edu 用户均可使用。",
+     "score": 9
+    },
+    {
+     "title": "Codex 上云，CLI、代码审查和安全扫描同步升级",
+     "body": "Codex 可在云端运行团队统一配置的开发环境；CLI 支持语音调整任务、新增多任务视图；桌面版可自动审查 GitHub/GitLab 的 PR；Codex Security 可定期扫描仓库并准备修复。",
+     "score": 8
+    },
+    {
+     "title": "Ultrafast 高速档与 $500 的 Pro 500",
+     "body": "Ultrafast 让 Codex 输出最高快 8 倍（约每秒 300 token），API 最高快 6 倍，先用于 GPT-6 Astra。新订阅档 Pro 500 月费 500 美元，用量为 Plus 的 25 倍并含 Ultrafast。",
+     "score": 7
+    },
+    {
+     "title": "ChatGPT 变成团队协作空间",
+     "body": "新增团队知识空间 ChatGPT Space、协作文档 Pages、可多人实时编辑并导出 PowerPoint 的幻灯片，以及可在 Slack 和 Teams 里 @ChatGPT、共享定时任务等功能，主要面向 Pro 和企业用户。",
+     "score": 7
+    },
+    {
+     "title": "Agents API 支持电脑操作，新增 Decisions API",
+     "body": "Agents API 现可操作软件完成任务，支持多智能体和工具搜索，基础设施由 OpenAI 托管；还与 AWS 合作让智能体直接跑在 Bedrock 上。Decisions API 专做从固定选项中快速选择的判断，适合分类和路由，先小范围预览。",
+     "score": 6
+    },
+    {
+     "title": "「用 ChatGPT 登录」与插件生态扩展",
+     "body": "Notion、Vercel、Devin 等 16 家工具支持用 ChatGPT 账号登录并共用订阅额度；插件可做侧栏和自定义文件查看器，还能由外部应用事件触发自动化。",
+     "score": 6
+    },
+    {
+     "title": "隐私：零数据保留与私密推理",
+     "body": "企业客户可选零数据保留，安全审查全自动、无人接触数据；结合机密计算的私密推理今年秋季开始预览，需联系销售开通。",
+     "score": 5
+    }
+   ],
+   "forYou": [
+    "ChatGPT Plus 和 Edu 用户马上能用上 GPT-6.1 Sol，日常写作、编程的质量会接近旗舰，额度压力更小。",
+    "最受关注的 Dots 暂时只给 $200 起的 Pro 和 Business Premium，学生个人用户短期用不到；学校如果开通 Edu，可申请测试。",
+    "Pages 和协作幻灯片让小组作业、备课可以直接在 ChatGPT 里一起做，但目前只开放给 Pro 和企业版。"
+   ],
+   "availability": [
+    "GPT-6.1 Sol：即日起面向 API 与 Plus 及以上各档（含 Edu）开放。",
+    "Dots：Pro、Business Premium（部分地区）先用，Enterprise、Edu、Healthcare 可申请测试。",
+    "Pro 500：即日可订，月费 500 美元。",
+    "协作幻灯片未来几周上线；私密推理今年秋季预览。"
+   ],
+   "sources": [
+    {
+     "name": "OpenAI：DevDay 2026 Recap",
+     "url": "https://openai.com/index/devday-2026-recap/"
+    },
+    {
+     "name": "OpenAI DevDay 2026 官方页",
+     "url": "https://openai.com/devday/2026/"
+    },
+    {
+     "name": "BGR",
+     "url": "https://www.bgr.com/2272332/openai-devday-2026-announcements/"
+    },
+    {
+     "name": "Engadget 直播",
+     "url": "https://www.engadget.com/2271985/openai-dev-day-live-blog-chatgpt-news/"
+    },
+    {
+     "name": "9to5Mac",
+     "url": "https://9to5mac.com/2026/09/29/openai-teases-20-announcements-at-devday-watch-live/"
+    }
+   ]
+  }
+ ]
 }

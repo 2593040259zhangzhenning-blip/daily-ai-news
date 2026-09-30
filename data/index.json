@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T14:18:36+08:00",
+ "generatedAt": "2026-09-30T10:26:31+00:00",
  "dates": [
   {
    "date": "2026-09-29",
@@ -11,9 +11,14 @@
   {
    "date": "2026-09-30",
    "headline": "Anthropic 招股书曝光，AI 双雄账本见光",
-   "updatedAt": "2026-09-30T01:27:33+08:00",
+   "updatedAt": "2026-09-30T18:40:00+08:00",
    "count": 6,
-   "specials": []
+   "specials": [
+    {
+     "slug": "openai-devday-2026",
+     "title": "OpenAI DevDay 2026"
+    }
+   ]
   }
  ]
 }
