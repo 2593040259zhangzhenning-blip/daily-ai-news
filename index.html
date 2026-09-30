@@ -151,6 +151,33 @@ button{font:inherit;color:inherit}
   .cols .scan,.cols .arch{order:0}
   .head h2{font-size:40px}
 }
+/* 发布会专题：当天页面最上方一张横幅，点开是完整总结 */
+.sp-card{position:relative;display:flex;flex-direction:column;gap:10px;width:100%;text-align:left;border:0;cursor:pointer;border-radius:22px;padding:24px 24px 22px;color:#fff;background:var(--k);overflow:hidden;font:inherit}
+.sp-card::before{content:"";position:absolute;inset:0;background:radial-gradient(90% 120% at 100% 0%,rgba(255,255,255,.3),transparent 55%),linear-gradient(160deg,transparent 30%,rgba(0,0,0,.28))}
+.sp-card > *{position:relative}
+.sp-eyebrow{display:flex;align-items:center;gap:8px;font:600 12px/1 var(--sans);letter-spacing:.08em;opacity:.9}
+.sp-eyebrow b{padding:4px 8px;border-radius:6px;background:rgba(255,255,255,.22);font-weight:700;letter-spacing:.04em}
+.sp-card h3{margin:0;font:700 28px/1.2 var(--display);letter-spacing:-.01em;text-wrap:balance}
+.sp-card p{margin:0;font-size:15px;line-height:1.6;opacity:.92;max-width:60ch}
+.sp-go{font:600 14px/1 var(--sans);margin-top:4px}
+.sp-card:focus-visible{outline:3px solid var(--link);outline-offset:3px}
+.sp-back{align-self:flex-start;border:0;background:none;cursor:pointer;color:var(--link);font:500 14px/1 var(--sans);padding:0}
+.sp-head{display:flex;flex-direction:column;gap:12px}
+.sp-head .sp-eyebrow{color:var(--k);opacity:1}
+.sp-head .sp-eyebrow b{background:var(--k);color:#fff}
+.sp-head h2{margin:0;font:700 34px/1.2 var(--display);text-wrap:balance}
+.sp-head .lede{margin:0;font-size:17px;line-height:1.65;max-width:62ch}
+.sp-list{display:flex;flex-direction:column;gap:12px;margin:0;padding:0;list-style:none;counter-reset:hl}
+.sp-list li{background:var(--card);border-radius:18px;padding:18px 20px 18px 58px;position:relative;counter-increment:hl}
+.sp-list li::before{content:counter(hl);position:absolute;left:18px;top:17px;width:26px;height:26px;border-radius:50%;background:var(--k);color:#fff;display:grid;place-items:center;font:700 13px/1 var(--sans);font-variant-numeric:tabular-nums}
+.sp-list h4{margin:0 0 6px;font:700 17px/1.4 var(--display)}
+.sp-list p{margin:0;font-size:15px;line-height:1.6;color:var(--sub)}
+.sp-box{background:var(--card);border-radius:18px;padding:18px 20px;display:flex;flex-direction:column;gap:10px}
+.sp-box h3{margin:0;font:700 17px/1.2 var(--display)}
+.sp-box ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:8px;font-size:14.5px;line-height:1.6}
+.sp-box .src{display:flex;flex-direction:column;gap:6px;font-size:13.5px}
+.sp-box .src a + a::before{content:none}
+@media (min-width:720px){.sp-card{padding:30px 32px 26px}.sp-card h3{font-size:34px}.sp-head h2{font-size:44px}}
 @media (prefers-reduced-motion:reduce){.list summary::after{transition:none}}
 </style>
 </head>
@@ -173,7 +200,8 @@ button{font:inherit;color:inherit}
 const CATS={model:["模型","模型发布","--k-model"],policy:["政策","政策治理","--k-policy"],product:["产品","产品动态","--k-product"],biz:["商业","融资商业","--k-biz"],china:["中国","中国 AI","--k-china"],research:["研究","研究突破","--k-research"]};
 const TIER={lead:0,must:1,brief:2};
 const WK=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
-let dates=[],dateInfo={},selDate=new URLSearchParams(location.search).get("d");
+const Q=new URLSearchParams(location.search);
+let dates=[],dateInfo={},selDate=Q.get("d"),selSpecial=Q.get("s");
 const dayCache={}; // 已加载过的日期内容
 
 function h(tag,a,...kids){const e=document.createElement(tag);for(const[k,v]of Object.entries(a||{})){if(k==="style")e.setAttribute("style",v);else if(k.startsWith("on"))e.addEventListener(k.slice(2),v);else e.setAttribute(k,v)}for(const c of kids.flat()){if(c==null||c===false)continue;e.append(c.nodeType?c:document.createTextNode(String(c)))}return e}
@@ -228,14 +256,14 @@ function scanNote(day){
     h("p",{},checked.join("、")));
 }
 
-function go(d){selDate=d;history.replaceState(null,"","?d="+d);show();window.scrollTo({top:0})}
+function go(d,sp){selDate=d;selSpecial=sp||null;history.replaceState(null,"","?d="+d+(sp?"&s="+sp:""));show();window.scrollTo({top:0})}
 
 async function fetchDay(date,fresh){
   if(!fresh&&dayCache[date])return dayCache[date];
   const r=await fetch(`data/days/${date}.json?t=${Date.now()}`,{cache:"no-store"});
   if(!r.ok)throw new Error(r.status);
   const j=await r.json();
-  return (dayCache[date]=j.issues||[]);
+  return (dayCache[date]={issues:j.issues||[],specials:j.specials||[]});
 }
 async function show(fresh){
   const main=document.getElementById("main");
@@ -248,16 +276,46 @@ async function show(fresh){
   const want=selDate;
   try{
     const day=await fetchDay(want,fresh);
-    if(want===selDate)render(day);
+    if(want===selDate){
+      const sp=selSpecial&&day.specials.find(x=>x.slug===selSpecial);
+      if(sp)renderSpecial(sp);else render(day);
+    }
     const near=[dates[di-1],dates[di+1]].filter(Boolean); // 顺手预取前后一天，翻页更快
     near.forEach(d=>fetchDay(d).catch(()=>{}));
   }catch(e){
     if(want===selDate)main.replaceChildren(h("div",{class:"empty"},h("strong",{},"这一天没加载出来"),"检查网络后刷新页面。"));
   }
 }
-function render(day){
+function specialCard(sp){
+  return h("button",{type:"button",class:"sp-card",style:kv(sp.cat),onclick:()=>go(sp.date,sp.slug)},
+    h("span",{class:"sp-eyebrow"},h("b",{},"专题"),sp.org+(sp.eventTime?" · "+sp.eventTime:"")),
+    h("h3",{},sp.title),
+    h("p",{},sp.summary),
+    h("span",{class:"sp-go"},`${sp.highlights.length} 项发布 · 看完整总结 ›`));
+}
+function renderSpecial(sp){
   const main=document.getElementById("main");
-  const morning=day.find(i=>i.edition==="morning")||day[0];
+  const ok=(sp.sources||[]).filter(x=>/^https?:\/\//.test(x.url||""));
+  main.replaceChildren(h("div",{class:"cols",style:kv(sp.cat)},
+    h("div",{class:"mainc"},
+      h("button",{type:"button",class:"sp-back",onclick:()=>go(sp.date)},`‹ 返回 ${dateCN(sp.date)}`),
+      h("div",{class:"sp-head"},
+        h("span",{class:"sp-eyebrow"},h("b",{},"专题"),sp.org+(sp.eventTime?" · "+sp.eventTime:"")),
+        h("h2",{},sp.title),
+        h("p",{class:"lede"},sp.summary),
+        h("span",{class:"meta"},`${hhmm(sp.createdAt)} 整理 · 共 ${sp.highlights.length} 项`)),
+      h("section",{class:"sec"},h("h3",{},"发布了什么"),
+        h("ol",{class:"sp-list"},sp.highlights.map(x=>h("li",{},h("h4",{},x.title),h("p",{},x.body)))))),
+    h("aside",{class:"side"},
+      (sp.forYou||[]).length?h("section",{class:"sp-box"},h("h3",{},"和你有关"),h("ul",{},sp.forYou.map(t=>h("li",{},t)))):null,
+      (sp.availability||[]).length?h("section",{class:"sp-box"},h("h3",{},"上线与价格"),h("ul",{},sp.availability.map(t=>h("li",{},t)))):null,
+      ok.length?h("section",{class:"sp-box"},h("h3",{},"来源"),h("div",{class:"src"},ok.map(x=>h("a",{href:x.url,target:"_blank",rel:"noopener"},x.name||"来源")))):null)
+  ));
+}
+function render(dayObj){
+  const main=document.getElementById("main");
+  const day=dayObj.issues, specials=dayObj.specials||[];
+  const morning=day.find(i=>i.edition==="morning")||day[0]||{headline:(specials[0]||{}).title||"",createdAt:(specials[0]||{}).createdAt};
   const evening=day.filter(i=>i.edition==="evening");
 
   const items=sorted(day.flatMap(x=>(x.items||[]).map(it=>({...it,_key:x.key,_eve:x.edition==="evening"}))));
@@ -275,6 +333,7 @@ function render(day){
         h("div",{class:"sub"},h("span",{class:"meta"},
           `${hhmm(morning.createdAt)} 更新`+(eveCount?` · 晚间新增 ${eveCount} 条`:"")),
           fresh.size?h("button",{type:"button",class:"fresh",onclick:jumpToFresh},`你上次打开后新增 ${fresh.size} 条 ›`):null)),
+      specials.map(specialCard),
       top.length?h("section",{class:"sec"},h("h3",{},"今日必看"),h("div",{class:"grid"},top.map((it,i)=>card(it,it===lead)))):null,
       scanNote(day)),
     h("aside",{class:"side"},
