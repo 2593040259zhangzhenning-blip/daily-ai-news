@@ -1,7 +1,8 @@
 // Signal · Mac 桌面小组件（Übersicht）
 // 读网站上的同一份数据，设计和手机上的大号小组件一致。每 30 分钟刷新一次。
 // 轻点：在默认浏览器里打开网站。按住拖动：移动位置，松手后吸附到系统小组件的网格并记住。
-// 网格按这台 Mac 上原生小组件量出：单位 163、间距 17（每格 180），整列离屏幕右边 34。
+// 网格按这台 Mac（2560×1440）上原生小组件量出：每格 180（单位 163 + 间距 17），
+// 最左一列离屏幕左边 16，行的起点离 Übersicht 顶部 60（屏幕上是 90，菜单栏占 30）。
 
 import { run } from "uebersicht";
 
@@ -10,7 +11,7 @@ const SITE = "https://2593040259zhangzhenning-blip.github.io/daily-ai-news/";
 export const refreshFrequency = 30 * 60 * 1000;
 
 // 位置记在本机，拖动后下次启动还在原处
-const POS_KEY = "daily-ai-news-pos";
+const POS_KEY = "daily-ai-news-pos-v2"; // 换了网格，旧位置作废
 const loadPos = () => {
   try {
     const p = JSON.parse(localStorage.getItem(POS_KEY) || "null");
@@ -20,19 +21,18 @@ const loadPos = () => {
 };
 // 和原生大号小组件同尺寸，吸附到原生小组件的网格
 const SIZE = 343;
-const GRID = { pitch: 180, right: 34, top: 127 }; // top 127：天气小组件（487）上方一格
+const GRID = { pitch: 180, left: 16, top: 60 }; // 默认位置：天气小组件（420）上方的空位
 const snap = (left, top) => {
-  const W = window.innerWidth;
-  const k = Math.max(0, Math.round((W - GRID.right - (left + SIZE)) / GRID.pitch));
-  const j = Math.max(0, Math.round((top - GRID.top) / GRID.pitch));
-  return { left: W - GRID.right - k * GRID.pitch - SIZE, top: GRID.top + j * GRID.pitch };
+  const maxK = Math.max(0, Math.floor((window.innerWidth - GRID.left - SIZE) / GRID.pitch));
+  const maxJ = Math.max(0, Math.floor((window.innerHeight - GRID.top - SIZE) / GRID.pitch));
+  const k = Math.min(maxK, Math.max(0, Math.round((left - GRID.left) / GRID.pitch)));
+  const j = Math.min(maxJ, Math.max(0, Math.round((top - GRID.top) / GRID.pitch)));
+  return { left: GRID.left + k * GRID.pitch, top: GRID.top + j * GRID.pitch };
 };
 const saved = loadPos();
-const start = saved ? snap(saved.left, saved.top) : null;
+const start = saved ? snap(saved.left, saved.top) : { left: GRID.left, top: GRID.top };
 
-export const className = start
-  ? `left: ${start.left}px; top: ${start.top}px;`
-  : `right: ${GRID.right}px; top: ${GRID.top}px;`;
+export const className = `left: ${start.left}px; top: ${start.top}px;`;
 
 // 按住移动超过 4 像素算拖动，否则算点击
 let dragging = null;
