@@ -1,0 +1,100 @@
+{
+ "key": "2026-09-30-2evening",
+ "date": "2026-09-30",
+ "edition": "evening",
+ "createdAt": "2026-09-30T21:21:59+08:00",
+ "headline": "AI 巨头签自律公约，OpenAI 拟融 300 亿",
+ "items": [
+  {
+   "cat": "policy",
+   "title": "白宫会谈后，六家 AI 巨头签署自律安全公约",
+   "body": "Anthropic、OpenAI、Google、Meta、xAI 和英伟达的 CEO 在白宫签署自愿性质的前沿 AI 责任承诺，要求加强模型监控、设立内部监督团队，并引入独立外部审计验证防护措施，但没有具体约束机制，也未设独立监管委员会。特朗普强调以行业自律为主，同日还签署行政令，要求联邦政府在对外表述中把 AI 称为「超级智能」。",
+   "score": 7,
+   "tier": "must",
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/9/29/trump-top-tech-firms-sign-accord-to-self-police-ai-development"
+    },
+    {
+     "name": "Axios",
+     "url": "https://www.axios.com/2026/09/29/trump-ai-voluntary-safety-white-house-zuckerberg"
+    },
+    {
+     "name": "NPR",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5985699/trump-self-police-ai-development"
+    },
+    {
+     "name": "CNBC",
+     "url": "https://www.cnbc.com/2026/09/29/trump-ai-super-intelligence.html"
+    }
+   ]
+  },
+  {
+   "cat": "biz",
+   "title": "OpenAI 洽谈 300 亿美元融资，上市推迟到 2027 年",
+   "body": "据彭博报道，OpenAI 正商谈一轮至少 300 亿美元的融资，估值约 1.4 万亿美元，作为上市前的过渡。Altman 已把原计划今年的 IPO 推迟到 2027 年，理由是 AI 安全问题尚待解决。",
+   "score": 7,
+   "tier": "must",
+   "sources": [
+    {
+     "name": "Bloomberg",
+     "url": "https://www.bloomberg.com/news/newsletters/2026-09-29/openai-targets-30-billion-in-new-funding-round-ahead-of-ipo"
+    },
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/09/29/openai-repotedly-in-talks-to-raise-30b-round-at-1-4t-valuation/"
+    },
+    {
+     "name": "Semafor",
+     "url": "https://www.semafor.com/article/09/30/2026/openai-hopes-to-raise-30b-in-new-funding-round"
+    }
+   ]
+  },
+  {
+   "cat": "research",
+   "title": "Canvas 数据：高校 AI 工具真正进课堂的很少",
+   "body": "Instructure 分析了美国 1950 万高校 Canvas 用户一学年的数据，排名最高的 AI 工具 Gemini 只覆盖约 8.8 万用户、211 所院校，连前 100 名都没进。虽然很多学校签了全校授权，但 AI 工具还很少被真正嵌入课程教学。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Inside Higher Ed",
+     "url": "https://www.insidehighered.com/news/tech-innovation/teaching-learning/2026/09/30/higher-eds-ai-integration-overhyped-new-data"
+    }
+   ]
+  }
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI",
+   "Anthropic",
+   "Google / DeepMind",
+   "DeepSeek",
+   "阿里通义 / Qwen",
+   "月之暗面 Kimi",
+   "智谱",
+   "@OpenAI",
+   "@AnthropicAI",
+   "@claudeai",
+   "@GoogleDeepMind",
+   "@deepseek_ai",
+   "@Alibaba_Qwen",
+   "@Kimi_Moonshot",
+   "Reuters",
+   "Bloomberg",
+   "TechCrunch",
+   "CNBC",
+   "Axios",
+   "机器之心",
+   "量子位",
+   "36氪",
+   "EdSurge",
+   "Inside Higher Ed",
+   "Gemini for Education",
+   "Techmeme",
+   "Hacker News"
+  ],
+  "candidates": 24
+ }
+}

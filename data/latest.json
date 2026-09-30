@@ -1,8 +1,8 @@
 {
  "date": "2026-09-30",
  "headline": "OpenAI DevDay 2026",
- "updatedAt": "2026-09-30T18:40:00+08:00",
- "count": 14,
+ "updatedAt": "2026-09-30T21:21:59+08:00",
+ "count": 17,
  "lead": {
   "cat": "product",
   "title": "OpenAI DevDay 2026",
@@ -26,14 +26,14 @@
    "tier": "lead"
   },
   {
-   "cat": "biz",
-   "title": "OpenAI 年化收入逼近 700 亿美元",
+   "cat": "policy",
+   "title": "白宫会谈后，六家 AI 巨头签署自律安全公约",
    "tier": "must"
   },
   {
-   "cat": "product",
-   "title": "Meta 成立企业 AI 平台，前 MongoDB CEO 掌舵",
-   "tier": "brief"
+   "cat": "biz",
+   "title": "OpenAI 洽谈 300 亿美元融资，上市推迟到 2027 年",
+   "tier": "must"
   }
  ]
 }
