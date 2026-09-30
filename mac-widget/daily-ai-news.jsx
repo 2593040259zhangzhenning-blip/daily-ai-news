@@ -1,8 +1,11 @@
 // Signal · Mac 桌面小组件（Übersicht）
 // 读网站上的同一份数据，设计和手机上的大号小组件一致。每 30 分钟刷新一次。
-// 轻点：在默认浏览器里打开网站。按住拖动：移动位置，松手后吸附到系统小组件的网格并记住。
-// 网格按这台 Mac（2560×1440）上原生小组件量出：每格 180（单位 163 + 间距 17），
-// 最左一列离屏幕左边 16，行的起点离 Übersicht 顶部 60（屏幕上是 90，菜单栏占 30）。
+// 轻点：在默认浏览器里打开网站。按住拖动：移动位置，松手后吸附到旁边的原生小组件并记住。
+//
+// 对齐方式：直接读系统里原生小组件的实际位置（窗口位置，不需要额外权限），
+// 以离得最近的原生小组件为基准，按它的格子（每格 180，小组件 163 + 间距 17）找最近的空位，
+// 不会压住原生小组件。原生小组件挪了，Signal 每分钟检查一次，被压住或错位就自动挪到最近的空位。
+// 桌面上没有原生小组件时，退回按屏幕边缘对齐。
 
 import { run } from "uebersicht";
 
@@ -10,8 +13,8 @@ const SITE = "https://2593040259zhangzhenning-blip.github.io/daily-ai-news/";
 
 export const refreshFrequency = 30 * 60 * 1000;
 
-// 位置记在本机，拖动后下次启动还在原处
-const POS_KEY = "daily-ai-news-pos-v2"; // 换了网格，旧位置作废
+// 位置记在本机
+const POS_KEY = "daily-ai-news-pos-v3";
 const loadPos = () => {
   try {
     const p = JSON.parse(localStorage.getItem(POS_KEY) || "null");
@@ -19,52 +22,143 @@ const loadPos = () => {
   } catch (e) {}
   return null;
 };
-// 和原生大号小组件同尺寸，吸附到原生小组件的网格
-const SIZE = 343;
-const GRID = { pitch: 180, left: 16, top: 60 }; // 默认位置：天气小组件（420）上方的空位
-const snap = (left, top) => {
-  const maxK = Math.max(0, Math.floor((window.innerWidth - GRID.left - SIZE) / GRID.pitch));
-  const maxJ = Math.max(0, Math.floor((window.innerHeight - GRID.top - SIZE) / GRID.pitch));
-  const k = Math.min(maxK, Math.max(0, Math.round((left - GRID.left) / GRID.pitch)));
-  const j = Math.min(maxJ, Math.max(0, Math.round((top - GRID.top) / GRID.pitch)));
-  return { left: GRID.left + k * GRID.pitch, top: GRID.top + j * GRID.pitch };
-};
-const saved = loadPos();
-const start = saved ? snap(saved.left, saved.top) : { left: GRID.left, top: GRID.top };
+const savePos = (p) => { try { localStorage.setItem(POS_KEY, JSON.stringify(p)); } catch (e) {} };
 
-export const className = `left: ${start.left}px; top: ${start.top}px;`;
+const SIZE = 343;          // 和原生大号小组件同尺寸
+const PITCH = 180;         // 原生网格每格
+const CELL = PITCH * 2;    // Signal 占 2×2 格
+const INSET = (CELL - SIZE) / 2; // 格子四周留出的间距（8.5）
+
+// 读原生小组件的位置：列出屏幕上的窗口，挑出桌面层、尺寸是 180 整数倍的那些（就是原生小组件的格子），
+// 同时拿到 Übersicht 窗口的位置，把屏幕坐标换成小组件坐标。
+const PROBE = `osascript -l JavaScript -e 'ObjC.import("CoreGraphics");
+var a = ObjC.deepUnwrap(ObjC.castRefToObject($.CGWindowListCopyWindowInfo(1, 0))) || [];
+var o = { host: null, cells: [] };
+var ok = function (v) { return v >= 179 && v <= 721 && Math.abs(v / 180 - Math.round(v / 180)) < 0.02; };
+a.forEach(function (w) {
+  var b = w.kCGWindowBounds, n = String(w.kCGWindowOwnerName || ""), L = w.kCGWindowLayer;
+  if (!b) return;
+  if (n.indexOf("bersicht") >= 0) { if (b.Width > 400 && (!o.host || b.Width * b.Height > o.host.w * o.host.h)) o.host = { x: b.X, y: b.Y, w: b.Width, h: b.Height }; return; }
+  if (L < -2147483000 && ok(b.Width) && ok(b.Height)) o.cells.push({ x: b.X, y: b.Y, w: b.Width, h: b.Height });
+});
+JSON.stringify(o);'`;
+
+const readNative = () =>
+  run(PROBE)
+    .then((out) => {
+      const o = JSON.parse(out);
+      const hx = o.host ? o.host.x : 0, hy = o.host ? o.host.y : 0;
+      return o.cells
+        .map((c) => ({ x: c.x - hx, y: c.y - hy, w: c.w, h: c.h }))
+        .filter((c) => c.x + c.w > 0 && c.y + c.h > 0 && c.x < window.innerWidth && c.y < window.innerHeight);
+    })
+    .catch(() => []);
+
+const overlaps = (a, b) => a.x < b.x + b.w - 1 && b.x < a.x + a.w - 1 && a.y < b.y + b.h - 1 && b.y < a.y + a.h - 1;
+
+// 给定 Signal 左上角（小组件坐标），返回吸附后的位置
+const snapTo = (left, top, cells) => {
+  const W = window.innerWidth, H = window.innerHeight;
+  const cx = left - INSET, cy = top - INSET; // 换成格子坐标
+  const fits = (x, y) => x >= -1 && y >= -1 && x + CELL <= W + 1 && y + CELL <= H + 1;
+  if (!cells.length) {
+    // 没有原生小组件：靠哪边就按哪边的边距对齐
+    const m = 8;
+    const fromRight = cx + CELL / 2 > W / 2;
+    const k = Math.max(0, Math.round((fromRight ? W - m - CELL - cx : cx - m) / PITCH));
+    const x = fromRight ? W - m - CELL - k * PITCH : m + k * PITCH;
+    const j = Math.max(0, Math.min(Math.floor((H - m - CELL) / PITCH), Math.round((cy - m) / PITCH)));
+    return { left: x + INSET, top: m + j * PITCH + INSET };
+  }
+  // 以最近的原生小组件为基准
+  const d2 = (c) => (c.x + c.w / 2 - (cx + CELL / 2)) ** 2 + (c.y + c.h / 2 - (cy + CELL / 2)) ** 2;
+  const anchor = cells.reduce((a, c) => (d2(c) < d2(a) ? c : a));
+  const i0 = Math.round((cx - anchor.x) / PITCH), j0 = Math.round((cy - anchor.y) / PITCH);
+  let best = null;
+  for (let di = -12; di <= 12; di++) {
+    for (let dj = -8; dj <= 8; dj++) {
+      const x = anchor.x + (i0 + di) * PITCH, y = anchor.y + (j0 + dj) * PITCH;
+      if (!fits(x, y)) continue;
+      const r = { x, y, w: CELL, h: CELL };
+      if (cells.some((c) => overlaps(r, c))) continue;
+      const dist = (x - cx) ** 2 + (y - cy) ** 2;
+      if (!best || dist < best.dist) best = { x, y, dist };
+    }
+  }
+  if (!best) return { left, top }; // 找不到空位就原地不动
+  return { left: best.x + INSET, top: best.y + INSET };
+};
+
+// 第一次出现：放在原生小组件那一列的正上方（放不下就找最近的空位）；没有原生小组件就放右上角
+const defaultPos = (cells) => {
+  if (!cells.length) return snapTo(window.innerWidth, 0, cells);
+  const topmost = cells.reduce((a, c) => (c.y < a.y ? c : a));
+  return snapTo(topmost.x + INSET, topmost.y - CELL + INSET, cells);
+};
+
+const saved = loadPos();
+export const className = saved
+  ? `left: ${saved.left}px; top: ${saved.top}px;`
+  : `right: 24px; top: 24px;`;
+
+const box = () => {
+  const el = document.querySelector(".dan");
+  return el ? el.parentElement : null; // Übersicht 包在外面、带定位的那一层
+};
+const moveBox = (b, p, animate) => {
+  if (animate) {
+    b.style.transition = "left .18s ease, top .18s ease";
+    setTimeout(() => { b.style.transition = ""; }, 220);
+  }
+  Object.assign(b.style, { left: p.left + "px", top: p.top + "px", right: "auto", bottom: "auto" });
+};
+
+// 每分钟看一眼原生小组件：被压住、错位或者第一次出现，就挪到最近的空位
+let dragging = null;
+const relayout = (animate) => {
+  const b = box();
+  if (!b || dragging) return;
+  readNative().then((cells) => {
+    if (dragging) return;
+    const cur = loadPos();
+    const r = b.getBoundingClientRect();
+    const p = cur ? snapTo(r.left, r.top, cells) : defaultPos(cells);
+    if (Math.abs(p.left - r.left) > 0.5 || Math.abs(p.top - r.top) > 0.5) moveBox(b, p, animate);
+    savePos(p);
+  });
+};
+if (window.__signalTimer) clearInterval(window.__signalTimer);
+window.__signalTimer = setInterval(() => relayout(true), 60 * 1000);
+setTimeout(() => relayout(false), 800);
 
 // 按住移动超过 4 像素算拖动，否则算点击
-let dragging = null;
 const onMouseDown = (e) => {
   if (e.button !== 0) return;
-  const box = e.currentTarget.parentElement; // Übersicht 包在外面、带定位的那一层
-  const rect = box.getBoundingClientRect();
-  dragging = { box, dx: e.clientX - rect.left, dy: e.clientY - rect.top, x0: e.clientX, y0: e.clientY, moved: false };
+  const b = e.currentTarget.parentElement;
+  const rect = b.getBoundingClientRect();
+  dragging = { b, dx: e.clientX - rect.left, dy: e.clientY - rect.top, x0: e.clientX, y0: e.clientY, moved: false };
+  const cellsP = readNative(); // 按下时就开始读，松手时基本已经读完
   const move = (ev) => {
     if (!dragging) return;
     if (!dragging.moved && Math.hypot(ev.clientX - dragging.x0, ev.clientY - dragging.y0) < 4) return;
     dragging.moved = true;
     const left = Math.max(0, Math.min(window.innerWidth - 60, ev.clientX - dragging.dx));
     const top = Math.max(0, Math.min(window.innerHeight - 60, ev.clientY - dragging.dy));
-    Object.assign(dragging.box.style, { left: left + "px", top: top + "px", right: "auto", bottom: "auto" });
+    Object.assign(dragging.b.style, { left: left + "px", top: top + "px", right: "auto", bottom: "auto" });
   };
   const up = () => {
     window.removeEventListener("mousemove", move);
     window.removeEventListener("mouseup", up);
     const d = dragging;
-    dragging = null;
     if (!d) return;
-    if (d.moved) {
-      const r = d.box.getBoundingClientRect();
-      const p = snap(r.left, r.top);
-      d.box.style.transition = "left .18s ease, top .18s ease";
-      Object.assign(d.box.style, { left: p.left + "px", top: p.top + "px" });
-      setTimeout(() => { d.box.style.transition = ""; }, 220);
-      try { localStorage.setItem(POS_KEY, JSON.stringify(p)); } catch (err) {}
-    } else {
-      open();
-    }
+    if (!d.moved) { dragging = null; open(); return; }
+    const r = d.b.getBoundingClientRect();
+    cellsP.then((cells) => {
+      const p = snapTo(r.left, r.top, cells);
+      moveBox(d.b, p, true);
+      savePos(p);
+      dragging = null;
+    });
   };
   window.addEventListener("mousemove", move);
   window.addEventListener("mouseup", up);
