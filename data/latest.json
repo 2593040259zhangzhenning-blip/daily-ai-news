@@ -1,8 +1,8 @@
 {
  "date": "2026-10-01",
  "headline": "谷歌 Gemini 4 Argon 登场",
- "updatedAt": "2026-10-01T13:14:09+08:00",
- "count": 6,
+ "updatedAt": "2026-10-01T21:21:48+08:00",
+ "count": 7,
  "lead": {
   "cat": "model",
   "title": "谷歌发布 Gemini 4 Argon，先给网络安全伙伴用",
@@ -20,6 +20,11 @@
    "tier": "must"
   },
   {
+   "cat": "china",
+   "title": "腾讯据报向甲骨文租 10 万枚 AI 芯片",
+   "tier": "brief"
+  },
+  {
    "cat": "product",
    "title": "Claude Sonnet 4.5 将于 11 月 30 日退役",
    "tier": "brief"
@@ -27,11 +32,6 @@
   {
    "cat": "research",
    "title": "Google.org 资助三项高校 AI 素养项目",
-   "tier": "brief"
-  },
-  {
-   "cat": "biz",
-   "title": "ElevenLabs 估值翻倍至 220 亿美元",
    "tier": "brief"
   }
  ]

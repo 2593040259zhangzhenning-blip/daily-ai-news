@@ -154,6 +154,71 @@
     ],
     "candidates": 42
    }
+  },
+  {
+   "key": "2026-10-01-2evening",
+   "date": "2026-10-01",
+   "edition": "evening",
+   "createdAt": "2026-10-01T21:21:48+08:00",
+   "headline": "腾讯 70 亿美元海外租算力",
+   "items": [
+    {
+     "cat": "china",
+     "title": "腾讯据报向甲骨文租 10 万枚 AI 芯片",
+     "body": "据英国《金融时报》报道，腾讯与甲骨文签下为期五年、约 70 亿美元的租用协议，通过甲骨文在东南亚的数据中心使用约 10 万枚国内买不到的先进 AI 芯片，约三成款项预付。美国出口管制禁止中国公司直接购买这类芯片，但目前并不禁止在海外租用算力；这笔钱将用于追赶 DeepSeek、阿里等对手的混元模型研发。",
+     "score": 6,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Reuters / Investing.com（转引 FT）",
+       "url": "https://www.investing.com/news/stock-market-news/tencent-leases-100000-chips-from-oracle-for-7-bln-ft-4926203"
+      },
+      {
+       "name": "TrendForce",
+       "url": "https://www.trendforce.com/news/2026/10/01/news-tencent-reportedly-signs-7b-deal-to-lease-100000-ai-chips-from-oracle-in-southeast-asia/"
+      },
+      {
+       "name": "中时新闻网",
+       "url": "https://www.chinatimes.com/realtimenews/20261001003581-260410"
+      }
+     ]
+    }
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI",
+     "Anthropic",
+     "Google / DeepMind",
+     "Meta",
+     "微软",
+     "英伟达",
+     "xAI",
+     "DeepSeek",
+     "阿里通义 / Qwen",
+     "月之暗面 Kimi",
+     "@OpenAI",
+     "@AnthropicAI",
+     "@claudeai",
+     "@GoogleDeepMind",
+     "@deepseek_ai",
+     "@Alibaba_Qwen",
+     "@Kimi_Moonshot",
+     "Reuters",
+     "Bloomberg",
+     "Financial Times",
+     "TechCrunch",
+     "CNBC",
+     "机器之心",
+     "量子位",
+     "Inside Higher Ed",
+     "EdSurge",
+     "中国教育部（moe.gov.cn）",
+     "ChatGPT Edu",
+     "Techmeme",
+     "Hacker News"
+    ],
+    "candidates": 28
+   }
   }
  ],
  "specials": []
