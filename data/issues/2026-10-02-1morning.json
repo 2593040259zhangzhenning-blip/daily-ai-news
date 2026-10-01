@@ -1,0 +1,138 @@
+{
+ "key": "2026-10-02-1morning",
+ "date": "2026-10-02",
+ "edition": "morning",
+ "createdAt": "2026-10-02T06:57:52+08:00",
+ "headline": "Anthropic 冲刺 11 月上市",
+ "items": [
+  {
+   "cat": "biz",
+   "title": "新进展：Anthropic 瞄准 11 月中旬上市",
+   "body": "据彭博报道，Anthropic 计划最早 11 月 9 日那周开始路演，争取在感恩节（11/26）前挂牌，比原定的 10 月晚一些；潜在投资者认为合理估值在 1.8 万亿到 2 万亿美元之间，募资规模有望比肩甚至超过 SpaceX。秘密递交的招股书还显示，2025 年近一半收入经由亚马逊和谷歌云渠道获得，这两家既是投资方也是竞争对手。",
+   "score": 8,
+   "tier": "lead",
+   "summary": "Claude 母公司拟感恩节前上市，估值或达 2 万亿美元。",
+   "sources": [
+    {
+     "name": "Bloomberg",
+     "url": "https://www.bloomberg.com/news/articles/2026-10-01/anthropic-said-to-target-mega-ipo-before-thanksgiving-holiday"
+    },
+    {
+     "name": "Investing.com",
+     "url": "https://uk.investing.com/news/stock-market-news/anthropic-targets-midnovember-for-public-debut--report-4892174"
+    },
+    {
+     "name": "The Star（转引 Reuters）",
+     "url": "https://www.thestar.com.my/business/business-news/2026/10/01/anthropic-ipo-filing-highlights-big-tech-reliance"
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "OpenAI 解雇三名安全研究员",
+   "body": "据《华尔街日报》和 TechCrunch 报道，OpenAI 10/1 证实解雇了安全团队的三名成员，理由是他们违反公司流程处理敏感信息，据称把内部材料分享给了一家外部 AI 安全组织。此事紧接着 GPT-6.1 Astra 因安全测试不过关被取消发布、FTC 启动调查，OpenAI 内部在安全问题上的紧张关系进一步公开化。",
+   "score": 7,
+   "tier": "must",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/01/openai-cuts-ties-with-three-safety-researchers-wsj-reports/"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "ChatGPT 上线虚拟试衣和收藏夹",
+   "body": "OpenAI 面向全球 ChatGPT 用户推出购物新功能：上传自拍就能看衣服、配饰穿在自己身上的效果，还能把看中的商品存进收藏夹。背后用的是新的 ChatGPT Images 2.5 图像模型，官方称光影更自然、改图指令更听话、出图更快。",
+   "score": 6,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/"
+    }
+   ]
+  },
+  {
+   "cat": "china",
+   "title": "DeepSeek 联手华为开源昇腾编程工具",
+   "body": "DeepSeek 与华为公布一批面向昇腾芯片的计算和通信库、基于 128 颗昇腾 950 的超节点架构，并开源了跨硬件的内核编程语言 TileLang 及昇腾适配代码。目标是补上国产芯片在软件生态上的短板，减少对英伟达 CUDA 的依赖。",
+   "score": 6,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "TechNode Global",
+     "url": "https://technode.global/2026/10/01/deepseek-huawei-ascend-ai-programming-tools"
+    },
+    {
+     "name": "The Daily Upside",
+     "url": "https://thedailyupside.com/technology/artificial-intelligence/deepseek-and-huawei-challenge-the-software-that-cements-nvidias-ai-dominance"
+    }
+   ]
+  },
+  {
+   "cat": "biz",
+   "title": "巴克莱银行扩大使用 Claude",
+   "body": "Anthropic 宣布巴克莱全面扩大 Claude 应用：已有 1.6 万多名员工使用基于 Claude 的内部知识助手，全球市场部门每天用它分拣约 12 万封邮件，并计划年底前一半开发者用上 Claude Code。大银行成规模采用，是 Anthropic 上市前企业业务的重要背书。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Anthropic 官方",
+     "url": "https://www.anthropic.com/news/barclays-scales-claude"
+    },
+    {
+     "name": "Bloomberg",
+     "url": "https://www.bloomberg.com/news/articles/2026-10-01/barclays-expands-use-of-anthropic-s-claude-in-efficiency-push"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "亚马逊开源 2B「决策模型」",
+   "body": "AWS 旗下 Strands Labs 开源了 Strands Decider 2B，它不生成长文本，只在给定选项里挑一个并给出置信度，适合做分类、路由等自动化环节，号称比大模型更快更省。这类决策模型最近扎堆出现，OpenAI 在 DevDay 上也推出了同类的 Decisions API。",
+   "score": 4,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/"
+    }
+   ]
+  }
+ ],
+ "watch": [
+  "Anthropic 何时公开递交招股书（S-1）",
+  "OpenAI 安全团队风波与 FTC 调查的后续",
+  "月之暗面对 OpenAI 蒸馏指控的正式回应"
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI",
+   "Anthropic",
+   "Google / DeepMind",
+   "DeepSeek",
+   "阿里通义 / Qwen",
+   "月之暗面 Kimi",
+   "智谱",
+   "字节豆包",
+   "@OpenAI",
+   "@AnthropicAI",
+   "@claudeai",
+   "Reuters",
+   "Bloomberg",
+   "TechCrunch",
+   "The Verge",
+   "CNBC",
+   "机器之心",
+   "量子位",
+   "EdSurge",
+   "Inside Higher Ed",
+   "Times Higher Education",
+   "中国教育部（moe.gov.cn）",
+   "Gemini for Education",
+   "Techmeme"
+  ],
+  "candidates": 45
+ }
+}

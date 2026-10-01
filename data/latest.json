@@ -1,37 +1,37 @@
 {
- "date": "2026-10-01",
- "headline": "谷歌 Gemini 4 Argon 登场",
- "updatedAt": "2026-10-01T21:21:48+08:00",
- "count": 7,
+ "date": "2026-10-02",
+ "headline": "Anthropic 冲刺 11 月上市",
+ "updatedAt": "2026-10-02T06:57:52+08:00",
+ "count": 6,
  "lead": {
-  "cat": "model",
-  "title": "谷歌发布 Gemini 4 Argon，先给网络安全伙伴用",
-  "summary": "谷歌新旗舰跑分领先，但暂只开放给网络安全伙伴。"
+  "cat": "biz",
+  "title": "新进展：Anthropic 瞄准 11 月中旬上市",
+  "summary": "Claude 母公司拟感恩节前上市，估值或达 2 万亿美元。"
  },
  "items": [
   {
    "cat": "policy",
-   "title": "美国 FTC 据报调查 OpenAI、Anthropic 等前沿实验室",
+   "title": "OpenAI 解雇三名安全研究员",
    "tier": "must"
   },
   {
-   "cat": "china",
-   "title": "OpenAI 点名月之暗面相关人员蒸馏其模型",
-   "tier": "must"
+   "cat": "product",
+   "title": "ChatGPT 上线虚拟试衣和收藏夹",
+   "tier": "brief"
   },
   {
    "cat": "china",
-   "title": "腾讯据报向甲骨文租 10 万枚 AI 芯片",
+   "title": "DeepSeek 联手华为开源昇腾编程工具",
+   "tier": "brief"
+  },
+  {
+   "cat": "biz",
+   "title": "巴克莱银行扩大使用 Claude",
    "tier": "brief"
   },
   {
    "cat": "product",
-   "title": "Claude Sonnet 4.5 将于 11 月 30 日退役",
-   "tier": "brief"
-  },
-  {
-   "cat": "research",
-   "title": "Google.org 资助三项高校 AI 素养项目",
+   "title": "亚马逊开源 2B「决策模型」",
    "tier": "brief"
   }
  ]

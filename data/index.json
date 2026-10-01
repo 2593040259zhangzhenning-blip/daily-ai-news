@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T13:21:49+00:00",
+ "generatedAt": "2026-10-01T22:57:52+00:00",
  "dates": [
   {
    "date": "2026-09-29",
@@ -25,6 +25,13 @@
    "headline": "谷歌 Gemini 4 Argon 登场",
    "updatedAt": "2026-10-01T21:21:48+08:00",
    "count": 7,
+   "specials": []
+  },
+  {
+   "date": "2026-10-02",
+   "headline": "Anthropic 冲刺 11 月上市",
+   "updatedAt": "2026-10-02T06:57:52+08:00",
+   "count": 6,
    "specials": []
   }
  ]
