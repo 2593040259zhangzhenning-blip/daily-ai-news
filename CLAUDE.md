@@ -60,11 +60,12 @@ Signal 是张振宁（Zhenning）给**自己**用的 AI 新闻简报：每天早
                      两个小组件读 data/latest.json
 ```
 
-- **定时任务**（在 Claude 的「定时任务」里，**不在这个仓库里**）：
+- **定时任务**（运行在 Claude 的「定时任务」里）：
   - Signal · 早间：每天北京时间 06:50
   - Signal · 晚间：每天 21:18，门槛高，没有重要新动态就什么都不写
   - Signal · 专题：不定时，手动触发并附上活动名
-  - 三个任务都设为自动批准。任务提示词只能用定时任务工具查看和修改。
+  - 三个任务都设为自动批准，模型用 Opus（用户 2026-10-01 决定保留 Opus，不换 Sonnet）。
+  - 提示词原文备份在 `tasks/`。实际生效的是定时任务里的版本；改提示词时，定时任务和 `tasks/` 里的文件要一起改。
 - **数据**：`data/issues/<日期>-1morning.json`、`-2evening.json` 是原始数据，永久保存；`index.json`、`days/`、`latest.json` 都由脚本重建，**不要手改**。
 - **发布**：网站从 `gh-pages` 分支发布。原因是自动化推送到 main 不会触发 Pages 重建，所以 `.github/workflows/pages.yml` 在每次推送和每 15 分钟把 gh-pages 同步到 main 并按需重新发布。
 - **iPhone 小组件**（Scriptable）：手机里只粘贴了一次 `widget/loader.js`，它每次从网站拉 `widget/daily-ai-news-widget.js` 来运行。所以改 widget 文件，手机自动跟着变；改 loader.js 则需要用户重新粘贴。
@@ -79,7 +80,7 @@ Signal 是张振宁（Zhenning）给**自己**用的 AI 新闻简报：每天早
 
 ## 改东西时注意
 
-- 改数据格式 → 同时改 `add_issue.py` 校验、网页、两个小组件、定时任务提示词，五处要一致。
+- 改数据格式 → 同时改 `add_issue.py` 校验、网页、两个小组件、定时任务提示词（连同 `tasks/` 备份），五处要一致。
 - 改分类颜色或名称 → 网页、Scriptable 小组件、Mac 小组件三处同步。
 - 推送后确认 GitHub Actions 跑成功、网站已更新，再告诉用户「上线了」。
 - 提交时用 `git -c user.name=Claude -c user.email=noreply@anthropic.com`。
