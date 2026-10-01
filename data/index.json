@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T13:21:59+00:00",
+ "generatedAt": "2026-10-01T05:14:09+00:00",
  "dates": [
   {
    "date": "2026-09-29",
@@ -19,6 +19,13 @@
      "title": "OpenAI DevDay 2026"
     }
    ]
+  },
+  {
+   "date": "2026-10-01",
+   "headline": "谷歌 Gemini 4 Argon 登场",
+   "updatedAt": "2026-10-01T13:14:09+08:00",
+   "count": 6,
+   "specials": []
   }
  ]
 }

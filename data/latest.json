@@ -1,39 +1,38 @@
 {
- "date": "2026-09-30",
- "headline": "OpenAI DevDay 2026",
- "updatedAt": "2026-09-30T21:21:59+08:00",
- "count": 17,
+ "date": "2026-10-01",
+ "headline": "谷歌 Gemini 4 Argon 登场",
+ "updatedAt": "2026-10-01T13:14:09+08:00",
+ "count": 6,
  "lead": {
-  "cat": "product",
-  "title": "OpenAI DevDay 2026",
-  "summary": "OpenAI 把重心从聊天转向「替你干活」：推出常驻云端的智能体 Dots、更便宜的 GPT-6…",
-  "special": "openai-devday-2026"
+  "cat": "model",
+  "title": "谷歌发布 Gemini 4 Argon，先给网络安全伙伴用",
+  "summary": "谷歌新旗舰跑分领先，但暂只开放给网络安全伙伴。"
  },
  "items": [
   {
-   "cat": "product",
-   "title": "Dots：常驻云端、持续干活的智能体",
-   "tier": "must"
-  },
-  {
-   "cat": "product",
-   "title": "GPT-6.1 Sol：接近旗舰、价格五分之一",
-   "tier": "must"
-  },
-  {
-   "cat": "biz",
-   "title": "Anthropic 招股书草稿曝光：巨亏与高增长并存",
-   "tier": "lead"
-  },
-  {
    "cat": "policy",
-   "title": "白宫会谈后，六家 AI 巨头签署自律安全公约",
+   "title": "美国 FTC 据报调查 OpenAI、Anthropic 等前沿实验室",
    "tier": "must"
   },
   {
-   "cat": "biz",
-   "title": "OpenAI 洽谈 300 亿美元融资，上市推迟到 2027 年",
+   "cat": "china",
+   "title": "OpenAI 点名月之暗面相关人员蒸馏其模型",
    "tier": "must"
+  },
+  {
+   "cat": "product",
+   "title": "Claude Sonnet 4.5 将于 11 月 30 日退役",
+   "tier": "brief"
+  },
+  {
+   "cat": "research",
+   "title": "Google.org 资助三项高校 AI 素养项目",
+   "tier": "brief"
+  },
+  {
+   "cat": "biz",
+   "title": "ElevenLabs 估值翻倍至 220 亿美元",
+   "tier": "brief"
   }
  ]
 }

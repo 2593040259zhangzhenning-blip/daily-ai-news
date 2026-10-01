@@ -1,0 +1,154 @@
+{
+ "key": "2026-10-01-1morning",
+ "date": "2026-10-01",
+ "edition": "morning",
+ "createdAt": "2026-10-01T13:14:09+08:00",
+ "headline": "谷歌 Gemini 4 Argon 登场",
+ "items": [
+  {
+   "cat": "model",
+   "title": "谷歌发布 Gemini 4 Argon，先给网络安全伙伴用",
+   "body": "谷歌推出新旗舰 Gemini 4 Argon，称在软件工程、漏洞修复和长视频理解等基准上超过 GPT-6 Astra 和 Claude 系列，目前只通过 Fairwind 计划开放给少数网络安全防御方，之后再面向付费 API、AI Ultra 订阅用户和普通消费者，尚无时间表。API 价格公布为每百万 token 输入 2 美元、输出 10 美元的优惠价，之后恢复为 4/20 美元。另据彭博，部分谷歌员工认为它跑分亮眼，但在一些真实编程任务上表现吃力。",
+   "score": 9,
+   "tier": "lead",
+   "summary": "谷歌新旗舰跑分领先，但暂只开放给网络安全伙伴。",
+   "sources": [
+    {
+     "name": "Google 官方博客",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+    },
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/"
+    },
+    {
+     "name": "Axios",
+     "url": "https://www.axios.com/2026/09/30/google-gemini-4"
+    },
+    {
+     "name": "Bloomberg",
+     "url": "https://www.bloomberg.com/news/articles/2026-09-30/google-grapples-with-employee-skepticism-about-new-gemini-model"
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "美国 FTC 据报调查 OpenAI、Anthropic 等前沿实验室",
+   "body": "据《纽约邮报》、CNBC 等报道，美国联邦贸易委员会已对 OpenAI、Anthropic 及其他前沿 AI 公司展开调查，关注 AI 产品对消费者可能造成的伤害，背景包括近期多起 AI 代理失控事件。调查紧接在白宫自律公约签署之后，意味着行业自律之外，监管机构仍可能动用消费者保护法追责。",
+   "score": 7,
+   "tier": "must",
+   "sources": [
+    {
+     "name": "Semafor",
+     "url": "https://www.semafor.com/article/09/30/2026/ftc-to-investigate-openai-anthropic-for-potential-consumer-harms"
+    },
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/ftc-launches-sweeping-probe-into-openai-anthropic-and-other-ai-labs-over-consumer-protection-concerns/"
+    },
+    {
+     "name": "Washington Times",
+     "url": "https://www.washingtontimes.com/news/2026/sep/30/ftc-probes-ai-giants-consumer-safety-risks/"
+    }
+   ]
+  },
+  {
+   "cat": "china",
+   "title": "OpenAI 点名月之暗面相关人员蒸馏其模型",
+   "body": "OpenAI 9/30 公开称，与月之暗面有关的人员通过上万个账号试图提取其模型被加密的推理过程，7 月下旬单日请求峰值约 1.6 万次；公司已在 7 月底封号并加固防护，并把情况通报给其他实验室和美国政府。这是 OpenAI 首次公开点名 Kimi 背后的公司，此前 Anthropic 也提出过类似指控；截至发稿月之暗面尚未回应。",
+   "score": 7,
+   "tier": "must",
+   "sources": [
+    {
+     "name": "Bloomberg",
+     "url": "https://www.bloomberg.com/news/articles/2026-09-30/openai-blames-moonshot-for-mass-data-extraction-on-its-ai-models"
+    },
+    {
+     "name": "The Next Web",
+     "url": "https://thenextweb.com/news/openai-moonshot-distillation-campaign-hidden-reasoning"
+    },
+    {
+     "name": "钜亨网",
+     "url": "https://news.cnyes.com/news/id/6619150"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "Claude Sonnet 4.5 将于 11 月 30 日退役",
+   "body": "Anthropic 宣布弃用 Claude Sonnet 4.5，计划 11 月 30 日在 Claude API 等自有平台下线，推荐迁移到 Sonnet 5.5，届时调用旧型号的请求会直接失败。用 API 或第三方工具接入 Claude 的人，需要提前检查自己配置里的模型名。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "The Decoder（Mixed）",
+     "url": "https://mixed-news.com/en/anthropic-deprecates-claude-sonnet-4-5-61-days-notice/"
+    }
+   ]
+  },
+  {
+   "cat": "research",
+   "title": "Google.org 资助三项高校 AI 素养项目",
+   "body": "谷歌公益部门在 EDUCAUSE 年会期间宣布资助三个高等教育项目，涉及成人学习者的 AI 课程认证、城市型大学的职业导向学习，以及社区学院转型，覆盖 30 所大学和多所社区学院。金额未公开，但显示科技公司正把 AI 普及从工具授权延伸到教学改造。",
+   "score": 4,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Google 官方博客",
+     "url": "https://blog.google/company-news/outreach-and-initiatives/google-org/educause-2026"
+    }
+   ]
+  },
+  {
+   "cat": "biz",
+   "title": "ElevenLabs 估值翻倍至 220 亿美元",
+   "body": "语音 AI 公司 ElevenLabs 完成 3 亿美元员工股份出售，由 Wellington 和 T. Rowe Price 领投，估值从 2 月的 110 亿美元翻倍。前天它刚发布 v4 语音模型，说明语音赛道仍受资本追捧。",
+   "score": 4,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/09/30/ai-voice-startup-elevenlabs-doubles-valuation-to-22b/"
+    }
+   ]
+  }
+ ],
+ "watch": [
+  "Gemini 4 Argon 何时向 Gemini 应用和 AI Ultra 用户开放",
+  "月之暗面对 OpenAI 蒸馏指控的回应",
+  "FTC 调查的具体范围与涉及公司名单"
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI",
+   "Anthropic",
+   "Google / DeepMind",
+   "Meta",
+   "DeepSeek",
+   "阿里通义 / Qwen",
+   "月之暗面 Kimi",
+   "智谱",
+   "@OpenAI",
+   "@AnthropicAI",
+   "@claudeai",
+   "@deepseek_ai",
+   "@Alibaba_Qwen",
+   "@Kimi_Moonshot",
+   "Bloomberg",
+   "TechCrunch",
+   "CNBC",
+   "Axios",
+   "机器之心",
+   "量子位",
+   "36氪",
+   "EdSurge",
+   "Inside Higher Ed",
+   "中国教育部（moe.gov.cn）",
+   "ChatGPT Edu",
+   "Claude for Education",
+   "Gemini for Education",
+   "Techmeme"
+  ],
+  "candidates": 42
+ }
+}
