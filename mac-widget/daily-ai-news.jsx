@@ -1,10 +1,11 @@
 // Signal · Mac 桌面小组件（Übersicht）
 // 读网站上的同一份数据，设计和手机上的大号小组件一致。每 30 分钟刷新一次。
-// 轻点：在默认浏览器里打开网站。按住拖动：移动位置，松手后吸附到旁边的原生小组件并记住。
+// 轻点：在默认浏览器里打开网站。按住 ⌥ Option 再拖：移动位置，松手后吸附到旁边的原生小组件并记住。
+// 位置锁定：不按 ⌥ 拖不动；摆好之后也不会再自己挪。
 //
 // 对齐方式：直接读系统里原生小组件的实际位置（窗口位置，不需要额外权限），
 // 以离得最近的原生小组件为基准，按它的格子（每格 180，小组件 163 + 间距 17）找最近的空位，
-// 不会压住原生小组件。原生小组件挪了，Signal 每分钟检查一次，被压住或错位就自动挪到最近的空位。
+// 不会压住原生小组件。只在第一次出现、以及按 ⌥ 拖动松手时吸附，其余时间位置固定不动。
 // 桌面上没有原生小组件时，退回按屏幕边缘对齐。
 
 import { run } from "uebersicht";
@@ -113,35 +114,33 @@ const moveBox = (b, p, animate) => {
   Object.assign(b.style, { left: p.left + "px", top: p.top + "px", right: "auto", bottom: "auto" });
 };
 
-// 每分钟看一眼原生小组件：被压住、错位或者第一次出现，就挪到最近的空位
+// 位置锁定：记过位置就不再自动挪。只有第一次出现（还没记过位置）时自动找空位摆好。
 let dragging = null;
-const relayout = (animate) => {
+const placeFirstTime = () => {
   const b = box();
-  if (!b || dragging) return;
+  if (!b || loadPos()) return;
   readNative().then((cells) => {
-    if (dragging) return;
-    const cur = loadPos();
-    const r = b.getBoundingClientRect();
-    const p = cur ? snapTo(r.left, r.top, cells) : defaultPos(cells);
-    if (Math.abs(p.left - r.left) > 0.5 || Math.abs(p.top - r.top) > 0.5) moveBox(b, p, animate);
+    if (dragging || loadPos()) return;
+    const p = defaultPos(cells);
+    moveBox(b, p, false);
     savePos(p);
   });
 };
-if (window.__signalTimer) clearInterval(window.__signalTimer);
-window.__signalTimer = setInterval(() => relayout(true), 60 * 1000);
-setTimeout(() => relayout(false), 800);
+if (window.__signalTimer) { clearInterval(window.__signalTimer); window.__signalTimer = null; } // 停掉旧版每分钟自动挪位置的定时器
+setTimeout(placeFirstTime, 800);
 
-// 按住移动超过 4 像素算拖动，否则算点击
+// 按住 ⌥ 移动超过 4 像素算拖动；不按 ⌥ 时只能点击，拖了也不动
 const onMouseDown = (e) => {
   if (e.button !== 0) return;
   const b = e.currentTarget.parentElement;
   const rect = b.getBoundingClientRect();
-  dragging = { b, dx: e.clientX - rect.left, dy: e.clientY - rect.top, x0: e.clientX, y0: e.clientY, moved: false };
-  const cellsP = readNative(); // 按下时就开始读，松手时基本已经读完
+  dragging = { b, dx: e.clientX - rect.left, dy: e.clientY - rect.top, x0: e.clientX, y0: e.clientY, moved: false, canMove: e.altKey };
+  const cellsP = e.altKey ? readNative() : Promise.resolve([]); // 按下时就开始读，松手时基本已经读完
   const move = (ev) => {
     if (!dragging) return;
     if (!dragging.moved && Math.hypot(ev.clientX - dragging.x0, ev.clientY - dragging.y0) < 4) return;
     dragging.moved = true;
+    if (!dragging.canMove) return;
     const left = Math.max(0, Math.min(window.innerWidth - 60, ev.clientX - dragging.dx));
     const top = Math.max(0, Math.min(window.innerHeight - 60, ev.clientY - dragging.dy));
     Object.assign(dragging.b.style, { left: left + "px", top: top + "px", right: "auto", bottom: "auto" });
@@ -152,6 +151,7 @@ const onMouseDown = (e) => {
     const d = dragging;
     if (!d) return;
     if (!d.moved) { dragging = null; open(); return; }
+    if (!d.canMove) { dragging = null; return; } // 没按 ⌥：不动，也不打开
     const r = d.b.getBoundingClientRect();
     cellsP.then((cells) => {
       const p = snapTo(r.left, r.top, cells);
@@ -268,7 +268,7 @@ export const render = ({ data, error }) => {
   }
   const lead = data.lead;
   return (
-    <div className="dan" onMouseDown={onMouseDown} title="点一下打开 Signal，按住可拖动">
+    <div className="dan" onMouseDown={onMouseDown} title="点一下打开 Signal，按住 ⌥ 拖动可移动位置">
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <Panel c={lead.cat}>
         <span className="dan-d">{longDate(data.date)}</span>
