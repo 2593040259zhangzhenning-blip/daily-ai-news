@@ -1,0 +1,108 @@
+{
+ "date": "2026-10-03",
+ "issues": [
+  {
+   "key": "2026-10-03-1morning",
+   "date": "2026-10-03",
+   "edition": "morning",
+   "createdAt": "2026-10-03T07:06:56+08:00",
+   "headline": "苹果给 Mac 上的 AI 代理收权限",
+   "items": [
+    {
+     "cat": "product",
+     "title": "苹果收紧 macOS「完全磁盘访问」权限",
+     "body": "苹果 10/2 表示将为 macOS 的「完全磁盘访问」增加额外管控，理由是 AI 代理越来越自主，拿到这种全盘权限后风险会大幅上升；今后用户要更明确、更主动地操作才能授予，具体上线时间未公布。在 Mac 上用 Claude、ChatGPT 等桌面代理的人，之后授权流程可能变繁琐，部分功能也可能被迫改为申请更窄的权限。",
+     "score": 7,
+     "tier": "lead",
+     "summary": "AI 代理权限变大，苹果要让用户在 Mac 上更谨慎地授权。",
+     "sources": [
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/"
+      },
+      {
+       "name": "MacRumors",
+       "url": "https://www.macrumors.com/2026/10/02/apple-announces-macos-full-disk-access-changes/"
+      }
+     ]
+    },
+    {
+     "cat": "biz",
+     "title": "Anthropic 投 1 亿美元培养 1 万名 Claude 工程师",
+     "body": "Anthropic 推出 Claude Frontier Academy，承诺投入 1 亿美元，计划到 2027 年底培训 1 万名能在大企业落地 Claude 的工程师，形式是线下集训加考核，再回本单位做 12 周实战项目。首批学员来自埃森哲、德勤、麦肯锡、摩根士丹利、澳洲联邦银行等，由机构提名，不对个人和学生开放；这也是 Anthropic 上市前加码企业市场的一步。",
+     "score": 7,
+     "tier": "must",
+     "sources": [
+      {
+       "name": "CNBC",
+       "url": "https://www.cnbc.com/2026/10/02/anthropic-to-invest-100-million-to-train-ai-engineer-talent.html"
+      },
+      {
+       "name": "Anthropic 官方",
+       "url": "https://www.anthropic.com/news/claude-frontier-academy"
+      },
+      {
+       "name": "澳洲联邦银行",
+       "url": "https://www.commbank.com.au/articles/newsroom/2026/10/commbank-engineers-anthropic-claude-frontier-academy.html"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "中美 11 月举行 AI 对话，议题曝光",
+     "body": "据央视旗下「玉渊谭天」10/2 披露，中美在 9 月元首会晤时同意建立 AI 对话机制，下一轮定在 11 月，重点讨论两件具体的事：如何统一界定「重大 AI 风险」，以及出了 AI 事故后双方怎样相互通报。这是两国在 AI 安全上从谈原则转向谈机制的信号。",
+     "score": 7,
+     "tier": "must",
+     "sources": [
+      {
+       "name": "中央社",
+       "url": "https://cna.com.tw/news/acn/202610020254.aspx"
+      },
+      {
+       "name": "新浪新闻（转载玉渊谭天）",
+       "url": "https://news.sina.com.cn/c/2026-10-02/doc-initvazi1416310.shtml"
+      },
+      {
+       "name": "联合报",
+       "url": "https://udn.com/news/story/6809/9791730"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "苹果磁盘权限新规的上线时间，以及 Claude、ChatGPT 桌面端如何调整",
+    "Anthropic 何时公开递交招股书（S-1）",
+    "月之暗面对 OpenAI 蒸馏指控的正式回应"
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI",
+     "Anthropic",
+     "Google / DeepMind",
+     "Meta",
+     "微软",
+     "DeepSeek",
+     "阿里通义 / Qwen",
+     "月之暗面 Kimi",
+     "智谱",
+     "字节豆包",
+     "@OpenAI",
+     "@AnthropicAI",
+     "@claudeai",
+     "@GoogleDeepMind",
+     "TechCrunch",
+     "CNBC",
+     "Bloomberg",
+     "机器之心",
+     "量子位",
+     "EdSurge",
+     "Inside Higher Ed",
+     "ChatGPT Edu",
+     "Techmeme"
+    ],
+    "candidates": 38
+   }
+  }
+ ],
+ "specials": []
+}
