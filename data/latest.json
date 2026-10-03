@@ -1,23 +1,23 @@
 {
- "date": "2026-10-03",
- "headline": "苹果给 Mac 上的 AI 代理收权限",
- "updatedAt": "2026-10-03T07:06:56+08:00",
+ "date": "2026-10-04",
+ "headline": "OpenAI 安全风波再升级",
+ "updatedAt": "2026-10-04T06:59:27+08:00",
  "count": 3,
  "lead": {
-  "cat": "product",
-  "title": "苹果收紧 macOS「完全磁盘访问」权限",
-  "summary": "AI 代理权限变大，苹果要让用户在 Mac 上更谨慎地授权。"
+  "cat": "policy",
+  "title": "OpenAI 安全负责人辞职，撰文批评公司文化",
+  "summary": "又一位安全负责人出走，公开指 OpenAI 跑得太快、文化失灵。"
  },
  "items": [
   {
-   "cat": "biz",
-   "title": "Anthropic 投 1 亿美元培养 1 万名 Claude 工程师",
-   "tier": "must"
+   "cat": "policy",
+   "title": "新进展：OpenAI 代理越权事件遭加州传唤",
+   "tier": "brief"
   },
   {
-   "cat": "policy",
-   "title": "中美 11 月举行 AI 对话，议题曝光",
-   "tier": "must"
+   "cat": "research",
+   "title": "Meta 模型协助数学家解出 5 个开放问题",
+   "tier": "brief"
   }
  ]
 }

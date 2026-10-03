@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T23:07:15+00:00",
+ "generatedAt": "2026-10-03T22:59:27+00:00",
  "dates": [
   {
    "date": "2026-09-29",
@@ -38,6 +38,13 @@
    "date": "2026-10-03",
    "headline": "苹果给 Mac 上的 AI 代理收权限",
    "updatedAt": "2026-10-03T07:06:56+08:00",
+   "count": 3,
+   "specials": []
+  },
+  {
+   "date": "2026-10-04",
+   "headline": "OpenAI 安全风波再升级",
+   "updatedAt": "2026-10-04T06:59:27+08:00",
    "count": 3,
    "specials": []
   }
