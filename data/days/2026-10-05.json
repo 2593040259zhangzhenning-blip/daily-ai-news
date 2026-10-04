@@ -1,0 +1,84 @@
+{
+ "date": "2026-10-05",
+ "issues": [
+  {
+   "key": "2026-10-05-1morning",
+   "date": "2026-10-05",
+   "edition": "morning",
+   "createdAt": "2026-10-05T06:52:27+08:00",
+   "headline": "白宫成立「超级智能部队」",
+   "items": [
+    {
+     "cat": "policy",
+     "title": "特朗普成立「超级智能部队」统筹 AI",
+     "body": "特朗普 10/4 在 Truth Social 宣布组建联邦「超级智能部队」，由国家情报总监 Jay Clayton 牵头，FTC 主席 Ferguson 等三人任副手，万斯、财长贝森特、防长赫格塞思也在列；此前他已签令在联邦层面把「人工智能」改称「超级智能」。这个机构要在 120 天内交出报告，评估 AI 的风险与机遇、安全漏洞和事故通报流程，章程同时强调避免过度监管。美国 AI 政策从此由情报系统负责人统筹，后续监管走向值得盯紧。",
+     "score": 7,
+     "tier": "lead",
+     "summary": "美国把 AI 统筹交给情报总监，120 天内拿出风险报告。",
+     "sources": [
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/10/04/trump-unveils-his-new-super-intelligence-force/"
+      },
+      {
+       "name": "CNBC",
+       "url": "https://www.cnbc.com/2026/10/03/trump-jay-clayton-ai-czar.html"
+      },
+      {
+       "name": "Straight Arrow News",
+       "url": "https://san.com/cc/trump-announces-a-new-super-intelligence-force-after-signing-order-renaming-ai/"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "Meta 代理 Muse 提示词曝光：用户指令压过安全训练",
+     "body": "据《连线》10/4 报道，一位安全研究员通过对话让 Meta 的个人代理 Muse 交出内部指令，其中写明用户对自家事务的权限无条件优先于模型的安全训练，Muse 还会为用户生活中的每个人建一页档案并每小时更新。Muse 9 月上线后一度登顶美区 App Store 免费榜；Meta 回应称提示词本就可供用户查看。能读邮件、动支付的 AI 代理，安全边界怎么设又成了焦点。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Wired",
+       "url": "https://www.wired.com/story/muse-creates-detailed-profiles-of-all-your-friends-and-family/"
+      },
+      {
+       "name": "Startup Fortune",
+       "url": "https://startupfortune.com/metas-muse-tells-its-ai-that-household-authority-overrides-safety-training/"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "「超级智能部队」的首批动作，以及是否波及 AI 公司和中美 AI 对话",
+    "OpenAI 如何回应加州传票和安全团队人事动荡",
+    "Anthropic 何时公开递交招股书（S-1）"
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI",
+     "Anthropic",
+     "Google / DeepMind",
+     "Meta",
+     "DeepSeek",
+     "阿里通义 / Qwen",
+     "月之暗面 Kimi",
+     "智谱",
+     "@OpenAI",
+     "@AnthropicAI",
+     "@claudeai",
+     "Reuters",
+     "TechCrunch",
+     "CNBC",
+     "Wired",
+     "36氪",
+     "Inside Higher Ed",
+     "EdSurge",
+     "ChatGPT Edu",
+     "Techmeme"
+    ],
+    "candidates": 46
+   }
+  }
+ ],
+ "specials": []
+}

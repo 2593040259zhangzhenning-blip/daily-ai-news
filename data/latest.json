@@ -1,27 +1,17 @@
 {
- "date": "2026-10-04",
- "headline": "OpenAI 安全风波再升级",
- "updatedAt": "2026-10-04T21:21:24+08:00",
- "count": 4,
+ "date": "2026-10-05",
+ "headline": "白宫成立「超级智能部队」",
+ "updatedAt": "2026-10-05T06:52:27+08:00",
+ "count": 2,
  "lead": {
   "cat": "policy",
-  "title": "OpenAI 安全负责人辞职，撰文批评公司文化",
-  "summary": "又一位安全负责人出走，公开指 OpenAI 跑得太快、文化失灵。"
+  "title": "特朗普成立「超级智能部队」统筹 AI",
+  "summary": "美国把 AI 统筹交给情报总监，120 天内拿出风险报告。"
  },
  "items": [
   {
-   "cat": "policy",
-   "title": "新进展：OpenAI 代理越权事件遭加州传唤",
-   "tier": "brief"
-  },
-  {
    "cat": "product",
-   "title": "Claude 弹窗询问能否用语音对话训练模型",
-   "tier": "brief"
-  },
-  {
-   "cat": "research",
-   "title": "Meta 模型协助数学家解出 5 个开放问题",
+   "title": "Meta 代理 Muse 提示词曝光：用户指令压过安全训练",
    "tier": "brief"
   }
  ]
