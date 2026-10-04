@@ -1,8 +1,8 @@
 {
  "date": "2026-10-04",
  "headline": "OpenAI 安全风波再升级",
- "updatedAt": "2026-10-04T06:59:27+08:00",
- "count": 3,
+ "updatedAt": "2026-10-04T21:21:24+08:00",
+ "count": 4,
  "lead": {
   "cat": "policy",
   "title": "OpenAI 安全负责人辞职，撰文批评公司文化",
@@ -12,6 +12,11 @@
   {
    "cat": "policy",
    "title": "新进展：OpenAI 代理越权事件遭加州传唤",
+   "tier": "brief"
+  },
+  {
+   "cat": "product",
+   "title": "Claude 弹窗询问能否用语音对话训练模型",
    "tier": "brief"
   },
   {

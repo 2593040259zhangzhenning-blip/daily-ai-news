@@ -102,6 +102,62 @@
     ],
     "candidates": 62
    }
+  },
+  {
+   "key": "2026-10-04-2evening",
+   "date": "2026-10-04",
+   "edition": "evening",
+   "createdAt": "2026-10-04T21:21:24+08:00",
+   "headline": "Claude 征求用户语音数据训练",
+   "items": [
+    {
+     "cat": "product",
+     "title": "Claude 弹窗询问能否用语音对话训练模型",
+     "body": "Anthropic 开始向 Claude 免费版、Pro 和 Max 用户弹出提示，询问是否允许用语音对话改进模型，可选允许、暂不或关闭；这个开关独立于原有的文字聊天训练设置，企业版和 API 不受影响。据报道，同意后语音数据最多保留 5 年，不同意约 30 天；之后可在「设置 › 隐私」随时关闭并删除。用 Claude 语音模式练口语的同学，看到弹窗前可以先想好选哪个。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "BleepingComputer",
+       "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-asks-claude-users-to-share-voice-data-for-ai-model-training/"
+      },
+      {
+       "name": "Crypto Briefing",
+       "url": "https://cryptobriefing.com/anthropic-asks-users-share-voice-data/"
+      }
+     ]
+    }
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI",
+     "Anthropic",
+     "Google / DeepMind",
+     "DeepSeek",
+     "阿里通义 / Qwen",
+     "月之暗面 Kimi",
+     "智谱",
+     "@OpenAI",
+     "@AnthropicAI",
+     "@claudeai",
+     "@GoogleDeepMind",
+     "@deepseek_ai",
+     "@Alibaba_Qwen",
+     "@Kimi_Moonshot",
+     "Reuters",
+     "TechCrunch",
+     "CNBC",
+     "机器之心",
+     "量子位",
+     "36氪",
+     "Inside Higher Ed",
+     "EdSurge",
+     "ChatGPT Edu",
+     "Claude for Education",
+     "Hacker News"
+    ],
+    "candidates": 24
+   }
   }
  ],
  "specials": []
