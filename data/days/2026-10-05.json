@@ -78,6 +78,56 @@
     ],
     "candidates": 46
    }
+  },
+  {
+   "key": "2026-10-05-2evening",
+   "date": "2026-10-05",
+   "edition": "evening",
+   "createdAt": "2026-10-05T21:21:38+08:00",
+   "headline": "Gemini 免费版 10/9 起只剩轻量模型",
+   "items": [
+    {
+     "cat": "product",
+     "title": "Gemini 免费版 10/9 起只能用 Flash-Lite",
+     "body": "据 9to5Google 报道，谷歌将从 10 月 9 日起收紧 Gemini 应用的模型权限：免费用户只能用 3.5 Flash-Lite，AI Plus 订阅保留 Flash-Lite 和 Flash、失去 Pro；AI Pro 不受限，还新增原本 Ultra 才有的 Deep Think。应用里也会加入低、中、高三档思考强度，档位越高越耗额度。平时用免费 Gemini 写作业、查资料的同学，下周起回答质量可能明显下降。",
+     "score": 6,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "9to5Google",
+       "url": "https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/"
+      },
+      {
+       "name": "Techmeme",
+       "url": "https://www.techmeme.com/261004/p4"
+      }
+     ]
+    }
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI",
+     "Anthropic",
+     "Google / DeepMind",
+     "DeepSeek",
+     "阿里通义 / Qwen",
+     "月之暗面 Kimi",
+     "智谱",
+     "@OpenAI",
+     "@AnthropicAI",
+     "@GoogleDeepMind",
+     "Reuters",
+     "TechCrunch",
+     "Bloomberg",
+     "机器之心",
+     "量子位",
+     "36氪",
+     "Inside Higher Ed",
+     "EdSurge",
+     "Techmeme"
+    ],
+    "candidates": 22
+   }
   }
  ],
  "specials": []

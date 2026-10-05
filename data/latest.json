@@ -1,14 +1,19 @@
 {
  "date": "2026-10-05",
  "headline": "白宫成立「超级智能部队」",
- "updatedAt": "2026-10-05T06:52:27+08:00",
- "count": 2,
+ "updatedAt": "2026-10-05T21:21:38+08:00",
+ "count": 3,
  "lead": {
   "cat": "policy",
   "title": "特朗普成立「超级智能部队」统筹 AI",
   "summary": "美国把 AI 统筹交给情报总监，120 天内拿出风险报告。"
  },
  "items": [
+  {
+   "cat": "product",
+   "title": "Gemini 免费版 10/9 起只能用 Flash-Lite",
+   "tier": "brief"
+  },
   {
    "cat": "product",
    "title": "Meta 代理 Muse 提示词曝光：用户指令压过安全训练",
