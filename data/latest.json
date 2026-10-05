@@ -1,22 +1,17 @@
 {
- "date": "2026-10-05",
- "headline": "白宫成立「超级智能部队」",
- "updatedAt": "2026-10-05T21:21:38+08:00",
- "count": 3,
+ "date": "2026-10-06",
+ "headline": "ChatGPT 生图要插广告了",
+ "updatedAt": "2026-10-06T07:03:17+08:00",
+ "count": 2,
  "lead": {
-  "cat": "policy",
-  "title": "特朗普成立「超级智能部队」统筹 AI",
-  "summary": "美国把 AI 统筹交给情报总监，120 天内拿出风险报告。"
+  "cat": "product",
+  "title": "ChatGPT 生成图片时将出现图片广告",
+  "summary": "广告首次以图片形式进入 ChatGPT，先在美国测试，免费用户首当其冲。"
  },
  "items": [
   {
-   "cat": "product",
-   "title": "Gemini 免费版 10/9 起只能用 Flash-Lite",
-   "tier": "brief"
-  },
-  {
-   "cat": "product",
-   "title": "Meta 代理 Muse 提示词曝光：用户指令压过安全训练",
+   "cat": "model",
+   "title": "英伟达投资的 Reflection 发布开源模型 Beam",
    "tier": "brief"
   }
  ]

@@ -1,0 +1,83 @@
+{
+ "key": "2026-10-06-1morning",
+ "date": "2026-10-06",
+ "edition": "morning",
+ "createdAt": "2026-10-06T07:03:17+08:00",
+ "headline": "ChatGPT 生图要插广告了",
+ "items": [
+  {
+   "cat": "product",
+   "title": "ChatGPT 生成图片时将出现图片广告",
+   "body": "OpenAI 10/5 宣布，本月晚些时候在美国开始测试一种新的图片广告：用户用 ChatGPT 生成图片时，旁边会出现带标注的广告，与生成的图片分开显示，首批只有少量广告主参与。据 TechCrunch 报道，广告主要面向免费版和低价订阅用户；OpenAI 同时披露 ChatGPT 每周用户已达 12 亿，并称广告不影响回答内容、敏感对话里不投放。这是 ChatGPT 广告从文字走向视觉的一步，免费用户今后看到的广告会更显眼。",
+   "score": 7,
+   "tier": "lead",
+   "summary": "广告首次以图片形式进入 ChatGPT，先在美国测试，免费用户首当其冲。",
+   "sources": [
+    {
+     "name": "OpenAI",
+     "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement/"
+    },
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results/"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-will-show-visual-ads-in-chatgpt-while-you-generate-images/"
+    }
+   ]
+  },
+  {
+   "cat": "model",
+   "title": "英伟达投资的 Reflection 发布开源模型 Beam",
+   "body": "美国初创公司 Reflection AI 10/5 发布首个模型 Beam：总参数 5010 亿、每次激活 230 亿的混合专家模型，主打编程和智能体任务，支持百万 token 上下文。公司称推理表现接近中国头部开源模型，算力消耗却只有 GLM-5.2 等的三到四分之一，但尚无独立评测；权重计划本月放出。这是美国阵营少见的大规模开源模型，正面对标 Qwen、GLM 等中国开源模型。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/"
+    },
+    {
+     "name": "Semafor",
+     "url": "https://www.semafor.com/article/10/05/2026/reflection-ai-unveils-an-open-source-answer-to-chinese-labs"
+    }
+   ]
+  }
+ ],
+ "watch": [
+  "ChatGPT 图片广告具体覆盖哪些套餐、何时扩展到美国以外",
+  "Reflection Beam 权重放出后的独立评测",
+  "Gemini 免费版 10/9 起改用轻量模型的实际影响"
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI",
+   "Anthropic",
+   "Google / DeepMind",
+   "DeepSeek",
+   "阿里通义 / Qwen",
+   "月之暗面 Kimi",
+   "智谱",
+   "@OpenAI",
+   "@AnthropicAI",
+   "@claudeai",
+   "@deepseek_ai",
+   "@Alibaba_Qwen",
+   "@Kimi_Moonshot",
+   "Reuters",
+   "TechCrunch",
+   "36氪",
+   "量子位",
+   "机器之心",
+   "Inside Higher Ed",
+   "EdSurge",
+   "Times Higher Education",
+   "中国教育部（moe.gov.cn）",
+   "ChatGPT Edu",
+   "Claude for Education",
+   "Techmeme"
+  ],
+  "candidates": 34
+ }
+}
