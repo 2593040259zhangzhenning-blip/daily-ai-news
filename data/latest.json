@@ -1,27 +1,32 @@
 {
- "date": "2026-10-06",
- "headline": "ChatGPT 生图要插广告了",
- "updatedAt": "2026-10-06T21:30:00+08:00",
- "count": 4,
+ "date": "2026-10-07",
+ "headline": "ChatGPT 提速五成，OpenAI 开启 28 天冲刺",
+ "updatedAt": "2026-10-07T07:08:19+08:00",
+ "count": 5,
  "lead": {
   "cat": "product",
-  "title": "ChatGPT 生成图片时将出现图片广告",
-  "summary": "广告首次以图片形式进入 ChatGPT，先在美国测试，免费用户首当其冲。"
+  "title": "GPT-6 提速约五成，OpenAI 启动 28 天连更",
+  "summary": "ChatGPT 回答变快约五成，接下来四周每天都有更新或额度重置。"
  },
  "items": [
   {
-   "cat": "china",
-   "title": "DeepSeek 拟融资至少 800 亿元，瞄准明年上市",
+   "cat": "model",
+   "title": "谷歌发布 Nano Banana 2.1，生图价格减半",
    "tier": "must"
   },
   {
-   "cat": "policy",
-   "title": "OpenAI 将给欧盟的 ChatGPT 文字加隐形水印",
+   "cat": "china",
+   "title": "月之暗面估值 500 亿美元，筹备明年港股上市",
    "tier": "brief"
   },
   {
-   "cat": "model",
-   "title": "英伟达投资的 Reflection 发布开源模型 Beam",
+   "cat": "biz",
+   "title": "Anthropic 送创业公司一年免费 Claude Team",
+   "tier": "brief"
+  },
+  {
+   "cat": "biz",
+   "title": "算力云 Lambda 拟融资 40 亿美元，Anthropic 是大客户",
    "tier": "brief"
   }
  ]

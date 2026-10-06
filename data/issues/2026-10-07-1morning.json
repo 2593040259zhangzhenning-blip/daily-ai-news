@@ -1,0 +1,134 @@
+{
+ "key": "2026-10-07-1morning",
+ "date": "2026-10-07",
+ "edition": "morning",
+ "createdAt": "2026-10-07T07:08:19+08:00",
+ "headline": "ChatGPT 提速五成，OpenAI 开启 28 天冲刺",
+ "items": [
+  {
+   "cat": "product",
+   "title": "GPT-6 提速约五成，OpenAI 启动 28 天连更",
+   "body": "OpenAI 产品负责人 Thibault Sottiaux 10/5 宣布为期 28 天的改进冲刺：每天要么给 Codex 和 ChatGPT 用户上一项明显有用的更新，要么直接重置用量额度。第一天的更新是 GPT-6 Astra 和 GPT-6.1 Sol 默认输出速度从每秒约 30 token 提到约 50 token，覆盖 OpenAI 订阅和用 ChatGPT 账号登录的第三方工具。外界普遍认为这是在回应 Claude Code 带来的竞争压力；接下来四周 ChatGPT 和 Codex 几乎天天有变化。",
+   "score": 7,
+   "tier": "lead",
+   "summary": "ChatGPT 回答变快约五成，接下来四周每天都有更新或额度重置。",
+   "sources": [
+    {
+     "name": "OpenAI 开发者社区",
+     "url": "https://community.openai.com/t/day-1-of-28-days-of-quality-of-life-improvements-or-a-full-reset/1403525"
+    },
+    {
+     "name": "36氪",
+     "url": "https://eu.36kr.com/en/p/4013699052588937"
+    },
+    {
+     "name": "KuCoin 快讯",
+     "url": "https://www.kucoin.com/news/flash/openai-sets-28-day-sprint-for-codex-with-daily-improvements-or-resets"
+    }
+   ]
+  },
+  {
+   "cat": "model",
+   "title": "谷歌发布 Nano Banana 2.1，生图价格减半",
+   "body": "谷歌 10/6 推出图像模型 Nano Banana 2.1，已上线 Gemini 应用、搜索 AI 模式和 AI Studio。新版改进了画面质量、局部修改和多次编辑中人物的一致性，最高输出 4K；API 价格约为上一代的一半，1K 图每张约 0.034 美元。谷歌自测成绩超过此前的 Nano Banana Pro，但还没有独立评测；旧版 3.1 Flash Image 将于 10/29 停用。",
+   "score": 7,
+   "tier": "must",
+   "sources": [
+    {
+     "name": "Google AI for Developers",
+     "url": "https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+     "name": "Decrypt",
+     "url": "https://decrypt.co/380257/google-launches-nano-banana-2-1"
+    },
+    {
+     "name": "Android Authority",
+     "url": "https://www.androidauthority.com/google-launches-nano-banana-2-1-3719823/"
+    }
+   ]
+  },
+  {
+   "cat": "china",
+   "title": "月之暗面估值 500 亿美元，筹备明年港股上市",
+   "body": "据彭博社 10/6 报道，Kimi 母公司月之暗面估值已达 500 亿美元，比今年夏天的 315 亿美元大涨；年化收入从 6 月约 3 亿美元升到约 10 亿美元。公司已完成最后一轮私募，计划 2027 年一季度在香港上市、募资最多 50 亿美元。加上同日传出的 DeepSeek 大额融资，国产大模型头部公司正集体走向资本市场。",
+   "score": 6,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Bloomberg",
+     "url": "https://bloomberg.com/news/articles/2026-10-06/moonshot-said-to-eye-early-2027-ipo-after-value-hits-50-billion"
+    },
+    {
+     "name": "Euronews",
+     "url": "https://euronews.com/2026/10/06/moonshot-ai-eyes-hong-kong-ipo-after-50-billion-valuation-as-deepseek-raises-capital"
+    }
+   ]
+  },
+  {
+   "cat": "biz",
+   "title": "Anthropic 送创业公司一年免费 Claude Team",
+   "body": "Anthropic 10/6 扩大 Claude for Startups 计划：成立 5 年内或近 2 年拿过融资的公司，可申请一年免费 Claude Team（最多 5 个席位）、1000 美元 API 额度和官方技术答疑。这是 Anthropic 争夺开发者和小团队的新手段，学生创业团队也可能符合条件。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/"
+    }
+   ]
+  },
+  {
+   "cat": "biz",
+   "title": "算力云 Lambda 拟融资 40 亿美元，Anthropic 是大客户",
+   "body": "据 TechCrunch 10/6 报道，英伟达投资的算力云公司 Lambda 正以 145 亿美元投前估值融资最多 40 亿美元，为 2027 年上市做准备。它的订单积压从 6 月的 150 亿美元涨到 9 月的 500 亿美元，其中大头来自 Anthropic 约 350 亿美元的承诺，可见 Claude 背后的算力投入规模。",
+   "score": 4,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/"
+    }
+   ]
+  }
+ ],
+ "watch": [
+  "OpenAI 28 天冲刺接下来每天的更新内容，或是否触发额度重置",
+  "Gemini 免费版 10/9 起改用轻量模型的实际影响",
+  "谷歌 Gemini 4 的发布时间"
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI",
+   "Anthropic",
+   "Google / DeepMind",
+   "微软",
+   "xAI",
+   "DeepSeek",
+   "阿里通义 / Qwen",
+   "月之暗面 Kimi",
+   "智谱",
+   "字节豆包",
+   "@OpenAI",
+   "@OpenAIDevs",
+   "@AnthropicAI",
+   "@claudeai",
+   "@GoogleDeepMind",
+   "@deepseek_ai",
+   "@Alibaba_Qwen",
+   "Bloomberg",
+   "TechCrunch",
+   "CNBC",
+   "36氪",
+   "机器之心",
+   "量子位",
+   "Inside Higher Ed",
+   "EdSurge",
+   "中国教育部（moe.gov.cn）",
+   "ChatGPT Edu",
+   "Claude for Education",
+   "Gemini for Education"
+  ],
+  "candidates": 31
+ }
+}
