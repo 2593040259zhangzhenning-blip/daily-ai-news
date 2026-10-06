@@ -83,6 +83,86 @@
     ],
     "candidates": 34
    }
+  },
+  {
+   "key": "2026-10-06-2evening",
+   "date": "2026-10-06",
+   "edition": "evening",
+   "createdAt": "2026-10-06T21:30:00+08:00",
+   "headline": "DeepSeek 拟融资至少 800 亿元",
+   "items": [
+    {
+     "cat": "china",
+     "title": "DeepSeek 拟融资至少 800 亿元，瞄准明年上市",
+     "body": "据彭博社 10/6 报道，DeepSeek 新一轮融资已锁定至少 120 亿美元（约 800 亿元），最终可能接近 150 亿美元，远超原定约 500 亿元的目标，腾讯和宁德时代是最大出资方。报道称投资者热情来自其最新模型的表现，这轮钱将为 2027 年初的上市铺路。一向低调、不缺钱的 DeepSeek 开始大举融资，国产大模型的竞争进入拼资本的阶段。",
+     "score": 7,
+     "tier": "must",
+     "sources": [
+      {
+       "name": "Quartz",
+       "url": "https://qz.com/deepseek-funding-round-tencent-catl-ipo-100626"
+      },
+      {
+       "name": "新浪财经",
+       "url": "https://finance.sina.com.cn/stock/estate/integration/2026-10-06/doc-iniuhitp5804286.shtml"
+      },
+      {
+       "name": "The Decoder",
+       "url": "https://the-decoder.com/catl-and-tencent-back-deepseeks-ballooning-funding-round-as-the-ai-startup-eyes-a-2027-ipo/"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "OpenAI 将给欧盟的 ChatGPT 文字加隐形水印",
+     "body": "OpenAI 10/5 公布文字水印技术 textGrain：为满足欧盟《人工智能法》，未来几周起欧盟用户在 ChatGPT 和 Codex 生成的文字会自动带上隐形水印；API 用户全球都可自愿开启，默认关闭。检测工具暂不对公众开放，只给获批的研究机构；OpenAI 自己的测试显示，改写四分之一的词后检出率就大幅下降。AI 写的作业以后可能被技术识别，但目前只限欧盟、且改写就能削弱。",
+     "score": 6,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "OpenAI",
+       "url": "https://openai.com/index/eu-text-provenance/"
+      },
+      {
+       "name": "9to5Mac",
+       "url": "https://9to5mac.com/2026/10/05/openai-details-new-text-watermarking-system-for-chatgpt-codex-and-the-api/"
+      },
+      {
+       "name": "The New Stack",
+       "url": "https://thenewstack.io/openai-api-text-watermarking/"
+      }
+     ]
+    }
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI",
+     "Anthropic",
+     "Google / DeepMind",
+     "DeepSeek",
+     "阿里通义 / Qwen",
+     "月之暗面 Kimi",
+     "智谱",
+     "字节豆包",
+     "@OpenAI",
+     "@AnthropicAI",
+     "@claudeai",
+     "@deepseek_ai",
+     "@Alibaba_Qwen",
+     "@Kimi_Moonshot",
+     "Reuters",
+     "Bloomberg",
+     "36氪",
+     "机器之心",
+     "量子位",
+     "Inside Higher Ed",
+     "EdSurge",
+     "中国教育部（moe.gov.cn）",
+     "ChatGPT Edu",
+     "Techmeme"
+    ],
+    "candidates": 27
+   }
   }
  ],
  "specials": []

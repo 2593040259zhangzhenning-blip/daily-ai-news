@@ -1,14 +1,24 @@
 {
  "date": "2026-10-06",
  "headline": "ChatGPT 生图要插广告了",
- "updatedAt": "2026-10-06T07:03:17+08:00",
- "count": 2,
+ "updatedAt": "2026-10-06T21:30:00+08:00",
+ "count": 4,
  "lead": {
   "cat": "product",
   "title": "ChatGPT 生成图片时将出现图片广告",
   "summary": "广告首次以图片形式进入 ChatGPT，先在美国测试，免费用户首当其冲。"
  },
  "items": [
+  {
+   "cat": "china",
+   "title": "DeepSeek 拟融资至少 800 亿元，瞄准明年上市",
+   "tier": "must"
+  },
+  {
+   "cat": "policy",
+   "title": "OpenAI 将给欧盟的 ChatGPT 文字加隐形水印",
+   "tier": "brief"
+  },
   {
    "cat": "model",
    "title": "英伟达投资的 Reflection 发布开源模型 Beam",
