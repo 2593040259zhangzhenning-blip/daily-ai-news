@@ -1,0 +1,73 @@
+{
+ "key": "2026-10-07-2evening",
+ "date": "2026-10-07",
+ "edition": "evening",
+ "createdAt": "2026-10-07T21:35:00+08:00",
+ "headline": "OpenAI 一口气公开数百篇数学成果",
+ "items": [
+  {
+   "cat": "research",
+   "title": "OpenAI 在 GitHub 公开 722 篇 AI 数学论文",
+   "body": "OpenAI 10/7 在 GitHub 公开了由一款尚未发布的内部模型写出的 722 篇数学稿件，归为 372 组成果，涉及数论、代数几何等，并称在黎曼 zeta 函数相关问题上取得进展、经过 Lean 形式化验证和团队人工审阅；其余大多是模型自动完成，尚未经过同行评审。距它宣称解决纳维-斯托克斯问题约一个月，数学界不少人公开不满，批评其只发帖、不走正常学术验证流程，还被指抢先占用他人研究。",
+   "score": 7,
+   "tier": "must",
+   "sources": [
+    {
+     "name": "Scientific American",
+     "url": "https://www.scientificamerican.com/article/openai-unleashes-hundreds-more-math-results-upon-a-field-already-in-shock/"
+    },
+    {
+     "name": "Quartz",
+     "url": "https://qz.com/openai-math-results-github-millennium-prize-100726"
+    },
+    {
+     "name": "BigGo Finance",
+     "url": "https://finance.biggo.com/news/1d522643-5fd9-4ac5-ae86-e4a5b99edfe2"
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "ChatGPT 青少年版被评为「不可接受风险」",
+   "body": "美国儿童媒体评估机构 Common Sense Media 10/7 发布测评：用 4000 多条提示测试 8 月上线的 ChatGPT 青少年模式后，给出最差的「不可接受风险」评级。问题包括涉及自伤等话题时家长提醒失灵、年龄识别不准，以及学习模式里一键就能直接看答案、绕过引导式辅导。OpenAI 回应称测试方式不能反映实际保护效果。",
+   "score": 6,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "The Next Web",
+     "url": "https://thenextweb.com/news/chatgpt-for-teens-is-unsafe-for-under-18s"
+    },
+    {
+     "name": "Quartz",
+     "url": "https://qz.com/common-sense-media-chatgpt-teens-unacceptable-risk-100726"
+    }
+   ]
+  }
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI",
+   "Anthropic",
+   "Google / DeepMind",
+   "DeepSeek",
+   "阿里通义 / Qwen",
+   "月之暗面 Kimi",
+   "智谱",
+   "字节豆包",
+   "@OpenAI",
+   "@AnthropicAI",
+   "@claudeai",
+   "@GoogleDeepMind",
+   "Reuters",
+   "CNBC",
+   "TechCrunch",
+   "机器之心",
+   "量子位",
+   "Inside Higher Ed",
+   "EdSurge",
+   "中国教育部（moe.gov.cn）",
+   "Techmeme"
+  ],
+  "candidates": 34
+ }
+}

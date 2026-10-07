@@ -1,8 +1,8 @@
 {
  "date": "2026-10-07",
  "headline": "ChatGPT 提速五成，OpenAI 开启 28 天冲刺",
- "updatedAt": "2026-10-07T07:08:19+08:00",
- "count": 5,
+ "updatedAt": "2026-10-07T21:35:00+08:00",
+ "count": 7,
  "lead": {
   "cat": "product",
   "title": "GPT-6 提速约五成，OpenAI 启动 28 天连更",
@@ -10,9 +10,19 @@
  },
  "items": [
   {
+   "cat": "research",
+   "title": "OpenAI 在 GitHub 公开 722 篇 AI 数学论文",
+   "tier": "must"
+  },
+  {
    "cat": "model",
    "title": "谷歌发布 Nano Banana 2.1，生图价格减半",
    "tier": "must"
+  },
+  {
+   "cat": "policy",
+   "title": "ChatGPT 青少年版被评为「不可接受风险」",
+   "tier": "brief"
   },
   {
    "cat": "china",
@@ -22,11 +32,6 @@
   {
    "cat": "biz",
    "title": "Anthropic 送创业公司一年免费 Claude Team",
-   "tier": "brief"
-  },
-  {
-   "cat": "biz",
-   "title": "算力云 Lambda 拟融资 40 亿美元，Anthropic 是大客户",
    "tier": "brief"
   }
  ]
