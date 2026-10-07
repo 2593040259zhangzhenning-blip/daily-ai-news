@@ -1,37 +1,37 @@
 {
- "date": "2026-10-07",
- "headline": "ChatGPT 提速五成，OpenAI 开启 28 天冲刺",
- "updatedAt": "2026-10-07T21:35:00+08:00",
- "count": 7,
+ "date": "2026-10-08",
+ "headline": "GPT-6 全量上线，Claude 小模型大降价",
+ "updatedAt": "2026-10-08T06:58:22+08:00",
+ "count": 6,
  "lead": {
   "cat": "product",
-  "title": "GPT-6 提速约五成，OpenAI 启动 28 天连更",
-  "summary": "ChatGPT 回答变快约五成，接下来四周每天都有更新或额度重置。"
+  "title": "GPT-6 进 ChatGPT，免费用户今天起可用",
+  "summary": "免费版也换上 GPT-6，ChatGPT 回答开始带图表和可互动的小工具。"
  },
  "items": [
   {
-   "cat": "research",
-   "title": "OpenAI 在 GitHub 公开 722 篇 AI 数学论文",
+   "cat": "model",
+   "title": "Claude Haiku 5.5 发布，API 价格降约九成",
    "tier": "must"
   },
   {
-   "cat": "model",
-   "title": "谷歌发布 Nano Banana 2.1，生图价格减半",
-   "tier": "must"
+   "cat": "product",
+   "title": "Claude Max 和 Team 订阅附送每月 API 额度",
+   "tier": "brief"
   },
   {
    "cat": "policy",
-   "title": "ChatGPT 青少年版被评为「不可接受风险」",
+   "title": "OpenAI 首份青少年报告：日均用不到 15 分钟",
    "tier": "brief"
   },
   {
-   "cat": "china",
-   "title": "月之暗面估值 500 亿美元，筹备明年港股上市",
+   "cat": "product",
+   "title": "谷歌 SynthID 检测网站向所有人开放",
    "tier": "brief"
   },
   {
-   "cat": "biz",
-   "title": "Anthropic 送创业公司一年免费 Claude Team",
+   "cat": "policy",
+   "title": "Anthropic 向审核过的安全团队放宽网络能力",
    "tier": "brief"
   }
  ]

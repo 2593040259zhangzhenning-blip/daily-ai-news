@@ -1,0 +1,142 @@
+{
+ "key": "2026-10-08-1morning",
+ "date": "2026-10-08",
+ "edition": "morning",
+ "createdAt": "2026-10-08T06:58:22+08:00",
+ "headline": "GPT-6 全量上线，Claude 小模型大降价",
+ "items": [
+  {
+   "cat": "product",
+   "title": "GPT-6 进 ChatGPT，免费用户今天起可用",
+   "body": "OpenAI 10/7 宣布 GPT-6 和新的「智能界面」在 ChatGPT 聊天里全面推出：Plus、Pro、Business、企业版当天用上 GPT-6 Sol，免费版和 Go 从 10/8 起改用 GPT-6 Luna。回答不再只是文字，可以直接出现图表、按钮、表单和小工具，比如能调参数、一步步推演的互动讲解（官方举了中心极限定理、三门问题的例子），还能现场做计算器、分账工具。模型可以边想边答，联网问题平均提前 44% 开始回答；Work 和 Codex 用的模型不变。",
+   "score": 9,
+   "tier": "lead",
+   "summary": "免费版也换上 GPT-6，ChatGPT 回答开始带图表和可互动的小工具。",
+   "sources": [
+    {
+     "name": "OpenAI",
+     "url": "https://openai.com/index/gpt-6-for-everyone/"
+    },
+    {
+     "name": "@OpenAI",
+     "url": "https://x.com/OpenAI/status/2107894997538525580"
+    },
+    {
+     "name": "MacRumors",
+     "url": "https://www.macrumors.com/2026/10/07/chatgpt-intelligent-ui/"
+    }
+   ]
+  },
+  {
+   "cat": "model",
+   "title": "Claude Haiku 5.5 发布，API 价格降约九成",
+   "body": "Anthropic 10/7 推出小模型 Claude Haiku 5.5：10 万 token 以内的请求每百万输入 0.10 美元、输出 0.50 美元，是 Haiku 4.5 的十分之一，超过 10 万 token 按 5 倍计价，官方估计平均成本降约 75%，和 OpenAI 的 GPT-6 Luna 同价。官方自测在知识工作、电脑操作和编程任务上明显超过 Haiku 4.5 和 GPT-6 Luna，但仍不及 Sonnet 5.5，尚无独立评测；新增可调的思考力度，默认中档。已上线 Claude API 和 AWS、谷歌云、Azure。",
+   "score": 8,
+   "tier": "must",
+   "sources": [
+    {
+     "name": "Claude 发布说明",
+     "url": "https://support.claude.com/en/articles/12138966-release-notes"
+    },
+    {
+     "name": "VentureBeat",
+     "url": "https://venturebeat.com/technology/anthropic-launches-claude-haiku-5-5-with-90-api-price-reduction-matching-gpt-6-luna"
+    },
+    {
+     "name": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/technology/article/anthropic-reveals-haiku-55-model-as-ai-pricing-war-intensifies-180000423.html"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "Claude Max 和 Team 订阅附送每月 API 额度",
+   "body": "Anthropic 10/7 宣布 Max 和 Team 订阅开始附带每月 API 额度，可以用来在 Claude 开发者平台上跑自己写的应用和智能体；据 VentureBeat，Max 5x 每月 100 美元、Max 20x 每月 200 美元，Team 整个团队共享最多 500 美元。额度几天内陆续发放，需要在设置的账单页面绑定 Claude Console 组织后才能领取。",
+   "score": 6,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Claude 发布说明",
+     "url": "https://support.claude.com/en/articles/12138966-release-notes"
+    },
+    {
+     "name": "VentureBeat",
+     "url": "https://venturebeat.com/technology/anthropic-launches-claude-haiku-5-5-with-90-api-price-reduction-matching-gpt-6-luna"
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "OpenAI 首份青少年报告：日均用不到 15 分钟",
+   "body": "据路透社 10/7 报道，OpenAI 发布首份青少年使用 ChatGPT 的报告：青少年平均每天用不到 15 分钟，连续用 3 小时以上的不到 2%；开启青少年版的用户发了更多学习相关的消息，常用学习模式和可视化讲解。OpenAI 还在考虑做申请大学的规划工具和闪卡、出题等学习功能。报告发布前一天，Common Sense Media 刚把 ChatGPT 青少年版评为「不可接受风险」。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Reuters（The Star 转载）",
+     "url": "https://www.thestar.com.my/tech/tech-news/2026/10/08/openai-says-teens-use-chatgpt-for-under-15-minutes-a-day-as-worries-over-risks-grow"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "谷歌 SynthID 检测网站向所有人开放",
+   "body": "谷歌 10/7 把 AI 内容检测工具 SynthID 做成公开网站 synthid.com，此前只开放给部分记者和研究者。上传图片、视频或音频，就能查是否带有谷歌等公司 AI 生成时打上的隐形水印；OpenAI、英伟达也支持这套水印。目前不支持检测文字。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/07/googles-new-synthid-website-can-identify-ai-generated-media"
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "Anthropic 向审核过的安全团队放宽网络能力",
+   "body": "Anthropic 10/6 把「网络安全验证计划」扩成三档：通过审核的防御、红队和少数特定机构，可以在 Claude Opus 5.5、Mythos 5.1 等模型上用到不同程度放宽的安全限制。公司称合作方通过 Glasswing 项目已核实 12.9 万多个软件漏洞。这是在「能力可攻可守」之间划线：普通用户限制不变，专业防守方拿到更多权限。",
+   "score": 4,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/10/anthropic-expands-claude-access-for.html"
+    }
+   ]
+  }
+ ],
+ "watch": [
+  "GPT-6 Luna 今天推送给免费用户后的实际体验与额度变化",
+  "Claude Haiku 5.5 是否进入 claude.ai 免费版，以及第三方独立评测",
+  "谷歌 Gemini 4 的发布时间"
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI",
+   "Anthropic",
+   "Google / DeepMind",
+   "Meta",
+   "智谱",
+   "DeepSeek",
+   "阿里通义 / Qwen",
+   "月之暗面 Kimi",
+   "@OpenAI",
+   "@AnthropicAI",
+   "@claudeai",
+   "Reuters",
+   "TechCrunch",
+   "VentureBeat",
+   "36氪",
+   "机器之心",
+   "量子位",
+   "Inside Higher Ed",
+   "EdSurge",
+   "中国教育部（moe.gov.cn）",
+   "ChatGPT Edu",
+   "Claude for Education",
+   "Gemini for Education",
+   "Techmeme"
+  ],
+  "candidates": 38
+ }
+}
