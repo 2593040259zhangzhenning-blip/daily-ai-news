@@ -1,6 +1,6 @@
 // Signal · Mac 桌面小组件（Übersicht）
 // 读网站上的同一份数据，设计和手机上的大号小组件一致。每 30 分钟刷新一次。
-// 轻点：打开「Signal」App（Safari「添加到程序坞」生成的，在 ~/Applications）；找不到时退回在默认浏览器里打开网站。按住 ⌥ Option 再拖：移动位置，松手后吸附到旁边的原生小组件并记住。
+// 轻点：在默认浏览器里打开网站。按住 ⌥ Option 再拖：移动位置，松手后吸附到旁边的原生小组件并记住。
 // 位置锁定：不按 ⌥ 拖不动；摆好之后也不会再自己挪。
 //
 // 对齐方式：直接读系统里原生小组件的实际位置（窗口位置，不需要额外权限），
@@ -197,9 +197,7 @@ const longDate = (d) => {
   const dt = new Date(d + "T00:00:00+08:00");
   return `${dt.getMonth() + 1}月${dt.getDate()}日 ${WK[dt.getDay()]}`;
 };
-// 网页 App 的位置。重新「添加到程序坞」时名字不变就不用改；改了名字，这里跟着改。
-const APP = "$HOME/Applications/Signal.app";
-const open = () => run(`open -a "${APP}" 2>/dev/null || open "${SITE}"`);
+const open = () => run(`open "${SITE}"`);
 
 const CSS = `
 .dan { --bg:#ffffff; --ink:#1d1d1f; --sub:#6e6e73; --line:#e5e5ea; --shadow:rgba(0,0,0,.12);

@@ -69,7 +69,7 @@ Signal 是张振宁（Zhenning）给**自己**用的 AI 新闻简报：每天早
 - **数据**：`data/issues/<日期>-1morning.json`、`-2evening.json` 是原始数据，永久保存；`index.json`、`days/`、`latest.json` 都由脚本重建，**不要手改**。
 - **发布**：网站从 `gh-pages` 分支发布。原因是自动化推送到 main 不会触发 Pages 重建，所以 `.github/workflows/pages.yml` 在每次推送和每 15 分钟把 gh-pages 同步到 main 并按需重新发布。
 - **iPhone 小组件**（Scriptable）：手机里只粘贴了一次 `widget/loader.js`，它每次从网站拉 `widget/daily-ai-news-widget.js` 来运行。所以改 widget 文件，手机自动跟着变；改 loader.js 则需要用户重新粘贴。
-- **Mac 小组件**（Übersicht）：`mac-widget/daily-ai-news.jsx`，用户电脑上通过 GitHub Desktop 拉取更新。它会读取系统原生小组件的窗口位置，自动吸附到原生小组件的网格（每格 180，小组件 343 = 2×2 格），不写死坐标，这是用户特别要求的。位置是锁定的（2026-10-02 用户要求）：只有按住 ⌥ Option 才能拖动，摆好后不再自动挪；只有第一次出现时自动找空位。点一下打开「Signal」网页 App（用户 2026-10-08 用 Safari「文件 › 添加到程序坞」生成，在 `~/Applications/Signal.app`；找不到时退回浏览器）。
+- **Mac 小组件**（Übersicht）：`mac-widget/daily-ai-news.jsx`，用户电脑上通过 GitHub Desktop 拉取更新。它会读取系统原生小组件的窗口位置，自动吸附到原生小组件的网格（每格 180，小组件 343 = 2×2 格），不写死坐标，这是用户特别要求的。位置是锁定的（2026-10-02 用户要求）：只有按住 ⌥ Option 才能拖动，摆好后不再自动挪；只有第一次出现时自动找空位。
 
 ## 和用户协作的方式
 
