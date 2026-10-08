@@ -148,23 +148,19 @@ def normalize_special(d):
 
 
 def ability_note(prev, now):
-    """跑分（0–100 的百分比）换成大白话。规则固定，每次发布都按同一把尺子量。"""
-    if prev > 0 and now / prev >= 1.8:
-        r = now / prev
-        return ("成功率翻倍" if r < 2.2 else f"成功率 ×{r:.1f}"), True
-    e0, e1 = 100 - prev, 100 - now
-    if e0 <= 0:
+    """跑分（0–100 的百分比）换成大白话：新一代比上一代提升了百分之几（用户 2026-10-08 定的说法）。
+    规则固定，每次发布都按同一把尺子量。"""
+    if prev <= 0:
+        return ("差不多", True) if now <= 0 else ("从无到有", True)
+    r = now / prev
+    if r >= 1.8:
+        return ("翻倍" if r < 2.2 else f"到原来的 {r:.1f} 倍"), True
+    inc = r - 1
+    if abs(inc) < 0.02:
         return "差不多", True
-    r = (e0 - e1) / e0
-    if abs(r) < 0.05:
-        return "差不多", True
-    if r < 0:
-        return f"多错 {round(-r * 20) * 5}%", False
-    if abs(r - 1 / 3) < 0.025:
-        return "少错 1/3", True
-    if abs(r - 0.5) < 0.025:
-        return "少错一半", True
-    return f"少错 {round(r * 20) * 5}%", True
+    if inc < 0:
+        return f"下降 {round(-inc * 100)}%", False
+    return f"提升 {round(inc * 100)}%", True
 
 
 def duel_note(prev, now):
@@ -200,7 +196,7 @@ def normalize_model(d):
         fail("headline 请控制在 16 字以内，例如「更聪明，更便宜，也更快」")
     sm = d["summary"]
     if not isinstance(sm, list) or not 2 <= len(sm) <= 3:
-        fail("summary 要 2–3 项，例如 [{\"label\":\"出错\",\"value\":\"少 3 成\"}]")
+        fail("summary 要 2–3 项，例如 [{\"label\":\"能力\",\"value\":\"提升 2 成\"}]")
     for i, s in enumerate(sm):
         if not s.get("label") or not s.get("value") or len(s["label"]) > 4 or len(s["value"]) > 6:
             fail(f"summary[{i}] 需要 label（4 字以内）和 value（6 字以内）")

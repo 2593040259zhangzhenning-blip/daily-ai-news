@@ -36,6 +36,6 @@ cat 只能取：model（模型发布）、policy（政策治理）、product（�
 版权要求：title、body、summary 必须用自己的话写，不照抄原文句子；直接引语最多一句，且少于 15 个字。
 9. 运行 python3 scripts/add_issue.py /tmp/issue.json。如果报错，按提示改 JSON 后再运行，直到成功。
 10. git add -A，用 git -c user.name=Claude -c user.email=noreply@anthropic.com commit 提交，提交信息写「早间：<headline>」，然后 git push。如果推送被拒绝，先 git pull --rebase 再推。确认推送成功。
-11. 最后的回复就是推送给用户的内容：如果写了对比卡，第一行「新模型：<name>，比 <prev> <summary 各项，如：出错少 3 成、价格降 2 成>」；如果写了专题，接一行「专题：<专题 title>」；然后一行「今日头条：<头条标题>」；接着每条必看一行、一句话；最后一行「打开 Signal 看全文」。不要多余说明。
+11. 最后的回复就是推送给用户的内容：如果写了对比卡，第一行「新模型：<name>，比 <prev> <summary 各项，如：能力提升 2 成、价格降 2 成>」；如果写了专题，接一行「专题：<专题 title>」；然后一行「今日头条：<头条标题>」；接着每条必看一行、一句话；最后一行「打开 Signal 看全文」。不要多余说明。
    如果第 10 步最终推送失败：第一行改为「早间内容没能发布到网站：<报错原文的一句话>」，接着照样列出头条和必看，让用户至少在通知里看到内容。
 ```
