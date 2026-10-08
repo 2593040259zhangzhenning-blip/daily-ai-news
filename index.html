@@ -183,23 +183,28 @@ button{font:inherit;color:inherit}
 :root{--md-bg:#1d1d1f;--md-sub:#a1a1a6;--md-rule:rgba(255,255,255,.18);--md-old:#d2d2d7;--md-shadow:0 1px 2px rgba(0,0,0,.05),0 14px 30px -14px rgba(0,0,0,.18)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--md-bg:#2c2c2e;--md-old:#48484a;--md-shadow:0 0 0 .5px rgba(255,255,255,.06)}}
 :root[data-theme="dark"]{--md-bg:#2c2c2e;--md-old:#48484a;--md-shadow:0 0 0 .5px rgba(255,255,255,.06)}
-.md{display:flex;flex-direction:column;gap:14px}
-.md-card{display:flex;flex-direction:column;gap:18px;width:100%;text-align:left;border:0;cursor:pointer;font:inherit;color:#fff;
-  background:var(--md-bg);border-radius:22px;padding:22px 22px 18px;box-shadow:0 1px 2px rgba(0,0,0,.12),0 20px 40px -18px rgba(0,0,0,.45),inset 0 .5px 0 rgba(255,255,255,.12)}
-.md-eyebrow{display:flex;align-items:center;gap:8px;font:600 12px/1 var(--sans);letter-spacing:.04em;color:var(--md-sub)}
-.md-eyebrow b{padding:4px 8px;border-radius:6px;background:var(--k-model);color:#fff;font-weight:700}
+.md{display:flex;flex-direction:column;gap:14px;--md-acc:var(--k-model);--md-card:var(--md-bg);--md-ink:#fff;--md-sub2:var(--md-sub);--md-rule2:var(--md-rule);--md-badge:var(--k-model)}
+/* 有品牌色时：主卡用这家的主题色，新一代的柱子和点也用它（深色模式下太暗或太亮的颜色自动换成能看清的） */
+.md.brand{--md-acc:var(--md-acc-l);--md-card:var(--md-card-l)}
+.md-more{display:flex;flex-direction:column;gap:14px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .md.brand{--md-acc:var(--md-acc-d);--md-card:var(--md-card-d)}}
+:root[data-theme="dark"] .md.brand{--md-acc:var(--md-acc-d);--md-card:var(--md-card-d)}
+.md-card{display:flex;flex-direction:column;gap:18px;width:100%;text-align:left;border:0;cursor:pointer;font:inherit;color:var(--md-ink);
+  background:var(--md-card);border-radius:22px;padding:22px 22px 18px;box-shadow:0 1px 2px rgba(0,0,0,.12),0 20px 40px -18px rgba(0,0,0,.45),inset 0 .5px 0 rgba(255,255,255,.12)}
+.md-eyebrow{display:flex;align-items:center;gap:8px;font:600 12px/1 var(--sans);letter-spacing:.04em;color:var(--md-sub2)}
+.md-eyebrow b{padding:4px 8px;border-radius:6px;background:var(--md-badge);color:var(--md-badge-ink,#fff);font-weight:700}
 .md-name{display:flex;flex-direction:column;gap:6px}
 .md-name h3{margin:0;font:700 28px/1.15 var(--display);letter-spacing:-.015em}
-.md-name span{font-size:15px;line-height:1.4;color:var(--md-sub)}
+.md-name span{font-size:15px;line-height:1.4;color:var(--md-sub2)}
 .md-sum{display:grid;grid-template-columns:repeat(var(--n,3),minmax(0,1fr))}
-.md-sum div{display:flex;flex-direction:column;gap:5px;padding:2px 12px;border-left:.5px solid var(--md-rule);min-width:0}
+.md-sum div{display:flex;flex-direction:column;gap:5px;padding:2px 12px;border-left:.5px solid var(--md-rule2);min-width:0}
 .md-sum div:first-child{padding-left:0;border-left:0}
-.md-sum small{font-size:13px;color:var(--md-sub)}
+.md-sum small{font-size:13px;color:var(--md-sub2)}
 .md-sum strong{font:600 22px/1.1 var(--display);letter-spacing:-.02em;white-space:nowrap}
-.md-go{font:600 14px/1 var(--sans);color:var(--md-sub);display:flex;align-items:center;gap:6px}
+.md-go{font:600 14px/1 var(--sans);color:var(--md-sub2);display:flex;align-items:center;gap:6px}
 .md-go::after{content:"";width:7px;height:7px;border-right:1.6px solid currentColor;border-bottom:1.6px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s ease}
 .md-card[aria-expanded="true"] .md-go::after{transform:translateY(1px) rotate(-135deg)}
-.md-card:hover .md-go{color:#fff}
+.md-card:hover .md-go{color:var(--md-ink)}
 .md-card:focus-visible{outline:3px solid var(--link);outline-offset:3px}
 .md-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
 .md-col{display:flex;flex-direction:column;gap:14px;min-width:0}
@@ -212,7 +217,7 @@ button{font:inherit;color:inherit}
 .md-row > span:first-child{color:var(--sub)}
 .md-trk{border-radius:10px;padding:4px;background:var(--bg);display:flex;flex-direction:column;gap:3px}
 .md-trk i{display:block;height:6px;border-radius:3px;background:var(--md-old)}
-.md-trk i + i{background:var(--k-model)}
+.md-trk i + i{background:var(--md-acc)}
 .md-row b{font-weight:600;text-align:right;white-space:nowrap}
 .md-row b.worse{font-weight:500;color:var(--sub)}
 .md-rule{height:.5px;background:var(--line)}
@@ -225,7 +230,7 @@ button{font:inherit;color:inherit}
 .md-strip > i{position:absolute;left:0;right:0;top:28px;height:6px;border-radius:3px;background:var(--bg)}
 .md-dot{position:absolute;top:24px;width:14px;height:14px;margin-left:-7px;border-radius:7px;background:var(--md-old);box-shadow:0 0 0 2.5px var(--card)}
 .md-dot.prev{background:var(--card);box-shadow:inset 0 0 0 2px var(--md-old),0 0 0 2.5px var(--card)}
-.md-dot.self{top:22px;width:18px;height:18px;margin-left:-9px;border-radius:9px;background:var(--k-model);box-shadow:0 0 0 3px var(--card),0 2px 6px rgba(0,0,0,.18)}
+.md-dot.self{top:22px;width:18px;height:18px;margin-left:-9px;border-radius:9px;background:var(--md-acc);box-shadow:0 0 0 3px var(--card),0 2px 6px rgba(0,0,0,.18)}
 .md-lab{position:absolute;top:46px;font-size:12px;color:var(--sub);white-space:nowrap;transform:translateX(-50%)}
 .md-lab.self{top:0;font-size:13px;font-weight:600;color:var(--ink)}
 .md-lab.l{transform:none}
@@ -238,7 +243,7 @@ button{font:inherit;color:inherit}
 .md-rank .bar i{display:block;height:100%;border-radius:5px;background:var(--md-old)}
 .md-rank b{text-align:right;font-weight:500;color:var(--sub);font-variant-numeric:tabular-nums}
 .md-rank.self > span:first-child,.md-rank.self b{color:var(--ink);font-weight:600}
-.md-rank.self .bar i{background:var(--k-model)}
+.md-rank.self .bar i{background:var(--md-acc)}
 .md-axis{display:flex;justify-content:space-between;font-size:11px;color:var(--faint);margin-left:108px;margin-right:40px}
 .md-foot{font-size:12.5px;line-height:1.6;color:var(--sub);display:flex;flex-direction:column;gap:4px;padding-inline:4px}
 @media (min-width:720px){
@@ -369,10 +374,19 @@ function specialCard(sp){
     h("span",{class:"sp-go"},`${sp.highlights.length} 项发布 · 看完整总结 ›`));
 }
 // 新模型对比卡。数字都由 scripts/add_issue.py 按固定规则算好，这里只负责画
+// 品牌色：主卡底色用它；文字在这个底色上看不清就换成深色；在深色模式里太暗的颜色换成浅色，保证柱子看得见
+function lum(hex){const c=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16)/255).map(v=>v<=.03928?v/12.92:((v+.055)/1.055)**2.4);return .2126*c[0]+.7152*c[1]+.0722*c[2]}
+function brandVars(hex){
+  if(!/^#[0-9a-fA-F]{6}$/.test(hex||""))return "";
+  const L=lum(hex),white=1.05/(L+.05)>=3;
+  const ink=white?"#fff":"#1d1d1f",sub=white?"rgba(255,255,255,.8)":"rgba(0,0,0,.62)",rule=white?"rgba(255,255,255,.3)":"rgba(0,0,0,.15)";
+  return [`--md-card-l:${hex}`,`--md-card-d:${L<.03?"#2c2c2e":hex}`,`--md-acc-l:${L>.7?"#1d1d1f":hex}`,`--md-acc-d:${L<.06?"#f5f5f7":hex}`,
+    `--md-ink:${ink}`,`--md-sub2:${sub}`,`--md-rule2:${rule}`,`--md-badge:${white?"rgba(255,255,255,.24)":"rgba(0,0,0,.08)"}`,`--md-badge-ink:${ink}`].join(";");
+}
 const yuanTxt=v=>"¥"+Number(v).toFixed(2);
 function modelBlock(md,open){
   const id="md-"+md.slug, sum=md.summary||[];
-  const more=h("div",{class:"md",id},
+  const more=h("div",{class:"md-more",id},
     h("div",{class:"md-grid"+(md.rank?"":" norank")},abilityBox(md),priceBox(md),md.rank?rankBox(md):null),
     h("div",{class:"md-foot"},
       h("span",{},"跑分："+(md.abilities||[]).concat(md.duels||[]).map(a=>a.name+" "+a.bench).join(" · ")),
@@ -387,7 +401,7 @@ function modelBlock(md,open){
     h("span",{class:"md-name"},h("h3",{},md.name),h("span",{},md.headline)),
     h("span",{class:"md-sum",style:"--n:"+sum.length},sum.map(s=>h("div",{},h("small",{},s.label),h("strong",{},s.value)))),
     h("span",{class:"md-go"},"看完整对比"));
-  return h("section",{class:"md","aria-label":md.name+" 对比"},card,more);
+  return h("section",{class:"md"+(md.color?" brand":""),style:brandVars(md.color),"aria-label":md.name+" 对比"},card,more);
 }
 function abilityBox(md){
   const rows=(md.abilities||[]).map(a=>h("div",{class:"md-row",title:a.bench+"："+a.prev+" → "+a.now},
@@ -399,7 +413,7 @@ function abilityBox(md){
   return h("section",{class:"md-box"},
     h("h4",{},"能力",h("span",{class:"md-key"},
       h("span",{},h("i",{style:"background:var(--md-old)"}),md.prev),
-      h("span",{},h("i",{style:"background:var(--k-model)"}),md.name.replace(/^Claude /,"")))),
+      h("span",{},h("i",{style:"background:var(--md-acc)"}),md.name.replace(/^Claude /,"")))),
     rows,duels.length?h("div",{class:"md-rule"}):null,duels);
 }
 function priceBox(md){

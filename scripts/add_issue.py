@@ -194,6 +194,8 @@ def normalize_model(d):
         fail("name 请控制在 28 字以内")
     if len(d["headline"]) > 16:
         fail("headline 请控制在 16 字以内，例如「更聪明，更便宜，也更快」")
+    if "color" in d and not re.match(r"^#[0-9a-fA-F]{6}$", str(d["color"])):
+        fail("color 是这款模型的品牌主题色，写成 #RRGGBB，例如 Claude 是 #D97757；拿不准就不写（默认黑色）")
     sm = d["summary"]
     if not isinstance(sm, list) or not 2 <= len(sm) <= 3:
         fail("summary 要 2–3 项，例如 [{\"label\":\"能力\",\"value\":\"提升 2 成\"}]")
