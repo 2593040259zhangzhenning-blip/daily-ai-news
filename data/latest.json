@@ -1,37 +1,27 @@
 {
- "date": "2026-10-08",
- "headline": "GPT-6 全量上线，Claude 小模型大降价",
- "updatedAt": "2026-10-08T22:30:00+08:00",
- "count": 8,
+ "date": "2026-10-09",
+ "headline": "Claude 改规则，OpenAI 收入缩水",
+ "updatedAt": "2026-10-09T06:58:30+08:00",
+ "count": 4,
  "lead": {
-  "cat": "product",
-  "title": "GPT-6 进 ChatGPT，免费用户今天起可用",
-  "summary": "免费版也换上 GPT-6，ChatGPT 回答开始带图表和可互动的小工具。"
+  "cat": "policy",
+  "title": "Claude 使用政策大改，11 月 12 日生效",
+  "summary": "新规首次禁止辱骂 Claude，并禁刷假评论、水军，11/12 生效。"
  },
  "items": [
   {
-   "cat": "model",
-   "title": "Claude Haiku 5.5 发布，API 价格降约九成",
+   "cat": "biz",
+   "title": "OpenAI 收入被曝比传闻少 200 亿美元",
    "tier": "must"
   },
   {
    "cat": "product",
-   "title": "谷歌云推出 Gemini 智能体，可调用 Claude",
-   "tier": "brief"
-  },
-  {
-   "cat": "product",
-   "title": "Claude Max 和 Team 订阅附送每月 API 额度",
-   "tier": "brief"
-  },
-  {
-   "cat": "china",
-   "title": "Manus 脱离 Meta 后融资超 5 亿美元",
+   "title": "新进展：ChatGPT 青少年版将上线升学规划",
    "tier": "brief"
   },
   {
    "cat": "policy",
-   "title": "OpenAI 首份青少年报告：日均用不到 15 分钟",
+   "title": "Anthropic 推网络防御计划，开源项目可免费扫漏洞",
    "tier": "brief"
   }
  ]

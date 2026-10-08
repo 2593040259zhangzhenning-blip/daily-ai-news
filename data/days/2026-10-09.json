@@ -1,0 +1,128 @@
+{
+ "date": "2026-10-09",
+ "issues": [
+  {
+   "key": "2026-10-09-1morning",
+   "date": "2026-10-09",
+   "edition": "morning",
+   "createdAt": "2026-10-09T06:58:30+08:00",
+   "headline": "Claude 改规则，OpenAI 收入缩水",
+   "items": [
+    {
+     "cat": "policy",
+     "title": "Claude 使用政策大改，11 月 12 日生效",
+     "body": "Anthropic 10/8 公布新版使用政策：首次禁止对 Claude「持续且无端的辱骂虐待」，官方称只针对极端情况，日常抱怨、黑暗题材写作和模型测试不算，处理方式仍是由 Claude 结束对话。另外新增「欺骗性活动」一节，禁止刷假评论、水军、冒充真人的机器人；收紧武器、选举干预、监控和执法相关用途。大多是把原有规定写清楚，普通用户基本不受影响。",
+     "score": 7,
+     "tier": "lead",
+     "summary": "新规首次禁止辱骂 Claude，并禁刷假评论、水军，11/12 生效。",
+     "sources": [
+      {
+       "name": "Anthropic",
+       "url": "https://www.anthropic.com/news/2026-usage-policy-update"
+      },
+      {
+       "name": "MacRumors",
+       "url": "https://www.macrumors.com/2026/10/08/anthropic-user-guideline-update/"
+      },
+      {
+       "name": "Quartz",
+       "url": "https://qz.com/anthropic-usage-policy-update-claude-abuse-election-weapons-100826"
+      }
+     ]
+    },
+    {
+     "cat": "biz",
+     "title": "OpenAI 收入被曝比传闻少 200 亿美元",
+     "body": "据英国《金融时报》10/8 报道，OpenAI 告诉投资者，截至 9 月底年化收入接近 500 亿美元，比上月外界广泛报道的约 700 亿美元少了约 200 亿。差距来自口径：Anthropic 把通过 AWS、谷歌云卖出的收入也算进去，OpenAI 不算，投资者拿两家比较时产生了误读。消息叠加美债收益率走高，当天纳斯达克收跌超 1%。",
+     "score": 7,
+     "tier": "must",
+     "sources": [
+      {
+       "name": "Reuters（Investing.com 转载）",
+       "url": "https://www.investing.com/news/stock-market-news/openais-annualized-revenue-20-billion-less-than-previously-signaled-ft-reports-4939854"
+      },
+      {
+       "name": "Yahoo Finance",
+       "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-drops-over-300-points-174323071.html"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "新进展：ChatGPT 青少年版将上线升学规划",
+     "body": "OpenAI 正式公布此前透露的升学工具：未来几周在 ChatGPT 青少年版推出「大学申请规划」，按学校整理申请材料、截止日期和助学金步骤，并帮忙找奖学金和免申请费机会；首批只面向美国 10–12 年级学生，之后再扩展到其他国家。同时上线根据笔记自动生成闪卡和测验、iOS 多页笔记扫描等学习功能。",
+     "score": 6,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Fox Business",
+       "url": "https://www.foxbusiness.com/technology/openai-launches-college-planner-chatgpt-teens-track-application-financial-aid"
+      },
+      {
+       "name": "Android Headlines",
+       "url": "https://www.androidheadlines.com/2026/10/openai-adds-college-planner-study-tools-chatgpt-teens.html"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "Anthropic 推网络防御计划，开源项目可免费扫漏洞",
+     "body": "Anthropic 10/8 启动「Cyber Mission」：联合 CrowdStrike、Palo Alto Networks、德勤、日立等 11 家首批伙伴，把最强模型和驻场工程师用于电网、水务等关键基础设施防护。同时推出免费的 OSS Scanner，定期用 Claude 扫描重要开源项目并附上复现方法；内测中 97 个高危发现有 85 个经专家确认。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "SiliconANGLE",
+       "url": "https://siliconangle.com/2026/10/08/anthropic-launches-critical-infrastructure-program-and-free-oss-scanner-for-open-source/"
+      },
+      {
+       "name": "Axios",
+       "url": "https://www.axios.com/2026/10/08/anthropic-critical-infrastructure-cybersecurity"
+      },
+      {
+       "name": "CyberScoop",
+       "url": "https://cyberscoop.com/anthropic-cybersecurity-program-critical-infrastructure-open-source/"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "OpenAI 是否回应收入口径之争，以及对 AI 股的后续影响",
+    "阶跃星辰 Step 5 Preview 计划 10/15 开放权重",
+    "ChatGPT 青少年版升学规划的上线时间"
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI",
+     "Anthropic",
+     "Google / DeepMind",
+     "Meta",
+     "微软",
+     "DeepSeek",
+     "阿里通义 / Qwen",
+     "月之暗面 Kimi",
+     "智谱",
+     "字节豆包",
+     "@OpenAI",
+     "@AnthropicAI",
+     "@claudeai",
+     "Reuters",
+     "Financial Times",
+     "Axios",
+     "TechCrunch",
+     "36氪",
+     "机器之心",
+     "量子位",
+     "Inside Higher Ed",
+     "EdSurge",
+     "中国教育部（moe.gov.cn）",
+     "ChatGPT Edu",
+     "Techmeme"
+    ],
+    "candidates": 36
+   }
+  }
+ ],
+ "specials": [],
+ "models": []
+}
