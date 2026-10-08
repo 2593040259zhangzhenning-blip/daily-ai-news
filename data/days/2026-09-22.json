@@ -1,0 +1,142 @@
+{
+ "date": "2026-09-22",
+ "issues": [],
+ "specials": [],
+ "models": [
+  {
+   "slug": "claude-opus-5-5",
+   "date": "2026-09-22",
+   "name": "Claude Opus 5.5",
+   "org": "Anthropic",
+   "prev": "Opus 5",
+   "createdAt": "2026-10-08T20:45:00+08:00",
+   "headline": "更聪明，更便宜，也更快",
+   "summary": [
+    {
+     "label": "出错",
+     "value": "少 3 成"
+    },
+    {
+     "label": "价格",
+     "value": "降 2 成"
+    },
+    {
+     "label": "速度",
+     "value": "快 3 成"
+    }
+   ],
+   "abilities": [
+    {
+     "name": "写代码",
+     "bench": "Terminal-Bench 4.0",
+     "prev": 52.3,
+     "now": 66.4,
+     "note": "少错 30%",
+     "better": true
+    },
+    {
+     "name": "操作电脑",
+     "bench": "OSWorld 2.0",
+     "prev": 74.0,
+     "now": 81.8,
+     "note": "少错 30%",
+     "better": true
+    },
+    {
+     "name": "读图表",
+     "bench": "Chartography",
+     "prev": 83.4,
+     "now": 89.0,
+     "note": "少错 1/3",
+     "better": true
+    },
+    {
+     "name": "科研任务",
+     "bench": "Terminal-Bench-Science 0.1",
+     "prev": 29.0,
+     "now": 58.7,
+     "note": "成功率翻倍",
+     "better": true
+    }
+   ],
+   "duels": [
+    {
+     "name": "写报告、做表格",
+     "bench": "GDPval-AA v2.1",
+     "prev": 1708,
+     "now": 1846,
+     "note": "盲比 10 次赢 7 次",
+     "better": true
+    }
+   ],
+   "price": {
+    "now": 20,
+    "prev": 25,
+    "fx": 6.7,
+    "peers": [
+     {
+      "name": "Sonnet 5.5",
+      "out": 10,
+      "yuan": 0.27
+     },
+     {
+      "name": "Fable 5.1",
+      "out": 50,
+      "yuan": 1.34
+     }
+    ],
+    "task": "写一篇 3000 字文章",
+    "yuan": 0.54,
+    "prevYuan": 0.67
+   },
+   "notes": [
+    {
+     "label": "速度",
+     "value": "快 3 成"
+    },
+    {
+     "label": "实际干活",
+     "value": "省 4 成"
+    }
+   ],
+   "rank": {
+    "source": "Artificial Analysis 综合指数",
+    "total": 168,
+    "rows": [
+     {
+      "name": "Opus 5.5",
+      "score": 58,
+      "self": true
+     },
+     {
+      "name": "Fable 5.1",
+      "score": 53
+     },
+     {
+      "name": "GPT-6 Astra",
+      "score": 53
+     },
+     {
+      "name": "Opus 5",
+      "score": 51
+     }
+    ],
+    "pos": 1
+   },
+   "sources": [
+    {
+     "name": "Anthropic 发布页",
+     "url": "https://www.anthropic.com/claude-opus-5-5"
+    },
+    {
+     "name": "Anthropic 价格页",
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    {
+     "name": "Artificial Analysis",
+     "url": "https://artificialanalysis.ai/articles/claude-opus-5-5"
+    }
+   ]
+  }
+ ]
+}

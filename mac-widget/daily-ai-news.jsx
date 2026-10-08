@@ -200,7 +200,16 @@ const longDate = (d) => {
 // 打开网址前先切到「访达」，再让浏览器打开。原因：用触发角「显示桌面」收起所有窗口后，
 // 如果收起前最前面的就是浏览器，打开网址时系统不做「切换程序」，窗口就不弹回来。
 // 先切到访达，浏览器再出来就是一次真正的切换，收起的窗口会跟着回来。（2026-10-08 用户确认的现象）
-const open = () => run(`osascript -e 'tell application "Finder" to activate' >/dev/null 2>&1; sleep 0.15; open "${SITE}"`);
+// 头条是新模型对比卡或专题时，点开直接到那张卡；否则打开当天首页
+let link = SITE;
+const linkFor = (data) => {
+  const l = data && data.lead;
+  if (!l || !/^\d{4}-\d{2}-\d{2}$/.test(data.date || "")) return SITE;
+  if (l.model && /^[a-z0-9-]+$/.test(l.model)) return `${SITE}?d=${data.date}&m=${l.model}`;
+  if (l.special && /^[a-z0-9-]+$/.test(l.special)) return `${SITE}?d=${data.date}&s=${l.special}`;
+  return SITE;
+};
+const open = () => run(`osascript -e 'tell application "Finder" to activate' >/dev/null 2>&1; sleep 0.15; open "${link}"`);
 
 const CSS = `
 .dan { --bg:#ffffff; --ink:#1d1d1f; --sub:#6e6e73; --line:#e5e5ea; --shadow:rgba(0,0,0,.12);
@@ -270,6 +279,7 @@ export const render = ({ data, error }) => {
     );
   }
   const lead = data.lead;
+  link = linkFor(data);
   return (
     <div className="dan" onMouseDown={onMouseDown} title="点一下打开 Signal，按住 ⌥ 拖动可移动位置">
       <style dangerouslySetInnerHTML={{ __html: CSS }} />

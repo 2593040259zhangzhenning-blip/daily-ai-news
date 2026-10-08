@@ -167,6 +167,9 @@ async function build() {
   }
   const lead = data.lead;
   const musts = data.items.filter((it) => it.tier === "must");
+  // 头条是新模型对比卡或专题时，点小组件直接打开那张卡
+  if (lead.model) w.url = `${SITE}?d=${data.date}&m=${lead.model}`;
+  else if (lead.special) w.url = `${SITE}?d=${data.date}&s=${lead.special}`;
 
   if (fam === "small") {
     panel(w, lead, shortDate(data.date), new Size(0, 64), 24, true);
