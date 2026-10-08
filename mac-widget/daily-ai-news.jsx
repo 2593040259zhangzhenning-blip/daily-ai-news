@@ -197,7 +197,10 @@ const longDate = (d) => {
   const dt = new Date(d + "T00:00:00+08:00");
   return `${dt.getMonth() + 1}月${dt.getDate()}日 ${WK[dt.getDay()]}`;
 };
-const open = () => run(`open "${SITE}"`);
+// 打开网址前先切到「访达」，再让浏览器打开。原因：用触发角「显示桌面」收起所有窗口后，
+// 如果收起前最前面的就是浏览器，打开网址时系统不做「切换程序」，窗口就不弹回来。
+// 先切到访达，浏览器再出来就是一次真正的切换，收起的窗口会跟着回来。（2026-10-08 用户确认的现象）
+const open = () => run(`osascript -e 'tell application "Finder" to activate' >/dev/null 2>&1; sleep 0.15; open "${SITE}"`);
 
 const CSS = `
 .dan { --bg:#ffffff; --ink:#1d1d1f; --sub:#6e6e73; --line:#e5e5ea; --shadow:rgba(0,0,0,.12);
