@@ -142,6 +142,84 @@
     ],
     "candidates": 38
    }
+  },
+  {
+   "key": "2026-10-08-2evening",
+   "date": "2026-10-08",
+   "edition": "evening",
+   "createdAt": "2026-10-08T22:30:00+08:00",
+   "headline": "谷歌推办公智能体，Manus 拿到新融资",
+   "items": [
+    {
+     "cat": "product",
+     "title": "谷歌云推出 Gemini 智能体，可调用 Claude",
+     "body": "谷歌云 10/8 在 Gemini at Work 2026 上发布面向企业的「Gemini agent」：一个输入框里就能查资料、做文档、生成图片视频、写代码并运行，可在云端长时间工作、拆出子智能体，还能拥有自己的 Gmail 和日历账号。它会按任务挑模型，目前除了 Gemini 也会调用 Anthropic 的 Claude。现在是内测，谷歌称很快向部分 Workspace 商业版和企业版开放，未公布价格。",
+     "score": 6,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Google Cloud",
+       "url": "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026"
+      },
+      {
+       "name": "9to5Google",
+       "url": "https://9to5google.com/2026/10/08/gemini-agent-google-cloud/"
+      },
+      {
+       "name": "VentureBeat",
+       "url": "https://venturebeat.com/orchestration/google-cloud-unveils-persistent-gemini-agents-for-long-running-tasks-and-they-get-their-own-gmail-calendar-and-drive-storage"
+      }
+     ]
+    },
+    {
+     "cat": "china",
+     "title": "Manus 脱离 Meta 后融资超 5 亿美元",
+     "body": "Manus 母公司蝴蝶效应 10/8 宣布完成超 5 亿美元融资，博裕投资、IDG 资本领投，腾讯、红杉中国、真格基金跟投；据彭博此前报道目标估值约 40 亿美元，是当初 Meta 收购价的两倍。Meta 去年底宣布的收购后来叫停，Manus 9 月起恢复独立运营，眼下正在北京组建国内产品团队。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "投资界",
+       "url": "https://news.pedaily.cn/202610/569907.shtml"
+      },
+      {
+       "name": "TechNode",
+       "url": "https://technode.com/2026/10/08/manus-parent-butterfly-effect-completes-more-than-500-million-funding-round/"
+      },
+      {
+       "name": "新浪科技",
+       "url": "https://finance.sina.com.cn/tech/roll/2026-10-08/doc-iniunvxc7646582.shtml"
+      }
+     ]
+    }
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI",
+     "Anthropic",
+     "Google / DeepMind",
+     "微软",
+     "DeepSeek",
+     "阿里通义 / Qwen",
+     "月之暗面 Kimi",
+     "智谱",
+     "字节豆包",
+     "@OpenAI",
+     "@AnthropicAI",
+     "@claudeai",
+     "@GoogleDeepMind",
+     "Reuters",
+     "TechCrunch",
+     "VentureBeat",
+     "36氪",
+     "机器之心",
+     "量子位",
+     "Inside Higher Ed",
+     "EdSurge",
+     "Techmeme"
+    ],
+    "candidates": 30
+   }
   }
  ],
  "specials": [],

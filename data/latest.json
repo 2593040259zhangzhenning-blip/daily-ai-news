@@ -1,8 +1,8 @@
 {
  "date": "2026-10-08",
  "headline": "GPT-6 全量上线，Claude 小模型大降价",
- "updatedAt": "2026-10-08T06:58:22+08:00",
- "count": 6,
+ "updatedAt": "2026-10-08T22:30:00+08:00",
+ "count": 8,
  "lead": {
   "cat": "product",
   "title": "GPT-6 进 ChatGPT，免费用户今天起可用",
@@ -16,22 +16,22 @@
   },
   {
    "cat": "product",
+   "title": "谷歌云推出 Gemini 智能体，可调用 Claude",
+   "tier": "brief"
+  },
+  {
+   "cat": "product",
    "title": "Claude Max 和 Team 订阅附送每月 API 额度",
+   "tier": "brief"
+  },
+  {
+   "cat": "china",
+   "title": "Manus 脱离 Meta 后融资超 5 亿美元",
    "tier": "brief"
   },
   {
    "cat": "policy",
    "title": "OpenAI 首份青少年报告：日均用不到 15 分钟",
-   "tier": "brief"
-  },
-  {
-   "cat": "product",
-   "title": "谷歌 SynthID 检测网站向所有人开放",
-   "tier": "brief"
-  },
-  {
-   "cat": "policy",
-   "title": "Anthropic 向审核过的安全团队放宽网络能力",
    "tier": "brief"
   }
  ]
