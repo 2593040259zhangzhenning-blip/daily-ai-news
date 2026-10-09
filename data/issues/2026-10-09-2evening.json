@@ -1,0 +1,54 @@
+{
+ "key": "2026-10-09-2evening",
+ "date": "2026-10-09",
+ "edition": "evening",
+ "createdAt": "2026-10-09T21:35:00+08:00",
+ "headline": "Claude 文档幻灯片免费版也能用",
+ "items": [
+  {
+   "cat": "product",
+   "title": "Claude 文档、幻灯片、设计转正，免费版可用",
+   "body": "Anthropic 10/8 宣布 Claude 里的文档、幻灯片和设计三项功能结束测试，所有套餐（含免费版）都能用；独立的 Claude Design 网站并入 Claude，保留到 12 月 14 日。同时推出两项测试功能：Dashboards 连接数据库自动生成实时更新的看板（付费版），Motion 把报告和图表做成可下载 MP4 的动画讲解（仅团队和企业版）。",
+   "score": 7,
+   "tier": "must",
+   "sources": [
+    {
+     "name": "TestingCatalog",
+     "url": "https://www.testingcatalog.com/claude-launches-dashboards-and-motion-in-beta/"
+    },
+    {
+     "name": "FourWeekMBA",
+     "url": "https://fourweekmba.com/ai-anthropic-adds-claude-dashboards-and-motion-docs-exit-beta/"
+    }
+   ]
+  }
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI",
+   "Anthropic",
+   "Google / DeepMind",
+   "DeepSeek",
+   "阿里通义 / Qwen",
+   "月之暗面 Kimi",
+   "智谱",
+   "字节豆包",
+   "@OpenAI",
+   "@AnthropicAI",
+   "@GoogleDeepMind",
+   "Reuters",
+   "TechCrunch",
+   "The Verge",
+   "36氪",
+   "机器之心",
+   "量子位",
+   "Inside Higher Ed",
+   "EdSurge",
+   "中国教育部（moe.gov.cn）",
+   "ChatGPT Edu",
+   "Claude for Education",
+   "Techmeme"
+  ],
+  "candidates": 42
+ }
+}
