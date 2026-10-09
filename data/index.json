@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-09T13:34:15+00:00",
+ "generatedAt": "2026-10-09T23:04:51+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -103,6 +103,14 @@
    "date": "2026-10-09",
    "headline": "Claude 改规则，OpenAI 收入缩水",
    "updatedAt": "2026-10-09T21:35:00+08:00",
+   "count": 5,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-10-10",
+   "headline": "OpenAI 称年底收入冲 700 亿",
+   "updatedAt": "2026-10-10T07:08:00+08:00",
    "count": 5,
    "specials": [],
    "models": []

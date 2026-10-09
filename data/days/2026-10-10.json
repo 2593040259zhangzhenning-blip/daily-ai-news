@@ -1,0 +1,146 @@
+{
+ "date": "2026-10-10",
+ "issues": [
+  {
+   "key": "2026-10-10-1morning",
+   "date": "2026-10-10",
+   "edition": "morning",
+   "createdAt": "2026-10-10T07:08:00+08:00",
+   "headline": "OpenAI 称年底收入冲 700 亿",
+   "items": [
+    {
+     "cat": "biz",
+     "title": "新进展：OpenAI 称年底年化收入达 700 亿美元",
+     "body": "前一天英国《金融时报》报道 OpenAI 9 月底年化收入约 500 亿美元、比传闻少 200 亿，引发 AI 股下跌。据彭博 10/9 报道，OpenAI 在新一轮融资谈判中向投资者表示，到今年底年化收入至少能到 700 亿美元，主要靠企业客户增长；OpenAI 官方未置评。也就是说，此前流传的 700 亿是年底目标而不是现状，和 Anthropic 的收入口径仍然不同，两家数字不能直接比。",
+     "score": 7,
+     "tier": "lead",
+     "summary": "OpenAI 对投资者称年底年化收入将达 700 亿美元，回应「缩水」报道。",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-10-09/openai-expects-70-billion-in-annualized-revenue-by-end-of-2026"
+      },
+      {
+       "name": "The Next Web",
+       "url": "https://thenextweb.com/news/openai-revenue-70bn-year-end-50bn-september"
+      },
+      {
+       "name": "Quartz",
+       "url": "https://qz.com/openai-annualized-revenue-70-billion-projection-2026-100926"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "Claude 进驻 Google 文档、表格和幻灯片",
+     "body": "Anthropic 本周推出 Claude for Google Workspace 公测：在 Google 文档、表格、幻灯片里打开侧边栏，就能让 Claude 改写润色、写公式、做数据透视表、重排幻灯片，可设置成每次修改前先给预览、由你确认。侧边栏需付费套餐，从 Google Workspace 插件商店安装；另外 Claude 对话里也能直接打开 Google 文档和表格。常用 Google 文档写作业的同学可以试试。",
+     "score": 7,
+     "tier": "must",
+     "sources": [
+      {
+       "name": "Android Headlines",
+       "url": "https://www.androidheadlines.com/2026/10/claude-challenges-gemini-google-workspace-integration.html"
+      },
+      {
+       "name": "Reworked",
+       "url": "https://www.reworked.co/digital-workplace/anthropic-opens-claude-for-google-workspace-in-beta/"
+      }
+     ]
+    },
+    {
+     "cat": "research",
+     "title": "新进展：陶哲轩所在数学家团体呼吁抵制 OpenAI",
+     "body": "OpenAI 本周一次性公开 700 多篇 AI 生成的数学证明后，陶哲轩参与的「人类数学家协会」（AHM）发表声明，批评这些文稿未经同行评审、难以读懂，会干扰相关研究方向，呼吁数学家停止与 OpenAI 合作。杨立昆等人则公开表示不同意，认为数学正进入新阶段。",
+     "score": 6,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Terence Tao 博客",
+       "url": "https://terrytao.wordpress.com/2026/10/07/ahm-statement-on-openais-october-6-release-of-mathematical-documents/"
+      },
+      {
+       "name": "36氪",
+       "url": "https://eu.36kr.com/en/p/4017915610369922"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "微软 365 家庭版的 Copilot 可全家共享",
+     "body": "微软 10/9 宣布，Microsoft 365 家庭版和 Premium 订阅的 Copilot AI 功能可分享给最多 5 位家人，原先分开计算的各项额度改为一个共享的 AI 用量池，Premium 用户还能额外加购。同时这两个套餐的 OneDrive 空间从 6TB 降到 2TB。生效时间和额度大小微软还没公布。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Windows Report",
+       "url": "https://windowsreport.com/microsoft-365-family-and-premium-users-can-now-share-copilot-ai/"
+      },
+      {
+       "name": "Neowin",
+       "url": "https://www.neowin.net/news/microsoft-365-family-and-premium-subscribers-will-soon-be-able-to-share-copilot-ai-benefits/"
+      }
+     ]
+    },
+    {
+     "cat": "model",
+     "title": "GPT-6.1 Sol 极速档上线，快 8 倍贵 6 倍",
+     "body": "OpenAI 10/8 上线 DevDay 预告的 GPT-6.1 Sol Ultrafast：生成速度最高是标准档的 8 倍，API 价格每百万 token 输入 12 美元、输出 60 美元，是标准档的 6 倍。在 ChatGPT 和 Codex 里只给 500 美元一个月的 Pro 500 和部分企业、教育版，Plus 和普通 Pro 用不上。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "36氪",
+       "url": "https://eu.36kr.com/en/p/4017808771829639"
+      },
+      {
+       "name": "Progressive Robot",
+       "url": "https://www.progressiverobot.com/2026/10/08/gpt-6-1-sol-ultrafast-chatgpt-work-codex-api/"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "Anthropic 传最快 11 月上市，招股文件和估值动向",
+    "OpenAI 新一轮融资是否落定",
+    "阶跃星辰 Step 5 Preview 计划 10/15 开放权重"
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI",
+     "Anthropic",
+     "Google / DeepMind",
+     "微软",
+     "DeepSeek",
+     "阿里通义 / Qwen",
+     "月之暗面 Kimi",
+     "智谱",
+     "字节豆包",
+     "@OpenAI",
+     "@AnthropicAI",
+     "@claudeai",
+     "@GoogleDeepMind",
+     "@deepseek_ai",
+     "@Alibaba_Qwen",
+     "@Kimi_Moonshot",
+     "Bloomberg",
+     "Reuters",
+     "TechCrunch",
+     "The Verge",
+     "36氪",
+     "机器之心",
+     "量子位",
+     "Inside Higher Ed",
+     "EdSurge",
+     "中国教育部（moe.gov.cn）",
+     "ChatGPT Edu",
+     "Claude for Education",
+     "Gemini for Education",
+     "Techmeme"
+    ],
+    "candidates": 38
+   }
+  }
+ ],
+ "specials": [],
+ "models": []
+}

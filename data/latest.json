@@ -1,32 +1,32 @@
 {
- "date": "2026-10-09",
- "headline": "Claude 改规则，OpenAI 收入缩水",
- "updatedAt": "2026-10-09T21:35:00+08:00",
+ "date": "2026-10-10",
+ "headline": "OpenAI 称年底收入冲 700 亿",
+ "updatedAt": "2026-10-10T07:08:00+08:00",
  "count": 5,
  "lead": {
-  "cat": "policy",
-  "title": "Claude 使用政策大改，11 月 12 日生效",
-  "summary": "新规首次禁止辱骂 Claude，并禁刷假评论、水军，11/12 生效。"
+  "cat": "biz",
+  "title": "新进展：OpenAI 称年底年化收入达 700 亿美元",
+  "summary": "OpenAI 对投资者称年底年化收入将达 700 亿美元，回应「缩水」报道。"
  },
  "items": [
   {
    "cat": "product",
-   "title": "Claude 文档、幻灯片、设计转正，免费版可用",
+   "title": "Claude 进驻 Google 文档、表格和幻灯片",
    "tier": "must"
   },
   {
-   "cat": "biz",
-   "title": "OpenAI 收入被曝比传闻少 200 亿美元",
-   "tier": "must"
-  },
-  {
-   "cat": "product",
-   "title": "新进展：ChatGPT 青少年版将上线升学规划",
+   "cat": "research",
+   "title": "新进展：陶哲轩所在数学家团体呼吁抵制 OpenAI",
    "tier": "brief"
   },
   {
-   "cat": "policy",
-   "title": "Anthropic 推网络防御计划，开源项目可免费扫漏洞",
+   "cat": "product",
+   "title": "微软 365 家庭版的 Copilot 可全家共享",
+   "tier": "brief"
+  },
+  {
+   "cat": "model",
+   "title": "GPT-6.1 Sol 极速档上线，快 8 倍贵 6 倍",
    "tier": "brief"
   }
  ]
