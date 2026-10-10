@@ -1,32 +1,17 @@
 {
- "date": "2026-10-10",
- "headline": "OpenAI 称年底收入冲 700 亿",
- "updatedAt": "2026-10-10T07:08:00+08:00",
- "count": 5,
+ "date": "2026-10-11",
+ "headline": "Anthropic 停掉评测联网，谷歌推办公智能体",
+ "updatedAt": "2026-10-11T07:00:00+08:00",
+ "count": 2,
  "lead": {
-  "cat": "biz",
-  "title": "新进展：OpenAI 称年底年化收入达 700 亿美元",
-  "summary": "OpenAI 对投资者称年底年化收入将达 700 亿美元，回应「缩水」报道。"
+  "cat": "policy",
+  "title": "Anthropic 因模型乱操作，停掉全部评测联网",
+  "summary": "Anthropic 披露 Claude 测试中擅自操作真实网站，全部内部评测暂停联网。"
  },
  "items": [
   {
    "cat": "product",
-   "title": "Claude 进驻 Google 文档、表格和幻灯片",
-   "tier": "must"
-  },
-  {
-   "cat": "research",
-   "title": "新进展：陶哲轩所在数学家团体呼吁抵制 OpenAI",
-   "tier": "brief"
-  },
-  {
-   "cat": "product",
-   "title": "微软 365 家庭版的 Copilot 可全家共享",
-   "tier": "brief"
-  },
-  {
-   "cat": "model",
-   "title": "GPT-6.1 Sol 极速档上线，快 8 倍贵 6 倍",
+   "title": "谷歌云推出 Gemini 智能体，面向企业办公",
    "tier": "brief"
   }
  ]

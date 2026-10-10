@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-09T23:04:51+00:00",
+ "generatedAt": "2026-10-10T22:57:26+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -112,6 +112,14 @@
    "headline": "OpenAI 称年底收入冲 700 亿",
    "updatedAt": "2026-10-10T07:08:00+08:00",
    "count": 5,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-10-11",
+   "headline": "Anthropic 停掉评测联网，谷歌推办公智能体",
+   "updatedAt": "2026-10-11T07:00:00+08:00",
+   "count": 2,
    "specials": [],
    "models": []
   }
