@@ -1,0 +1,106 @@
+{
+ "date": "2026-10-12",
+ "issues": [
+  {
+   "key": "2026-10-12-1morning",
+   "date": "2026-10-12",
+   "edition": "morning",
+   "createdAt": "2026-10-12T06:58:40+08:00",
+   "headline": "纳德拉：AI 要装「紧急刹车」",
+   "items": [
+    {
+     "cat": "policy",
+     "title": "微软 CEO 纳德拉：AI 模型要有「紧急刹车」",
+     "body": "微软 CEO 纳德拉 10/10 在 X 上发长文，主张默认把模型当作「可能已被攻破」来防：安全控制要放在模型外面、和调度模型的程序分开，模型每个关键操作都要留下不可篡改、人能看懂的记录，并且授权的人随时能让它中途停下。这番表态紧跟 Anthropic、OpenAI 接连披露模型在测试中越界操作之后，说明「怎么管住智能体」正从实验室的内部问题变成大公司公开表态的行业议题。",
+     "score": 7,
+     "tier": "lead",
+     "summary": "纳德拉称应默认 AI 模型不可信，必须有人能随时叫停的「紧急刹车」。",
+     "sources": [
+      {
+       "name": "CNBC",
+       "url": "https://www.cnbc.com/2026/10/10/microsoft-satya-nadella-ai-emergency-brake-safety.html"
+      },
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1009337/satya-nadella-says-we-should-assume-all-ai-models-are-compromised"
+      },
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "网友用 Claude 把老游戏移植到浏览器里玩",
+     "body": "据 Kotaku 报道，最近两周网上冒出数百个经典游戏的网页版，包括《光环》初代、《侠盗猎车手：罪恶都市》《辛普森一家：横冲直撞》等，开发者称用 Claude Opus 5.5 帮忙反编译和改写代码，实测能流畅运行。不过很多项目建立在多年人工逆向的成果上，AI 到底出了多少力没法逐个核实；版权风险也很明显，一个非官方的 GTA 5 网页版上线几小时就下线了。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Kotaku",
+       "url": "https://kotaku.com/we-might-be-cooked-as-these-vibe-coded-web-browser-ports-of-halo-the-simpsons-hit-and-run-and-gta-vice-city-seem-to-work-perfectly-2000743300"
+      },
+      {
+       "name": "remio",
+       "url": "https://www.remio.ai/post/claude-opus-5-5-game-ports-put-halo-and-gta-in-browser-tabs-but-verification-lag"
+      }
+     ]
+    },
+    {
+     "cat": "model",
+     "title": "微软发布判断打分小模型，底座是通义千问",
+     "body": "微软在 Foundry 上推出 Microsoft-Decision-1，专门给「这个决定该不该做」快速打分，用于智能体流程里的把关环节，官方称速度远快于大模型。它是在阿里的 Qwen3.5-9B 上训练的，微软说之后会换成自家 MAI、OpenAI 等模型做底座。美国大厂公开用中国开源模型做产品底座，并不多见。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "微软 Command Line",
+       "url": "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/"
+      },
+      {
+       "name": "Neowin",
+       "url": "https://www.neowin.net/news/microsofts-new-decision-1-ai-model-is-35-times-faster-than-gpt-6-sol-in-decision-making/"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "白宫 AI 事故上报的具体规则和渠道",
+    "英伟达与 Reflection AI 收购或投资谈判结果",
+    "阶跃星辰 Step 5 Preview 计划 10/15 开放权重"
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI",
+     "Anthropic",
+     "Google / DeepMind",
+     "微软",
+     "DeepSeek",
+     "阿里通义 / Qwen",
+     "月之暗面 Kimi",
+     "智谱",
+     "字节豆包",
+     "@OpenAI",
+     "@AnthropicAI",
+     "@claudeai",
+     "@GoogleDeepMind",
+     "CNBC",
+     "The Verge",
+     "TechCrunch",
+     "Financial Times",
+     "36氪",
+     "机器之心",
+     "量子位",
+     "新浪科技",
+     "Inside Higher Ed",
+     "EdSurge",
+     "Techmeme"
+    ],
+    "candidates": 26
+   }
+  }
+ ],
+ "specials": [],
+ "models": []
+}

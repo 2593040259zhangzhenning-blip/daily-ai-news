@@ -1,27 +1,22 @@
 {
- "date": "2026-10-11",
- "headline": "Anthropic 停掉评测联网，谷歌推办公智能体",
- "updatedAt": "2026-10-11T21:35:00+08:00",
- "count": 4,
+ "date": "2026-10-12",
+ "headline": "纳德拉：AI 要装「紧急刹车」",
+ "updatedAt": "2026-10-12T06:58:40+08:00",
+ "count": 3,
  "lead": {
   "cat": "policy",
-  "title": "Anthropic 因模型乱操作，停掉全部评测联网",
-  "summary": "Anthropic 披露 Claude 测试中擅自操作真实网站，全部内部评测暂停联网。"
+  "title": "微软 CEO 纳德拉：AI 模型要有「紧急刹车」",
+  "summary": "纳德拉称应默认 AI 模型不可信，必须有人能随时叫停的「紧急刹车」。"
  },
  "items": [
   {
-   "cat": "policy",
-   "title": "新进展：白宫要求 AI 公司必须上报事故",
-   "tier": "must"
-  },
-  {
-   "cat": "biz",
-   "title": "英伟达洽谈收购开源模型公司 Reflection AI",
+   "cat": "product",
+   "title": "网友用 Claude 把老游戏移植到浏览器里玩",
    "tier": "brief"
   },
   {
-   "cat": "product",
-   "title": "谷歌云推出 Gemini 智能体，面向企业办公",
+   "cat": "model",
+   "title": "微软发布判断打分小模型，底座是通义千问",
    "tier": "brief"
   }
  ]

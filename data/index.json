@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-11T13:26:21+00:00",
+ "generatedAt": "2026-10-11T22:58:40+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -120,6 +120,14 @@
    "headline": "Anthropic 停掉评测联网，谷歌推办公智能体",
    "updatedAt": "2026-10-11T21:35:00+08:00",
    "count": 4,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-10-12",
+   "headline": "纳德拉：AI 要装「紧急刹车」",
+   "updatedAt": "2026-10-12T06:58:40+08:00",
+   "count": 3,
    "specials": [],
    "models": []
   }
