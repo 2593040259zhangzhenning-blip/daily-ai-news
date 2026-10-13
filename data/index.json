@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-11T22:58:40+00:00",
+ "generatedAt": "2026-10-13T13:34:16+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -128,6 +128,14 @@
    "headline": "纳德拉：AI 要装「紧急刹车」",
    "updatedAt": "2026-10-12T06:58:40+08:00",
    "count": 3,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-10-13",
+   "headline": "Meta 首个前沿模型 Muse Wonder 发布",
+   "updatedAt": "2026-10-13T21:34:08+08:00",
+   "count": 5,
    "specials": [],
    "models": []
   }

@@ -1,22 +1,32 @@
 {
- "date": "2026-10-12",
- "headline": "纳德拉：AI 要装「紧急刹车」",
- "updatedAt": "2026-10-12T06:58:40+08:00",
- "count": 3,
+ "date": "2026-10-13",
+ "headline": "Meta 首个前沿模型 Muse Wonder 发布",
+ "updatedAt": "2026-10-13T21:34:08+08:00",
+ "count": 5,
  "lead": {
-  "cat": "policy",
-  "title": "微软 CEO 纳德拉：AI 模型要有「紧急刹车」",
-  "summary": "纳德拉称应默认 AI 模型不可信，必须有人能随时叫停的「紧急刹车」。"
+  "cat": "model",
+  "title": "Meta 发布首个前沿模型 Muse Wonder",
+  "summary": "Meta 首款前沿模型发布，跑分接近 GPT-6，API 与 Opus 同价。"
  },
  "items": [
   {
-   "cat": "product",
-   "title": "网友用 Claude 把老游戏移植到浏览器里玩",
+   "cat": "biz",
+   "title": "Character.AI 申请破产保护，迪士尼出价 2000 万",
    "tier": "brief"
   },
   {
-   "cat": "model",
-   "title": "微软发布判断打分小模型，底座是通义千问",
+   "cat": "biz",
+   "title": "微软发布自研 AI 芯片 Maia 300，减少依赖英伟达",
+   "tier": "brief"
+  },
+  {
+   "cat": "china",
+   "title": "IDC：华为在中国 AI 芯片市场份额逼近英伟达",
+   "tier": "brief"
+  },
+  {
+   "cat": "product",
+   "title": "Linux 之父用 Claude Code 重写内核缓存",
    "tier": "brief"
   }
  ]

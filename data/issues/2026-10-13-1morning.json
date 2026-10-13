@@ -1,0 +1,129 @@
+{
+ "key": "2026-10-13-1morning",
+ "date": "2026-10-13",
+ "edition": "morning",
+ "createdAt": "2026-10-13T21:34:08+08:00",
+ "headline": "Meta 首个前沿模型 Muse Wonder 发布",
+ "items": [
+  {
+   "cat": "model",
+   "title": "Meta 发布首个前沿模型 Muse Wonder",
+   "body": "Meta 超级智能实验室 10/12 推出 Muse Wonder 和更强的 Muse Wonder Full，主打智能体任务和跨对话的「主动记忆」，官方自测成绩与 GPT-6 Astra、Fable 5.1 相当。普通版已开放 API，价格每百万 token 输入 4 美元、输出 20 美元，和 Opus 5.5 同档；Full 版只给 Muse Code 订阅用户（每月 50 美元起），不走 API，也不开放权重。第三方 Artificial Analysis 综合指数里 Full 版 56 分排第二，仅次于 Opus 5.5 的 58 分。",
+   "score": 8,
+   "tier": "lead",
+   "summary": "Meta 首款前沿模型发布，跑分接近 GPT-6，API 与 Opus 同价。",
+   "sources": [
+    {
+     "name": "Meta 官方新闻",
+     "url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/"
+    },
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/"
+    },
+    {
+     "name": "VentureBeat",
+     "url": "https://venturebeat.com/technology/metas-new-muse-wonder-and-muse-wonder-full-models-achieve-frontier-performance-but-only-the-weaker-one-is-available-via-api"
+    }
+   ]
+  },
+  {
+   "cat": "biz",
+   "title": "Character.AI 申请破产保护，迪士尼出价 2000 万",
+   "body": "曾经很火的 AI 角色聊天应用 Character.AI 10/12 在美国申请破产重组，计划把部分资产和知识产权授权以 2000 万美元卖给迪士尼，作为拍卖底价，其他买家可以加价竞购。公司称重组期间应用照常运行。它的创始团队此前已被谷歌挖走，这次破产也说明单靠陪伴聊天很难撑起一家公司。",
+   "score": 6,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Bloomberg Law",
+     "url": "https://news.bloomberglaw.com/bankruptcy-law/character-ai-files-for-chapter-11-bankruptcy-in-delaware"
+    },
+    {
+     "name": "TokenPost",
+     "url": "https://www.tokenpost.com/news/business/30912"
+    }
+   ]
+  },
+  {
+   "cat": "biz",
+   "title": "微软发布自研 AI 芯片 Maia 300，减少依赖英伟达",
+   "body": "微软 10/12 在 OCP 峰会上公布第三代推理芯片 Maia 300，称每兆瓦产出的 token 比主流 GPU 方案多 4 成，2027 年起将成为自家产品的主力推理系统。据路透社报道，明年部署量可能超过 100 万颗。消息公布当天微软股价上涨，英伟达和 AMD 下跌。",
+   "score": 6,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Dataconomy（援引微软博客、路透社）",
+     "url": "https://dataconomy.com/2026/10/13/microsoft-maia-300-ai-chip-2027"
+    },
+    {
+     "name": "新浪科技",
+     "url": "https://k.sina.com.cn/article_7857201856_1d45362c001908qul6.html"
+    }
+   ]
+  },
+  {
+   "cat": "china",
+   "title": "IDC：华为在中国 AI 芯片市场份额逼近英伟达",
+   "body": "据香港《英文虎报》援引 IDC 数据，英伟达在中国 AI 加速芯片市场的份额已降到 34%，华为升至 28%，差距明显缩小。另据《金融时报》报道，今年中国科技公司为补算力缺口，买了超过 100 万块英伟达游戏卡和工作站卡。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "The Standard",
+     "url": "https://www.thestandard.com.hk/innovation/article/345296/Nvidias-China-AI-chip-share-falls-as-Huawei-closes-gap-report-finds"
+    },
+    {
+     "name": "Financial Times",
+     "url": "https://www.ft.com/content/9dbd99db-6b0c-43bd-b7be-849f129df098"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "Linux 之父用 Claude Code 重写内核缓存",
+   "body": "Linux 创始人 Linus Torvalds 10/12 推送了一个重做页面缓存的内核分支，并注明很大一部分工作由 Claude Code 完成，小文件读取速度据称提高到约 3 倍。Torvalds 过去对 AI 写代码态度保守，这次公开署名使用，算是 Claude Code 在顶级开源项目里的一次背书。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Hardware Busters",
+     "url": "https://hwbusters.com/news/linus-torvalds-uses-claude-code-to-rework-the-linux-page-cache-tripling-small-read-throughput/"
+    }
+   ]
+  }
+ ],
+ "watch": [
+  "Muse Wonder 何时进入 Muse 应用，面向普通用户怎么收费",
+  "阶跃星辰 Step 5 Preview 计划 10/15 开放权重",
+  "Character.AI 资产拍卖是否有人加价"
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI",
+   "Anthropic",
+   "Google / DeepMind",
+   "Meta",
+   "微软",
+   "英伟达",
+   "阿里通义 / Qwen",
+   "DeepSeek",
+   "@OpenAI",
+   "@AnthropicAI",
+   "@claudeai",
+   "@GoogleDeepMind",
+   "TechCrunch",
+   "CNBC",
+   "Bloomberg",
+   "Financial Times",
+   "Reuters",
+   "新浪科技",
+   "机器之心",
+   "量子位",
+   "Inside Higher Ed",
+   "EdSurge",
+   "中国教育部（moe.gov.cn）",
+   "Techmeme"
+  ],
+  "candidates": 34
+ }
+}
