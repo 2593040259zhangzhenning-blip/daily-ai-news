@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-14T13:24:04+00:00",
+ "generatedAt": "2026-10-14T22:53:16+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -154,6 +154,14 @@
    "headline": "Gemini 4 Argon 向付费用户全面开放",
    "updatedAt": "2026-10-14T21:40:00+08:00",
    "count": 9,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-10-15",
+   "headline": "Anthropic 三季度收入近 170 亿美元",
+   "updatedAt": "2026-10-15T06:53:05+08:00",
+   "count": 6,
    "specials": [],
    "models": []
   }

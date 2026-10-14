@@ -1,39 +1,37 @@
 {
- "date": "2026-10-14",
- "headline": "Gemini 4 Argon 向付费用户全面开放",
- "updatedAt": "2026-10-14T21:40:00+08:00",
- "count": 9,
+ "date": "2026-10-15",
+ "headline": "Anthropic 三季度收入近 170 亿美元",
+ "updatedAt": "2026-10-15T06:53:05+08:00",
+ "count": 6,
  "lead": {
-  "cat": "model",
-  "title": "Gemini 4 Argon：综合排名并列第 4",
-  "summary": "Gemini App AI Pro 起（$19.99 / 月）",
-  "model": "gemini-4-argon",
-  "date": "2026-10-01"
+  "cat": "biz",
+  "title": "Anthropic 三季度收入 168 亿美元，环比涨 45%",
+  "summary": "Claude 背后公司季收入近 170 亿美元，IPO 估值瞄准 2 万亿。"
  },
  "items": [
   {
-   "cat": "model",
-   "title": "新进展：Gemini 4 Argon 向付费用户全面开放",
-   "tier": "lead"
-  },
-  {
-   "cat": "model",
-   "title": "据报 OpenAI 下一代旗舰模型卡在安全问题上",
+   "cat": "product",
+   "title": "Claude 将为美国用户显示官方投票信息",
    "tier": "brief"
   },
   {
-   "cat": "policy",
-   "title": "400 多位科学家联名呼吁设国际 AI 监管机构",
+   "cat": "china",
+   "title": "阶跃星辰开源前上调 Step 5 部分 API 价格",
    "tier": "brief"
   },
   {
-   "cat": "policy",
-   "title": "路透：Anthropic、OpenAI 曾想管住外部评测报告",
+   "cat": "biz",
+   "title": "Anthropic 开设新加坡办公室，与政府签合作备忘录",
    "tier": "brief"
   },
   {
-   "cat": "model",
-   "title": "Anthropic 加强防「蒸馏」，被拦请求也要收费",
+   "cat": "biz",
+   "title": "英伟达五年投入 2.5 亿美元算力支持英国 AI 安全研究",
+   "tier": "brief"
+  },
+  {
+   "cat": "product",
+   "title": "Deezer、YouTube Music 开始区分 AI 生成音乐",
    "tier": "brief"
   }
  ]

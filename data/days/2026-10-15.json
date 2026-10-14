@@ -1,0 +1,139 @@
+{
+ "date": "2026-10-15",
+ "issues": [
+  {
+   "key": "2026-10-15-1morning",
+   "date": "2026-10-15",
+   "edition": "morning",
+   "createdAt": "2026-10-15T06:53:05+08:00",
+   "headline": "Anthropic 三季度收入近 170 亿美元",
+   "items": [
+    {
+     "cat": "biz",
+     "title": "Anthropic 三季度收入 168 亿美元，环比涨 45%",
+     "body": "据《金融时报》和路透社 10/14 报道，Anthropic 在上市前的闭门投资人会上披露，三季度收入约 168 亿美元，比二季度的约 115 亿美元增长约 45%，经调整后实现盈利。公司仍在等待公开递交招股书，路透社称上市可能推迟到 11 月美国中期选举之后，目标估值超过 2 万亿美元。Claude 的增长速度，正在决定这场可能是史上最大 IPO 的规模。",
+     "score": 7,
+     "tier": "lead",
+     "summary": "Claude 背后公司季收入近 170 亿美元，IPO 估值瞄准 2 万亿。",
+     "sources": [
+      {
+       "name": "Reuters（经 Investing.com 转载）",
+       "url": "https://www.investing.com/news/stock-market-news/anthropics-q3-revenue-surges-45-to-nearly-17-billion-4950208"
+      },
+      {
+       "name": "Yahoo Finance（援引 Financial Times）",
+       "url": "https://finance.yahoo.com/technology/article/anthropic-q3-revenue-climbs-to-168-billion-report-221619202.html"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-10-14/anthropic-revenue-jumps-to-16-8-billion-in-quarter-before-ipo"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "Claude 将为美国用户显示官方投票信息",
+     "body": "Anthropic 10/14 公布中期选举安排：美国用户问到在哪投票、要带什么证件时，Claude 会调取第三方机构 Democracy Works 的各州官方信息，选举当晚也会给出官方结果。公司称最新的 Opus、Sonnet、Haiku 5.5 在自家政治中立测试中得分 99%，并已封禁一个用 Claude 批量写选举假新闻的境外网站账号。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Anthropic 官方新闻",
+       "url": "https://www.anthropic.com/news/2026-us-midterms"
+      }
+     ]
+    },
+    {
+     "cat": "china",
+     "title": "阶跃星辰开源前上调 Step 5 部分 API 价格",
+     "body": "阶跃星辰 10/14 凌晨起把 Step-5-preview 的缓存命中输入价从每百万 token 0.35 元提到 0.7 元，其他价格不变，老用户不受影响。北京商报指出，DeepSeek、智谱、Kimi 此前也已调价，国产模型降价潮在算力吃紧下出现反转；这款模型计划 10/15 开放权重。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "北京商报",
+       "url": "https://www.bbtnews.com.cn/2026/1012/607740.shtml"
+      }
+     ]
+    },
+    {
+     "cat": "biz",
+     "title": "Anthropic 开设新加坡办公室，与政府签合作备忘录",
+     "body": "Anthropic 10/14 在新加坡开设亚太第五个办公室，并与新加坡数码发展及新闻部签署备忘录，合作内容包括模型安全评测、事故应对，以及帮助中小企业和公务员提升 AI 技能。按人口算，新加坡的 Claude.ai 使用量在 121 个国家里排第二。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Anthropic 官方新闻",
+       "url": "https://www.anthropic.com/news/singapore-office-opening"
+      }
+     ]
+    },
+    {
+     "cat": "biz",
+     "title": "英伟达五年投入 2.5 亿美元算力支持英国 AI 安全研究",
+     "body": "英伟达 10/13 宣布未来五年向英国研究机构提供约 2.5 亿美元的算力（不是现金），重点支持智能体安全和机器人研究，受益方包括帝国理工学院等。这也是近期各家在英国加码 AI 安全投入的一部分。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "英伟达新闻中心",
+       "url": "https://nvidianews.nvidia.com/news/nvidia-commits-250-million-to-advance-uk-agentic-safety-and-security-research-over-the-next-five-years"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "Deezer、YouTube Music 开始区分 AI 生成音乐",
+     "body": "据 TechCrunch 10/14 报道，Deezer 即将允许用户过滤掉 AI 生成的歌曲，YouTube Music 也推出新标签来标明这类内容。AI 音乐大量涌入流媒体后，平台开始把「要不要听 AI 歌」交给用户自己选。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/10/14/deezer-will-soon-let-you-filter-out-ai-generated-music/"
+      },
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/10/14/youtube-music-launches-new-labels-as-ai-generated-music-floods-streaming-platforms/"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "阶跃星辰 Step 5 Preview 今天是否如期开放权重",
+    "Anthropic 何时公开递交招股书",
+    "OpenAI 下一代旗舰模型的安全问题何时解决、何时上线"
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI",
+     "Anthropic",
+     "Google / DeepMind",
+     "英伟达",
+     "DeepSeek",
+     "阿里通义 / Qwen",
+     "月之暗面 Kimi",
+     "智谱",
+     "@OpenAI",
+     "@claudeai",
+     "@deepseek_ai",
+     "@Alibaba_Qwen",
+     "Reuters",
+     "Bloomberg",
+     "Financial Times",
+     "TechCrunch",
+     "机器之心",
+     "量子位",
+     "Inside Higher Ed",
+     "EdSurge",
+     "Times Higher Education",
+     "中国教育部（moe.gov.cn）"
+    ],
+    "candidates": 38
+   }
+  }
+ ],
+ "specials": [],
+ "models": []
+}
