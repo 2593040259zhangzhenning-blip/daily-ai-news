@@ -1,0 +1,58 @@
+{
+ "key": "2026-10-14-2evening",
+ "date": "2026-10-14",
+ "edition": "evening",
+ "createdAt": "2026-10-14T21:40:00+08:00",
+ "headline": "OpenAI 下一代旗舰卡在安全问题上",
+ "items": [
+  {
+   "cat": "model",
+   "title": "据报 OpenAI 下一代旗舰模型卡在安全问题上",
+   "body": "据 The Information 10/14 报道，OpenAI 正赶在发布前修补下一代旗舰模型的安全隐患：外界认为它用了让模型反复「过同一组层」的循环架构，这会让人更难看清模型在想什么、也更难发现异常行为。报道没有给出上线时间；此前 OpenAI 已在 9 月底因对齐测试不理想取消了 GPT-6.1 Astra。ChatGPT 用户等新一代模型可能还要多等一阵。",
+   "score": 6,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "The Information",
+     "url": "https://www.theinformation.com/articles/openai-scrambles-fix-safety-issues-shipping-next-flagship-model"
+    },
+    {
+     "name": "AI Weekly（转述 The Information）",
+     "url": "https://aiweekly.co/alerts/openai-scrambles-to-fix-safety-issues-on-next-flagship-model"
+    }
+   ]
+  }
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI",
+   "Anthropic",
+   "Google / DeepMind",
+   "英伟达",
+   "DeepSeek",
+   "阿里通义 / Qwen",
+   "月之暗面 Kimi",
+   "智谱",
+   "@OpenAI",
+   "@AnthropicAI",
+   "@GoogleDeepMind",
+   "@Alibaba_Qwen",
+   "@deepseek_ai",
+   "@Kimi_Moonshot",
+   "Reuters",
+   "The Information",
+   "TechCrunch",
+   "CNBC",
+   "Bloomberg",
+   "机器之心",
+   "36氪",
+   "新浪科技",
+   "Inside Higher Ed",
+   "EdSurge",
+   "中国教育部（moe.gov.cn）",
+   "Techmeme",
+   "Artificial Analysis"
+  ],
+  "candidates": 41
+ }
+}

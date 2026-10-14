@@ -1,8 +1,8 @@
 {
  "date": "2026-10-14",
  "headline": "Gemini 4 Argon 向付费用户全面开放",
- "updatedAt": "2026-10-14T18:41:00+08:00",
- "count": 8,
+ "updatedAt": "2026-10-14T21:40:00+08:00",
+ "count": 9,
  "lead": {
   "cat": "model",
   "title": "Gemini 4 Argon：综合排名并列第 4",
@@ -17,6 +17,11 @@
    "tier": "lead"
   },
   {
+   "cat": "model",
+   "title": "据报 OpenAI 下一代旗舰模型卡在安全问题上",
+   "tier": "brief"
+  },
+  {
    "cat": "policy",
    "title": "400 多位科学家联名呼吁设国际 AI 监管机构",
    "tier": "brief"
@@ -29,11 +34,6 @@
   {
    "cat": "model",
    "title": "Anthropic 加强防「蒸馏」，被拦请求也要收费",
-   "tier": "brief"
-  },
-  {
-   "cat": "product",
-   "title": "OpenAI 明年 1 月起 API 下线 GPT-4o 等老模型",
    "tier": "brief"
   }
  ]
