@@ -1,32 +1,37 @@
 {
- "date": "2026-10-13",
- "headline": "Meta 首个前沿模型 Muse Wonder 发布",
- "updatedAt": "2026-10-13T21:34:08+08:00",
- "count": 5,
+ "date": "2026-10-14",
+ "headline": "Gemini 4 Argon 向付费用户全面开放",
+ "updatedAt": "2026-10-14T16:52:00+08:00",
+ "count": 8,
  "lead": {
   "cat": "model",
-  "title": "Meta 发布首个前沿模型 Muse Wonder",
-  "summary": "Meta 首款前沿模型发布，跑分接近 GPT-6，API 与 Opus 同价。"
+  "title": "新进展：Gemini 4 Argon 向付费用户全面开放",
+  "summary": "谷歌最强模型 Argon 开放给 Pro/Ultra 用户和 API，免费版暂无。"
  },
  "items": [
   {
-   "cat": "biz",
-   "title": "Character.AI 申请破产保护，迪士尼出价 2000 万",
+   "cat": "policy",
+   "title": "400 多位科学家联名呼吁设国际 AI 监管机构",
    "tier": "brief"
   },
   {
-   "cat": "biz",
-   "title": "微软发布自研 AI 芯片 Maia 300，减少依赖英伟达",
+   "cat": "policy",
+   "title": "路透：Anthropic、OpenAI 曾想管住外部评测报告",
    "tier": "brief"
   },
   {
-   "cat": "china",
-   "title": "IDC：华为在中国 AI 芯片市场份额逼近英伟达",
+   "cat": "model",
+   "title": "Anthropic 加强防「蒸馏」，被拦请求也要收费",
    "tier": "brief"
   },
   {
    "cat": "product",
-   "title": "Linux 之父用 Claude Code 重写内核缓存",
+   "title": "OpenAI 明年 1 月起 API 下线 GPT-4o 等老模型",
+   "tier": "brief"
+  },
+  {
+   "cat": "product",
+   "title": "苹果发布 HomeView 家庭中枢，欧盟买不到",
    "tier": "brief"
   }
  ]

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-13T13:34:16+00:00",
+ "generatedAt": "2026-10-14T08:47:04+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -136,6 +136,14 @@
    "headline": "Meta 首个前沿模型 Muse Wonder 发布",
    "updatedAt": "2026-10-13T21:34:08+08:00",
    "count": 5,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-10-14",
+   "headline": "Gemini 4 Argon 向付费用户全面开放",
+   "updatedAt": "2026-10-14T16:52:00+08:00",
+   "count": 8,
    "specials": [],
    "models": []
   }

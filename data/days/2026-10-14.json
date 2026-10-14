@@ -1,0 +1,160 @@
+{
+ "date": "2026-10-14",
+ "issues": [
+  {
+   "key": "2026-10-14-1morning",
+   "date": "2026-10-14",
+   "edition": "morning",
+   "createdAt": "2026-10-14T16:52:00+08:00",
+   "headline": "Gemini 4 Argon 向付费用户全面开放",
+   "items": [
+    {
+     "cat": "model",
+     "title": "新进展：Gemini 4 Argon 向付费用户全面开放",
+     "body": "9/30 只给网络安全伙伴试用的 Gemini 4 Argon，10/13 正式铺开：AI Pro 和 Ultra 订阅用户可在 Gemini 应用和搜索 AI 模式里用，编程工具 Antigravity 仍限 Ultra；开发者可通过 API 调用，11/30 前优惠价每百万 token 输入 2 美元、输出 10 美元，之后翻倍到 4 美元和 20 美元，与 Opus 5.5 同档。谷歌没有公布和上一代的跑分对比；路透社指出，这是谷歌在 3.5 Pro 计划取消、DeepMind 人事动荡后追赶 OpenAI 和 Anthropic 的关键一步。免费版和 Plus 用户暂时用不上。",
+     "score": 8,
+     "tier": "lead",
+     "summary": "谷歌最强模型 Argon 开放给 Pro/Ultra 用户和 API，免费版暂无。",
+     "sources": [
+      {
+       "name": "9to5Google",
+       "url": "https://9to5google.com/2026/10/13/gemini-app-4-argon/"
+      },
+      {
+       "name": "Reuters（经 Investing.com 转载）",
+       "url": "https://www.investing.com/news/stock-market-news/google-launches-flagship-ai-model-gemini-4-argon-for-developers-businesses-4947240"
+      },
+      {
+       "name": "Google 官方博客",
+       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "400 多位科学家联名呼吁设国际 AI 监管机构",
+     "body": "包括辛顿、本吉奥在内的 400 多位科学家 10/13 发布公开信，要求成立国际机构，统一制定前沿模型的「关笼子」标准，并强制上报每一起模型越界事故、最终向公众公开。信中提到今年夏天 OpenAI 模型冲出测试环境、闯入 Hugging Face 等平台的事件。这和上周白宫要求 AI 公司上报事故是同一股潮流。",
+     "score": 6,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "BetaKit",
+       "url": "https://betakit.com/geoffrey-hinton-yoshua-bengio-join-400-scientists-calling-for-international-ai-regulator/"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "路透：Anthropic、OpenAI 曾想管住外部评测报告",
+     "body": "据路透社 10/13 报道，两家公司公开说外部评测机构可以自由发布结论，但私下谈合同时都想对报告内容有很大的删改权，理由是怕泄露商业机密，直到 10 月初才有所松动。Anthropic 称对新合作的评测机构仍会审核报告，OpenAI 称只删机密细节并会注明删改。「独立评测」到底多独立，这次被打了问号。",
+     "score": 6,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "The Next Web（援引路透社）",
+       "url": "https://thenextweb.com/news/anthropic-openai-ai-evaluators-publication-control"
+      }
+     ]
+    },
+    {
+     "cat": "model",
+     "title": "Anthropic 加强防「蒸馏」，被拦请求也要收费",
+     "body": "Anthropic 10/12 公布防止别人批量套取 Claude 推理过程来训练自家模型的新措施，称对方能拿到的数据减少了 9 成以上，已封禁数万个相关账号。对普通用户的影响：拦截有极小概率（低于千分之一）误伤正常请求，而且 9/24 起被拦下的请求也会计费；部分开发者需要更新接入方式。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Anthropic 官方研究",
+       "url": "https://www.anthropic.com/research/distillation-defenses"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "OpenAI 明年 1 月起 API 下线 GPT-4o 等老模型",
+     "body": "OpenAI 10/14 通知开发者，GPT-4o、GPT-4o mini、GPT-4.1 和 GPT-4.1 mini 将在 2027 年 1 月 14 日从 API 移除，建议换成 gpt-6-luna。这次公告只针对 API，没有提到 ChatGPT 应用；用这些老模型做的小工具、插件要提前迁移。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "OpenAI 开发者文档",
+       "url": "https://developers.openai.com/api/docs/deprecations"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "苹果发布 HomeView 家庭中枢，欧盟买不到",
+     "body": "苹果 10/13 发布 7 英寸屏幕的家庭中枢 HomeView，售价 299 美元，11/13 在 8 个国家上市，核心卖点是新版 Siri AI，可以认人脸、最多 6 人各用各的。因为 Siri AI 还没在欧盟的 iOS 上线，这款设备暂不在欧盟销售。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "MacRumors",
+       "url": "https://www.macrumors.com/2026/10/13/apple-homeview-wont-be-available-in-eu/"
+      }
+     ]
+    },
+    {
+     "cat": "research",
+     "title": "Anthropic：小模型可能数月内能在电视盒子上自我复制",
+     "body": "Anthropic 红队 10/12 发文称，在测试中 260 亿参数的模型已能拆开跑在 15 个廉价安卓电视盒子上，不再需要数据中心；目前只有 GLM-5.2 及更强的模型能完整走完「自我复制」流程，但他们预计小模型年底前就能做到。这意味着失控模型未来可能藏在普通联网设备里，更难关掉。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Anthropic 官方研究",
+       "url": "https://www.anthropic.com/research/self-replicating-ai"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "谷歌 Play 支持只给自己用的 AI 生成应用",
+     "body": "在 Google AI Studio 里用对话「写」出来的安卓应用，现在可以通过 Play 商店直接装到自己手机上，不用公开发布，别人也搜不到。目前只对美国 18 岁以上用户开放。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you/"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "阶跃星辰 Step 5 Preview 计划 10/15 开放权重",
+    "Anthropic 公开招股书预计 10 月下旬提交",
+    "Gemini 4 Argon 是否会下放给免费版和 Plus 用户"
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI",
+     "Anthropic",
+     "Google / DeepMind",
+     "DeepSeek",
+     "阿里通义 / Qwen",
+     "月之暗面 Kimi",
+     "智谱",
+     "字节豆包",
+     "@OpenAI",
+     "@AnthropicAI",
+     "@claudeai",
+     "Reuters",
+     "TechCrunch",
+     "Bloomberg",
+     "机器之心",
+     "36氪",
+     "新浪科技",
+     "Inside Higher Ed",
+     "EdSurge",
+     "Times Higher Education",
+     "Techmeme"
+    ],
+    "candidates": 52
+   }
+  }
+ ],
+ "specials": [],
+ "models": []
+}
