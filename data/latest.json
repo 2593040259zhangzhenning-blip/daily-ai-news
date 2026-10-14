@@ -1,14 +1,21 @@
 {
  "date": "2026-10-14",
  "headline": "Gemini 4 Argon 向付费用户全面开放",
- "updatedAt": "2026-10-14T16:52:00+08:00",
+ "updatedAt": "2026-10-14T18:41:00+08:00",
  "count": 8,
  "lead": {
   "cat": "model",
-  "title": "新进展：Gemini 4 Argon 向付费用户全面开放",
-  "summary": "谷歌最强模型 Argon 开放给 Pro/Ultra 用户和 API，免费版暂无。"
+  "title": "Gemini 4 Argon：综合排名并列第 4",
+  "summary": "Gemini App AI Pro 起（$19.99 / 月）",
+  "model": "gemini-4-argon",
+  "date": "2026-10-01"
  },
  "items": [
+  {
+   "cat": "model",
+   "title": "新进展：Gemini 4 Argon 向付费用户全面开放",
+   "tier": "lead"
+  },
   {
    "cat": "policy",
    "title": "400 多位科学家联名呼吁设国际 AI 监管机构",
@@ -27,11 +34,6 @@
   {
    "cat": "product",
    "title": "OpenAI 明年 1 月起 API 下线 GPT-4o 等老模型",
-   "tier": "brief"
-  },
-  {
-   "cat": "product",
-   "title": "苹果发布 HomeView 家庭中枢，欧盟买不到",
    "tier": "brief"
   }
  ]

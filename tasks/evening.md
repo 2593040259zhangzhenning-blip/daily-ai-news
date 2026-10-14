@@ -3,7 +3,7 @@
 - 运行时间：每天北京时间 21:18（`CRON_TZ=Asia/Shanghai 18 21 * * *`）
 - 模型：Opus
 - 审批：自动批准；完成后推送通知到手机
-- 存档日期：2026-10-08（加入新模型对比卡）
+- 存档日期：2026-10-14（新模型卡改成「排第几、怎么用上」，尺子换成 Artificial Analysis 综合指数）
 
 这是定时任务提示词的备份。实际生效的是 Claude「定时任务」里的版本。改提示词时两边要一起改；任务丢失时，用下面的原文重新创建。
 
@@ -23,14 +23,14 @@
    - JSON 里 key 用 "D-1morning"，edition 用 "morning"；可加 "watch"（1–3 条接下来值得关注的事）。
    - 一般收 5–10 条，3 分及以下不收：最高分 1 条是头条（tier "lead"），加一句 40 字以内的 summary；其余 7 分及以上最多 3 条是必看（"must"）；其他是 "brief"。传闻不能做头条。不适用第 7 步的晚间门槛。
    - 提交信息写「早间（补）：<headline>」。
-   - 最后的回复：写了对比卡就第一行「新模型：<name>，比 <prev> <summary 各项>」；写了专题就接一行「专题：<专题 title>」；然后一行「今日头条：<头条标题>（早上没跑成，已补上）」；接着每条必看一行；最后一行「打开 Signal 看全文」。
+   - 最后的回复：写了新模型卡就第一行「新模型：<name>，综合排名<脚本打印的结论>」；写了专题就接一行「专题：<专题 title>」；然后一行「今日头条：<头条标题>（早上没跑成，已补上）」；接着每条必看一行；最后一行「打开 Signal 看全文」。
    - 补做早间后本次就结束，不再另写晚间内容。
-4. 读 README.md（重要度打分标准）、sources.md（信源清单和规则）、specials.md（发布会专题）和 models.md（新模型对比卡），严格照着做。运行 python3 scripts/add_issue.py --recent 3、python3 scripts/add_issue.py --specials 和 python3 scripts/add_issue.py --models，重点看 D 当天的早间内容 D-1morning 和已有专题，记下已经报道过的事件。
+4. 读 README.md（重要度打分标准）、sources.md（信源清单和规则）、specials.md（发布会专题）和 models.md（新模型卡），严格照着做。运行 python3 scripts/add_issue.py --recent 3、python3 scripts/add_issue.py --specials 和 python3 scripts/add_issue.py --models，重点看 D 当天的早间内容 D-1morning 和已有专题，记下已经报道过的事件。
 5. 按 sources.md 的五层逐层检索 D 当天早上 7 点以来的 AI 动态（中国白天、欧洲时段、美国凌晨公布的都算）。五层都要查，第二层用 site:x.com 加账号名搜索，第四层（AI 与教育）必查。每条事实都要有检索到的来源支撑。一边查一边记下实际检查过的来源名称和看过的候选条数。
 6. 发布会专题：如果检索中发现某场已经结束的发布活动公布了 3 项及以上值得报道的内容，而且还没有它的专题，就按 specials.md 另写一份专题（写成 /tmp/special.json，运行 python3 scripts/add_issue.py --special /tmp/special.json，报错就改到成功）。这场活动的各项发布不再写进下面的晚间条目。已有专题的活动，只有实质新进展才作为普通条目写。
-   新模型对比卡：如果检索中发现一款主流新模型已经正式发布，官方公布了新旧两代在同一批跑分上的成绩和新的 API 价格，而且还没有它的对比卡（python3 scripts/add_issue.py --model-exists <slug> 退出码不是 0），就按 models.md 写一张（写成 /tmp/model.json，运行 python3 scripts/add_issue.py --model /tmp/model.json，报错就改到成功，再核对脚本打印出的换算结果）。这次发布不再写进下面的当期条目。
+   新模型卡：按 models.md 检查最近 7 天正式发布的前沿模型（今天新发布的，以及之前已写成新闻、当时还没出分的）。在 Artificial Analysis 综合指数上已经出分、按模型算排进前 5（并列算同名次）、而且还没有它的卡（python3 scripts/add_issue.py --model-exists <slug> 退出码不是 0），就按 models.md 写一张，date 用模型发布那天（写成 /tmp/model.json，运行 python3 scripts/add_issue.py --model /tmp/model.json，报错就改到成功，再核对脚本打印出的排名）。脚本判定没进前 5 会报错，那就不出卡。卡只回答「排第几、怎么用上」，模型发布本身照常可以作为普通条目写进当期。
 7. 门槛要高：只收早间没有、而且确实重要的新事件，或早间事件的实质新进展。一般的小更新、评论文章、重复报道都不算。按 README 的四项标准打 1–10 分，「自己在用的 AI 工具」和「AI 与教育」加权；5 分以下不收。
-   - 如果没有达到门槛的普通条目：不要写 /tmp/issue.json；如果第 6 步写了专题或对比卡，直接跳到第 10 步提交；如果什么都没写，只回复一行「今晚无重要增补」，结束。
+   - 如果没有达到门槛的普通条目：不要写 /tmp/issue.json；如果第 6 步写了专题或新模型卡，直接跳到第 10 步提交；如果什么都没写，只回复一行「今晚无重要增补」，结束。
    - 如果有 1–5 条：继续。
 8. 晚间内容没有头条：7 分及以上的最多 3 条标为必看（tier "must"），其余标 "brief"，不能用 "lead"。只在个人 X 账号或论坛出现、没有得到确认的消息，标题前加「传闻：」，分数不超过 5。把数据写成 JSON 文件 /tmp/issue.json：
 {
@@ -45,7 +45,7 @@
 cat 只能取：model、policy、product、biz、china、research。
 版权要求：title 和 body 必须用自己的话写，不照抄原文句子；直接引语最多一句，且少于 15 个字。
 9. 运行 python3 scripts/add_issue.py /tmp/issue.json。如果报错，按提示改 JSON 后再运行，直到成功。
-10. git add -A，用 git -c user.name=Claude -c user.email=noreply@anthropic.com commit 提交，提交信息写「晚间：<headline>」（只有专题时写「专题：<专题 title>」，只有对比卡时写「新模型：<name>」），然后 git push。如果推送被拒绝，先 git pull --rebase 再推。确认推送成功。
-11. 最后的回复就是推送给用户的内容：如果写了对比卡，第一行「新模型：<name>，比 <prev> <summary 各项，如：能力提升 2 成、价格降 2 成>」；如果写了专题，接一行「专题：<专题 title>」；有普通条目就接一行「晚间新增 N 条」和每条一行、一句话；最后一行「打开 Signal 看全文」。不要多余说明。
+10. git add -A，用 git -c user.name=Claude -c user.email=noreply@anthropic.com commit 提交，提交信息写「晚间：<headline>」（只有专题时写「专题：<专题 title>」，只有新模型卡时写「新模型：<name>」），然后 git push。如果推送被拒绝，先 git pull --rebase 再推。确认推送成功。
+11. 最后的回复就是推送给用户的内容：如果写了新模型卡，第一行「新模型：<name>，综合排名<脚本打印的结论>，<use 第一项的 where> <value>」；如果写了专题，接一行「专题：<专题 title>」；有普通条目就接一行「晚间新增 N 条」和每条一行、一句话；最后一行「打开 Signal 看全文」。不要多余说明。
    如果第 10 步最终推送失败：第一行改为「晚间内容没能发布到网站：<报错原文的一句话>」，接着照样列出内容，让用户至少在通知里看到内容。
 ```

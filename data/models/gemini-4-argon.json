@@ -1,0 +1,90 @@
+{
+ "slug": "gemini-4-argon",
+ "date": "2026-10-01",
+ "name": "Gemini 4 Argon",
+ "org": "Google",
+ "createdAt": "2026-10-14T18:41:00+08:00",
+ "self": "Gemini 4 Argon",
+ "board": {
+  "source": "Artificial Analysis 综合指数 v4.3",
+  "asof": "2026-10-14",
+  "rows": [
+   {
+    "name": "Opus 5.5",
+    "score": 58,
+    "rank": 1
+   },
+   {
+    "name": "Sonnet 5.5",
+    "score": 56,
+    "rank": 2
+   },
+   {
+    "name": "Muse Wonder Full",
+    "score": 56,
+    "rank": 2
+   },
+   {
+    "name": "Fable 5.1",
+    "score": 53,
+    "rank": 4
+   },
+   {
+    "name": "GPT-6 Astra",
+    "score": 53,
+    "rank": 4
+   },
+   {
+    "name": "Gemini 4 Argon",
+    "score": 53,
+    "rank": 4
+   },
+   {
+    "name": "Muse Wonder",
+    "score": 52,
+    "rank": 7
+   },
+   {
+    "name": "GPT-6.1 Sol",
+    "score": 52,
+    "rank": 7
+   }
+  ]
+ },
+ "use": [
+  {
+   "where": "Gemini App",
+   "value": "AI Pro 起",
+   "note": "$19.99 / 月"
+  },
+  {
+   "where": "Antigravity",
+   "value": "只给 Ultra",
+   "note": "$99.99 / 月起"
+  }
+ ],
+ "sources": [
+  {
+   "name": "Google 官方博客",
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+  },
+  {
+   "name": "9to5Google",
+   "url": "https://9to5google.com/2026/10/13/gemini-app-4-argon/"
+  },
+  {
+   "name": "Google AI 订阅",
+   "url": "https://one.google.com/about/google-ai-plans/"
+  },
+  {
+   "name": "Artificial Analysis",
+   "url": "https://artificialanalysis.ai/models/gemini-4-argon"
+  },
+  {
+   "name": "Artificial Analysis 排行榜",
+   "url": "https://artificialanalysis.ai/leaderboards/models"
+  }
+ ],
+ "pos": 4,
+ "rankText": "并列第 4"
+}

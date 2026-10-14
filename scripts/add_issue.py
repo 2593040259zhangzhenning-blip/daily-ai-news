@@ -10,9 +10,9 @@
   python3 scripts/add_issue.py --special path/to/special.json [--force]  # 写入一份发布会专题（格式见 specials.md）
   python3 scripts/add_issue.py --special-exists devday-2026  # 该专题已存在则退出码 0，否则 1
   python3 scripts/add_issue.py --specials                  # 列出已有专题（slug、日期、标题）
-  python3 scripts/add_issue.py --model path/to/model.json [--force]  # 写入一张新模型对比卡（格式见 models.md）
-  python3 scripts/add_issue.py --model-exists claude-opus-5-5  # 该对比卡已存在则退出码 0，否则 1
-  python3 scripts/add_issue.py --models                    # 列出已有对比卡（slug、日期、模型名）
+  python3 scripts/add_issue.py --model path/to/model.json [--force]  # 写入一张新模型卡（格式见 models.md；--force 覆盖同名卡）
+  python3 scripts/add_issue.py --model-exists gemini-4-argon  # 该卡已存在则退出码 0，否则 1
+  python3 scripts/add_issue.py --models                    # 列出已有新模型卡（slug、日期、模型名）
 
 每条新闻必须有：
   cat    model | policy | product | biz | china | research
@@ -30,8 +30,8 @@
   data/index.json          网页读取的日期目录：每天有哪几期、当天标题（很小）
   data/days/<date>.json    网页按需加载的某一天全部内容（早间 + 晚间）
   data/specials/<slug>.json 发布会专题，挂在所属日期的页面最上方
-  data/models/<slug>.json   新模型对比卡，挂在所属日期的页面最上方
-  data/latest.json         小组件读取：最新一期的摘要（当天有对比卡或专题时，头条换成它）
+  data/models/<slug>.json   新模型卡（排第几、怎么用上），挂在模型发布那天的页面最上方
+  data/latest.json         小组件读取：最新一期的摘要（当天新出了模型卡或专题时，头条换成它）
 """
 import json, math, re, sys
 from datetime import datetime
@@ -41,9 +41,8 @@ ROOT = Path(__file__).resolve().parent.parent
 ISSUES = ROOT / "data" / "issues"
 SPECIALS = ROOT / "data" / "specials"
 MODELS = ROOT / "data" / "models"
-# 价格换算的固定任务：写一篇 3000 字中文文章，约 4000 个输出 token
-TASK_NAME = "写一篇 3000 字文章"
-TASK_TOKENS = 4000
+# 新模型卡：只有在综合指数上排进前几名（按模型算，并列同名次）才出卡
+CARD_TOP = 5
 SLUG_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 CATS = {"model", "policy", "product", "biz", "china", "research"}
 TIERS = {"lead": 0, "must": 1, "brief": 2}
@@ -147,43 +146,22 @@ def normalize_special(d):
     return d
 
 
-def ability_note(prev, now):
-    """跑分（0–100 的百分比）换成大白话：新一代比上一代提升了百分之几（用户 2026-10-08 定的说法）。
-    规则固定，每次发布都按同一把尺子量。"""
-    if prev <= 0:
-        return ("差不多", True) if now <= 0 else ("从无到有", True)
-    r = now / prev
-    if r >= 1.8:
-        return ("翻倍" if r < 2.2 else f"到原来的 {r:.1f} 倍"), True
-    inc = r - 1
-    if abs(inc) < 0.02:
-        return "差不多", True
-    if inc < 0:
-        return f"下降 {round(-inc * 100)}%", False
-    return f"提升 {round(inc * 100)}%", True
-
-
-def duel_note(prev, now):
-    """Elo 分差换成胜率：两份作品放一起盲比，新一代 10 次里赢几次。"""
-    win = 1 / (1 + 10 ** (-(now - prev) / 400))
-    return f"盲比 10 次赢 {round(win * 10)} 次", win >= 0.5
-
-
-def yuan(out_price, fx):
-    return round(out_price * TASK_TOKENS / 1e6 * fx, 2)
-
-
 def num(v):
     return isinstance(v, (int, float)) and not isinstance(v, bool) and math.isfinite(v)
 
 
-def normalize_model(d):
-    """校验一张新模型对比卡，并按固定规则算出大白话。格式说明见 models.md。"""
-    for f in ("slug", "date", "name", "org", "prev", "createdAt", "headline", "summary", "abilities", "price", "sources"):
+def rank_text(pos, tie):
+    return f"并列第 {pos}" if tie else f"第 {pos}"
+
+
+def normalize_model(d, force=False):
+    """校验一张新模型卡，并算出名次。格式说明见 models.md。
+    卡片回答一个问题：这款新模型在现有模型里排第几、怎么用上。尺子是第三方综合指数，不用厂商自测。"""
+    for f in ("slug", "date", "name", "org", "createdAt", "self", "board", "use", "sources"):
         if d.get(f) in (None, "", []):
-            fail(f"对比卡缺少字段 {f}")
+            fail(f"新模型卡缺少字段 {f}")
     if not SLUG_RE.match(d["slug"]):
-        fail("slug 只能用小写字母、数字和连字符，例如 claude-opus-5-5")
+        fail("slug 只能用小写字母、数字和连字符，例如 gemini-4-argon")
     if not re.match(r"^\d{4}-\d{2}-\d{2}$", d["date"]):
         fail("date 格式应为 YYYY-MM-DD（北京时间，模型发布那天）")
     try:
@@ -192,56 +170,41 @@ def normalize_model(d):
         fail("createdAt 不是 ISO 8601 时间")
     if len(d["name"]) > 28:
         fail("name 请控制在 28 字以内")
-    if len(d["headline"]) > 16:
-        fail("headline 请控制在 16 字以内，例如「更聪明，更便宜，也更快」")
     if "color" in d and not re.match(r"^#[0-9a-fA-F]{6}$", str(d["color"])):
-        fail("color 是这款模型的品牌主题色，写成 #RRGGBB，例如 Claude 是 #D97757；拿不准就不写（默认黑色）")
-    sm = d["summary"]
-    if not isinstance(sm, list) or not 2 <= len(sm) <= 3:
-        fail("summary 要 2–3 项，例如 [{\"label\":\"能力\",\"value\":\"提升 2 成\"}]")
-    for i, s in enumerate(sm):
-        if not s.get("label") or not s.get("value") or len(s["label"]) > 4 or len(s["value"]) > 6:
-            fail(f"summary[{i}] 需要 label（4 字以内）和 value（6 字以内）")
-    ab = d["abilities"]
-    if not isinstance(ab, list) or not 2 <= len(ab) <= 5:
-        fail("abilities 要 2–5 项")
-    for i, a in enumerate(ab):
-        if not a.get("name") or not a.get("bench") or len(a["name"]) > 5:
-            fail(f"abilities[{i}] 需要 name（5 字以内的大白话）和 bench（跑分名称）")
-        if not (num(a.get("prev")) and num(a.get("now")) and 0 <= a["prev"] <= 100 and 0 <= a["now"] <= 100):
-            fail(f"abilities[{i}] 的 prev / now 必须是 0–100 的百分比分数")
-        a["note"], a["better"] = ability_note(a["prev"], a["now"])
-    for i, u in enumerate(d.get("duels", [])):
-        if not u.get("name") or not u.get("bench") or not (num(u.get("prev")) and num(u.get("now"))):
-            fail(f"duels[{i}] 需要 name、bench 和 prev / now（Elo 分数）")
-        u["note"], u["better"] = duel_note(u["prev"], u["now"])
-    p = d["price"]
-    for f in ("now", "prev", "fx"):
-        if not num(p.get(f)) or p[f] <= 0:
-            fail(f"price.{f} 必须是正数（now / prev 是每百万输出 token 的美元价，fx 是美元兑人民币汇率）")
-    p["task"] = TASK_NAME
-    p["yuan"], p["prevYuan"] = yuan(p["now"], p["fx"]), yuan(p["prev"], p["fx"])
-    for i, q in enumerate(p.get("peers", [])):
-        if not q.get("name") or not num(q.get("out")) or q["out"] <= 0:
-            fail(f"price.peers[{i}] 需要 name 和 out（每百万输出 token 的美元价）")
-        q["yuan"] = yuan(q["out"], p["fx"])
-    for i, s in enumerate(d.get("notes", [])):
-        if not s.get("label") or not s.get("value"):
-            fail(f"notes[{i}] 需要 label 和 value")
-    rk = d.get("rank")
-    if rk is not None:
-        rows = rk.get("rows")
-        if not rk.get("source") or not isinstance(rows, list) or len(rows) < 2:
-            fail("rank 需要 source 和至少 2 行 rows")
-        if sum(1 for r in rows if r.get("self")) != 1:
-            fail("rank.rows 里要有且只有一行 \"self\": true（就是这款新模型）")
-        for i, r in enumerate(rows):
-            if not r.get("name") or not num(r.get("score")):
-                fail(f"rank.rows[{i}] 需要 name 和 score")
-        rows.sort(key=lambda r: -r["score"])
-        if "total" in rk and not (isinstance(rk["total"], int) and rk["total"] >= len(rows)):
-            fail("rank.total 是榜单上的模型总数，必须是整数")
-        rk["pos"] = 1 + sum(1 for r in rows if r["score"] > next(x for x in rows if x.get("self"))["score"])
+        fail("color 是这款模型的官方品牌主题色，写成 #RRGGBB，例如 Claude 是 #D97757；拿不准就不写（默认黑色）")
+    bd = d["board"]
+    rows = bd.get("rows")
+    if not bd.get("source") or not re.match(r"^\d{4}-\d{2}-\d{2}$", str(bd.get("asof", ""))):
+        fail("board 需要 source（榜单名称和版本）和 asof（取数日期 YYYY-MM-DD）")
+    if not isinstance(rows, list) or not 6 <= len(rows) <= 10:
+        fail("board.rows 要 6–10 行：榜上排在最前面的模型，每个模型一行（同一模型的不同档位只留最高分那一档）")
+    names = [r.get("name") for r in rows]
+    for i, r in enumerate(rows):
+        if not r.get("name") or not num(r.get("score")):
+            fail(f"board.rows[{i}] 需要 name 和 score")
+    if len(set(names)) != len(names):
+        fail("board.rows 里有重复的模型，同一模型只留最高分那一档")
+    rows.sort(key=lambda r: -r["score"])
+    for r in rows:
+        r["rank"] = 1 + sum(1 for x in rows if x["score"] > r["score"])
+    me = next((r for r in rows if r["name"] == d["self"]), None)
+    if not me:
+        fail("self 要和 board.rows 里这款新模型那一行的 name 完全一样")
+    if d.get("sibling") and d["sibling"] not in names:
+        fail("sibling（同一次发布的另一款）要和 board.rows 里的 name 完全一样；不在榜单前列就不写")
+    pv = bd.get("prev")
+    if pv is not None and (not pv.get("name") or not num(pv.get("score"))):
+        fail("board.prev 是同一榜单上的上一代，需要 name 和 score；榜上没有就不写")
+    tie = sum(1 for r in rows if r["score"] == me["score"]) > 1
+    d["pos"], d["rankText"] = me["rank"], rank_text(me["rank"], tie)
+    if me["rank"] > CARD_TOP and not force:
+        fail(f"{d['self']} 排{d['rankText']}，没进前 {CARD_TOP}，按规则不出卡，照常写成新闻条目")
+    use = d["use"]
+    if not isinstance(use, list) or not 1 <= len(use) <= 2:
+        fail("use 要 1–2 项：普通人最先能用上它的地方，例如 {\"where\":\"Gemini App\",\"value\":\"AI Pro 起\",\"note\":\"$19.99 / 月\"}")
+    for i, u in enumerate(use):
+        if not u.get("where") or not u.get("value") or len(u["where"]) > 12 or len(u["value"]) > 9 or len(u.get("note", "")) > 14:
+            fail(f"use[{i}] 需要 where（在哪用，12 字以内）和 value（要什么订阅，9 字以内），note 可选（14 字以内，例如月费）")
     for s_ in d["sources"]:
         if not str(s_.get("url", "")).startswith(("http://", "https://")):
             fail("sources 里有无效链接")
@@ -309,21 +272,23 @@ def rebuild():
 
     latest = {"date": None, "headline": "", "updatedAt": None, "count": 0, "lead": None, "items": []}
     last_sp = specials[-1] if specials else None
-    last_md = models[-1] if models else None
+    # 新模型卡常常在发布后一两天、等榜单出分才补上，挂在发布那天；按写入时间找最新一张
+    last_md = max(models, key=lambda m: m["createdAt"]) if models else None
     newest = issues[0]["date"] if issues else ""
-    if last_md and last_md["date"] >= newest and (not last_sp or last_md["date"] >= last_sp["date"]):
-        # 最新一天有新模型对比卡：小组件头条换成「XX 发布」+ 一句对比，下面列当天其余要闻
-        day = last_md["date"]
+    if last_md and last_md["createdAt"][:10] >= newest and (not last_sp or last_md["createdAt"][:10] >= last_sp["date"]):
+        # 最新一天新出了模型卡：小组件头条换成「XX：排第几」+ 怎么用上，下面列当天其余要闻
+        day = max(newest, last_md["date"])
         todays = [x for x in issues if x["date"] == day]
         items = sorted([it for x in todays for it in x["items"]], key=lambda it: (TIERS[it["tier"]], -it["score"]))
-        line = "，".join(s["label"] + s["value"] for s in last_md["summary"])
+        u = last_md["use"][0]
         latest = {
             "date": day,
             "headline": (next((x["headline"] for x in todays if x["edition"] == "morning"), None) or f'{last_md["name"]} 发布'),
             "updatedAt": max([last_md["createdAt"]] + [x["createdAt"] for x in todays]),
             "count": len(items),
-            "lead": {"cat": "model", "title": f'{last_md["name"]} 发布', "summary": f'比 {last_md["prev"]}：{line}',
-                     "model": last_md["slug"]},
+            "lead": {"cat": "model", "title": f'{last_md["name"]}：综合排名{last_md["rankText"]}',
+                     "summary": f'{u["where"]} {u["value"]}' + (f'（{u["note"]}）' if u.get("note") else ""),
+                     "model": last_md["slug"], "date": last_md["date"]},
             "items": [{"cat": it["cat"], "title": it["title"], "tier": it["tier"]} for it in items][:5],
         }
     elif last_sp and (not issues or last_sp["date"] >= issues[0]["date"]):
@@ -361,7 +326,7 @@ def rebuild():
                       for it in items if it is not lead][:5],
         }
     (ROOT / "data" / "latest.json").write_text(json.dumps(latest, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"已重建：{len(issues)} 期、{len(specials)} 份专题、{len(models)} 张对比卡，最新 {latest['date']}")
+    print(f"已重建：{len(issues)} 期、{len(specials)} 份专题、{len(models)} 张新模型卡，最新 {latest['date']}")
 
 
 def main(argv):
@@ -384,18 +349,16 @@ def main(argv):
     if argv[0] == "--model-exists":
         sys.exit(0 if (MODELS / f"{argv[1]}.json").exists() else 1)
     if argv[0] == "--model":
-        d = normalize_model(json.loads(Path(argv[1]).read_text(encoding="utf-8")))
+        d = normalize_model(json.loads(Path(argv[1]).read_text(encoding="utf-8")), force="--force-rank" in argv)
         MODELS.mkdir(parents=True, exist_ok=True)
         dest = MODELS / f'{d["slug"]}.json'
         if dest.exists() and "--force" not in argv:
-            fail(f'对比卡 {d["slug"]} 已存在（要覆盖请加 --force）')
+            fail(f'新模型卡 {d["slug"]} 已存在（要覆盖请加 --force）')
         dest.write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
         print(f"已写入 {dest.relative_to(ROOT)}")
-        for a in d["abilities"]:
-            print(f'  {a["name"]}：{a["prev"]} → {a["now"]}，{a["note"]}')
-        for u in d.get("duels", []):
-            print(f'  {u["name"]}：{u["note"]}')
-        print(f'  {d["price"]["task"]}：¥{d["price"]["yuan"]}（上一代 ¥{d["price"]["prevYuan"]}）')
+        for r in d["board"]["rows"]:
+            print(f'  {r["rank"]:>2}  {r["name"]}  {r["score"]}' + ("   ← 这款" if r["name"] == d["self"] else ""))
+        print(f'  结论：{d["rankText"]}')
         return rebuild()
     if argv[0] == "--special":
         d = normalize_special(json.loads(Path(argv[1]).read_text(encoding="utf-8")))

@@ -200,12 +200,14 @@ const longDate = (d) => {
 // 打开网址前先切到「访达」，再让浏览器打开。原因：用触发角「显示桌面」收起所有窗口后，
 // 如果收起前最前面的就是浏览器，打开网址时系统不做「切换程序」，窗口就不弹回来。
 // 先切到访达，浏览器再出来就是一次真正的切换，收起的窗口会跟着回来。（2026-10-08 用户确认的现象）
-// 头条是新模型对比卡或专题时，点开直接到那张卡；否则打开当天首页
+// 头条是新模型卡或专题时，点开直接到那张卡；否则打开当天首页
 let link = SITE;
 const linkFor = (data) => {
   const l = data && data.lead;
   if (!l || !/^\d{4}-\d{2}-\d{2}$/.test(data.date || "")) return SITE;
-  if (l.model && /^[a-z0-9-]+$/.test(l.model)) return `${SITE}?d=${data.date}&m=${l.model}`;
+  // 新模型卡挂在模型发布那天（可能早于今天），lead.date 是那一天
+  const md = /^\d{4}-\d{2}-\d{2}$/.test(l.date || "") ? l.date : data.date;
+  if (l.model && /^[a-z0-9-]+$/.test(l.model)) return `${SITE}?d=${md}&m=${l.model}`;
   if (l.special && /^[a-z0-9-]+$/.test(l.special)) return `${SITE}?d=${data.date}&s=${l.special}`;
   return SITE;
 };
