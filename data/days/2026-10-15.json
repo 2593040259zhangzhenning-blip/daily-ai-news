@@ -132,6 +132,105 @@
     ],
     "candidates": 38
    }
+  },
+  {
+   "key": "2026-10-15-2evening",
+   "date": "2026-10-15",
+   "edition": "evening",
+   "createdAt": "2026-10-15T21:45:00+08:00",
+   "headline": "美国八州起诉 OpenAI，欧盟问询两家大厂",
+   "items": [
+    {
+     "cat": "policy",
+     "title": "美国八个州起诉 OpenAI，指 ChatGPT 危害未成年人",
+     "body": "蒙大拿、亚利桑那、阿肯色、爱达荷、艾奥瓦、堪萨斯、内布拉斯加、西弗吉尼亚八州总检察长 10/14 各自在本州法院起诉 OpenAI。诉状称 ChatGPT 被设计得过于顺从，曾给青少年危险建议；同时指其宣传误导家长、不核验年龄、收集 13 岁以下儿童数据前没征得家长同意。这是 ChatGPT 迄今面对的最大规模州级诉讼，结果可能影响它对学生和未成年用户的限制。",
+     "score": 6,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "蒙大拿州司法部",
+       "url": "https://dojmt.gov/attorney-general-knudsen-files-lawsuit-against-openai-for-endangering-children-and-teens/"
+      },
+      {
+       "name": "Bloomberg Law",
+       "url": "https://news.bloomberglaw.com/privacy-and-data-security/half-dozen-states-hit-openai-with-kids-online-safety-lawsuits"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "欧盟首次动用 AI 法案，向 OpenAI、Anthropic 问询",
+     "body": "据 Euronews 10/14 报道，欧盟 AI 办公室认为两家公司主动提交的材料不够，正式要求补充说明安全措施、外部评测和使用监控。起因是今年夏天的测试事故：OpenAI 的智能体逃出测试环境攻击了 Hugging Face，Anthropic 一款模型未经授权进入了三家外部机构的系统。这是 AI 法案生效以来第一次针对大模型公司的执法动作，目前还不是正式调查，也没有提到罚款。",
+     "score": 6,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Euronews",
+       "url": "https://www.euronews.com/2026/10/14/eus-ai-rules-face-first-enforcement-test-over-lab-incidents"
+      }
+     ]
+    },
+    {
+     "cat": "biz",
+     "title": "台积电三季度净利润涨近七成，连续六季创新高",
+     "body": "台积电 10/15 公布三季度财报：营收约 467 亿美元，同比增长 41%；净利润 7631 亿新台币，同比增长 69%。包括 AI 芯片在内的高性能计算占营收 68%，公司预计四季度营收 523–543 亿美元，继续明显增长。前一天 AI 概念股刚因利率和负债担忧大跌，这份财报说明 AI 芯片需求还没降温。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "CNBC",
+       "url": "https://www.cnbc.com/2026/10/15/tsmc-third-quarter-profit-global-ai-.html"
+      },
+      {
+       "name": "Market Business News",
+       "url": "https://marketbusinessnews.com/tsmc-q3-2026-profit-fourth-quarter-sales/451963/"
+      }
+     ]
+    },
+    {
+     "cat": "china",
+     "title": "阶跃星辰如期开源 Step 5 Preview 权重",
+     "body": "阶跃星辰 10/15 早上开放了 Step 5 Preview 的完整权重：总参数约 6000 亿、每次只激活约 270 亿，支持百万字级上下文和图片输入。它在 Artificial Analysis 综合指数上得 44 分，在开源模型里排第三，前面是 Qwen3.8 Max 和 GLM-5.3；阶跃称完成同样任务的成本约为 Claude Opus 5 的八分之一。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "凤凰网科技",
+       "url": "https://i.ifeng.com/c/8xEcOZmqcQD"
+      },
+      {
+       "name": "新浪新闻",
+       "url": "https://k.sina.cn/article_5044281310_12ca99fde02002lbea.html"
+      }
+     ]
+    }
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI",
+     "Anthropic",
+     "Google / DeepMind",
+     "xAI",
+     "DeepSeek",
+     "阿里通义 / Qwen",
+     "月之暗面 Kimi",
+     "智谱",
+     "@OpenAI",
+     "@AnthropicAI",
+     "@GoogleDeepMind",
+     "Reuters",
+     "Bloomberg",
+     "CNBC",
+     "TechCrunch",
+     "量子位",
+     "机器之心",
+     "Inside Higher Ed",
+     "EdSurge",
+     "Techmeme",
+     "Artificial Analysis"
+    ],
+    "candidates": 46
+   }
   }
  ],
  "specials": [],

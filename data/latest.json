@@ -1,8 +1,8 @@
 {
  "date": "2026-10-15",
  "headline": "Anthropic 三季度收入近 170 亿美元",
- "updatedAt": "2026-10-15T06:53:05+08:00",
- "count": 6,
+ "updatedAt": "2026-10-15T21:45:00+08:00",
+ "count": 10,
  "lead": {
   "cat": "biz",
   "title": "Anthropic 三季度收入 168 亿美元，环比涨 45%",
@@ -10,28 +10,28 @@
  },
  "items": [
   {
-   "cat": "product",
-   "title": "Claude 将为美国用户显示官方投票信息",
+   "cat": "policy",
+   "title": "美国八个州起诉 OpenAI，指 ChatGPT 危害未成年人",
+   "tier": "brief"
+  },
+  {
+   "cat": "policy",
+   "title": "欧盟首次动用 AI 法案，向 OpenAI、Anthropic 问询",
+   "tier": "brief"
+  },
+  {
+   "cat": "biz",
+   "title": "台积电三季度净利润涨近七成，连续六季创新高",
    "tier": "brief"
   },
   {
    "cat": "china",
-   "title": "阶跃星辰开源前上调 Step 5 部分 API 价格",
-   "tier": "brief"
-  },
-  {
-   "cat": "biz",
-   "title": "Anthropic 开设新加坡办公室，与政府签合作备忘录",
-   "tier": "brief"
-  },
-  {
-   "cat": "biz",
-   "title": "英伟达五年投入 2.5 亿美元算力支持英国 AI 安全研究",
+   "title": "阶跃星辰如期开源 Step 5 Preview 权重",
    "tier": "brief"
   },
   {
    "cat": "product",
-   "title": "Deezer、YouTube Music 开始区分 AI 生成音乐",
+   "title": "Claude 将为美国用户显示官方投票信息",
    "tier": "brief"
   }
  ]
