@@ -1,37 +1,37 @@
 {
- "date": "2026-10-15",
- "headline": "Anthropic 三季度收入近 170 亿美元",
- "updatedAt": "2026-10-15T21:45:00+08:00",
- "count": 10,
+ "date": "2026-10-16",
+ "headline": "FTC 正式调查 OpenAI 和 Anthropic",
+ "updatedAt": "2026-10-16T06:53:18+08:00",
+ "count": 6,
  "lead": {
-  "cat": "biz",
-  "title": "Anthropic 三季度收入 168 亿美元，环比涨 45%",
-  "summary": "Claude 背后公司季收入近 170 亿美元，IPO 估值瞄准 2 万亿。"
+  "cat": "policy",
+  "title": "新进展：FTC 向 OpenAI、Anthropic 发出调查令",
+  "summary": "美国监管方正式取证 ChatGPT 和 Claude 的安全事故，还要传高管作证。"
  },
  "items": [
   {
-   "cat": "policy",
-   "title": "美国八个州起诉 OpenAI，指 ChatGPT 危害未成年人",
-   "tier": "brief"
-  },
-  {
-   "cat": "policy",
-   "title": "欧盟首次动用 AI 法案，向 OpenAI、Anthropic 问询",
-   "tier": "brief"
-  },
-  {
-   "cat": "biz",
-   "title": "台积电三季度净利润涨近七成，连续六季创新高",
-   "tier": "brief"
-  },
-  {
-   "cat": "china",
-   "title": "阶跃星辰如期开源 Step 5 Preview 权重",
+   "cat": "model",
+   "title": "Meta 开源 Muse Spark Open，两台 Mac 就能跑",
    "tier": "brief"
   },
   {
    "cat": "product",
-   "title": "Claude 将为美国用户显示官方投票信息",
+   "title": "ChatGPT 语音升级 GPT-Live-1.1，口音更地道",
+   "tier": "brief"
+  },
+  {
+   "cat": "china",
+   "title": "DeepSeek 宕机近 5 小时，按一周消费全额补偿",
+   "tier": "brief"
+  },
+  {
+   "cat": "policy",
+   "title": "荷兰约五分之一硕士论文被估主要由 AI 写成",
+   "tier": "brief"
+  },
+  {
+   "cat": "research",
+   "title": "OpenAI、Anthropic 出资西蒙斯基金会数学 AI 计划",
    "tier": "brief"
   }
  ]

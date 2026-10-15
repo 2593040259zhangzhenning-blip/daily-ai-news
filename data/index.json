@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-15T13:28:50+00:00",
+ "generatedAt": "2026-10-15T22:53:19+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -162,6 +162,14 @@
    "headline": "Anthropic 三季度收入近 170 亿美元",
    "updatedAt": "2026-10-15T21:45:00+08:00",
    "count": 10,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-10-16",
+   "headline": "FTC 正式调查 OpenAI 和 Anthropic",
+   "updatedAt": "2026-10-16T06:53:18+08:00",
+   "count": 6,
    "specials": [],
    "models": []
   }
