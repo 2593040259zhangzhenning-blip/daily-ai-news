@@ -3,6 +3,18 @@
 > 给接手这项工作的 Claude 看的。用户在 2026-10-16 的对话里定下了方向，实施在新对话里进行。
 > 先读本文件和 `watchlist.md`（关注清单，已定稿），再读 CLAUDE.md、sources.md、README.md。
 
+## 进度（2026-10-17 更新）
+
+**第一步已上线。** 抓取脚本 `scripts/fetch_inbox.py`（信源清单在 `scripts/inbox_config.py`），GitHub Actions 每小时跑，结果在 `data/inbox/`；早晚定时任务和 `tasks/` 备份、`sources.md`、`CLAUDE.md` 都已改成「先读收件箱和 `watchlist.md`，再搜索补漏」。试跑结果：61 个源 60 个成功，连跑了 7 次每小时定时触发。
+
+和原计划不同的地方（都已和用户确认）：
+- **ChatGPT 发布说明**：help.openai.com 对机房 IP 一律返回 Cloudflare 人机验证，GitHub 上抓不到。收件箱里停用这一项，改由早晚任务用网页读取工具（WebFetch）直接读。
+- **AI HOT 不接**（用户 10-16 决定）：旧接口 10-31 下线，新版 `aihot.news/api/v1` 的使用规则不允许公开镜像，而收件箱随本仓库公开。AI News Radar 里来自 AI HOT 的条目也已过滤。国内突破靠量子位、AI News Radar 里的 AIbase 和搜索。
+- 英伟达有订阅源（`nvidianews.nvidia.com/releases.xml`），不用页面监测；SpaceX 官网更新页是空壳，数据取自它背后的内容接口。
+- 教育部网站只留标题带 AI 的；Times Higher Education 订阅源被拦，改用 Google 新闻按站点搜索。arXiv 没接，论文只取 Hugging Face 每日论文前 12。
+
+第二步（共识打分、圈外位、每周复盘和建议关注）还没做，用第一周的真实数据调门槛。看数据的地方：`data/inbox/source-status.json`（各源成败和条数）、Actions 里「抓取收件箱」每次运行的摘要。
+
 ## 为什么改
 
 - 现在每期只靠模型临时用搜索引擎找新闻，每期候选只有 24–52 条。搜索引擎收录有延迟，常搜到转载站（Investing.com 转载路透、FourWeekMBA 等）。

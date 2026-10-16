@@ -9,6 +9,8 @@
 - `data/issues/<key>.json` 单期原始数据（永久保存）
 - `data/index.json` 日期目录；`data/days/<date>.json` 每天的内容，网页按需加载；`data/latest.json` 小组件数据
 - `scripts/add_issue.py` 校验并写入新一期，自动排序、重建索引
+- `scripts/fetch_inbox.py` + `scripts/inbox_config.py` 每小时（GitHub Actions）抓取信源，写 `data/inbox/`；`scripts/inbox_view.py` 把收件箱打印成定时任务读的清单
+- `watchlist.md` 关注清单（关注什么、各层门槛）；`sources.md` 信源和出处规则；`sources-plan.md` 信源改造的方向和进度
 - `widget/daily-ai-news-widget.js` iPhone / Mac 桌面小组件（Scriptable）
 
 ## 重要度打分（每条 1–10 分）
@@ -19,6 +21,7 @@
 4. **与读者的相关度**（加权）：读者重点关注
    - 自己在用的 AI 工具：Claude、ChatGPT 等产品和模型的更新、价格、功能变化
    - AI 与教育：教学、语言学习、留学、学生使用 AI 的政策和应用
+   - 关注清单第一层的对象（`watchlist.md`）：Anthropic、OpenAI、Google、Meta、英伟达、苹果、SpaceX，以及留学与签证政策、英语教学与语言培训行业
 
 分档：
 - **头条 lead**：当期最重要的 1 条
