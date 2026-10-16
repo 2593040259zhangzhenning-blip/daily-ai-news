@@ -1,0 +1,123 @@
+{
+ "key": "2026-10-16-2evening",
+ "date": "2026-10-16",
+ "edition": "evening",
+ "createdAt": "2026-10-16T21:40:00+08:00",
+ "headline": "中国拟管制大模型等 AI 技术出口",
+ "items": [
+  {
+   "cat": "china",
+   "title": "中国拟把 23 项 AI 技术列入出口管制，含大模型",
+   "body": "商务部和科技部 10/16 发布征求意见稿，拟把 23 项 AI 技术列入限制或禁止出口目录，涵盖大模型核心技术、智能体、AI 芯片设计和算力集群；据报道，2 万亿参数以上或排进全球前十的模型，其权重和源代码将受管制。开源代码和已发表研究不受影响，国内公司仍可通过 App、网站和 API 服务海外用户。出口登记要求即日生效，意见征集到 11/15 截止。",
+   "score": 7,
+   "tier": "must",
+   "sources": [
+    {
+     "name": "Bloomberg",
+     "url": "https://www.bloomberg.com/news/articles/2026-10-16/china-proposes-export-controls-on-ai-models-chips-and-agents"
+    },
+    {
+     "name": "The Next Web",
+     "url": "https://thenextweb.com/news/china-ai-export-controls-draft"
+    },
+    {
+     "name": "Geopolitechs",
+     "url": "https://www.geopolitechs.org/p/china-imposes-temporary-export-registration"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "库克：苹果智能已获准在华上线，月底推测试版",
+   "body": "据路透社援引澎湃新闻专访，库克 10/15 在上海表示苹果智能已在中国获批，测试版本月晚些时候推出。此前工信部更新了 iPhone Duo、iPhone 18 Pro 等机型的入网许可，涵盖苹果智能和阿里的通义千问、通义万相。国内 iPhone 用户等了两年多的 AI 功能终于有了时间表。",
+   "score": 6,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Reuters（经 MarketScreener 转载）",
+     "url": "https://www.marketscreener.com/news/tim-cook-says-apple-intelligence-approved-in-china-the-paper-reports-ce785dd3da89f721"
+    },
+    {
+     "name": "南华早报",
+     "url": "https://www.scmp.com/tech/big-tech/article/3370893/china-approves-alibaba-ai-models-use-iphone-duo-and-other-apple-handsets"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "ChatGPT 的 Chrome 扩展能读标签页、替你填表",
+   "body": "OpenAI 10/15 升级 ChatGPT 浏览器扩展：「Chat」模式能读你开着的多个标签页并回答问题，比如比价；「Work」模式可在你已登录的网站上填表、下载文件、发消息，需要 Plus 及以上。每进一个新网站都会先征求同意，建议用时关掉网银等敏感页面。",
+   "score": 6,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "The Verge",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs"
+    },
+    {
+     "name": "PiunikaWeb",
+     "url": "https://piunikaweb.com/2026/10/16/chatgpt-chrome-extension-tab-control-automation/"
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "Anthropic 让 METR 以员工级权限独立评估",
+   "body": "Anthropic 10/15 宣布，第三方评测机构 METR 的 6 名研究员将获得接近内部员工的权限，可用公司电脑和内部工具评估模型、安全做法和事故，并自行发布结论，Anthropic 只能在客户数据等少数类别要求删改。这是在 FTC 调查和多起智能体越界事故后，它对外部监督的回应；OpenAI 也表示会跟进。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/"
+    },
+    {
+     "name": "Anthropic 官方新闻",
+     "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators"
+    }
+   ]
+  },
+  {
+   "cat": "biz",
+   "title": "Anthropic 上市估值预期据报降至 1.5 万亿",
+   "body": "据 The Information 等报道，Anthropic 披露三季度收入环比增长 45% 后，部分现有和潜在投资人把上市估值预期从约 2 万亿美元下调到约 1.5 万亿，主要因为增速比二季度放慢，以及对 AI 基建举债的担忧。这只是初步讨论，最终定价未定，公司仍计划 11 月上市。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-investors-consider-lower-1-101100832.html"
+    },
+    {
+     "name": "24/7 Wall St.",
+     "url": "https://247wallst.com/investing/2026/10/16/some-anthropic-investors-now-see-a-1-5-trillion-ipo-not-2-trillion/"
+    }
+   ]
+  }
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI",
+   "Anthropic",
+   "微软",
+   "英伟达",
+   "Meta",
+   "@OpenAI",
+   "@claudeai",
+   "@AnthropicAI",
+   "Reuters",
+   "Bloomberg",
+   "TechCrunch",
+   "The Verge",
+   "南华早报",
+   "中国教育报",
+   "EdSurge",
+   "Inside Higher Ed",
+   "The PIE News",
+   "Techmeme",
+   "Hacker News",
+   "Artificial Analysis"
+  ],
+  "candidates": 64
+ }
+}

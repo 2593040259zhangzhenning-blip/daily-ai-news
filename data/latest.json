@@ -1,8 +1,8 @@
 {
  "date": "2026-10-16",
  "headline": "FTC 正式调查 OpenAI 和 Anthropic",
- "updatedAt": "2026-10-16T06:53:18+08:00",
- "count": 6,
+ "updatedAt": "2026-10-16T21:40:00+08:00",
+ "count": 11,
  "lead": {
   "cat": "policy",
   "title": "新进展：FTC 向 OpenAI、Anthropic 发出调查令",
@@ -10,28 +10,28 @@
  },
  "items": [
   {
+   "cat": "china",
+   "title": "中国拟把 23 项 AI 技术列入出口管制，含大模型",
+   "tier": "must"
+  },
+  {
+   "cat": "product",
+   "title": "库克：苹果智能已获准在华上线，月底推测试版",
+   "tier": "brief"
+  },
+  {
+   "cat": "product",
+   "title": "ChatGPT 的 Chrome 扩展能读标签页、替你填表",
+   "tier": "brief"
+  },
+  {
    "cat": "model",
    "title": "Meta 开源 Muse Spark Open，两台 Mac 就能跑",
    "tier": "brief"
   },
   {
-   "cat": "product",
-   "title": "ChatGPT 语音升级 GPT-Live-1.1，口音更地道",
-   "tier": "brief"
-  },
-  {
-   "cat": "china",
-   "title": "DeepSeek 宕机近 5 小时，按一周消费全额补偿",
-   "tier": "brief"
-  },
-  {
    "cat": "policy",
-   "title": "荷兰约五分之一硕士论文被估主要由 AI 写成",
-   "tier": "brief"
-  },
-  {
-   "cat": "research",
-   "title": "OpenAI、Anthropic 出资西蒙斯基金会数学 AI 计划",
+   "title": "Anthropic 让 METR 以员工级权限独立评估",
    "tier": "brief"
   }
  ]
