@@ -1,0 +1,54 @@
+# Signal 收件箱：每小时按关注清单抓一遍信源，把最近 48 小时的候选写进 data/inbox/。
+# 定时任务（早间 / 晚间）先读收件箱，再用搜索核实、补背景、查漏。
+# 信源清单在 scripts/inbox_config.py，抓取逻辑在 scripts/fetch_inbox.py。
+name: 抓取收件箱
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/fetch_inbox.py
+      - scripts/inbox_config.py
+      - .github/workflows/inbox.yml
+permissions:
+  contents: write
+concurrency:
+  group: inbox-fetch
+  cancel-in-progress: false
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: 抓取全部信源
+        run: |
+          python3 --version
+          python3 scripts/fetch_inbox.py
+      - name: 写入运行摘要
+        if: always()
+        run: |
+          {
+            echo '### 各信源抓取情况'
+            echo '```'
+            python3 scripts/inbox_view.py --status || true
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: 提交收件箱
+        run: |
+          git config user.name "Signal Inbox Bot"
+          git config user.email "noreply@github.com"
+          git add data/inbox
+          if git diff --cached --quiet; then echo "没有变化"; exit 0; fi
+          git commit -m "收件箱：$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          for i in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
+            sleep 5
+          done
+          echo "推送失败" >&2
+          exit 1

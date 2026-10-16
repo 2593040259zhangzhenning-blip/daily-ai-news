@@ -1,0 +1,3 @@
+# Python 编译缓存：定时任务用 git add -A 提交时不要把它们带上
+__pycache__/
+*.pyc
