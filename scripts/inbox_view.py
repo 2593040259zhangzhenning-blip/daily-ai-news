@@ -56,7 +56,7 @@ def fmt_time(t, approx="", date_only=False):
     if not t:
         return "时间不明"
     if date_only:
-        return "%s 日期" % t.strftime("%m-%d")          # 来源只给了日期，不显示时刻
+        return "%s（仅日期）" % t.strftime("%m-%d")      # 来源只给了日期，不显示时刻
     return "%s%s" % (approx, t.astimezone(BJ).strftime("%m-%d %H:%M"))
 
 
@@ -181,8 +181,8 @@ def main():
         print(json.dumps(items, ensure_ascii=False, indent=1))
         return 0
 
-    print("# 收件箱（北京时间 %s 生成，共 %d 条候选；本次列出最近 %g 小时内的 %d 条）" % (
-        gen.astimezone(BJ).strftime("%m-%d %H:%M") if gen else "?", doc.get("count", 0), args.hours, len(items)))
+    print("# 收件箱（北京时间 %s 生成；最近 %g 小时内共 %d 条，下面按关注清单挑出相关的部分列出，实际列出的条数见末尾）" % (
+        gen.astimezone(BJ).strftime("%m-%d %H:%M") if gen else "?", args.hours, len(items)))
     if age is None or age > STALE_HOURS:
         print("⚠ 收件箱已经 %s 小时没更新（正常每小时一次）：GitHub Actions 可能停了。"
               "不要只信收件箱，按旧流程用搜索补全，并在最终回复里提一句。" % ("%.0f" % age if age else "?"))
