@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-10-16T16:43:24Z",
+ "generatedAt": "2026-10-16T17:39:57Z",
  "summary": {
   "sources": 61,
-  "ok": 60,
-  "failed": 1,
-  "items": 1649
+  "ok": 59,
+  "failed": 2,
+  "items": 1723
  },
  "sources": [
   {
@@ -19,8 +19,8 @@
    "fetched": 1296,
    "inWindow": 4,
    "new": 0,
-   "ms": 307,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 951,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -35,9 +35,9 @@
    "fetched": 0,
    "inWindow": 0,
    "new": 0,
-   "ms": 159,
+   "ms": 237,
    "lastOkAt": null,
-   "failStreak": 14
+   "failStreak": 15
   },
   {
    "id": "anthropic-news",
@@ -51,8 +51,8 @@
    "fetched": 11,
    "inWindow": 3,
    "new": 0,
-   "ms": 547,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 745,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -67,8 +67,8 @@
    "fetched": 83,
    "inWindow": 0,
    "new": 0,
-   "ms": 647,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 718,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -83,8 +83,8 @@
    "fetched": 100,
    "inWindow": 1,
    "new": 0,
-   "ms": 478,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 4380,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -99,8 +99,8 @@
    "fetched": 20,
    "inWindow": 0,
    "new": 0,
-   "ms": 329,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 270,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -115,8 +115,8 @@
    "fetched": 100,
    "inWindow": 0,
    "new": 0,
-   "ms": 507,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 375,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -131,8 +131,8 @@
    "fetched": 10,
    "inWindow": 0,
    "new": 0,
-   "ms": 1861,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 2941,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -147,8 +147,8 @@
    "fetched": 18,
    "inWindow": 5,
    "new": 0,
-   "ms": 221,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 268,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -163,8 +163,8 @@
    "fetched": 20,
    "inWindow": 9,
    "new": 0,
-   "ms": 311,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 199,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -179,8 +179,8 @@
    "fetched": 85,
    "inWindow": 1,
    "new": 0,
-   "ms": 175,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 527,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -193,10 +193,10 @@
    "http": 200,
    "error": null,
    "fetched": 20,
-   "inWindow": 2,
+   "inWindow": 1,
    "new": 0,
-   "ms": 85,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 135,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -209,10 +209,10 @@
    "http": 200,
    "error": null,
    "fetched": 41,
-   "inWindow": 3,
+   "inWindow": 2,
    "new": 0,
-   "ms": 126,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 120,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -227,8 +227,8 @@
    "fetched": 148,
    "inWindow": 0,
    "new": 0,
-   "ms": 420,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 405,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -241,10 +241,10 @@
    "http": 200,
    "error": null,
    "fetched": 20,
-   "inWindow": 33,
-   "new": 2,
-   "ms": 127,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "inWindow": 34,
+   "new": 1,
+   "ms": 328,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -257,10 +257,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 40,
+   "inWindow": 41,
    "new": 1,
-   "ms": 144,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 194,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -275,8 +275,8 @@
    "fetched": 31,
    "inWindow": 0,
    "new": 0,
-   "ms": 194,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 391,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -291,8 +291,8 @@
    "fetched": 20,
    "inWindow": 3,
    "new": 0,
-   "ms": 629,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 1021,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -307,8 +307,8 @@
    "fetched": 880,
    "inWindow": 5,
    "new": 0,
-   "ms": 211,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 215,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -323,8 +323,8 @@
    "fetched": 90,
    "inWindow": 1,
    "new": 0,
-   "ms": 95,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 425,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -339,8 +339,8 @@
    "fetched": 50,
    "inWindow": 1,
    "new": 0,
-   "ms": 379,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 466,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -355,8 +355,8 @@
    "fetched": 10,
    "inWindow": 2,
    "new": 0,
-   "ms": 173,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 226,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -371,8 +371,8 @@
    "fetched": 20,
    "inWindow": 2,
    "new": 0,
-   "ms": 1097,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 707,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -387,8 +387,8 @@
    "fetched": 8,
    "inWindow": 3,
    "new": 0,
-   "ms": 1151,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 1197,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -397,15 +397,15 @@
    "type": "rss",
    "url": "https://thepienews.com/feed/",
    "tier": 4,
-   "ok": true,
-   "http": 200,
-   "error": null,
-   "fetched": 10,
+   "ok": false,
+   "http": 415,
+   "error": "HTTP 415",
+   "fetched": 0,
    "inWindow": 10,
    "new": 0,
-   "ms": 1135,
+   "ms": 365,
    "lastOkAt": "2026-10-16T16:43:24Z",
-   "failStreak": 0
+   "failStreak": 1
   },
   {
    "id": "ielts",
@@ -419,8 +419,8 @@
    "fetched": 8,
    "inWindow": 0,
    "new": 0,
-   "ms": 1874,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 2541,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -435,8 +435,8 @@
    "fetched": 15,
    "inWindow": 1,
    "new": 0,
-   "ms": 550,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 315,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -451,8 +451,8 @@
    "fetched": 24,
    "inWindow": 0,
    "new": 0,
-   "ms": 1615,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 1768,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -467,8 +467,8 @@
    "fetched": 330,
    "inWindow": 5,
    "new": 0,
-   "ms": 5244,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 5573,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -482,9 +482,9 @@
    "error": null,
    "fetched": 20,
    "inWindow": 23,
-   "new": 3,
-   "ms": 69,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "new": 0,
+   "ms": 235,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -499,8 +499,8 @@
    "fetched": 10,
    "inWindow": 12,
    "new": 0,
-   "ms": 110,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 152,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -513,10 +513,10 @@
    "http": 200,
    "error": null,
    "fetched": 20,
-   "inWindow": 6,
-   "new": 1,
-   "ms": 323,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "inWindow": 5,
+   "new": 0,
+   "ms": 409,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -531,8 +531,8 @@
    "fetched": 10,
    "inWindow": 5,
    "new": 0,
-   "ms": 140,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 233,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -547,8 +547,8 @@
    "fetched": 10,
    "inWindow": 0,
    "new": 0,
-   "ms": 105,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 147,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -563,8 +563,8 @@
    "fetched": 10,
    "inWindow": 13,
    "new": 0,
-   "ms": 1331,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 1585,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -579,8 +579,8 @@
    "fetched": 10,
    "inWindow": 10,
    "new": 0,
-   "ms": 1871,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 1733,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -594,9 +594,9 @@
    "error": null,
    "fetched": 15,
    "inWindow": 29,
-   "new": 1,
-   "ms": 408,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "new": 0,
+   "ms": 491,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -608,11 +608,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 30,
-   "inWindow": 21,
-   "new": 0,
-   "ms": 311,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "fetched": 29,
+   "inWindow": 22,
+   "new": 1,
+   "ms": 326,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -626,9 +626,9 @@
    "error": null,
    "fetched": 50,
    "inWindow": 23,
-   "new": 1,
-   "ms": 119,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "new": 0,
+   "ms": 180,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -642,9 +642,9 @@
    "error": null,
    "fetched": 303,
    "inWindow": 142,
-   "new": 11,
-   "ms": 665,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "new": 0,
+   "ms": 348,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -657,10 +657,10 @@
    "http": 200,
    "error": null,
    "fetched": 21,
-   "inWindow": 34,
+   "inWindow": 31,
    "new": 0,
-   "ms": 232,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 416,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -673,10 +673,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 83,
-   "new": 5,
-   "ms": 640,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "inWindow": 90,
+   "new": 7,
+   "ms": 571,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -689,10 +689,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 98,
-   "new": 11,
-   "ms": 1920,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "inWindow": 108,
+   "new": 10,
+   "ms": 1953,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -705,10 +705,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 83,
-   "new": 12,
-   "ms": 3289,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "inWindow": 89,
+   "new": 6,
+   "ms": 3194,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -721,10 +721,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 84,
-   "new": 4,
-   "ms": 4697,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "inWindow": 85,
+   "new": 1,
+   "ms": 4467,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -737,10 +737,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 137,
-   "new": 3,
-   "ms": 6166,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "inWindow": 139,
+   "new": 2,
+   "ms": 5959,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -753,10 +753,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 109,
-   "new": 5,
-   "ms": 7454,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "inWindow": 123,
+   "new": 14,
+   "ms": 7641,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -769,10 +769,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 122,
-   "new": 11,
-   "ms": 8732,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "inWindow": 132,
+   "new": 10,
+   "ms": 8676,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -785,10 +785,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 46,
+   "inWindow": 47,
    "new": 1,
-   "ms": 9614,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 9953,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -801,10 +801,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 49,
-   "new": 3,
-   "ms": 10452,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "inWindow": 51,
+   "new": 2,
+   "ms": 10395,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -817,10 +817,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 102,
-   "new": 10,
-   "ms": 10502,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "inWindow": 109,
+   "new": 7,
+   "ms": 10456,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -833,10 +833,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 79,
-   "new": 7,
-   "ms": 11517,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "inWindow": 89,
+   "new": 10,
+   "ms": 11570,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -851,8 +851,8 @@
    "fetched": 13,
    "inWindow": 14,
    "new": 0,
-   "ms": 11749,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 11835,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -865,10 +865,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 54,
-   "new": 2,
-   "ms": 12015,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "inWindow": 57,
+   "new": 3,
+   "ms": 12098,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -883,8 +883,8 @@
    "fetched": 100,
    "inWindow": 1,
    "new": 0,
-   "ms": 11893,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 11747,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -897,10 +897,10 @@
    "http": 200,
    "error": null,
    "fetched": 31,
-   "inWindow": 21,
-   "new": 0,
-   "ms": 11825,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "inWindow": 23,
+   "new": 2,
+   "ms": 11881,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -912,11 +912,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 32,
-   "inWindow": 17,
-   "new": 0,
-   "ms": 11862,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "fetched": 33,
+   "inWindow": 19,
+   "new": 2,
+   "ms": 11920,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -928,11 +928,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 32,
-   "inWindow": 23,
-   "new": 0,
-   "ms": 11934,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "fetched": 26,
+   "inWindow": 25,
+   "new": 2,
+   "ms": 11893,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -947,8 +947,8 @@
    "fetched": 47,
    "inWindow": 13,
    "new": 0,
-   "ms": 11919,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 11995,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -960,11 +960,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 12,
-   "inWindow": 17,
+   "fetched": 10,
+   "inWindow": 15,
    "new": 0,
-   "ms": 11756,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "ms": 11812,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   },
   {
@@ -978,9 +978,9 @@
    "error": null,
    "fetched": 43,
    "inWindow": 45,
-   "new": 2,
-   "ms": 12188,
-   "lastOkAt": "2026-10-16T16:43:24Z",
+   "new": 0,
+   "ms": 12062,
+   "lastOkAt": "2026-10-16T17:39:57Z",
    "failStreak": 0
   }
  ]
