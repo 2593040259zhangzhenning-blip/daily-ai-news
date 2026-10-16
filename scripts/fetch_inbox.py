@@ -590,7 +590,7 @@ def fetch_source(src, ctx):
 
 
 # ---------------------------------------------------------------- 打标 ----
-def tag_item(src, title, snippet):
+def tag_item(src, title, snippet, region=None):
     both = "%s %s" % (title, snippet)
     ai = bool(C.AI_RE.search(both))
     watch = list(src.get("watch") or [])
@@ -620,7 +620,7 @@ def tag_item(src, title, snippet):
         flags.append("rumor")
     if C.MONEY_PEOPLE_RE.search(title):
         flags.append("money_people")
-    region = src.get("region", "intl")
+    region = region or src.get("region", "intl")
     if region == "cn" and not (set(watch) & C.EDU_EXEMPT):
         flags.append("domestic")
     return watch, topics, layer, flags
@@ -635,7 +635,7 @@ def build_item(src, e, now, prev):
     key = e.get("guid") if src["type"] in ("launch_library", "release_notes", "hn", "hf_papers") else url
     iid = item_id(src["id"], key or url)
     snippet = clip(e.get("snippet", ""), 160)
-    watch, topics, layer, flags = tag_item(src, title, snippet)
+    watch, topics, layer, flags = tag_item(src, title, snippet, e.get("region"))
     if src.get("keep_only_tagged") and not (watch or topics):
         return None
     old = prev.get(iid, {})
