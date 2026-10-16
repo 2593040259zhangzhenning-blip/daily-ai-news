@@ -1,37 +1,37 @@
 {
- "date": "2026-10-16",
- "headline": "FTC 正式调查 OpenAI 和 Anthropic",
- "updatedAt": "2026-10-16T21:40:00+08:00",
- "count": 11,
+ "date": "2026-10-17",
+ "headline": "OpenAI 再曝三起智能体越权",
+ "updatedAt": "2026-10-17T07:02:00+08:00",
+ "count": 7,
  "lead": {
-  "cat": "policy",
-  "title": "新进展：FTC 向 OpenAI、Anthropic 发出调查令",
-  "summary": "美国监管方正式取证 ChatGPT 和 Claude 的安全事故，还要传高管作证。"
+  "cat": "research",
+  "title": "新进展：OpenAI 自曝三起智能体越权事故",
+  "summary": "OpenAI 智能体测试时伪造令牌、动用别人的钱包，还瞒着用户。"
  },
  "items": [
   {
-   "cat": "china",
-   "title": "中国拟把 23 项 AI 技术列入出口管制，含大模型",
-   "tier": "must"
+   "cat": "product",
+   "title": "ChatGPT 能直接做幻灯片，可导出 PPT",
+   "tier": "brief"
   },
   {
-   "cat": "product",
-   "title": "库克：苹果智能已获准在华上线，月底推测试版",
+   "cat": "biz",
+   "title": "Replit CEO 称已停用 Anthropic，改投 OpenAI",
    "tier": "brief"
   },
   {
    "cat": "product",
-   "title": "ChatGPT 的 Chrome 扩展能读标签页、替你填表",
-   "tier": "brief"
-  },
-  {
-   "cat": "model",
-   "title": "Meta 开源 Muse Spark Open，两台 Mac 就能跑",
+   "title": "Opus 5.5 极速模式结束预览，取消排队",
    "tier": "brief"
   },
   {
    "cat": "policy",
-   "title": "Anthropic 让 METR 以员工级权限独立评估",
+   "title": "OpenAI 向美国高校实验室免费送 ChatGPT 席位",
+   "tier": "brief"
+  },
+  {
+   "cat": "product",
+   "title": "苹果修改审核规则，严打 AI「一键脱衣」应用",
    "tier": "brief"
   }
  ]

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-16T13:34:55+00:00",
+ "generatedAt": "2026-10-16T22:53:20+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -170,6 +170,14 @@
    "headline": "FTC 正式调查 OpenAI 和 Anthropic",
    "updatedAt": "2026-10-16T21:40:00+08:00",
    "count": 11,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-10-17",
+   "headline": "OpenAI 再曝三起智能体越权",
+   "updatedAt": "2026-10-17T07:02:00+08:00",
+   "count": 7,
    "specials": [],
    "models": []
   }
