@@ -747,7 +747,8 @@ def run(sources, out_dir, dry=False):
         statuses.append(st)
     # 这次没跑的源（--only 调试时）保留上次的状态
     ran = {s["id"] for s in statuses}
-    statuses += [s for sid, s in prev_status.items() if sid not in ran]
+    known = {s["id"] for s in C.SOURCES if s.get("enabled", True)}     # 已停用或删掉的源，旧状态不再保留
+    statuses += [s for sid, s in prev_status.items() if sid not in ran and sid in known]
     ok_n = sum(1 for s in statuses if s["ok"])
     status_doc = dict(generatedAt=iso(now), summary=dict(sources=len(statuses), ok=ok_n, failed=len(statuses) - ok_n,
                                                          items=len(items)), sources=statuses)

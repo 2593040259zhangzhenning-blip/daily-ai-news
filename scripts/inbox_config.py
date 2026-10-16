@@ -95,7 +95,9 @@ SOURCES = [
     # ===== 第一层 · 官方一手 =====
     dict(id="openai", name="OpenAI 官网", type="rss", url="https://openai.com/news/rss.xml",
          tier=1, role="primary", region="intl", watch=["OpenAI/ChatGPT"], limit=40),
-    dict(id="chatgpt-notes", name="ChatGPT 发布说明", type="release_notes",
+    # 已停用（2026-10-17）：help.openai.com 对所有机房 IP 返回 Cloudflare 人机验证（403），GitHub 上抓不到。
+    # 改由早晚定时任务用网页读取工具直接读这个页面，见 tasks/morning.md 第 5 步。
+    dict(id="chatgpt-notes", name="ChatGPT 发布说明", type="release_notes", enabled=False,
          url="https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
          tier=1, role="primary", region="intl", watch=["OpenAI/ChatGPT"]),
     dict(id="anthropic-news", name="Anthropic 新闻页", type="page_links", url="https://www.anthropic.com/news",

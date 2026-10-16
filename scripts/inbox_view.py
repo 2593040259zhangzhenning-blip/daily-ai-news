@@ -7,6 +7,7 @@
   python3 scripts/inbox_view.py --all            # 连「清单外」和每组的全部线索都列出来
   python3 scripts/inbox_view.py --urls           # 线索类条目也带链接（Google 新闻是跳转地址，一般不需要）
   python3 scripts/inbox_view.py --status         # 只看各个源的抓取状态
+  python3 scripts/inbox_view.py --checked        # 本次成功读取的来源名（直接抄进 scan.checked）
   python3 scripts/inbox_view.py --json           # 输出筛选后的原始 JSON
 
 读法：
@@ -71,6 +72,7 @@ def flags_text(it):
 
 
 def line(it, urls):
+    PRINTED[0] += 1
     t, approx = when(it)
     kind = "一手" if it.get("role") == "primary" else "线索"
     src = it["sourceName"]
@@ -89,6 +91,7 @@ def line(it, urls):
 
 
 _SEEN_LEADS = set()
+PRINTED = [0]          # 实际打印出来的候选条数，scan.candidates 从这里起算
 
 
 def show_group(title, items, args, lead_cap=10, rumor_cap=8):
@@ -136,6 +139,7 @@ def main():
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--urls", action="store_true")
     ap.add_argument("--status", action="store_true")
+    ap.add_argument("--checked", action="store_true")
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--dir", default=str(INBOX))
     args = ap.parse_args()
@@ -148,6 +152,14 @@ def main():
         return 1
     if args.status:
         print_status(status)
+        return 0
+    if args.checked:
+        ok = [s for s in status.get("sources", []) if s["ok"]]
+        names = [s["name"] for s in ok if not s["id"].startswith("gn-")]
+        gn = [s for s in ok if s["id"].startswith("gn-")]
+        if gn:
+            names.append("Google 新闻关键词搜索（%d 组）" % len(gn))
+        print(json.dumps(names, ensure_ascii=False))
         return 0
 
     now = datetime.now(UTC)
@@ -221,6 +233,8 @@ def main():
             print(line(i, args.urls))
     else:
         print("（清单外另有 %d 条，--all 查看）" % len(l0))
+    print("\n---\n上面一共列出 %d 条候选（scan.candidates 从这个数起算，再加上你用搜索额外看过的条数）。"
+          "成功读取的来源名用 --checked 取。" % PRINTED[0])
     return 0
 
 
