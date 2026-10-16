@@ -378,9 +378,18 @@ def parse_release_notes(html_text):
 
 # ---------------------------------------------------------------- 各类型抓取 ----
 def fetch_rss(src, ctx):
-    status, data, ctype, final = http_get(src["url"], accept="application/rss+xml, application/atom+xml, application/xml, text/xml, */*")
-    entries = parse_feed(data)
-    return dict(entries=entries, fetched=len(entries), http=status)
+    for attempt in (0, 1):
+        status, data, ctype, final = http_get(src["url"], accept="application/rss+xml, application/atom+xml, application/xml, text/xml, */*")
+        try:
+            entries = parse_feed(data)
+            return dict(entries=entries, fetched=len(entries), http=status)
+        except FetchError as e:
+            # 偶尔会返回一段拦截页（HTTP 200 但不是 XML）：等几秒重试一次，仍不行就把开头记进错误
+            if attempt == 0:
+                time.sleep(4)
+                continue
+            head = " ".join(data[:80].decode("utf-8", "replace").split())
+            raise FetchError("%s（返回内容开头：%s）" % (e, head))
 
 
 def fetch_gnews(src, ctx):
