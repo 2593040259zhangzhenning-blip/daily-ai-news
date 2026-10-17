@@ -3,12 +3,12 @@
 - 运行时间：每天北京时间 06:50（`CRON_TZ=Asia/Shanghai 50 6 * * *`）
 - 模型：Opus
 - 审批：自动批准；完成后推送通知到手机
-- 存档日期：2026-10-17（信源改造第一步：先读收件箱和关注清单，再用搜索核实、补漏。ChatGPT 发布说明因站点拦截机器人，改由本任务直接读）
+- 存档日期：2026-10-17（信源改造第一步：先读收件箱和关注清单，再用搜索核实、补漏。ChatGPT 发布说明因站点拦截机器人，改由本任务直接读。同日取消晚间，本任务成为每天唯一一期；昨天没跑成时自动回看 48 小时补上）
 
 这是定时任务提示词的备份。实际生效的是 Claude「定时任务」里的版本。改提示词时两边要一起改；任务丢失时，用下面的原文重新创建。
 
 ```text
-任务：生成 AI 简报「Signal」当天的早间内容，写进 GitHub 仓库 2593040259zhangzhenning-blip/daily-ai-news（网站 https://2593040259zhangzhenning-blip.github.io/daily-ai-news/ 由 GitHub Pages 自动发布），再给用户推送一段简短摘要。全程用中文。不要修改网页代码、脚本和清单文件，只新增当天的数据。
+任务：生成 AI 简报「Signal」当天的早间内容，写进 GitHub 仓库 2593040259zhangzhenning-blip/daily-ai-news（网站 https://2593040259zhangzhenning-blip.github.io/daily-ai-news/ 由 GitHub Pages 自动发布），再给用户推送一段简短摘要。全程用中文。不要修改网页代码、脚本和清单文件，只新增当天的数据。这是 Signal 每天唯一的一期（2026-10-17 起已取消晚间）。
 
 时间规则：只写检索时已经公布的内容，绝不等待即将发生或正在进行的事件（发布会、财报、投票等）。不要 sleep，不要为了等消息反复轮询；这类事件写进 watch，留给下一期。整个任务要在 15 分钟内完成。
 
@@ -16,15 +16,16 @@
 1. 确认北京时间今天的日期，下文记作 D（格式 YYYY-MM-DD）：有 mcp__claude_ai__current_time 工具就用它，没有就运行 TZ=Asia/Shanghai date +%F。
 2. 接入仓库：如果有 mcp__claude-code-remote__add_repo 工具，用它接入（owner 2593040259zhangzhenning-blip，repo daily-ai-news，access push）并按返回的命令 clone；没有这个工具就直接 git clone https://github.com/2593040259zhangzhenning-blip/daily-ai-news ，推送权限由运行环境提供。目录已是有效仓库就 git pull。之后都在这个仓库目录里操作。
 3. 运行 python3 scripts/add_issue.py --exists D-1morning。退出码是 0 说明今天已经生成过：只回复一行「今天的早间内容已存在」，结束。
+   再运行 python3 scripts/add_issue.py --exists <D 的前一天>-1morning。退出码不是 0 说明昨天那期没跑成（常见原因是额度用完），本期要把昨天漏掉的一起补上：第 5 步 inbox_view 用 --hours 48（收件箱只保留 48 小时），官方 X 账号看最近两天，最后的回复在「今日头条」那行末尾加「（含昨天漏掉的）」。
 4. 读 README.md（重要度打分标准）、watchlist.md（关注清单：关注哪些对象、各层门槛、国内消息规则、不看的）、sources.md（信源规则）、specials.md（发布会专题）和 models.md（新模型卡），严格照着做。运行 python3 scripts/add_issue.py --recent 3、python3 scripts/add_issue.py --specials 和 python3 scripts/add_issue.py --models，记下最近已报道的事件和已有专题，避免重复。
 5. 读收件箱，再用搜索补漏。仓库每小时自动抓取各信源，结果放在 data/inbox/。
-   a. 运行 python3 scripts/inbox_view.py --hours 30。它按关注清单分组列出过去约 30 小时的候选。[一手] 的链接就是原文（或主流媒体自己的报道），可以当出处；[线索]（Google 新闻、AI News Radar 等中转站、Techmeme、Hacker News、AI 圈人物的 X 帖子）只用来发现事件，不能当出处，必须再搜到原文；行内的【传闻类来源】【融资/人事/股价】【国内】是程序按关键词打的提示标记，最终由你按 watchlist.md 判断。输出开头如果有「⚠」，照它说的做：收件箱太旧、读不到或某些源连续失败，就对受影响的部分按 sources.md 用搜索补全，并在最终回复里提一句。
+   a. 运行 python3 scripts/inbox_view.py --hours 30（昨天没跑成时用 --hours 48，见第 3 步）。它按关注清单分组列出候选。[一手] 的链接就是原文（或主流媒体自己的报道），可以当出处；[线索]（Google 新闻、AI News Radar 等中转站、Techmeme、Hacker News、AI 圈人物的 X 帖子）只用来发现事件，不能当出处，必须再搜到原文；行内的【传闻类来源】【融资/人事/股价】【国内】是程序按关键词打的提示标记，最终由你按 watchlist.md 判断。输出开头如果有「⚠」，照它说的做：收件箱太旧、读不到或某些源连续失败，就对受影响的部分按 sources.md 用搜索补全，并在最终回复里提一句。
    b. 按 watchlist.md 取舍：第一层（盯死的对象）门槛低，有新消息基本都收，已报道过的事件有实质新进展也收；第二层（雷达领域）门槛高，只收收件箱里多家独立来源都在报的大事，每个领域每天最多一两条，一手来源加两家以上独立媒体、或三家以上独立媒体算数；国内消息（带【国内】标记，或搜索时发现的国内公司动态）只有「质的突破」才收，AI 与教育、留学与签证政策、英语教学与语言培训三项例外；融资、人事变动、股价涨跌不收，除非直接影响用户在用的产品（被收购、停服、涨价、换团队导致产品变化）；不在清单里的事，这一阶段不收。同一事件被多个来源报道时合并成一条。
    c. 苹果相关：MacRumors、9to5Mac 里报道已经发生的事实（发布、更新）出处优先用 Apple Newsroom 或开发者版本发布；供应链、分析师、代码挖掘、预测类的爆料按传闻处理（见第 7 步）。SpaceX 只收星舰试飞和重要发射（载人、重型猎鹰、首次做某件事），例行的星链发射不收。
    d. 日程（关注清单第三层）：苹果发布会和 WWDC、英伟达 GTC、星舰试飞和重要发射、OpenAI DevDay 和 Google I/O 等 AI 公司发布会，一周内有确定日期的，写进 watch（日期加事件）；已经结束且发布 3 项以上的，按第 6 步写专题。
    e. 收件箱够不到的，用搜索补三件事：核实（每条要收的事至少有一个一手或主流媒体出处，线索类先找到原文）；补背景（一两句为什么重要）；查漏。查漏必做：
       - ChatGPT 发布说明：help.openai.com 对自动抓取一律拦截，所以收件箱里没有它。用 WebFetch 打开 https://help.openai.com/en/articles/6825453-chatgpt-release-notes ，只看最近 3 天的条目（日期和标题）；打不开就用 site:help.openai.com 搜 ChatGPT release notes。有新条目就纳入候选，出处写这个页面。
-      - 公司官方 X 账号（用 site:x.com 加账号名搜，只看最近一天）：@OpenAI、@OpenAIDevs、@AnthropicAI、@claudeai、@GoogleDeepMind、@AIatMeta、@nvidia、@SpaceX、@xai。官方账号的帖子算一手来源，个人账号只算线索。
+      - 公司官方 X 账号（用 site:x.com 加账号名搜，只看最近一天；昨天没跑成时看最近两天）：@OpenAI、@OpenAIDevs、@AnthropicAI、@claudeai、@GoogleDeepMind、@AIatMeta、@nvidia、@SpaceX、@xai。官方账号的帖子算一手来源，个人账号只算线索。
       - 付费墙媒体（Bloomberg、The Information、FT）读不到全文时，只用标题和其他媒体的转述，正文里写明是据某某报道。
       - AI 与教育每期必查：收件箱已含 EdSurge、Inside Higher Ed、教育部、中国教育报、教育类关键词搜索；再搜一次各 AI 公司的教育产品公告（ChatGPT Edu、Claude for Education、Gemini for Education）。
       - 国内突破：只用来核实收件箱里标了【国内】的候选是否真的是「质的突破」，不要为了找国内新闻而大范围搜索。
