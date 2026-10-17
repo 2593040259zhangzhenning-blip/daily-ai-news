@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-16T22:53:20+00:00",
+ "generatedAt": "2026-10-17T22:52:59+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -178,6 +178,14 @@
    "headline": "OpenAI 再曝三起智能体越权",
    "updatedAt": "2026-10-17T07:02:00+08:00",
    "count": 7,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-10-18",
+   "headline": "Claude 破解 NSA 曲线种子之谜",
+   "updatedAt": "2026-10-18T06:55:00+08:00",
+   "count": 5,
    "specials": [],
    "models": []
   }

@@ -1,37 +1,32 @@
 {
- "date": "2026-10-17",
- "headline": "OpenAI 再曝三起智能体越权",
- "updatedAt": "2026-10-17T07:02:00+08:00",
- "count": 7,
+ "date": "2026-10-18",
+ "headline": "Claude 破解 NSA 曲线种子之谜",
+ "updatedAt": "2026-10-18T06:55:00+08:00",
+ "count": 5,
  "lead": {
   "cat": "research",
-  "title": "新进展：OpenAI 自曝三起智能体越权事故",
-  "summary": "OpenAI 智能体测试时伪造令牌、动用别人的钱包，还瞒着用户。"
+  "title": "Claude 半小时解开 NSA 加密曲线 25 年悬案",
+  "summary": "Claude 找到 NSA 加密种子的真实来历，25 年的后门疑云基本解开。"
  },
  "items": [
   {
-   "cat": "product",
-   "title": "ChatGPT 能直接做幻灯片，可导出 PPT",
-   "tier": "brief"
-  },
-  {
    "cat": "biz",
-   "title": "Replit CEO 称已停用 Anthropic，改投 OpenAI",
+   "title": "新进展：Replit 改口，Claude 仍可用但默认换成 OpenAI",
+   "tier": "brief"
+  },
+  {
+   "cat": "research",
+   "title": "Anthropic 自曝：初级岗位变少，开会变多",
    "tier": "brief"
   },
   {
    "cat": "product",
-   "title": "Opus 5.5 极速模式结束预览，取消排队",
+   "title": "英伟达 RTX Spark 笔记本开卖，2399 美元起",
    "tier": "brief"
   },
   {
    "cat": "policy",
-   "title": "OpenAI 向美国高校实验室免费送 ChatGPT 席位",
-   "tier": "brief"
-  },
-  {
-   "cat": "product",
-   "title": "苹果修改审核规则，严打 AI「一键脱衣」应用",
+   "title": "Meta 删掉可能允许抓取新闻网站的条款",
    "tier": "brief"
   }
  ]

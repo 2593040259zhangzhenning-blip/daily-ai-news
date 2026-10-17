@@ -1,0 +1,140 @@
+{
+ "key": "2026-10-18-1morning",
+ "date": "2026-10-18",
+ "edition": "morning",
+ "createdAt": "2026-10-18T06:55:00+08:00",
+ "headline": "Claude 破解 NSA 曲线种子之谜",
+ "items": [
+  {
+   "cat": "research",
+   "title": "Claude 半小时解开 NSA 加密曲线 25 年悬案",
+   "body": "Anthropic 10/16 发文称，一名员工让内部研究模型分析 NIST 椭圆曲线标准里那组由 NSA 提供、来历不明的「种子」数字，模型不到半小时就发现它们来自 C 语言里一个普通的随机数函数，用 1997–1998 年间的时间戳生成。这组种子多年被怀疑藏有后门，新结论让「故意埋后门」的可能性大大降低；Anthropic 公开了能复现全部种子的代码，并把 3.6 万多美元的悬赏捐给非营利机构 ISRG。目前还没有外部密码学家的独立复核。",
+   "score": 7,
+   "tier": "lead",
+   "summary": "Claude 找到 NSA 加密种子的真实来历，25 年的后门疑云基本解开。",
+   "sources": [
+    {
+     "name": "Anthropic 研究博客",
+     "url": "https://www.anthropic.com/research/ecdsa-curve-origins"
+    },
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/anthropics-claude-cracks-a-25-year-old-nsa-cryptography-mystery-in-under-30-minutes/"
+    }
+   ]
+  },
+  {
+   "cat": "biz",
+   "title": "新进展：Replit 改口，Claude 仍可用但默认换成 OpenAI",
+   "body": "Replit CEO 在 TechCrunch Disrupt 上称「不再和 Anthropic 合作」后改口澄清：Claude 模型仍对用户开放，只是 Replit Agent 的默认模型换成了 OpenAI，后者成为首选合作方。由于大多数用户不改默认设置，Replit 在 Anthropic 上的花费可能大幅减少；Anthropic 尚未回应。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/"
+    }
+   ]
+  },
+  {
+   "cat": "research",
+   "title": "Anthropic 自曝：初级岗位变少，开会变多",
+   "body": "Anthropic 发布自家员工变化报告：自 2025 年初以来，技术部门里初级员工占比从 21% 降到 14%，新招技术岗位中初级人员从 27% 降到 9%；约五分之一员工说工作变成了「管理一群 Claude」，人均开会时间一年涨了 20%。这是 AI 公司少见地用自己的数据回答「AI 会不会挤掉新人岗位」，对正在找实习和工作的学生有参考意义。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Anthropic 研究博客",
+     "url": "https://www.anthropic.com/research/employment-at-anthropic"
+    },
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "英伟达 RTX Spark 笔记本开卖，2399 美元起",
+   "body": "英伟达 10/17 宣布首批搭载 RTX Spark 芯片（Blackwell 显卡加 Grace 处理器）的 Windows 笔记本上市，华硕、戴尔、惠普、联想、微软、微星都有机型，起价 2399 美元，最高 128GB 统一内存、约 1 petaflop 的 AI 算力。这是英伟达第一次做 Windows 电脑的主处理器，主打在本地跑大模型。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "英伟达博客",
+     "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-windows-laptops-celebration/"
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "Meta 删掉可能允许抓取新闻网站的条款",
+   "body": "Meta 新版商业条款里有一句允许它使用企业账号所关联网站的任何内容，法律专家警告这可能被用来抓取媒体网站训练 AI。遭到反对后 Meta 删掉了这句话，称它只针对广告和商业产品，不改变公司爬取网页的方式。",
+   "score": 4,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/"
+    }
+   ]
+  }
+ ],
+ "watch": [
+  "外部密码学家能否复核 Claude 对 NSA 曲线种子的结论",
+  "Anthropic 对 Replit 换默认模型的正式回应",
+  "Anthropic 何时公开递交招股书"
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI 官网",
+   "Anthropic 新闻页",
+   "Claude 发布说明",
+   "Google AI 栏目",
+   "Google Research 博客",
+   "Meta AI 博客",
+   "英伟达博客",
+   "英伟达新闻中心",
+   "xAI 新闻页",
+   "Apple Newsroom",
+   "Apple 开发者版本发布",
+   "Apple 开发者新闻",
+   "MacRumors",
+   "9to5Mac",
+   "SpaceX 官网更新",
+   "SpaceX 发射日程（Launch Library）",
+   "Hugging Face 博客",
+   "Mistral 新闻",
+   "EdSurge",
+   "Inside Higher Ed",
+   "英国签证与移民局（GOV.UK）",
+   "ICEF Monitor",
+   "The PIE News",
+   "雅思官方（IELTS）",
+   "多邻国博客",
+   "教育部（工作动态）",
+   "中国教育报",
+   "TechCrunch AI",
+   "The Verge AI",
+   "Ars Technica AI",
+   "Wired AI",
+   "MIT Technology Review AI",
+   "The Decoder",
+   "量子位",
+   "Techmeme",
+   "Hacker News 首页（≥100 分）",
+   "Hugging Face 每日论文（前 12）",
+   "AI News Radar（中转站）",
+   "Follow Builders（AI 圈人物 X）",
+   "Google 新闻关键词搜索（20 组）",
+   "ChatGPT 发布说明",
+   "@OpenAI",
+   "@AnthropicAI",
+   "@claudeai",
+   "AI 公司教育产品公告",
+   "Artificial Analysis",
+   "ICEF Monitor（澳洲学签）"
+  ],
+  "candidates": 215
+ }
+}
