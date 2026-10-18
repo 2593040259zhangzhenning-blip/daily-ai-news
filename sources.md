@@ -26,7 +26,7 @@ GitHub Actions（`.github/workflows/inbox.yml`）每小时读下面这些源，�
 AI HOT（aihot.news）不接：它的使用规则不允许公开镜像，而收件箱随本仓库公开；也不收 AI News Radar 里来自 AI HOT 的条目。
 
 上表中的更新日志类来源（Claude 发布说明、Claude Code 更新日志和每周摘要、ChatGPT 与 Codex 更新日志、OpenAI API 更新日志）的条目带 `kind: "changelog"`，`inbox_view.py` 把它们单独列成「功能更新候选」一节，不混进按对象分的组里。怎么挑见 `watchlist.md` 的「功能更新」。
-GitHub Actions 的机房 IP 能不能读到这几个页面，要看上线后 `source-status.json` 的结果；读不到的由早间任务用 WebFetch 直接读（ChatGPT 发布说明就是这样处理的）。
+这四个新页面在 GitHub Actions 机房 IP 上都能读到（2026-10-18 核实）；以后哪个读不到，由早间任务用 WebFetch 直接读（ChatGPT 发布说明就是这样处理的）。
 
 收件箱里每条候选都带三个提示标记，是程序按关键词打的，**只供参考，取舍由定时任务按 `watchlist.md` 判断**：【传闻类来源】【融资/人事/股价】【国内】。
 时间前面的 `~` 表示来源没给发布时间，用的是收件箱第一次发现它的时间。
