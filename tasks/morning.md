@@ -32,7 +32,7 @@
       - AI 与教育每期必查：收件箱已含 EdSurge、Inside Higher Ed、教育部、中国教育报、教育类关键词搜索；再搜一次各 AI 公司的教育产品公告（ChatGPT Edu、Claude for Education、Gemini for Education）。
       - 国内突破：只用来核实收件箱里标了【国内】的候选是否真的是「质的突破」，不要为了找国内新闻而大范围搜索。
       收件箱里已经有的内容不要再搜一遍。每条事实都要有检索到的来源支撑，不确定的不写。一边查一边记下：实际用搜索检查过的来源名称、搜索额外看过的候选条数。
-   f. 功能更新（写进 updates，规则见 watchlist.md 的「功能更新」一节）：从「功能更新候选」一节，加上 e 里读到的 ChatGPT 发布说明，挑出我关注的产品（Claude 和 Claude Code、ChatGPT 和 Codex、Gemini）里用户能直接感觉到的变化：新功能、新模型能用了、用法或界面变了、价格额度可用范围变了。不收：环境变量、配置项、API 和 SDK 参数、修 bug、性能和稳定性优化、内部重构、遥测、只给企业管理员或开发者集成用的设置。更新日志条目的摘要只有开头几行，要判断时用 WebFetch 打开条目的链接看全文。每条一句 60 字以内的大白话，说清「你能感觉到什么变化」，带官方发布日期和官方来源链接（更新日志页本身就行）。已经作为头条、必看或更多动态写过的大事（比如新模型发布）不再重复写进 updates，--recent 里已经出现过的也不重复。最多 8 条；没有就不写 updates 字段，不要为了凑数写。
+   f. 功能更新（写进 updates，规则见 watchlist.md 的「功能更新」一节）：从「功能更新候选」一节，加上 e 里读到的 ChatGPT 发布说明，挑出用户主力在用的两个工具（Claude 含 Claude Code、ChatGPT 含 Codex）里用户能直接感觉到的变化。Gemini 和其他公司的产品不写进 updates；它们没有「质的飞跃」就不关心，真有（新模型排进 Artificial Analysis 综合指数前 5、做到别家做不到的事）按普通新闻写进 items：新功能、新模型能用了、用法或界面变了、价格额度可用范围变了。不收：环境变量、配置项、API 和 SDK 参数、修 bug、性能和稳定性优化、内部重构、遥测、只给企业管理员或开发者集成用的设置。更新日志条目的摘要只有开头几行，要判断时用 WebFetch 打开条目的链接看全文。每条一句 60 字以内的大白话，说清「你能感觉到什么变化」，带官方发布日期和官方来源链接（更新日志页本身就行）。已经作为头条、必看或更多动态写过的大事（比如新模型发布）不再重复写进 updates，--recent 里已经出现过的也不重复。最多 8 条；没有就不写 updates 字段，不要为了凑数写。
 6. 发布会专题：如果检索中发现某场已经结束的发布活动公布了 3 项及以上值得报道的内容，而且还没有它的专题，就按 specials.md 另写一份专题（写成 /tmp/special.json，运行 python3 scripts/add_issue.py --special /tmp/special.json，报错就改到成功）。这场活动的各项发布不再写进下面的当期条目。已有专题的活动，只有实质新进展才作为普通条目写。
    新模型卡：按 models.md 检查最近 7 天正式发布的前沿模型（今天新发布的，以及之前已写成新闻、当时还没出分的）。在 Artificial Analysis 综合指数上已经出分、按模型算排进前 5（并列算同名次）、而且还没有它的卡（python3 scripts/add_issue.py --model-exists <slug> 退出码不是 0），就按 models.md 写一张，date 用模型发布那天（写成 /tmp/model.json，运行 python3 scripts/add_issue.py --model /tmp/model.json，报错就改到成功，再核对脚本打印出的排名）。脚本判定没进前 5 会报错，那就不出卡。卡只回答「排第几、怎么用上」，模型发布本身照常可以作为普通条目写进当期。还没出分的写进 watch。
 7. 挑选和打分：按 README 的四项标准给每条打 1–10 分，读者重点关注「自己在用的 AI 工具」「AI 与教育」和关注清单第一层的对象，这几类要加权。3 分及以下不收；一般收 5–10 条，新闻少的日子可以更少，宁缺毋滥。最高分的 1 条是头条（tier "lead"），并写一句 40 字以内的 summary；其余 7 分及以上的最多 3 条是必看（tier "must"）；其他是 "brief"。已经报道过的事件只有出现实质新进展才写，标题里点明「新进展」。只在个人 X 账号、论坛出现或属于苹果爆料类、没有得到确认的消息，标题前加「传闻：」，分数不超过 5，不能做头条。
@@ -45,7 +45,7 @@
   "headline": 一句话概括今天最大的主题（20 字以内）,
   "items": [ { "cat": 类别, "title": 标题（30 字以内）, "body": 1–3 句，讲清发生了什么、为什么重要, "score": 1–10 的整数, "tier": "lead" / "must" / "brief", "summary": 只有头条需要, "sources": [ {"name": 媒体或机构名, "url": 链接} ] } ],
   "watch": [ 1–3 条接下来值得关注的事（含第三层日程），可省略 ],
-  "updates": [ { "product": 产品名（Claude Code、Claude、ChatGPT、Codex、Gemini，14 字以内）, "text": 一句话大白话（60 字以内）, "date": "官方发布日期 YYYY-MM-DD", "sources": [ {"name": "Claude Code 更新日志", "url": 链接} ] } ]（第 5 步 f；可省略；同一产品的条目挨在一起，Claude 在前）,
+  "updates": [ { "product": 产品名（Claude Code、Claude、ChatGPT、Codex，14 字以内）, "text": 一句话大白话（60 字以内）, "date": "官方发布日期 YYYY-MM-DD", "sources": [ {"name": "Claude Code 更新日志", "url": 链接} ] } ]（第 5 步 f；可省略；同一产品的条目挨在一起，Claude 在前）,
   "scan": { "checked": [ 来源名称数组 ], "candidates": 看过的候选条数 }
 }
 cat 只能取：model（模型发布）、policy（政策治理）、product（产品动态）、biz（融资商业）、china（中国 AI）、research（研究突破）。新增关注范围暂时这样归（页面分类等跑一段时间后再和用户商量）：苹果的系统和硬件、SpaceX 的发射和星舰 → product；芯片、机器人、自动驾驶、脑机接口的技术突破 → research，产品发布 → product；留学与签证政策、教育政策 → policy；国内的质的突破 → china。
