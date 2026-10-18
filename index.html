@@ -111,6 +111,19 @@ button{font:inherit;color:inherit}
 .scan summary::after{content:"";width:6px;height:6px;border-right:1.4px solid var(--faint);border-bottom:1.4px solid var(--faint);transform:translateY(-2px) rotate(45deg)}
 .scan[open] summary::after{transform:translateY(1px) rotate(-135deg)}
 .scan p{margin:8px 0 0;line-height:1.7;max-width:70ch}
+/* 功能更新：Claude、ChatGPT 里用户能直接感觉到的变化，放在今日必看下面。两组：Claude（含 Claude Code）、ChatGPT（含 Codex）。
+   层次：产品组标题 → 一句话 → 小灰日期；同组同一天只写一次日期；三天以前的条目整行变灰。整行点开官方来源 */
+.up{background:var(--card);border-radius:18px;padding-inline:18px;display:flex;flex-direction:column}
+.up-g{display:flex;flex-direction:column;padding-block:16px 10px}
+.up-g + .up-g{border-top:1px solid var(--line)}
+.up-p{font:600 17px/1.3 var(--display);color:var(--ink);padding-bottom:6px}
+.up-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:14px;padding-block:7px;color:inherit;text-decoration:none}
+.up-t{font:400 15px/1.55 var(--sans);min-width:0;color:var(--ink)}
+.up-s{font:500 13px/1 var(--sans);color:var(--sub);margin-right:7px}
+.up-d{font:400 12.5px/1.5 var(--sans);color:var(--sub);font-variant-numeric:tabular-nums;white-space:nowrap}
+.up-row.old .up-t{color:var(--sub)}
+a.up-row:hover .up-t{color:var(--link)}
+@media (min-width:720px){.up{padding-inline:24px}}
 .empty{background:var(--card);border-radius:18px;padding:36px 20px;text-align:center;color:var(--sub);display:flex;flex-direction:column;gap:6px}
 .empty strong{color:var(--ink);font:600 17px/1.3 var(--display)}
 
@@ -296,6 +309,30 @@ function row(it){
     h("summary",{},h("span",{class:"dot","aria-label":(CATS[it.cat]||CATS.model)[1]}),h("span",{class:"t"},tags(it),it.title)),
     h("div",{class:"more"},h("p",{},it.body),src(it.sources)));
 }
+// 功能更新：按产品分两组（Claude、ChatGPT），组的先后按各组最新一条的日期；子产品（Claude Code、Codex）在句子前带灰色小字
+function updatesBlock(day,issueDate){
+  const ups=day.flatMap(x=>Array.isArray(x.updates)?x.updates:[]);
+  if(!ups.length)return null;
+  const fam=p=>/^claude/i.test(p)?"Claude":/chatgpt|codex|openai|gpt/i.test(p)?"ChatGPT":p;
+  const groups=new Map();
+  for(const u of ups){const f=fam(u.product||"");if(!groups.has(f))groups.set(f,[]);groups.get(f).push(u)}
+  const latest=g=>g.reduce((m,u)=>(u.date||"")>m?u.date:m,"");
+  const ordered=[...groups.entries()].map(([f,g])=>[f,[...g].sort((a,b)=>(b.date||"").localeCompare(a.date||""))])
+    .sort((a,b)=>latest(b[1]).localeCompare(latest(a[1])));
+  const t0=Date.parse(issueDate+"T00:00:00+08:00");
+  const row=(u,prev,f)=>{
+    const s=(u.sources||[]).find(x=>/^https?:\/\//.test(x.url||""));
+    const dm=/^\d{4}-(\d{2})-(\d{2})$/.exec(u.date||"");
+    const old=dm&&t0-Date.parse(u.date+"T00:00:00+08:00")>=3*864e5; // 比这一期早三天及以上就变灰
+    const showD=dm&&!(prev&&prev.date===u.date);                     // 同组连续同一天只写一次日期
+    const kids=[h("span",{class:"up-t"},u.product&&u.product!==f?h("span",{class:"up-s"},u.product):null,u.text),
+      h("span",{class:"up-d"},showD?`${+dm[1]}月${+dm[2]}日`:"")];
+    const cls="up-row"+(old?" old":"");
+    return s?h("a",{class:cls,href:s.url,target:"_blank",rel:"noopener"},kids):h("div",{class:cls},kids);
+  };
+  return h("section",{class:"sec"},h("h3",{},"功能更新"),
+    h("div",{class:"up"},ordered.map(([f,g])=>h("div",{class:"up-g"},h("span",{class:"up-p"},f),g.map((u,i)=>row(u,g[i-1],f))))));
+}
 function scanNote(day){
   const scans=day.map(x=>x.scan).filter(Boolean);
   if(!scans.length)return null;
@@ -433,6 +470,7 @@ function render(dayObj){
       models.map(md=>modelBlock(md,selModel===md.slug||(!day.length&&!specials.length))),
       specials.map(specialCard),
       top.length?h("section",{class:"sec"},h("h3",{},"今日必看"),h("div",{class:"grid"},top.map((it,i)=>card(it,it===lead)))):null,
+      updatesBlock(day,selDate),
       scanNote(day)),
     h("aside",{class:"side"},
       rest.length?h("section",{class:"sec"},h("h3",{},"更多动态"),h("div",{class:"list"},rest.map(row))):null,
