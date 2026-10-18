@@ -1,0 +1,145 @@
+{
+ "date": "2026-10-19",
+ "issues": [
+  {
+   "key": "2026-10-19-1morning",
+   "date": "2026-10-19",
+   "edition": "morning",
+   "createdAt": "2026-10-19T06:58:00+08:00",
+   "headline": "Anthropic 拿出 5% 股份做公益",
+   "items": [
+    {
+     "cat": "biz",
+     "title": "Anthropic 拿出 5% 股份成立公益基金",
+     "body": "Anthropic 10/18 宣布把 5% 的股份放进一个新的公益基金，公司估值每涨 50% 再追加 2%，算上未来增长最多约两成股份用于公共目的。钱可以捐给非营利组织、直接发给特定人群，或用来应对 AI 对就业的冲击，不会用于游说和政治捐款；方案还要股东批准，治理结构几个月后公布。这是它上市前对「AI 抢饭碗」质疑的一次大手笔回应。",
+     "score": 6,
+     "tier": "lead",
+     "summary": "上市前，Anthropic 承诺拿出至少 5% 股份应对 AI 带来的社会冲击。",
+     "sources": [
+      {
+       "name": "Anthropic 官方新闻",
+       "url": "https://www.anthropic.com/news/public-benefit-fund"
+      },
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/"
+      },
+      {
+       "name": "Reuters（经 Yahoo Finance）",
+       "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-commit-5-stake-public-191115841.html"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "Anthropic 私下向国会推销自拟的 AI 安全法案",
+     "body": "据 Politico 报道（Bloomberg、Reuters 转述），Anthropic 正向议员递交一份前沿 AI 安全法案草稿：只有当模型可能马上造成 50 人以上伤亡或 10 亿美元以上损失，且涉及生物武器、AI 失控或网络攻击三种情形时，政府才能叫停其发布，同时要求独立机构定期评估。已有媒体批评这个干预门槛定得太高。",
+     "score": 6,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Bloomberg（经 Yahoo Finance）",
+       "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-pitches-ai-safety-bill-222533608.html"
+      },
+      {
+       "name": "Reuters（经 US News）",
+       "url": "https://www.usnews.com/news/top-news/articles/2026-10-16/anthropic-quietly-pitches-its-own-ai-safety-bill-to-lawmakers-politico-reports"
+      }
+     ]
+    },
+    {
+     "cat": "research",
+     "title": "四个 Gemini 4 Argon 智能体自己通关《我的世界》",
+     "body": "Google DeepMind 让四个 Gemini 4 Argon 智能体从随机出生点开始合作玩《我的世界》，全程没有人帮忙，约 27 小时、写了两千多段程序后打败了末影龙。这类长时间、多步骤的任务一直是智能体的弱项，说明 AI 自己规划和分工的能力又进了一步。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "The Decoder",
+       "url": "https://the-decoder.com/four-gemini-4-argon-agents-beat-minecraft-without-any-human-help"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "Anthropic 请律所帮忙定 AI 代人谈判的规矩",
+     "body": "据《金融时报》报道，Anthropic 正在咨询律师事务所，研究谈判时什么手段算公平，为以后让 AI 智能体替人砍价、签约做准备。智能体开始代表用户和别人打交道，规则要先立起来。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "The Decoder",
+       "url": "https://the-decoder.com/anthropic-consults-law-firms-to-set-fair-negotiation-norms-before-ai-agents-start-cutting-deals"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "Anthropic 公益基金的治理结构和股东表决",
+    "Anthropic 的 AI 安全法案草稿有没有议员接手提交",
+    "Anthropic 何时公开递交招股书"
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI 官网",
+     "ChatGPT 与 Codex 更新日志（OpenAI）",
+     "OpenAI API 更新日志",
+     "Anthropic 新闻页",
+     "Claude 发布说明",
+     "Claude Code 更新日志",
+     "Claude Code 每周摘要",
+     "Google DeepMind 博客",
+     "Google AI 栏目",
+     "Google Research 博客",
+     "Meta AI 博客",
+     "英伟达博客",
+     "英伟达新闻中心",
+     "xAI 新闻页",
+     "Apple Newsroom",
+     "Apple 开发者版本发布",
+     "Apple 开发者新闻",
+     "MacRumors",
+     "9to5Mac",
+     "SpaceX 官网更新",
+     "SpaceX 发射日程（Launch Library）",
+     "Hugging Face 博客",
+     "Mistral 新闻",
+     "EdSurge",
+     "Inside Higher Ed",
+     "英国签证与移民局（GOV.UK）",
+     "ICEF Monitor",
+     "The PIE News",
+     "雅思官方（IELTS）",
+     "多邻国博客",
+     "教育部（工作动态）",
+     "中国教育报",
+     "TechCrunch AI",
+     "The Verge AI",
+     "Ars Technica AI",
+     "Wired AI",
+     "MIT Technology Review AI",
+     "The Decoder",
+     "量子位",
+     "Techmeme",
+     "Hacker News 首页（≥100 分）",
+     "Hugging Face 每日论文（前 12）",
+     "AI News Radar（中转站）",
+     "Follow Builders（AI 圈人物 X）",
+     "Google 新闻关键词搜索（20 组）",
+     "ChatGPT 发布说明",
+     "@OpenAI",
+     "@AnthropicAI",
+     "@claudeai",
+     "Politico（经 Bloomberg、Reuters 转述）",
+     "Bloomberg",
+     "Reuters",
+     "AI 公司教育产品公告",
+     "Artificial Analysis"
+    ],
+    "candidates": 198
+   }
+  }
+ ],
+ "specials": [],
+ "models": []
+}

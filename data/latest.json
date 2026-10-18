@@ -1,32 +1,27 @@
 {
- "date": "2026-10-18",
- "headline": "Claude 破解 NSA 曲线种子之谜",
- "updatedAt": "2026-10-18T06:55:00+08:00",
- "count": 5,
+ "date": "2026-10-19",
+ "headline": "Anthropic 拿出 5% 股份做公益",
+ "updatedAt": "2026-10-19T06:58:00+08:00",
+ "count": 4,
  "lead": {
-  "cat": "research",
-  "title": "Claude 半小时解开 NSA 加密曲线 25 年悬案",
-  "summary": "Claude 找到 NSA 加密种子的真实来历，25 年的后门疑云基本解开。"
+  "cat": "biz",
+  "title": "Anthropic 拿出 5% 股份成立公益基金",
+  "summary": "上市前，Anthropic 承诺拿出至少 5% 股份应对 AI 带来的社会冲击。"
  },
  "items": [
   {
-   "cat": "biz",
-   "title": "新进展：Replit 改口，Claude 仍可用但默认换成 OpenAI",
+   "cat": "policy",
+   "title": "Anthropic 私下向国会推销自拟的 AI 安全法案",
    "tier": "brief"
   },
   {
    "cat": "research",
-   "title": "Anthropic 自曝：初级岗位变少，开会变多",
+   "title": "四个 Gemini 4 Argon 智能体自己通关《我的世界》",
    "tier": "brief"
   },
   {
    "cat": "product",
-   "title": "英伟达 RTX Spark 笔记本开卖，2399 美元起",
-   "tier": "brief"
-  },
-  {
-   "cat": "policy",
-   "title": "Meta 删掉可能允许抓取新闻网站的条款",
+   "title": "Anthropic 请律所帮忙定 AI 代人谈判的规矩",
    "tier": "brief"
   }
  ]
