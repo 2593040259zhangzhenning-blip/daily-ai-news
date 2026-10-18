@@ -9,8 +9,8 @@ Signal 每期按这份清单搜集和打分。随时可以改：加一行、删�
 
 | 对象 | 从哪里抓 |
 |---|---|
-| Anthropic / Claude | 官网新闻页、Claude 发布说明（无订阅源，页面变动监测）；@AnthropicAI、@claudeai |
-| OpenAI / ChatGPT | 官网订阅源 openai.com/news/rss.xml；ChatGPT 发布说明页（页面变动监测）；@OpenAI |
+| Anthropic / Claude | 官网新闻页、Claude 发布说明（无订阅源，页面变动监测）；Claude Code 更新日志和每周摘要（官方文档站）；@AnthropicAI、@claudeai |
+| OpenAI / ChatGPT | 官网订阅源 openai.com/news/rss.xml；ChatGPT 发布说明页（早间任务直接读）；ChatGPT 与 Codex 更新日志、OpenAI API 更新日志（页面抓取）；@OpenAI |
 | Google / Gemini | deepmind.google/blog/rss.xml；blog.google 的 AI 栏目订阅源 |
 | Meta / Muse 系列 | ai.meta.com/blog（无订阅源，页面变动监测）；@AIatMeta |
 | 英伟达 | blogs.nvidia.com/feed；nvidianews.nvidia.com（页面变动监测）；@nvidia |
@@ -19,6 +19,15 @@ Signal 每期按这份清单搜集和打分。随时可以改：加一行、删�
 | AI 与教育 | EdSurge、Inside Higher Ed、Times Higher Education、教育部；各 AI 公司的教育产品公告 |
 | 留学与签证政策 | 各国留学生政策（英国毕业生签证期限、学签名额、存款和学费要求）；雅思考试改动（题型、机考、单科重考、院校认可分数）；QS 排名发布。来源：英国政府签证公告、雅思官方、ICEF Monitor、The PIE News（抓取前逐个验证） |
 | 英语教学与语言培训行业 | 不带 AI 的那一半也看：新东方等培训机构的动向、多邻国等语言学习产品、雅思口语培训的新做法 |
+
+### 功能更新（2026-10-17 定，10-18 落地）
+
+第一层里「我在用的模型和产品」的用户可见能力变化，单独一块放在页面上，不打分、不分档，也不和头条抢位置。
+- 关注的产品：Claude 和 Claude Code、ChatGPT 和 Codex、Gemini。其余对象的功能变化仍按普通新闻处理。
+- 收：新功能、新模型能用了、用法或界面变了、价格额度可用范围变了，一句话说清「你能感觉到什么变化」。
+- 不收：环境变量、配置项、API 和 SDK 参数、修 bug、性能和稳定性优化、内部重构、遥测，只给企业管理员或开发者集成用的设置。后端和工程细节一律不放。
+- 来源（都是官方更新日志，进收件箱后在「功能更新候选」一节里单独列出）：Claude Code 更新日志、Claude Code 每周摘要、Claude 发布说明（Claude 应用）、ChatGPT 发布说明（收件箱抓不到，由早间任务直接读）、ChatGPT 与 Codex 更新日志、OpenAI API 更新日志。Gemini 的更新日志还没有接。
+- 已经当成新闻写过的大事（如新模型发布）不再重复写进功能更新。
 
 ## 第二层 · 雷达领域
 

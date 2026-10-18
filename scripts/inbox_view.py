@@ -13,6 +13,8 @@
 读法：
   [一手] 链接就是原文，可以当出处（再按 sources.md 判断层级）。
   [线索] 聚合站、中转站、Google 新闻、个人 X 账号：只用来发现事件，出处必须回到原文。
+  「功能更新候选」：产品更新日志（Claude Code、Claude 应用、ChatGPT / Codex、OpenAI API）里的条目，单独成一节，
+  不会再出现在下面按对象分的组里；是否写进当期的 updates 由定时任务按 watchlist.md 判断（只要用户能感觉到的变化）。
   时间前面的 ~ 表示来源没给发布时间，用的是「收件箱第一次发现它的时间」。
 """
 import argparse
@@ -87,6 +89,8 @@ def line(it, urls):
         s += "（HN %s 分）" % it["meta"]["points"]
     if urls or it.get("role") == "primary":
         s += "\n    " + it["url"]
+    if it.get("kind") == "changelog" and it.get("snippet"):
+        s += "\n    摘要：" + it["snippet"]
     return s
 
 
@@ -192,11 +196,20 @@ def main():
               "；".join("%s（%s）" % (s["name"], s.get("error") or "未知") for s in bad))
     print()
 
+    cl = [i for i in items if i.get("kind") == "changelog"]
+    items = [i for i in items if i.get("kind") != "changelog"]      # 更新日志只在「功能更新候选」里出现一次
     l1 = [i for i in items if i["layer"] == 1 and "domestic" not in i.get("flags", [])]
     l2 = [i for i in items if i["layer"] == 2 and "domestic" not in i.get("flags", [])]
     l3 = [i for i in items if i["layer"] == 3]
     l0 = [i for i in items if i["layer"] == 0 and "domestic" not in i.get("flags", [])]
     cn = [i for i in items if "domestic" in i.get("flags", [])]
+
+    print("## 功能更新候选（产品更新日志，共 %d 条；工程细节居多，只挑用户能感觉到的变化写进 updates）\n" % len(cl))
+    for i in cl:
+        print(line(i, args.urls))
+    if not cl:
+        print("（这段时间更新日志类来源没有新条目）")
+    print()
 
     print("## 第一层 · 盯死的对象\n")
     for w in LAYER1_ORDER:

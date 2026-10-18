@@ -8,6 +8,7 @@ watchlist.md 决定「关注什么」，这个文件决定「去哪儿抓、怎�
   name      给人看的名字
   type      rss | gnews | page_links | release_notes | hn | hf_papers | launch_library
             | spacex_updates | ai_news_radar | follow_builders
+            | changelog_update | changelog_api | changelog_codex   （产品更新日志，三种页面格式）
   url       地址（gnews 用 q 代替）
   tier      来源层级，沿用 sources.md 的五层：1 官方一手，3 主流媒体，4 AI 与教育，5 查漏
   role      primary = 条目链接就是原文，可以当出处；lead = 只是线索（聚合、中转、个人账号），出处要回到原文
@@ -18,6 +19,9 @@ watchlist.md 决定「关注什么」，这个文件决定「去哪儿抓、怎�
   keep_only_tagged  True：没贴上任何 watch/topic 的条目直接丢掉（用于信息量大的综合源）
   rumor_prone  True：爆料类来源，按传闻规则处理
   limit     每次最多取多少条（取最新的）
+  kind      "changelog"：产品更新日志，条目会带 kind 标记，inbox_view 单独列成「功能更新候选」，供「功能更新」板块挑选
+  label / link   （changelog_* 专用）条目标题前缀 / 条目指向的网页（url 是拿来抓的 Markdown 版，链接要给人看的页面）
+  take      （changelog_* 专用）只看页面最前面多少条（页面很长，窗口只有 48 小时）
 """
 import re
 
@@ -99,13 +103,32 @@ SOURCES = [
     # 改由早晚定时任务用网页读取工具直接读这个页面，见 tasks/morning.md 第 5 步。
     dict(id="chatgpt-notes", name="ChatGPT 发布说明", type="release_notes", enabled=False,
          url="https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
-         tier=1, role="primary", region="intl", watch=["OpenAI/ChatGPT"]),
+         tier=1, role="primary", region="intl", watch=["OpenAI/ChatGPT"], kind="changelog"),
+    # 2026-10-18 新增：OpenAI 的另外两份更新日志。ChatGPT 桌面端 / Codex 的页面原先在 developers.openai.com/codex/changelog，
+    # 现在跳转到 learn.chatgpt.com；GitHub 发版镜像（Codex CLI 0.xxx 这类）不收，只收官方写的条目。
+    dict(id="openai-chatgpt-codex-changelog", name="ChatGPT 与 Codex 更新日志（OpenAI）", type="changelog_codex",
+         url="https://learn.chatgpt.com/docs/changelog", link="https://learn.chatgpt.com/docs/changelog", take=40,
+         tier=1, role="primary", region="intl", watch=["OpenAI/ChatGPT"], kind="changelog", limit=30),
+    dict(id="openai-api-changelog", name="OpenAI API 更新日志", type="changelog_api",
+         url="https://developers.openai.com/api/docs/changelog.md", link="https://developers.openai.com/api/docs/changelog",
+         take=15, tier=1, role="primary", region="intl", watch=["OpenAI/ChatGPT"], kind="changelog", limit=15),
     dict(id="anthropic-news", name="Anthropic 新闻页", type="page_links", url="https://www.anthropic.com/news",
          link_re=r"^https://www\.anthropic\.com/news/[a-z0-9\-]+$", fix_relative="https://www.anthropic.com",
          enrich=True, tier=1, role="primary", region="intl", watch=["Anthropic/Claude"]),
     dict(id="claude-notes", name="Claude 发布说明", type="release_notes",
          url="https://support.claude.com/en/articles/12138966-release-notes",
-         tier=1, role="primary", region="intl", watch=["Anthropic/Claude"]),
+         tier=1, role="primary", region="intl", watch=["Anthropic/Claude"], kind="changelog"),
+    # 2026-10-18 新增：Claude Code 更新日志（逐版本，官方文档站，内容来自 GitHub CHANGELOG.md）和每周摘要
+    # （就是邮件里的 "This week in Claude Code"；摘要页 9 月中旬之后没再更新，所以只当补充）。
+    # 抓的是页面的 Markdown 版（网址后加 .md），比 HTML 好解析；条目链接指向给人看的页面。
+    dict(id="claude-code-changelog", name="Claude Code 更新日志", type="changelog_update",
+         url="https://code.claude.com/docs/en/changelog.md", link="https://code.claude.com/docs/en/changelog",
+         label="Claude Code", take=15, tier=1, role="primary", region="intl", watch=["Anthropic/Claude"],
+         kind="changelog", limit=15),
+    dict(id="claude-code-weekly", name="Claude Code 每周摘要", type="changelog_update",
+         url="https://code.claude.com/docs/en/whats-new.md", link="https://code.claude.com/docs/en/whats-new",
+         label="Claude Code 每周摘要", range_dates=True, take=4, tier=1, role="primary", region="intl",
+         watch=["Anthropic/Claude"], kind="changelog", limit=4),
     dict(id="deepmind", name="Google DeepMind 博客", type="rss", url="https://deepmind.google/blog/rss.xml",
          tier=1, role="primary", region="intl", watch=["Google/Gemini"], limit=30),
     dict(id="google-ai", name="Google AI 栏目", type="rss",

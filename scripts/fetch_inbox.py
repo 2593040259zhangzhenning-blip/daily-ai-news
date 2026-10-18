@@ -473,6 +473,142 @@ def fetch_release_notes(src, ctx):
     return dict(entries=entries, fetched=len(parsed), http=status)
 
 
+# ---------------------------------------------------------------- 更新日志类（功能更新候选）----
+def md_plain(s):
+    """Markdown 转纯文字：去掉加粗、反引号、链接地址和转义。"""
+    s = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", s or "")
+    s = s.replace("\\[", "[").replace("\\]", "]").replace("\\_", "_")
+    s = re.sub(r"[*`]+", "", s)
+    return " ".join(s.split())
+
+
+def range_end_date(desc):
+    """「September 7–11, 2026」「August 31 – September 4, 2026」→ 周期的最后一天。"""
+    m = re.search(r"([A-Z][a-z]{2,8})?\.? ?(\d{1,2})\s*[–—-]\s*(?:([A-Z][a-z]{2,8})\.? )?(\d{1,2}),? (\d{4})", desc or "")
+    if m:
+        mon = MONTHS.get((m.group(3) or m.group(1) or "")[:3].lower())
+        try:
+            if mon:
+                return date(int(m.group(5)), mon, int(m.group(4)))
+        except ValueError:
+            pass
+    return find_date(desc)[0]
+
+
+def parse_update_blocks(text):
+    """Mintlify 的 <Update label=".." description=".."> 块（Claude Code 更新日志、每周摘要）。"""
+    out = []
+    for m in re.finditer(r'<Update label="([^"]+)" description="([^"]*)"[^>]*>(.*?)</Update>', text, re.S):
+        label, desc, body = m.group(1), m.group(2), m.group(3)
+        sections, cur = {}, "_"
+        for ln in body.splitlines():
+            ln = ln.strip()
+            if not ln:
+                continue
+            mh = re.fullmatch(r"\*\*([^*]+)\*\*", ln)
+            if mh:
+                cur = mh.group(1).strip().lower()
+                continue
+            if ln.startswith(("* ", "- ")):
+                sections.setdefault(cur, []).append(md_plain(ln[2:]))
+            elif not ln.startswith(("[", "<")):
+                sections.setdefault(cur, []).append(md_plain(ln))
+        out.append(dict(label=label, desc=desc, sections=sections))
+    return out
+
+
+def fetch_changelog_update(src, ctx):
+    status, data, ctype, final = http_get(src["url"], accept="text/markdown,text/plain,*/*", timeout=60)
+    blocks = parse_update_blocks(data.decode("utf-8", errors="replace"))
+    if not blocks:
+        raise FetchError("没有解析到更新条目，页面格式可能变了")
+    entries = []
+    for b in blocks[:src.get("take", 15)]:
+        d = range_end_date(b["desc"]) if src.get("range_dates") else find_date(b["desc"])[0]
+        if not d:
+            continue
+        sec = b["sections"]
+        feats = sec.get("added", []) + sec.get("changed", [])
+        if not feats:                      # 每周摘要没有 Added / Changed 小标题，整段都是正文
+            feats = [x for k, v in sec.items() if k not in ("fixed", "fixes") for x in v]
+        if not feats:
+            feats = [x for v in sec.values() for x in v]
+        head = clip(feats[0], 90) if feats else ""
+        title = "%s %s%s" % (src["label"], b["label"], "：" + head if head else "")
+        snippet = " ｜ ".join(clip(x, 110) for x in feats[1:4])
+        entries.append(dict(title=title, url=src["link"], published=day_end(d, ctx["now"]), snippet=snippet,
+                            origin="", guid="%s|%s" % (src["id"], b["label"]), dateOnly=True))
+    return dict(entries=entries, fetched=len(blocks), http=status)
+
+
+def fetch_changelog_api(src, ctx):
+    """OpenAI API 更新日志的 Markdown 版：「## October, 2026」→「### Oct 16」→ 标签行 + 正文。"""
+    status, data, ctype, final = http_get(src["url"], accept="text/markdown,text/plain,*/*", timeout=60)
+    year, cur, entries, seen = None, None, [], {}
+    blocks = []
+    for ln in data.decode("utf-8", errors="replace").splitlines():
+        m = re.match(r"^## ([A-Z][a-z]+),? (\d{4})\s*$", ln)
+        if m:
+            year = int(m.group(2))
+            continue
+        m = re.match(r"^### ([A-Z][a-z]{2,8})\.? (\d{1,2})\s*$", ln)
+        if m and year:
+            mon = MONTHS.get(m.group(1)[:3].lower())
+            try:
+                cur = dict(date=date(year, mon, int(m.group(2))), lines=[])
+            except (ValueError, TypeError):
+                cur = None
+            if cur:
+                blocks.append(cur)
+            continue
+        if cur is not None and ln.strip():
+            cur["lines"].append(ln.strip())
+    for b in blocks[:src.get("take", 15)]:
+        lines = b["lines"]
+        tags = lines[0] if lines and re.match(r"^(Feature|Update|Deprecation|Fix|Launch|Release)[^.]*·", lines[0]) else ""
+        paras = [md_plain(x) for x in (lines[1:] if tags else lines) if not x.startswith("```")]
+        if not paras:
+            continue
+        first = re.split(r"(?<=[.!?])\s", paras[0], maxsplit=1)[0]
+        title = clip(first.rstrip("."), 110)
+        n = seen.get((b["date"], title), 0)
+        seen[(b["date"], title)] = n + 1
+        entries.append(dict(title="OpenAI API：" + title, url=src["link"], published=day_end(b["date"], ctx["now"]),
+                            snippet=" ｜ ".join([md_plain(tags)] * bool(tags) + [clip(x, 110) for x in paras[1:3]]),
+                            origin="", guid="%s|%s|%s|%d" % (src["id"], b["date"], title, n), dateOnly=True))
+    if not blocks:
+        raise FetchError("没有解析到更新条目，页面格式可能变了")
+    return dict(entries=entries, fetched=len(blocks), http=status)
+
+
+def fetch_changelog_codex(src, ctx):
+    """ChatGPT 与 Codex 更新日志（learn.chatgpt.com）：每条是 <li id="codex-日期-标题">，带 <time> 和 <h3>。
+    GitHub 发版镜像（data-changelog-source="release"，如 Codex CLI 0.163.0）是工程细节，不收。"""
+    status, data, ctype, final = http_get(src["url"], accept="text/html,*/*", timeout=60)
+    text = decode_html(data, ctype)
+    starts = list(re.finditer(r'<li id="([^"]+)" class="scroll-mt-28"([^>]*)>', text))
+    if not starts:
+        raise FetchError("没有解析到更新条目，页面格式可能变了")
+    entries = []
+    for i, m in enumerate(starts[: src.get("take", 40)]):
+        block = text[m.end(): starts[i + 1].start() if i + 1 < len(starts) else m.end() + 20000]
+        if 'data-changelog-source="release"' in m.group(2):
+            continue
+        mt = re.search(r"<time[^>]*>\s*(\d{4}-\d{2}-\d{2})\s*</time>", block)
+        mh = re.search(r"(?is)<h3[^>]*>(.*?)</h3>", block)
+        if not mt or not mh:
+            continue
+        d = date.fromisoformat(mt.group(1))
+        title = strip_html(mh.group(1))
+        mp = re.search(r"(?is)<p[^>]*>(.*?)</p>", block)
+        topics = re.search(r'data-codex-topics="([^"]*)"', m.group(2))
+        entries.append(dict(title="ChatGPT / Codex：" + title, url=src["link"] + "#" + m.group(1),
+                            published=day_end(d, ctx["now"]), snippet=strip_html(mp.group(1)) if mp else "",
+                            origin="", guid="%s|%s" % (src["id"], m.group(1)), dateOnly=True,
+                            meta={"topics": topics.group(1)} if topics else None))
+    return dict(entries=entries, fetched=len(starts), http=status)
+
+
 def fetch_hn(src, ctx):
     status, data, _, _ = http_get(src["url"], accept="application/json")
     hits = json.loads(data).get("hits", [])
@@ -577,7 +713,8 @@ def fetch_follow_builders(src, ctx):
 
 FETCHERS = {
     "rss": fetch_rss, "gnews": fetch_gnews, "page_links": fetch_page_links, "release_notes": fetch_release_notes,
-    "hn": fetch_hn, "hf_papers": fetch_hf_papers, "launch_library": fetch_launch_library,
+    "changelog_update": fetch_changelog_update, "changelog_api": fetch_changelog_api,
+    "changelog_codex": fetch_changelog_codex, "hn": fetch_hn, "hf_papers": fetch_hf_papers, "launch_library": fetch_launch_library,
     "spacex_updates": fetch_spacex_updates, "ai_news_radar": fetch_ai_news_radar, "follow_builders": fetch_follow_builders,
 }
 
@@ -639,11 +776,12 @@ def build_item(src, e, now, prev):
     pub = e.get("published")
     if pub and (pub.hour, pub.minute, pub.second) == (0, 0, 0) and not e.get("eventAt"):
         e = dict(e, published=day_end(pub.date(), now), dateOnly=True)      # 只有日期的发布时间，按当天结束算
-    url = norm_url(e["url"], keep_fragment=src["type"] == "spacex_updates")
+    url = norm_url(e["url"], keep_fragment=src["type"] in ("spacex_updates", "changelog_codex"))
     title = " ".join(e["title"].split())
-    key = e.get("guid") if src["type"] in ("launch_library", "release_notes", "hn", "hf_papers") else url
+    key = e.get("guid") if src["type"] in ("launch_library", "release_notes", "hn", "hf_papers",
+                                           "changelog_update", "changelog_api", "changelog_codex") else url
     iid = item_id(src["id"], key or url)
-    snippet = clip(e.get("snippet", ""), 160)
+    snippet = clip(e.get("snippet", ""), 360 if src.get("kind") == "changelog" else 160)
     watch, topics, layer, flags = tag_item(src, title, snippet, e.get("region"))
     if src.get("keep_only_tagged") and not (watch or topics):
         return None
@@ -654,6 +792,8 @@ def build_item(src, e, now, prev):
               layer=layer, watch=watch, topics=topics, flags=flags)
     if e.get("dateOnly"):
         it["dateOnly"] = True
+    if src.get("kind"):
+        it["kind"] = src["kind"]          # changelog：产品更新日志，供「功能更新」板块挑选
     if snippet:
         it["snippet"] = snippet
     if e.get("origin"):

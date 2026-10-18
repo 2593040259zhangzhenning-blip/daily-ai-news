@@ -15,6 +15,8 @@
 
 第二步（共识打分、圈外位、每周复盘和建议关注）还没做，用第一周的真实数据调门槛。看数据的地方：`data/inbox/source-status.json`（各源成败和条数）、Actions 里「抓取收件箱」每次运行的摘要。
 
+**2026-10-18 补充（功能更新）：** 新增四个来源进收件箱：Claude Code 更新日志、Claude Code 每周摘要（官方文档站，抓 Markdown 版）、ChatGPT 与 Codex 更新日志（learn.chatgpt.com）、OpenAI API 更新日志（developers.openai.com，抓 Markdown 版）；Claude 发布说明和 ChatGPT 发布说明也标上了更新日志类标记。它们的条目在 `inbox_view.py` 里单独成「功能更新候选」一节，用来写每期的 `updates`（规则见 `watchlist.md`「功能更新」）。注意：Claude 发布说明（support.claude.com）是 Claude 应用的更新，不含 Claude Code，所以 Claude Code 之前一直没有被覆盖；Claude Code 每周摘要页最新一期只到 9 月 11 日那周，只当补充。ChatGPT 发布说明仍然靠早间任务用 WebFetch 读。这些页面在 GitHub 机房 IP 上能不能读到，以上线后 `source-status.json` 为准。
+
 ## 为什么改
 
 - 现在每期只靠模型临时用搜索引擎找新闻，每期候选只有 24–52 条。搜索引擎收录有延迟，常搜到转载站（Investing.com 转载路透、FourWeekMBA 等）。

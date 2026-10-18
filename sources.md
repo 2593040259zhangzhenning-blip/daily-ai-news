@@ -13,7 +13,9 @@ GitHub Actions（`.github/workflows/inbox.yml`）每小时读下面这些源，�
 |---|---|---|---|
 | 1 官方一手 | OpenAI 官网、Google DeepMind、Google AI、Google Research、英伟达博客、英伟达新闻中心、Apple Newsroom、Apple 开发者新闻和版本发布、Hugging Face 博客、Mistral、多邻国博客 | 订阅源 | 能 |
 | 1 官方一手 | Anthropic 新闻页、Meta AI 博客、xAI 新闻页、雅思官方、教育部（工作动态） | 页面变动监测：每小时看有没有新链接，发布日期取自链接或文章页 | 能 |
-| 1 官方一手 | Claude 发布说明（support.claude.com） | 解析页面里按日期排的条目 | 能 |
+| 1 官方一手 | Claude 发布说明（support.claude.com，是 Claude 应用的更新，不含 Claude Code） | 解析页面里按日期排的条目 | 能 |
+| 1 官方一手 | Claude Code 更新日志（code.claude.com，逐版本）、Claude Code 每周摘要（即邮件 "This week in Claude Code" 的网页版，2026-10-18 时最新一期只到 9 月 11 日那周，只当补充） | 抓页面的 Markdown 版（网址后加 .md），解析 `<Update>` 条目 | 能 |
+| 1 官方一手 | ChatGPT 与 Codex 更新日志（learn.chatgpt.com，原 developers.openai.com/codex/changelog 会跳转过去；Codex CLI 0.xxx 这类 GitHub 发版镜像不收）、OpenAI API 更新日志（developers.openai.com） | 前者解析页面，后者抓 Markdown 版 | 能 |
 | 1 官方一手 | SpaceX 官网更新（内容接口）、英国签证与移民局（GOV.UK，只留和学生有关的） | 接口 / 订阅源 | 能 |
 | 3 主流媒体 | TechCrunch AI、The Verge AI、Ars Technica AI、Wired AI、MIT Technology Review AI、The Decoder、量子位 | 订阅源 | 能（写明媒体名） |
 | 3 主流媒体 | MacRumors、9to5Mac | 订阅源 | 报道已发生的事实时能；爆料类按传闻处理 |
@@ -22,6 +24,9 @@ GitHub Actions（`.github/workflows/inbox.yml`）每小时读下面这些源，�
 | 5 查漏线索 | Techmeme、Hacker News 首页（≥100 分）、Hugging Face 每日论文（前 12）、AI News Radar（中转站）、Follow Builders（AI 圈人物的 X 帖子）、Google 新闻关键词搜索（20 组） | 订阅源 / 接口 | **不能**，只用来发现事件 |
 
 AI HOT（aihot.news）不接：它的使用规则不允许公开镜像，而收件箱随本仓库公开；也不收 AI News Radar 里来自 AI HOT 的条目。
+
+上表中的更新日志类来源（Claude 发布说明、Claude Code 更新日志和每周摘要、ChatGPT 与 Codex 更新日志、OpenAI API 更新日志）的条目带 `kind: "changelog"`，`inbox_view.py` 把它们单独列成「功能更新候选」一节，不混进按对象分的组里。怎么挑见 `watchlist.md` 的「功能更新」。
+GitHub Actions 的机房 IP 能不能读到这几个页面，要看上线后 `source-status.json` 的结果；读不到的由早间任务用 WebFetch 直接读（ChatGPT 发布说明就是这样处理的）。
 
 收件箱里每条候选都带三个提示标记，是程序按关键词打的，**只供参考，取舍由定时任务按 `watchlist.md` 判断**：【传闻类来源】【融资/人事/股价】【国内】。
 时间前面的 `~` 表示来源没给发布时间，用的是收件箱第一次发现它的时间。
@@ -32,7 +37,7 @@ AI HOT（aihot.news）不接：它的使用规则不允许公开镜像，而收�
 
 | 要查什么 | 怎么查 | 为什么收件箱没有 |
 |---|---|---|
-| ChatGPT 发布说明 | 用 WebFetch 打开 help.openai.com/en/articles/6825453-chatgpt-release-notes，只看最近几天的条目；打不开就搜 `site:help.openai.com ChatGPT release notes` | OpenAI 帮助中心对自动抓取一律返回 Cloudflare 人机验证，GitHub 上抓不到 |
+| ChatGPT 发布说明（也是功能更新的来源） | 用 WebFetch 打开 help.openai.com/en/articles/6825453-chatgpt-release-notes，只看最近几天的条目；打不开就搜 `site:help.openai.com ChatGPT release notes` | OpenAI 帮助中心对自动抓取一律返回 Cloudflare 人机验证，GitHub 上抓不到 |
 | 公司官方 X 账号 | `site:x.com 账号名`：@OpenAI、@OpenAIDevs、@AnthropicAI、@claudeai、@GoogleDeepMind、@AIatMeta、@nvidia、@SpaceX、@xai | X 不允许自动读取，也没有接付费接口 |
 | 付费墙媒体 | Reuters、Bloomberg、Financial Times、The Information：读不到全文时只用标题和其他媒体的转述，正文里写明是据某某报道 | 读不到正文 |
 | AI 公司的教育产品公告 | ChatGPT Edu、Claude for Education、Gemini for Education 等 | 没有统一的订阅源 |

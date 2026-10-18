@@ -22,6 +22,9 @@
   tier   lead（头条）| must（必看，0–3 条）| brief（其余）
          早间一期恰好 1 条 lead；晚间一期没有 lead，只有 must / brief
   summary 仅头条需要：一句话摘要（40 字以内），小组件大号显示
+每期可以有 updates（「功能更新」板块，可省略）：我关注的模型和产品里，用户能直接感觉到的能力变化，不放后端和工程细节。
+  [{"product": "Claude Code", "text": "一句话说你能感觉到什么变化（60 字以内）", "date": "2026-10-16", "sources": [{"name": "...", "url": "..."}]}]
+  product 是产品名（14 字以内，例如 ChatGPT、Codex、Claude Code、Claude、Gemini）；date 是官方发布日期（可省略）；sources 至少 1 个官方来源；最多 8 条，不打分、不分档。
 每期还要有 scan：{"checked": [实际检查过的来源名称], "candidates": 看过的候选条数}，见 sources.md
 写入时按 头条 → 必看 → 其余、同档内按 score 从高到低 自动排序。
 
@@ -99,6 +102,21 @@ def normalize(d):
     items.sort(key=lambda it: (TIERS[it["tier"]], -it["score"]))
     if "watch" in d and not isinstance(d["watch"], list):
         fail("watch 必须是数组")
+    ups = d.get("updates")
+    if ups is not None:
+        if not isinstance(ups, list) or len(ups) > 8:
+            fail("updates 必须是数组，最多 8 条")
+        for i, u in enumerate(ups):
+            if not u.get("product") or len(u["product"]) > 14:
+                fail(f"updates[{i}] 需要 product（产品名，14 字以内，例如 ChatGPT、Claude Code）")
+            if not u.get("text") or len(u["text"]) > 60:
+                fail(f"updates[{i}] 需要 text（一句话，60 字以内）")
+            if u.get("date") and not re.match(r"^\d{4}-\d{2}-\d{2}$", str(u["date"])):
+                fail(f"updates[{i}].date 格式应为 YYYY-MM-DD")
+            srcs = u.get("sources")
+            if not isinstance(srcs, list) or not srcs or not all(
+                    str(x.get("url", "")).startswith(("http://", "https://")) for x in srcs):
+                fail(f"updates[{i}] 至少要有 1 个有效来源链接（sources）")
     scan = d.get("scan")
     if scan is not None:
         if not isinstance(scan.get("checked"), list) or not all(isinstance(x, str) for x in scan["checked"]):
