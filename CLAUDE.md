@@ -70,8 +70,9 @@ GitHub Actions（每小时）──抓取约 60 个信源──▶ data/inbox/ �
   - Signal · 晚间：2026-10-17 已删除（用户决定只保留早间）
   - Signal · 专题：不定时，手动触发并附上活动名
   - 两个任务都设为自动批准，模型用 Opus（用户 2026-10-01 决定保留 Opus，不换 Sonnet）。
+  - 通知（2026-10-18 起）：早间任务正常完成不推送，最终回复只写「已发布」；只有没能发布时才用 PushNotification 推送。专题任务不受影响。
   - 提示词原文备份在 `tasks/`。实际生效的是定时任务里的版本；改提示词时，定时任务和 `tasks/` 里的文件要一起改。
-  - 2026-10-17 起早间任务的流程：先读 `watchlist.md`，再 `python3 scripts/inbox_view.py` 读收件箱（平时 `--hours 30`，昨天没跑成时 `--hours 48`），然后用搜索核实、补背景、查漏。收件箱读不到或太旧时，输出开头有「⚠」，任务退回到纯搜索流程并在通知里提一句。
+  - 2026-10-17 起早间任务的流程：先读 `watchlist.md`，再 `python3 scripts/inbox_view.py` 读收件箱（平时 `--hours 30`，昨天没跑成时 `--hours 48`），然后用搜索核实、补背景、查漏。收件箱读不到或太旧时，输出开头有「⚠」，任务退回到纯搜索流程，并在最终回复那一行里带一句「信源异常」。
   - ChatGPT 发布说明（help.openai.com）对机房 IP 一律返回 Cloudflare 人机验证，抓取脚本读不到，所以由早间任务用网页读取工具直接读。AI HOT 不接（它的使用规则不允许公开镜像）。
 - **收件箱**：`.github/workflows/inbox.yml` 每小时（每小时 :17）跑 `scripts/fetch_inbox.py`，按 `scripts/inbox_config.py` 里的信源清单抓取，把最近 48 小时的候选写进 `data/inbox/items.json`，每个源的成功与否和条数写进 `source-status.json`，页面变动监测的记忆在 `state.json`。三个文件由机器人每小时提交到 main，**不要手改**。加源、删源、改关键词规则都在 `inbox_config.py`；已停用的源把 `enabled=False`。工作流在 Actions 页面的运行摘要里也会列出各源抓取情况。
 - **数据**：`data/issues/<日期>-1morning.json`、`-2evening.json`（只有 10-17 之前有）是原始数据，永久保存；`data/specials/`、`data/models/` 是专题和新模型卡；`index.json`、`days/`、`latest.json` 都由脚本重建，**不要手改**。当天新写了模型卡时，`latest.json` 的头条换成「XX：综合排名第几」，两个小组件点开直接跳到那张卡（`?d=日期&m=slug`；专题是 `&s=slug`）。
