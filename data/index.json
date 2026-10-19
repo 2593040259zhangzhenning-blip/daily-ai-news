@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-18T22:53:12+00:00",
+ "generatedAt": "2026-10-19T22:53:08+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -194,6 +194,14 @@
    "headline": "Anthropic 拿出 5% 股份做公益",
    "updatedAt": "2026-10-19T06:58:00+08:00",
    "count": 4,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-10-20",
+   "headline": "一人指挥 AI 智能体攻破百余网站",
+   "updatedAt": "2026-10-20T06:53:08+08:00",
+   "count": 7,
    "specials": [],
    "models": []
   }

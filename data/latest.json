@@ -1,27 +1,37 @@
 {
- "date": "2026-10-19",
- "headline": "Anthropic 拿出 5% 股份做公益",
- "updatedAt": "2026-10-19T06:58:00+08:00",
- "count": 4,
+ "date": "2026-10-20",
+ "headline": "一人指挥 AI 智能体攻破百余网站",
+ "updatedAt": "2026-10-20T06:53:08+08:00",
+ "count": 7,
  "lead": {
-  "cat": "biz",
-  "title": "Anthropic 拿出 5% 股份成立公益基金",
-  "summary": "上市前，Anthropic 承诺拿出至少 5% 股份应对 AI 带来的社会冲击。"
+  "cat": "research",
+  "title": "黑客靠 AI 智能体攻破 100 多家网站",
+  "summary": "花 5000 美元、几乎不动手，AI 智能体替一名黑客打进百余家公司网站。"
  },
  "items": [
   {
-   "cat": "policy",
-   "title": "Anthropic 私下向国会推销自拟的 AI 安全法案",
+   "cat": "research",
+   "title": "MIT 把 Claude 丢到虚拟荒岛，它开始自己玩",
    "tier": "brief"
   },
   {
-   "cat": "research",
-   "title": "四个 Gemini 4 Argon 智能体自己通关《我的世界》",
+   "cat": "policy",
+   "title": "新进展：OpenAI 窃听案嫌犯被下令羁押",
    "tier": "brief"
   },
   {
    "cat": "product",
-   "title": "Anthropic 请律所帮忙定 AI 代人谈判的规矩",
+   "title": "英伟达发布 Nemotron 3.5 开源模型，能在笔记本上跑",
+   "tier": "brief"
+  },
+  {
+   "cat": "biz",
+   "title": "新进展：马斯克回应 Anthropic，要送每个美国孩子一股 SpaceX",
+   "tier": "brief"
+  },
+  {
+   "cat": "research",
+   "title": "前 OpenAI 研究员称大模型「其实看得懂」，引发争论",
    "tier": "brief"
   }
  ]

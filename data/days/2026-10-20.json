@@ -1,0 +1,210 @@
+{
+ "date": "2026-10-20",
+ "issues": [
+  {
+   "key": "2026-10-20-1morning",
+   "date": "2026-10-20",
+   "edition": "morning",
+   "createdAt": "2026-10-20T06:53:08+08:00",
+   "headline": "一人指挥 AI 智能体攻破百余网站",
+   "items": [
+    {
+     "cat": "research",
+     "title": "黑客靠 AI 智能体攻破 100 多家网站",
+     "body": "安全公司 NorForge 报告，一名黑客用开源智能体平台 Cairn 自动发起 1100 多次攻击，打进 100 多个网站，路透确认受害者包括约翰迪尔、SharkNinja 和康明斯；算力花费约 5000 美元，平均每次成功约 50 美元。日志显示任务跑在疑似「Claude Code 接 DeepSeek V4.1 Flash」的组合上。这说明便宜模型加现成智能体框架，已经让大规模自动化入侵的门槛低到普通人也够得着。",
+     "score": 6,
+     "tier": "lead",
+     "summary": "花 5000 美元、几乎不动手，AI 智能体替一名黑客打进百余家公司网站。",
+     "sources": [
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins"
+      },
+      {
+       "name": "The Next Web",
+       "url": "https://thenextweb.com/news/ai-agents-hacker-cairn-100-sites-deere-norforge"
+      }
+     ]
+    },
+    {
+     "cat": "research",
+     "title": "MIT 把 Claude 丢到虚拟荒岛，它开始自己玩",
+     "body": "MIT 研究者把 13 个 Claude Code（Opus 4.7）智能体放进模拟岛屿 30 小时、不给任何任务，它们爬山、用方块画画，还自创了篮球、保龄球之类的游戏；玩过的智能体之后做搭建任务的成绩约是新手的三倍。论文还没经过同行评审，也有认知科学家质疑这算不算真正的「玩」。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "MIT Technology Review",
+       "url": "https://www.technologyreview.com/2026/10/19/1147095/ai-stranded-claude-virtual-desert-island-play"
+      },
+      {
+       "name": "The Next Web",
+       "url": "https://thenextweb.com/news/mit-claude-agents-virtual-island-play"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "新进展：OpenAI 窃听案嫌犯被下令羁押",
+     "body": "被控在 OpenAI 高管会议室装窃听设备的前工程师 Alfozan，10/19 被联邦法官下令羁押到 11 月 6 日初审。检方称他与一名沙特王室成员频繁联系、被拉拢参与 AI 项目，还在内部工具里查过沙特相关会面，浏览记录里有个名为「Saudi Gov Docs」的文件夹；沙特领事馆曾表示愿意替他付保释金。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Fortune",
+       "url": "https://fortune.com/2026/10/19/openai-alleged-bugger-alfozan-jail-saudi-court-filings-hearing/"
+      },
+      {
+       "name": "Wired",
+       "url": "https://www.wired.com/story/openai-engineer-accused-of-spying-on-executives-ordered-to-remain-in-custody"
+      },
+      {
+       "name": "Ars Technica",
+       "url": "https://arstechnica.com/tech-policy/2026/10/accused-openai-spy-had-folder-called-saudi-gov-docs-fbi-says"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "英伟达发布 Nemotron 3.5 开源模型，能在笔记本上跑",
+     "body": "英伟达 10/19 推出三款开放权重模型：1200 亿参数的 Nemotron 3.5 Super VL 面向企业智能体，740 亿参数的 Bolt 可在搭载 RTX Spark 的笔记本和 DGX Spark 上本地运行，更小的 Bolt E4B 本月晚些时候上线。英伟达称微调后在部分智能体任务上比 Anthropic、OpenAI 的模型完成得更快。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs/"
+      }
+     ]
+    },
+    {
+     "cat": "biz",
+     "title": "新进展：马斯克回应 Anthropic，要送每个美国孩子一股 SpaceX",
+     "body": "Anthropic 宣布拿出 5% 股份成立公益基金的第二天，马斯克在 X 上回复称股份应该「直接给公众」，并承诺明年给每个美国孩子一股 SpaceX 股票，按上周五股价粗算约 100 亿美元以上，具体怎么发没有细节。两家 AI 公司上市前的「分红给社会」之争开始升温。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "PBS",
+       "url": "https://www.pbs.org/newshour/nation/musk-pledges-to-give-a-share-of-his-spacex-company-to-every-kid-in-america-next-year"
+      },
+      {
+       "name": "CNN",
+       "url": "https://www.cnn.com/2026/10/19/business/elon-musk-children-spacex-shares-x-post-intl"
+      },
+      {
+       "name": "Reuters（经 Investing.com）",
+       "url": "https://www.investing.com/news/stock-market-news/anthropic-commits-5-stake-to-new-public-benefit-fund-musk-argues-for-direct-share-donations-to-kids-4958151"
+      }
+     ]
+    },
+    {
+     "cat": "research",
+     "title": "前 OpenAI 研究员称大模型「其实看得懂」，引发争论",
+     "body": "Goodfire 研究员、前 OpenAI 研究员 Cammarata 认为，过去觉得神经网络内部一团乱麻是「看错了角度」，坚持逐个神经元研究就能读懂模型的内在逻辑，这对 AI 安全是少见的好消息。谷歌 DeepMind 的 Neel Nanda 等人认为证据还太薄、被炒过头了。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "MIT Technology Review",
+       "url": "https://www.technologyreview.com/2026/10/19/1147149/we-were-looking-at-it-wrong-the-explosive-claim-thats-upended-the-ai-world/"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "iOS 27.2 等苹果系统发布候选版",
+     "body": "苹果 10/19 向开发者推送 iOS、iPadOS、macOS、watchOS、visionOS 27.2 的候选版（RC），通常意味着正式版一周左右就会推给所有用户。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Apple 开发者版本发布",
+       "url": "https://developer.apple.com/news/releases?id=10192026a"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "iOS 27.2 正式版推送",
+    "OpenAI 窃听案 11 月 6 日初审",
+    "Anthropic 公益基金的治理结构和股东表决"
+   ],
+   "updates": [
+    {
+     "product": "Claude Code",
+     "text": "新命令 /auto-mode-setup：读你的项目和最近会话，引导你教会自动模式什么能直接做",
+     "date": "2026-10-19",
+     "sources": [
+      {
+       "name": "Claude Code 更新日志",
+       "url": "https://code.claude.com/docs/en/changelog"
+      }
+     ]
+    }
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI 官网",
+     "ChatGPT 与 Codex 更新日志（OpenAI）",
+     "OpenAI API 更新日志",
+     "Anthropic 新闻页",
+     "Claude 发布说明",
+     "Claude Code 更新日志",
+     "Claude Code 每周摘要",
+     "Google DeepMind 博客",
+     "Google AI 栏目",
+     "Google Research 博客",
+     "Meta AI 博客",
+     "英伟达博客",
+     "英伟达新闻中心",
+     "xAI 新闻页",
+     "Apple Newsroom",
+     "Apple 开发者版本发布",
+     "Apple 开发者新闻",
+     "MacRumors",
+     "9to5Mac",
+     "SpaceX 官网更新",
+     "SpaceX 发射日程（Launch Library）",
+     "Hugging Face 博客",
+     "Mistral 新闻",
+     "EdSurge",
+     "Inside Higher Ed",
+     "英国签证与移民局（GOV.UK）",
+     "ICEF Monitor",
+     "The PIE News",
+     "雅思官方（IELTS）",
+     "多邻国博客",
+     "教育部（工作动态）",
+     "中国教育报",
+     "TechCrunch AI",
+     "The Verge AI",
+     "Ars Technica AI",
+     "Wired AI",
+     "MIT Technology Review AI",
+     "The Decoder",
+     "量子位",
+     "Techmeme",
+     "Hacker News 首页（≥100 分）",
+     "Hugging Face 每日论文（前 12）",
+     "AI News Radar（中转站）",
+     "Follow Builders（AI 圈人物 X）",
+     "Google 新闻关键词搜索（20 组）",
+     "ChatGPT 发布说明（经 Releasebot 转述）",
+     "@OpenAI",
+     "@AnthropicAI",
+     "@claudeai",
+     "AI 公司教育产品公告",
+     "Fortune",
+     "The Next Web",
+     "PBS",
+     "CNN",
+     "Reuters（经 Investing.com）"
+    ],
+    "candidates": 255
+   }
+  }
+ ],
+ "specials": [],
+ "models": []
+}
