@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-10-18T23:34:57Z",
+ "generatedAt": "2026-10-19T00:54:49Z",
  "summary": {
   "sources": 64,
-  "ok": 63,
-  "failed": 1,
-  "items": 1920
+  "ok": 64,
+  "failed": 0,
+  "items": 1940
  },
  "sources": [
   {
@@ -17,10 +17,10 @@
    "http": 200,
    "error": null,
    "fetched": 1299,
-   "inWindow": 2,
+   "inWindow": 0,
    "new": 0,
-   "ms": 188,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 236,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -35,8 +35,8 @@
    "fetched": 154,
    "inWindow": 0,
    "new": 0,
-   "ms": 194,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 164,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -49,10 +49,10 @@
    "http": 200,
    "error": null,
    "fetched": 181,
-   "inWindow": 1,
+   "inWindow": 0,
    "new": 0,
-   "ms": 349,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 95,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -67,8 +67,8 @@
    "fetched": 11,
    "inWindow": 1,
    "new": 0,
-   "ms": 366,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 317,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -83,8 +83,8 @@
    "fetched": 83,
    "inWindow": 0,
    "new": 0,
-   "ms": 469,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 568,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -97,10 +97,10 @@
    "http": 200,
    "error": null,
    "fetched": 423,
-   "inWindow": 2,
-   "new": 1,
-   "ms": 338,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "inWindow": 1,
+   "new": 0,
+   "ms": 550,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -115,8 +115,8 @@
    "fetched": 24,
    "inWindow": 0,
    "new": 0,
-   "ms": 501,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 549,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -125,15 +125,15 @@
    "type": "rss",
    "url": "https://deepmind.google/blog/rss.xml",
    "tier": 1,
-   "ok": false,
-   "http": null,
-   "error": "订阅源解析失败：not well-formed (invalid token): line 1, column 0（返回内容开头：�\b\u0000\u0000\u0000\u0000\u0000\u0002�Խג��� z��1�\bIq\u0006=��b�V�{�y�\u0000\u0001�\u0000 G\u0018��� �����$�r\u00014� �4YS�����]f��J�e�）",
-   "fetched": 0,
+   "ok": true,
+   "http": 200,
+   "error": null,
+   "fetched": 100,
    "inWindow": 0,
    "new": 0,
-   "ms": 4346,
-   "lastOkAt": "2026-10-18T22:37:31Z",
-   "failStreak": 1
+   "ms": 339,
+   "lastOkAt": "2026-10-19T00:54:49Z",
+   "failStreak": 0
   },
   {
    "id": "google-ai",
@@ -147,8 +147,8 @@
    "fetched": 20,
    "inWindow": 0,
    "new": 0,
-   "ms": 243,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 319,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -163,8 +163,8 @@
    "fetched": 100,
    "inWindow": 0,
    "new": 0,
-   "ms": 224,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 269,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -179,8 +179,8 @@
    "fetched": 10,
    "inWindow": 0,
    "new": 0,
-   "ms": 1243,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 1560,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -195,8 +195,8 @@
    "fetched": 18,
    "inWindow": 1,
    "new": 0,
-   "ms": 64,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 298,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -211,8 +211,8 @@
    "fetched": 20,
    "inWindow": 1,
    "new": 0,
-   "ms": 199,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 255,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -227,8 +227,8 @@
    "fetched": 85,
    "inWindow": 0,
    "new": 0,
-   "ms": 303,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 243,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -243,8 +243,8 @@
    "fetched": 20,
    "inWindow": 0,
    "new": 0,
-   "ms": 31,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 14,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -259,8 +259,8 @@
    "fetched": 41,
    "inWindow": 0,
    "new": 0,
-   "ms": 84,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 12,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -275,8 +275,8 @@
    "fetched": 148,
    "inWindow": 0,
    "new": 0,
-   "ms": 425,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 418,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -289,10 +289,10 @@
    "http": 200,
    "error": null,
    "fetched": 20,
-   "inWindow": 9,
+   "inWindow": 8,
    "new": 0,
-   "ms": 82,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 80,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -305,10 +305,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 12,
+   "inWindow": 11,
    "new": 0,
-   "ms": 61,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 106,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -323,8 +323,8 @@
    "fetched": 31,
    "inWindow": 0,
    "new": 0,
-   "ms": 148,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 128,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -339,8 +339,8 @@
    "fetched": 20,
    "inWindow": 3,
    "new": 0,
-   "ms": 628,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 728,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -353,10 +353,10 @@
    "http": 200,
    "error": null,
    "fetched": 880,
-   "inWindow": 1,
+   "inWindow": 0,
    "new": 0,
-   "ms": 87,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 213,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -371,8 +371,8 @@
    "fetched": 90,
    "inWindow": 0,
    "new": 0,
-   "ms": 275,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 123,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -387,8 +387,8 @@
    "fetched": 50,
    "inWindow": 0,
    "new": 0,
-   "ms": 267,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 695,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -403,8 +403,8 @@
    "fetched": 10,
    "inWindow": 0,
    "new": 0,
-   "ms": 68,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 50,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -419,8 +419,8 @@
    "fetched": 20,
    "inWindow": 0,
    "new": 0,
-   "ms": 729,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 509,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -435,8 +435,8 @@
    "fetched": 8,
    "inWindow": 0,
    "new": 0,
-   "ms": 985,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 1292,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -451,8 +451,8 @@
    "fetched": 10,
    "inWindow": 0,
    "new": 0,
-   "ms": 1070,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 757,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -467,8 +467,8 @@
    "fetched": 8,
    "inWindow": 0,
    "new": 0,
-   "ms": 1454,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 1692,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -483,8 +483,8 @@
    "fetched": 15,
    "inWindow": 0,
    "new": 0,
-   "ms": 222,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 86,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -499,8 +499,8 @@
    "fetched": 24,
    "inWindow": 0,
    "new": 0,
-   "ms": 1686,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 1536,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -512,11 +512,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 325,
-   "inWindow": 0,
-   "new": 0,
-   "ms": 2680,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "fetched": 326,
+   "inWindow": 1,
+   "new": 1,
+   "ms": 4650,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -531,8 +531,8 @@
    "fetched": 20,
    "inWindow": 5,
    "new": 0,
-   "ms": 78,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 54,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -547,8 +547,8 @@
    "fetched": 10,
    "inWindow": 3,
    "new": 0,
-   "ms": 19,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 73,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -563,8 +563,8 @@
    "fetched": 20,
    "inWindow": 1,
    "new": 0,
-   "ms": 160,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 409,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -579,8 +579,8 @@
    "fetched": 10,
    "inWindow": 3,
    "new": 0,
-   "ms": 93,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 103,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -595,8 +595,8 @@
    "fetched": 10,
    "inWindow": 0,
    "new": 0,
-   "ms": 40,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 64,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -611,8 +611,8 @@
    "fetched": 10,
    "inWindow": 11,
    "new": 0,
-   "ms": 1313,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 1460,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -627,8 +627,8 @@
    "fetched": 10,
    "inWindow": 6,
    "new": 0,
-   "ms": 1804,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 1354,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -641,10 +641,10 @@
    "http": 200,
    "error": null,
    "fetched": 15,
-   "inWindow": 38,
-   "new": 0,
-   "ms": 356,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "inWindow": 37,
+   "new": 1,
+   "ms": 73,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -659,8 +659,8 @@
    "fetched": 30,
    "inWindow": 40,
    "new": 2,
-   "ms": 322,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 318,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -675,8 +675,8 @@
    "fetched": 50,
    "inWindow": 0,
    "new": 0,
-   "ms": 112,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 229,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -689,10 +689,10 @@
    "http": 200,
    "error": null,
    "fetched": 138,
-   "inWindow": 60,
-   "new": 2,
-   "ms": 256,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "inWindow": 55,
+   "new": 0,
+   "ms": 127,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -705,10 +705,10 @@
    "http": 200,
    "error": null,
    "fetched": 12,
-   "inWindow": 25,
+   "inWindow": 22,
    "new": 0,
-   "ms": 324,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 305,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -721,10 +721,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 235,
-   "new": 8,
-   "ms": 396,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "inWindow": 239,
+   "new": 15,
+   "ms": 488,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -737,10 +737,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 157,
-   "new": 1,
-   "ms": 1820,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "inWindow": 163,
+   "new": 6,
+   "ms": 1908,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -753,10 +753,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 103,
-   "new": 1,
-   "ms": 3212,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "inWindow": 110,
+   "new": 9,
+   "ms": 3156,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -768,11 +768,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 47,
-   "inWindow": 44,
+   "fetched": 46,
+   "inWindow": 42,
    "new": 1,
-   "ms": 4438,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 4489,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -785,10 +785,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 217,
+   "inWindow": 222,
    "new": 7,
-   "ms": 5956,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 6075,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -801,10 +801,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 188,
-   "new": 5,
-   "ms": 7463,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "inWindow": 190,
+   "new": 6,
+   "ms": 7526,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -817,10 +817,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 137,
-   "new": 4,
-   "ms": 8250,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "inWindow": 138,
+   "new": 9,
+   "ms": 8621,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -832,11 +832,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 62,
-   "inWindow": 61,
-   "new": 3,
-   "ms": 9333,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "fetched": 58,
+   "inWindow": 57,
+   "new": 2,
+   "ms": 9993,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -848,11 +848,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 84,
-   "inWindow": 84,
+   "fetched": 83,
+   "inWindow": 86,
    "new": 2,
-   "ms": 10458,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 10499,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -865,10 +865,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 203,
-   "new": 4,
-   "ms": 11908,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "inWindow": 215,
+   "new": 14,
+   "ms": 10558,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -881,10 +881,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 97,
-   "new": 1,
-   "ms": 11959,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "inWindow": 98,
+   "new": 5,
+   "ms": 11683,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -898,9 +898,9 @@
    "error": null,
    "fetched": 9,
    "inWindow": 9,
-   "new": 0,
-   "ms": 11895,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "new": 1,
+   "ms": 11920,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -912,11 +912,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 50,
-   "inWindow": 48,
+   "fetched": 49,
+   "inWindow": 47,
    "new": 2,
-   "ms": 12108,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 12020,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -929,10 +929,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 1,
-   "new": 0,
-   "ms": 11757,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "inWindow": 2,
+   "new": 1,
+   "ms": 11906,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -947,8 +947,8 @@
    "fetched": 22,
    "inWindow": 28,
    "new": 0,
-   "ms": 11810,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 11909,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -961,10 +961,10 @@
    "http": 200,
    "error": null,
    "fetched": 20,
-   "inWindow": 9,
-   "new": 0,
-   "ms": 11975,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "inWindow": 11,
+   "new": 2,
+   "ms": 11946,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -976,11 +976,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 19,
-   "inWindow": 30,
-   "new": 1,
-   "ms": 11921,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "fetched": 22,
+   "inWindow": 28,
+   "new": 0,
+   "ms": 11868,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -995,8 +995,8 @@
    "fetched": 44,
    "inWindow": 25,
    "new": 0,
-   "ms": 11913,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 11838,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -1008,11 +1008,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 2,
-   "inWindow": 2,
-   "new": 0,
-   "ms": 11805,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "fetched": 3,
+   "inWindow": 3,
+   "new": 1,
+   "ms": 11773,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   },
   {
@@ -1027,8 +1027,8 @@
    "fetched": 11,
    "inWindow": 17,
    "new": 0,
-   "ms": 12013,
-   "lastOkAt": "2026-10-18T23:34:57Z",
+   "ms": 11942,
+   "lastOkAt": "2026-10-19T00:54:49Z",
    "failStreak": 0
   }
  ]
