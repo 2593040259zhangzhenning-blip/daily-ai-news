@@ -1,0 +1,181 @@
+{
+ "key": "2026-10-21-1morning",
+ "date": "2026-10-21",
+ "edition": "morning",
+ "createdAt": "2026-10-21T06:55:00+08:00",
+ "headline": "Anthropic 招股书草稿曝光",
+ "items": [
+  {
+   "cat": "biz",
+   "title": "Anthropic 招股书草稿：半年收入 163 亿美元",
+   "body": "据《华尔街日报》看到的招股书草稿，Anthropic 今年上半年收入约 163 亿美元，一年前同期只有 11 亿；账面净亏损 807 亿美元，其中约 720 亿来自可转债等融资工具的估值变动，真正花在算力上的约 90 亿。它已承诺未来付给谷歌、亚马逊、微软等超过 6000 亿美元的算力费用，并在风险提示里写到云服务伙伴越来越把它当对手、模型可能出现不对齐行为。这是外界第一次看到 Claude 背后公司的完整账本，也说明上市已进入倒计时。",
+   "score": 8,
+   "tier": "lead",
+   "summary": "Claude 的母公司首次亮出账本：收入暴涨，算力账单超 6000 亿美元。",
+   "sources": [
+    {
+     "name": "《华尔街日报》（经 Benzinga 转述）",
+     "url": "https://www.benzinga.com/markets/private-markets/26/10/62484656/anthropic-lost-80-billion-in-six-months-as-ai-spending-soars-draft-ipo-filing-shows"
+    },
+    {
+     "name": "Bloomberg",
+     "url": "https://www.bloomberg.com/news/videos/2026-10-20/anthropic-s1-shows-billions-in-losses-wsj-reports-video"
+    },
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "ChatGPT 可以给单个对话上锁",
+   "body": "OpenAI 10/20 开始推出「锁定对话」：用 4 位密码或面容 ID、指纹给某段对话上锁，它会移出普通历史和搜索结果，单独放在一个区，记忆也和普通对话分开。免费版到 Pro 都能用，几天内陆续到账。OpenAI 说明这不是端到端加密，也不改变数据保留规则；重置密码会永久删除所有锁定对话。",
+   "score": 7,
+   "tier": "must",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/"
+    },
+    {
+     "name": "Engadget",
+     "url": "https://www.engadget.com/2292365/chatgpt-now-lets-you-lock-sensitive-chats-behind-a-pin/"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "Meta 的 Muse 分享链接泄露隐私，紧急暂停",
+   "body": "安全公司研究者发现，Muse 的分享链接把对话标题写进网址的子域名，结果在公开 DNS 记录里就能搜出 6800 多条，里面有贷款申请、银行风控提醒、公司内部文件等。Meta 10/20 暂停了分享功能。Muse 刚在 40 天里拿下 1000 万美国下载，这次是它上线以来最大的一次隐私事故。",
+   "score": 6,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "The Verge",
+     "url": "https://www.theverge.com/tech/1014627/meta-muse-ai-sharing-ai-chats"
+    },
+    {
+     "name": "Ars Technica",
+     "url": "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations"
+    },
+    {
+     "name": "Engadget",
+     "url": "https://www.engadget.com/2292281/meta-suspends-muse-chats-sharing-feature-after-it-left-private-details-exposed/"
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "美国令联邦机构清除 DeepSeek",
+   "body": "美国国土安全部 10/20 下令，联邦民事机构停止采购并从系统中移除 DeepSeek 的产品，连基于 DeepSeek 技术开发的第三方软件也算在内，理由是中国法律下政府数据可能被调取。这是美国第一次在全联邦层面禁用一家中国 AI 公司的模型。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems/"
+    },
+    {
+     "name": "CNBC",
+     "url": "https://www.cnbc.com/2026/10/20/us-deepseek-federal-agency-ban.html"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "星舰第 15 次试飞将首次接住两级火箭",
+   "body": "马斯克在 SpaceX 10/20 的财报电话会上说，下个月的星舰第 15 次试飞会同时用发射塔机械臂接住助推器和飞船本体；接住飞船还是第一次，他认为成功的可能性过半。两级都能回收，是星舰实现完全重复使用的关键一步。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Space.com",
+     "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-will-attempt-1st-ever-double-starship-rocket-catch-on-next-test-launch-a-profound-technology-milestone-elon-musk-says"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "Gemini 的「个人智能」上车了",
+   "body": "谷歌 10/20 开始在 Android Auto 上推出 Gemini 的个人智能功能，开车时可以让它结合你的邮件、日历和照片回答问题；内置谷歌系统的汽车几个月内跟上，需要用户主动开启。",
+   "score": 4,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "The Verge",
+     "url": "https://www.theverge.com/tech/1014999/google-gemini-ai-cars-android-auto"
+    },
+    {
+     "name": "Ars Technica",
+     "url": "https://arstechnica.com/google/2026/10/geminis-personal-intelligence-is-coming-to-cars"
+    }
+   ]
+  }
+ ],
+ "watch": [
+  "Anthropic 何时公开递交招股书、启动路演",
+  "星舰第 15 次试飞（11 月，尝试两级回收）",
+  "iOS 27.2 正式版推送"
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI 官网",
+   "ChatGPT 与 Codex 更新日志（OpenAI）",
+   "OpenAI API 更新日志",
+   "Anthropic 新闻页",
+   "Claude 发布说明",
+   "Google DeepMind 博客",
+   "Google AI 栏目",
+   "Google Research 博客",
+   "Meta AI 博客",
+   "英伟达博客",
+   "英伟达新闻中心",
+   "xAI 新闻页",
+   "Apple Newsroom",
+   "Apple 开发者版本发布",
+   "Apple 开发者新闻",
+   "MacRumors",
+   "9to5Mac",
+   "SpaceX 官网更新",
+   "SpaceX 发射日程（Launch Library）",
+   "Hugging Face 博客",
+   "Mistral 新闻",
+   "EdSurge",
+   "Inside Higher Ed",
+   "英国签证与移民局（GOV.UK）",
+   "ICEF Monitor",
+   "雅思官方（IELTS）",
+   "多邻国博客",
+   "教育部（工作动态）",
+   "中国教育报",
+   "TechCrunch AI",
+   "The Verge AI",
+   "Ars Technica AI",
+   "Wired AI",
+   "MIT Technology Review AI",
+   "The Decoder",
+   "量子位",
+   "Techmeme",
+   "Hacker News 首页（≥100 分）",
+   "Hugging Face 每日论文（前 12）",
+   "AI News Radar（中转站）",
+   "Follow Builders（AI 圈人物 X）",
+   "Google 新闻关键词搜索（20 组）",
+   "ChatGPT 发布说明",
+   "Claude Code 更新日志（经 Havoptic 转录）",
+   "@OpenAI",
+   "@AnthropicAI",
+   "@claudeai",
+   "AI 公司教育产品公告",
+   "《华尔街日报》（经转述）",
+   "Bloomberg",
+   "Benzinga",
+   "Engadget",
+   "CNBC",
+   "Fortune",
+   "Space.com"
+  ],
+  "candidates": 330
+ }
+}

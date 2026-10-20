@@ -1,37 +1,37 @@
 {
- "date": "2026-10-20",
- "headline": "一人指挥 AI 智能体攻破百余网站",
- "updatedAt": "2026-10-20T06:53:08+08:00",
- "count": 7,
+ "date": "2026-10-21",
+ "headline": "Anthropic 招股书草稿曝光",
+ "updatedAt": "2026-10-21T06:55:00+08:00",
+ "count": 6,
  "lead": {
-  "cat": "research",
-  "title": "黑客靠 AI 智能体攻破 100 多家网站",
-  "summary": "花 5000 美元、几乎不动手，AI 智能体替一名黑客打进百余家公司网站。"
+  "cat": "biz",
+  "title": "Anthropic 招股书草稿：半年收入 163 亿美元",
+  "summary": "Claude 的母公司首次亮出账本：收入暴涨，算力账单超 6000 亿美元。"
  },
  "items": [
   {
-   "cat": "research",
-   "title": "MIT 把 Claude 丢到虚拟荒岛，它开始自己玩",
+   "cat": "product",
+   "title": "ChatGPT 可以给单个对话上锁",
+   "tier": "must"
+  },
+  {
+   "cat": "product",
+   "title": "Meta 的 Muse 分享链接泄露隐私，紧急暂停",
    "tier": "brief"
   },
   {
    "cat": "policy",
-   "title": "新进展：OpenAI 窃听案嫌犯被下令羁押",
+   "title": "美国令联邦机构清除 DeepSeek",
    "tier": "brief"
   },
   {
    "cat": "product",
-   "title": "英伟达发布 Nemotron 3.5 开源模型，能在笔记本上跑",
+   "title": "星舰第 15 次试飞将首次接住两级火箭",
    "tier": "brief"
   },
   {
-   "cat": "biz",
-   "title": "新进展：马斯克回应 Anthropic，要送每个美国孩子一股 SpaceX",
-   "tier": "brief"
-  },
-  {
-   "cat": "research",
-   "title": "前 OpenAI 研究员称大模型「其实看得懂」，引发争论",
+   "cat": "product",
+   "title": "Gemini 的「个人智能」上车了",
    "tier": "brief"
   }
  ]
