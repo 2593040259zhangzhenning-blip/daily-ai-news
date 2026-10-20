@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-10-20T17:42:24Z",
+ "generatedAt": "2026-10-20T18:49:03Z",
  "summary": {
   "sources": 64,
-  "ok": 64,
-  "failed": 0,
-  "items": 3893
+  "ok": 62,
+  "failed": 2,
+  "items": 3940
  },
  "sources": [
   {
@@ -18,9 +18,9 @@
    "error": null,
    "fetched": 1301,
    "inWindow": 2,
-   "new": 1,
-   "ms": 190,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "new": 0,
+   "ms": 264,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -35,8 +35,8 @@
    "fetched": 140,
    "inWindow": 0,
    "new": 0,
-   "ms": 298,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 314,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -48,11 +48,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 181,
-   "inWindow": 0,
-   "new": 0,
-   "ms": 225,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "fetched": 182,
+   "inWindow": 1,
+   "new": 1,
+   "ms": 271,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -65,10 +65,10 @@
    "http": 200,
    "error": null,
    "fetched": 25,
-   "inWindow": 15,
-   "new": 14,
-   "ms": 1950,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "inWindow": 14,
+   "new": 0,
+   "ms": 309,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -83,8 +83,8 @@
    "fetched": 83,
    "inWindow": 0,
    "new": 0,
-   "ms": 498,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 594,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -93,15 +93,15 @@
    "type": "changelog_update",
    "url": "https://code.claude.com/docs/en/changelog.md",
    "tier": 1,
-   "ok": true,
-   "http": 200,
-   "error": null,
-   "fetched": 424,
+   "ok": false,
+   "http": null,
+   "error": "没有解析到更新条目，页面格式可能变了",
+   "fetched": 0,
    "inWindow": 2,
    "new": 0,
-   "ms": 366,
+   "ms": 346,
    "lastOkAt": "2026-10-20T17:42:24Z",
-   "failStreak": 0
+   "failStreak": 1
   },
   {
    "id": "claude-code-weekly",
@@ -109,15 +109,15 @@
    "type": "changelog_update",
    "url": "https://code.claude.com/docs/en/whats-new.md",
    "tier": 1,
-   "ok": true,
-   "http": 200,
-   "error": null,
-   "fetched": 24,
+   "ok": false,
+   "http": null,
+   "error": "没有解析到更新条目，页面格式可能变了",
+   "fetched": 0,
    "inWindow": 0,
    "new": 0,
-   "ms": 435,
+   "ms": 2479,
    "lastOkAt": "2026-10-20T17:42:24Z",
-   "failStreak": 0
+   "failStreak": 1
   },
   {
    "id": "deepmind",
@@ -131,8 +131,8 @@
    "fetched": 100,
    "inWindow": 0,
    "new": 0,
-   "ms": 4394,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 346,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -147,8 +147,8 @@
    "fetched": 20,
    "inWindow": 0,
    "new": 0,
-   "ms": 275,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 182,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -163,8 +163,8 @@
    "fetched": 100,
    "inWindow": 0,
    "new": 0,
-   "ms": 323,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 351,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -179,8 +179,8 @@
    "fetched": 10,
    "inWindow": 0,
    "new": 0,
-   "ms": 1481,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 1572,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -195,8 +195,8 @@
    "fetched": 18,
    "inWindow": 3,
    "new": 0,
-   "ms": 310,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 297,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -211,8 +211,8 @@
    "fetched": 20,
    "inWindow": 4,
    "new": 0,
-   "ms": 241,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 306,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -224,11 +224,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 85,
-   "inWindow": 0,
-   "new": 0,
-   "ms": 164,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "fetched": 86,
+   "inWindow": 1,
+   "new": 1,
+   "ms": 447,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -243,8 +243,8 @@
    "fetched": 20,
    "inWindow": 2,
    "new": 0,
-   "ms": 163,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 166,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -259,8 +259,8 @@
    "fetched": 42,
    "inWindow": 7,
    "new": 0,
-   "ms": 110,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 136,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -275,8 +275,8 @@
    "fetched": 148,
    "inWindow": 0,
    "new": 0,
-   "ms": 346,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 405,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -290,9 +290,9 @@
    "error": null,
    "fetched": 20,
    "inWindow": 25,
-   "new": 0,
-   "ms": 154,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "new": 1,
+   "ms": 142,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -305,10 +305,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 39,
-   "new": 0,
-   "ms": 99,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "inWindow": 40,
+   "new": 2,
+   "ms": 159,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -323,8 +323,8 @@
    "fetched": 31,
    "inWindow": 0,
    "new": 0,
-   "ms": 191,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 192,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -339,8 +339,8 @@
    "fetched": 20,
    "inWindow": 3,
    "new": 0,
-   "ms": 720,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 1195,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -353,10 +353,10 @@
    "http": 200,
    "error": null,
    "fetched": 886,
-   "inWindow": 6,
-   "new": 0,
-   "ms": 178,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "inWindow": 7,
+   "new": 1,
+   "ms": 172,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -371,8 +371,8 @@
    "fetched": 91,
    "inWindow": 1,
    "new": 0,
-   "ms": 110,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 124,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -387,8 +387,8 @@
    "fetched": 50,
    "inWindow": 0,
    "new": 0,
-   "ms": 294,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 312,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -403,8 +403,8 @@
    "fetched": 10,
    "inWindow": 1,
    "new": 0,
-   "ms": 168,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 124,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -419,8 +419,8 @@
    "fetched": 20,
    "inWindow": 1,
    "new": 0,
-   "ms": 689,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 134,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -435,8 +435,8 @@
    "fetched": 8,
    "inWindow": 2,
    "new": 0,
-   "ms": 1162,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 1202,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -451,8 +451,8 @@
    "fetched": 10,
    "inWindow": 12,
    "new": 0,
-   "ms": 1489,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 990,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -467,8 +467,8 @@
    "fetched": 8,
    "inWindow": 0,
    "new": 0,
-   "ms": 1735,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 255,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -483,8 +483,8 @@
    "fetched": 15,
    "inWindow": 2,
    "new": 0,
-   "ms": 316,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 191,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -499,8 +499,8 @@
    "fetched": 24,
    "inWindow": 0,
    "new": 0,
-   "ms": 1453,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 2192,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -515,8 +515,8 @@
    "fetched": 322,
    "inWindow": 7,
    "new": 0,
-   "ms": 2752,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 6240,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -529,10 +529,10 @@
    "http": 200,
    "error": null,
    "fetched": 20,
-   "inWindow": 20,
-   "new": 1,
-   "ms": 89,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "inWindow": 23,
+   "new": 3,
+   "ms": 115,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -546,9 +546,9 @@
    "error": null,
    "fetched": 10,
    "inWindow": 8,
-   "new": 0,
-   "ms": 140,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "new": 1,
+   "ms": 151,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -561,10 +561,10 @@
    "http": 200,
    "error": null,
    "fetched": 20,
-   "inWindow": 4,
-   "new": 0,
+   "inWindow": 6,
+   "new": 2,
    "ms": 193,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -577,10 +577,10 @@
    "http": 200,
    "error": null,
    "fetched": 10,
-   "inWindow": 4,
-   "new": 0,
-   "ms": 151,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "inWindow": 5,
+   "new": 1,
+   "ms": 202,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -595,8 +595,8 @@
    "fetched": 10,
    "inWindow": 6,
    "new": 0,
-   "ms": 121,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 81,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -610,9 +610,9 @@
    "error": null,
    "fetched": 10,
    "inWindow": 12,
-   "new": 2,
-   "ms": 1478,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "new": 0,
+   "ms": 1351,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -627,8 +627,8 @@
    "fetched": 10,
    "inWindow": 10,
    "new": 0,
-   "ms": 1867,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 1446,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -641,10 +641,10 @@
    "http": 200,
    "error": null,
    "fetched": 15,
-   "inWindow": 94,
-   "new": 2,
-   "ms": 405,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "inWindow": 98,
+   "new": 5,
+   "ms": 463,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -657,10 +657,10 @@
    "http": 200,
    "error": null,
    "fetched": 30,
-   "inWindow": 61,
+   "inWindow": 59,
    "new": 1,
-   "ms": 330,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 423,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -673,10 +673,10 @@
    "http": 200,
    "error": null,
    "fetched": 50,
-   "inWindow": 19,
-   "new": 0,
-   "ms": 129,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "inWindow": 20,
+   "new": 1,
+   "ms": 119,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -689,10 +689,10 @@
    "http": 200,
    "error": null,
    "fetched": 294,
-   "inWindow": 142,
+   "inWindow": 141,
    "new": 0,
-   "ms": 215,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 286,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -705,10 +705,10 @@
    "http": 200,
    "error": null,
    "fetched": 15,
-   "inWindow": 31,
+   "inWindow": 29,
    "new": 0,
-   "ms": 293,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 284,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -721,10 +721,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 381,
-   "new": 6,
-   "ms": 587,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "inWindow": 379,
+   "new": 7,
+   "ms": 622,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -737,10 +737,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 396,
-   "new": 10,
-   "ms": 2068,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "inWindow": 404,
+   "new": 12,
+   "ms": 2001,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -753,10 +753,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 215,
-   "new": 5,
-   "ms": 3346,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "inWindow": 217,
+   "new": 4,
+   "ms": 3447,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -768,11 +768,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 37,
+   "fetched": 38,
    "inWindow": 67,
-   "new": 1,
-   "ms": 4745,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "new": 0,
+   "ms": 4686,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -785,10 +785,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 425,
-   "new": 8,
-   "ms": 6018,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "inWindow": 430,
+   "new": 10,
+   "ms": 5936,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -801,10 +801,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 328,
-   "new": 8,
-   "ms": 7425,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "inWindow": 333,
+   "new": 9,
+   "ms": 7337,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -817,10 +817,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 387,
-   "new": 10,
-   "ms": 8592,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "inWindow": 391,
+   "new": 6,
+   "ms": 8742,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -832,11 +832,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 99,
-   "inWindow": 110,
-   "new": 8,
-   "ms": 9626,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "fetched": 100,
+   "inWindow": 113,
+   "new": 4,
+   "ms": 10087,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -849,10 +849,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 192,
-   "new": 2,
-   "ms": 10995,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "inWindow": 195,
+   "new": 3,
+   "ms": 10465,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -865,10 +865,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 367,
+   "inWindow": 374,
    "new": 8,
-   "ms": 11921,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 10539,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -881,10 +881,10 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 168,
-   "new": 11,
-   "ms": 12168,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "inWindow": 170,
+   "new": 3,
+   "ms": 10566,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -899,8 +899,8 @@
    "fetched": 17,
    "inWindow": 22,
    "new": 0,
-   "ms": 11816,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 11772,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -912,11 +912,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 88,
-   "inWindow": 84,
-   "new": 2,
-   "ms": 12001,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "fetched": 89,
+   "inWindow": 85,
+   "new": 1,
+   "ms": 12061,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -931,8 +931,8 @@
    "fetched": 100,
    "inWindow": 6,
    "new": 0,
-   "ms": 11919,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 11883,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -944,11 +944,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 43,
+   "fetched": 42,
    "inWindow": 55,
-   "new": 0,
-   "ms": 11890,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "new": 1,
+   "ms": 11786,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -963,8 +963,8 @@
    "fetched": 24,
    "inWindow": 32,
    "new": 0,
-   "ms": 11754,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 11907,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -976,11 +976,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 30,
-   "inWindow": 62,
-   "new": 0,
-   "ms": 11873,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "fetched": 34,
+   "inWindow": 61,
+   "new": 2,
+   "ms": 11906,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -995,8 +995,8 @@
    "fetched": 37,
    "inWindow": 19,
    "new": 0,
-   "ms": 11918,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 11875,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -1011,8 +1011,8 @@
    "fetched": 3,
    "inWindow": 9,
    "new": 0,
-   "ms": 11617,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "ms": 11798,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   },
   {
@@ -1024,11 +1024,11 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 15,
-   "inWindow": 23,
-   "new": 0,
-   "ms": 12054,
-   "lastOkAt": "2026-10-20T17:42:24Z",
+   "fetched": 16,
+   "inWindow": 24,
+   "new": 1,
+   "ms": 12079,
+   "lastOkAt": "2026-10-20T18:49:03Z",
    "failStreak": 0
   }
  ]
