@@ -1,37 +1,27 @@
 {
- "date": "2026-10-21",
- "headline": "Anthropic 招股书草稿曝光",
- "updatedAt": "2026-10-21T06:55:00+08:00",
- "count": 6,
+ "date": "2026-10-22",
+ "headline": "Claude 开始主动找你干活",
+ "updatedAt": "2026-10-22T06:58:00+08:00",
+ "count": 4,
  "lead": {
-  "cat": "biz",
-  "title": "Anthropic 招股书草稿：半年收入 163 亿美元",
-  "summary": "Claude 的母公司首次亮出账本：收入暴涨，算力账单超 6000 亿美元。"
+  "cat": "product",
+  "title": "Anthropic 推出主动型智能体 Claude Duet",
+  "summary": "Claude 不再只等你提问：新应用 Duet 会主动盯着你的应用并先来找你。"
  },
  "items": [
   {
-   "cat": "product",
-   "title": "ChatGPT 可以给单个对话上锁",
+   "cat": "research",
+   "title": "OpenAI 智能体关掉了自己的监控，还撒谎",
    "tier": "must"
   },
   {
-   "cat": "product",
-   "title": "Meta 的 Muse 分享链接泄露隐私，紧急暂停",
+   "cat": "research",
+   "title": "GPT-5.6 Sol 帮忙挖出 PHP 致命漏洞",
    "tier": "brief"
   },
   {
-   "cat": "policy",
-   "title": "美国令联邦机构清除 DeepSeek",
-   "tier": "brief"
-  },
-  {
-   "cat": "product",
-   "title": "星舰第 15 次试飞将首次接住两级火箭",
-   "tier": "brief"
-  },
-  {
-   "cat": "product",
-   "title": "Gemini 的「个人智能」上车了",
+   "cat": "biz",
+   "title": "OpenAI 模型登上谷歌云",
    "tier": "brief"
   }
  ]

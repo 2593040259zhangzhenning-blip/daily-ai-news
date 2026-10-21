@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-20T22:53:46+00:00",
+ "generatedAt": "2026-10-21T22:54:03+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -208,8 +208,21 @@
   {
    "date": "2026-10-21",
    "headline": "Anthropic 招股书草稿曝光",
-   "updatedAt": "2026-10-21T06:55:00+08:00",
+   "updatedAt": "2026-10-22T06:55:00+08:00",
    "count": 6,
+   "specials": [
+    {
+     "slug": "gtc-berlin-2026",
+     "title": "英伟达 GTC Berlin 2026"
+    }
+   ],
+   "models": []
+  },
+  {
+   "date": "2026-10-22",
+   "headline": "Claude 开始主动找你干活",
+   "updatedAt": "2026-10-22T06:58:00+08:00",
+   "count": 4,
    "specials": [],
    "models": []
   }

@@ -183,6 +183,96 @@
    }
   }
  ],
- "specials": [],
+ "specials": [
+  {
+   "slug": "gtc-berlin-2026",
+   "date": "2026-10-21",
+   "title": "英伟达 GTC Berlin 2026",
+   "org": "英伟达",
+   "cat": "research",
+   "eventTime": "北京时间 10/21 下午",
+   "createdAt": "2026-10-22T06:55:00+08:00",
+   "summary": "黄仁勋在柏林把重点放在欧洲 AI 基建：集装箱式「AI 工厂」把数据中心建设从半年压到两周，同时推出管住 AI 智能体的安全架构和人形机器人参考平台。",
+   "highlights": [
+    {
+     "title": "DSX POD：装在集装箱里的 AI 工厂",
+     "body": "基于 Vera Rubin 的模块化数据中心参考设计，合作伙伴在出厂前就把整套系统集成、测试好。英伟达称部署时间可从约六个月缩短到最快 14 天，2027 年初开始全球交付。",
+     "score": 7
+    },
+    {
+     "title": "OpenShell：给 AI 智能体装上「监工」",
+     "body": "一套构建、监控和约束智能体的安全参考架构，限制智能体能碰哪些文件、工具和账号凭据，越界操作可被 BlueField 上的监控程序直接拦下。思科、CrowdStrike、谷歌云、微软、SAP 等参与。",
+     "score": 6
+    },
+    {
+     "title": "谷歌云正式开放 Vera Rubin 算力",
+     "body": "英伟达和谷歌云宣布 Vera Rubin 基础设施在谷歌云上正式可用，这是英伟达新一代 AI 芯片平台进入大规模商用的标志。",
+     "score": 6
+    },
+    {
+     "title": "人形机器人参考平台和 Isaac Lab 3.0",
+     "body": "推出基于 GR00T 和 Jetson Thor 的人形机器人参考机型 Agile ONE SN，面向研究者和开发者，计划 2027 年初推出；同时更新 Isaac 运行时，发布 Isaac Lab 3.0 等训练和仿真工具。",
+     "score": 5
+    },
+    {
+     "title": "扩产：封装产能三年内翻几倍",
+     "body": "英伟达和供应商签下扩产协议：基板产能三年内提升到 2.5 倍，安靠的先进封装产能到 2028 年底增长 300% 以上，英伟达预付 11 亿美元锁定产能。芯片供不应求的瓶颈正在往封装环节转移。",
+     "score": 5
+    },
+    {
+     "title": "欧洲自动驾驶：Volvo、Bolt 上 Hyperion",
+     "body": "沃尔沃汽车采用英伟达 Hyperion 平台和 Alpamayo 自动驾驶软件，网约车公司 Bolt 也选它做欧洲无人出租车项目，首批用 Lucid 的车。",
+     "score": 4
+    },
+    {
+     "title": "AI 进基站：商用网络打通首个 AI-RAN 通话",
+     "body": "T-Mobile 联合英伟达和诺基亚在商用网络上完成英伟达所说的首个 AI-RAN 通话，欧洲、中东和非洲已有 9 家运营商在建相关基础设施。",
+     "score": 4
+    }
+   ],
+   "forYou": [
+    "这场发布会几乎都是企业和数据中心层面的东西，短期内不会改变你用 Claude、ChatGPT 的体验；长远看，算力建得越快，AI 服务的额度和价格压力越小。",
+    "OpenShell 这类「管住智能体」的工具在各家都出事故之后变得热门，说明让 AI 自己动手干活的安全问题已经从研究走到产品。"
+   ],
+   "availability": [
+    "DSX POD 由合作伙伴 2027 年初开始交付",
+    "Agile ONE SN 人形机器人参考平台计划 2027 年初推出"
+   ],
+   "sources": [
+    {
+     "name": "英伟达博客（主题演讲实况）",
+     "url": "https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote/"
+    },
+    {
+     "name": "英伟达新闻中心（DSX POD）",
+     "url": "https://nvidianews.nvidia.com/news/nvidia-introduces-dsx-pod-ai-factories-to-accelerate-europes-infrastructure-deployment"
+    },
+    {
+     "name": "英伟达新闻中心（OpenShell）",
+     "url": "https://nvidianews.nvidia.com/news/openshell-reference-architecture"
+    },
+    {
+     "name": "英伟达博客（谷歌云 Vera Rubin）",
+     "url": "https://blogs.nvidia.com/blog/google-cloud-vera-rubin-infrastructure"
+    },
+    {
+     "name": "英伟达新闻中心（Isaac 人形机器人）",
+     "url": "https://nvidianews.nvidia.com/news/nvidia-advances-isaac-platform-for-general-purpose-robotics-with-new-reference-humanoid-frameworks-simulation-pipelines-and-data"
+    },
+    {
+     "name": "英伟达新闻中心（供应链扩产）",
+     "url": "https://nvidianews.nvidia.com/news/nvidia-and-supply-chain-partners-expand-capacity-to-accelerate-ai-infrastructure-buildout"
+    },
+    {
+     "name": "Analytics India Magazine",
+     "url": "https://analyticsindiamag.com/deep-tech/from-humanoid-robots-to-telecom-trials-12-major-announcements-at-nvidia-gtc-berlin-2026"
+    },
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/nvidias-dsx-pod-could-cut-ai-data-center-setup-from-six-months-to-as-little-as-14-days"
+    }
+   ]
+  }
+ ],
  "models": []
 }
