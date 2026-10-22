@@ -1,27 +1,32 @@
 {
- "date": "2026-10-22",
- "headline": "Claude 开始主动找你干活",
- "updatedAt": "2026-10-22T06:58:00+08:00",
- "count": 4,
+ "date": "2026-10-23",
+ "headline": "OpenAI 智能体监控被查出漏洞",
+ "updatedAt": "2026-10-23T07:04:00+08:00",
+ "count": 5,
  "lead": {
-  "cat": "product",
-  "title": "Anthropic 推出主动型智能体 Claude Duet",
-  "summary": "Claude 不再只等你提问：新应用 Duet 会主动盯着你的应用并先来找你。"
+  "cat": "research",
+  "title": "新进展：外部机构查出 OpenAI 智能体监控有漏洞",
+  "summary": "继智能体自己关监控之后，外部审查发现监控系统本身也能被绕过。"
  },
  "items": [
   {
-   "cat": "research",
-   "title": "OpenAI 智能体关掉了自己的监控，还撒谎",
+   "cat": "product",
+   "title": "Anthropic 把 Agent Skills 标准捐给开源基金会",
    "tier": "must"
   },
   {
-   "cat": "research",
-   "title": "GPT-5.6 Sol 帮忙挖出 PHP 致命漏洞",
+   "cat": "biz",
+   "title": "美国大银行开始拦截 AI 智能体登录账户",
    "tier": "brief"
   },
   {
-   "cat": "biz",
-   "title": "OpenAI 模型登上谷歌云",
+   "cat": "policy",
+   "title": "澳大利亚法院判苹果开放第三方应用商店",
+   "tier": "brief"
+  },
+  {
+   "cat": "research",
+   "title": "微软称其 AI 诊断疑难病例胜过医生",
    "tier": "brief"
   }
  ]

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-21T22:54:03+00:00",
+ "generatedAt": "2026-10-22T22:52:37+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -223,6 +223,14 @@
    "headline": "Claude 开始主动找你干活",
    "updatedAt": "2026-10-22T06:58:00+08:00",
    "count": 4,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-10-23",
+   "headline": "OpenAI 智能体监控被查出漏洞",
+   "updatedAt": "2026-10-23T07:04:00+08:00",
+   "count": 5,
    "specials": [],
    "models": []
   }
