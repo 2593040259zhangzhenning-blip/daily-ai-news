@@ -1,0 +1,75 @@
+{
+ "slug": "kimi-k3-1-pro",
+ "date": "2026-10-23",
+ "name": "Kimi K3.1 Pro",
+ "org": "月之暗面",
+ "createdAt": "2026-10-24T07:05:00+08:00",
+ "self": "Kimi K3.1 Pro",
+ "board": {
+  "source": "Artificial Analysis 综合指数",
+  "asof": "2026-10-24",
+  "rows": [
+   {
+    "name": "Opus 5.5",
+    "score": 58,
+    "rank": 1
+   },
+   {
+    "name": "Sonnet 5.5",
+    "score": 56,
+    "rank": 2
+   },
+   {
+    "name": "Muse Wonder Full",
+    "score": 56,
+    "rank": 2
+   },
+   {
+    "name": "Kimi K3.1 Pro",
+    "score": 55,
+    "rank": 4
+   },
+   {
+    "name": "Fable 5.1",
+    "score": 53,
+    "rank": 5
+   },
+   {
+    "name": "GPT-6 Astra",
+    "score": 53,
+    "rank": 5
+   },
+   {
+    "name": "Gemini 4 Argon",
+    "score": 53,
+    "rank": 5
+   }
+  ],
+  "prev": {
+   "name": "Kimi K3",
+   "score": 44
+  }
+ },
+ "use": [
+  {
+   "where": "Kimi 网页和 App",
+   "value": "已可选用"
+  }
+ ],
+ "sources": [
+  {
+   "name": "Kimi 官方博客",
+   "url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+  },
+  {
+   "name": "Artificial Analysis",
+   "url": "https://artificialanalysis.ai/articles/kimi-k3-1-pro-launch-benchmarks"
+  },
+  {
+   "name": "Artificial Analysis 排行榜",
+   "url": "https://artificialanalysis.ai/leaderboards/models"
+  }
+ ],
+ "pos": 4,
+ "rankText": "第 4"
+}
