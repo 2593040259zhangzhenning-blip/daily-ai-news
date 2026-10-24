@@ -41,7 +41,7 @@ Signal 每期按这份清单搜集和打分。随时可以改：加一行、删�
 专业源（2026-10-24 加入收件箱，都验证过订阅源能读、仍在更新；题材比雷达领域宽的只留标题命中关键词的）：
 - 人形机器人：The Robot Report、IEEE Spectrum 机器人、TechCrunch 机器人（只留标题提到人形机器人和主要厂商的）
 - 自动驾驶：Waymo 官方博客、Electrek、TechCrunch 交通、The Verge 交通（后三者只留自动驾驶相关的）
-- 芯片：IEEE Spectrum 半导体、EE Times
+- 芯片：IEEE Spectrum 半导体（EE Times 对 GitHub 机房 IP 返回 403，已停用）
 - 脑机接口：IEEE Spectrum 生物医学、STAT 神经科学（只留脑机接口相关的）；Neuralink 官网更新页是脚本渲染的，抓不到，由谷歌新闻关键词搜索覆盖
 
 ## 国内消息的规则

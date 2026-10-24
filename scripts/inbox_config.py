@@ -256,7 +256,8 @@ SOURCES = [
          tier=3, role="primary", region="intl", watch=[], layer=2, limit=10, keep_only_tagged=True),
     dict(id="ieee-semis", name="IEEE Spectrum 半导体", type="rss", url="https://spectrum.ieee.org/feeds/topic/semiconductors.rss",
          tier=3, role="primary", region="intl", watch=[], layer=2, limit=30, default_topics=["芯片"]),
-    dict(id="eetimes", name="EE Times", type="rss", url="https://www.eetimes.com/feed/",
+    # 2026-10-24 停用：EE Times 对 GitHub 机房 IP 返回 403（本机能读，Actions 上读不到）；芯片由 IEEE Spectrum 半导体和 Techmeme 覆盖
+    dict(id="eetimes", name="EE Times", type="rss", url="https://www.eetimes.com/feed/", enabled=False,
          tier=3, role="primary", region="intl", watch=[], layer=2, limit=20, keep_only_tagged=True),
     dict(id="ieee-biomed", name="IEEE Spectrum 生物医学", type="rss", url="https://spectrum.ieee.org/feeds/topic/biomedical.rss",
          tier=3, role="primary", region="intl", watch=[], layer=2, limit=30, keep_only_tagged=True),
