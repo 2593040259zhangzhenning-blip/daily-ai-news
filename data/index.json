@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-23T22:54:16+00:00",
+ "generatedAt": "2026-10-24T22:53:27+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -244,6 +244,14 @@
    "headline": "国产模型 Kimi 冲进全球前四",
    "updatedAt": "2026-10-24T07:08:00+08:00",
    "count": 7,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-10-25",
+   "headline": "谷歌要拿邮件和相册推广告",
+   "updatedAt": "2026-10-25T06:53:00+08:00",
+   "count": 5,
    "specials": [],
    "models": []
   }

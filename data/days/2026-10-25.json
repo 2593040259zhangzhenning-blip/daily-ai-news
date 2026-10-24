@@ -1,0 +1,186 @@
+{
+ "date": "2026-10-25",
+ "issues": [
+  {
+   "key": "2026-10-25-1morning",
+   "date": "2026-10-25",
+   "edition": "morning",
+   "createdAt": "2026-10-25T06:53:00+08:00",
+   "headline": "谷歌要拿邮件和相册推广告",
+   "items": [
+    {
+     "cat": "product",
+     "title": "谷歌：连上 AI 的 Gmail 和相册可能用来推广告",
+     "body": "谷歌 10/16 悄悄改了隐私政策：你如果把 Gmail、日历或 Google 相册连到搜索（包括 Gemini 的「个人智能」功能），搜索就可以根据从这些内容里提炼的摘要和推断给你定制内容，其中也包括广告。谷歌说广告不会直接读你的邮件和照片、广告主也看不到，但这改掉了它多年来「不拿邮件内容推广告」的承诺。不想被用，可以在搜索的个人智能设置里断开这些应用，并在「我的广告中心」关掉个性化广告。",
+     "score": 6,
+     "tier": "lead",
+     "summary": "把邮件和相册交给 AI 助手之前，先想想它们也可能被拿去推广告。",
+     "sources": [
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update"
+      },
+      {
+       "name": "Ars Technica",
+       "url": "https://arstechnica.com/gadgets/2026/10/updated-google-privacy-policy-says-your-gmail-might-be-used-for-advertising"
+      },
+      {
+       "name": "Techlicious",
+       "url": "https://www.techlicious.com/blog/google-gmail-photos-insights-ads/"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "猫王歌曲版权方起诉 Anthropic",
+     "body": "猫王（Elvis Presley）歌曲的版权方起诉 Anthropic，指控它未经许可拿 274 首猫王歌曲训练 Claude，其中包括《Can't Help Falling in Love》；据 Rolling Stone 报道，索赔约 4100 万美元。这是继出版商、作家之后，又一类版权方把 Anthropic 告上法庭，Anthropic 暂未回应。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Rolling Stone",
+       "url": "https://www.rollingstone.com/music/music-news/elvis-presley-rightsholders-anthropic-lawsuit-infringement-1235647682/"
+      },
+      {
+       "name": "VICE",
+       "url": "https://www.vice.com/en/article/elvis-presley-estate-sues-anthropic-for-stealing-his-music-at-a-scale-never-seen-before-to-train-ai/"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "印度给 9–12 年级推出 AI 入门课",
+     "body": "印度国家教育研究与培训委员会（NCERT）10/24 推出面向 9 到 12 年级的「计算思维与 AI」入门模块，以讨论、练习和小实验为主，没有电脑也能上。内容包括 AI 能做什么、做不到什么，怎么核对 AI 给出的信息，以及数据隐私、深度伪造和虚假信息等使用伦理。这是人口最多的国家把 AI 素养系统地放进高中课堂。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "The Tribune",
+       "url": "https://www.tribuneindia.com/news/india/ncert-launches-ai-computational-thinking-module-for-grades-9-12/"
+      },
+      {
+       "name": "Free Press Journal",
+       "url": "https://www.freepressjournal.in/education/ncert-introduces-20-hour-ai-module-for-classes-9-to-12-deepfakes-data-privacy-and-ethical-use-in-focus"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "瑞典政府办公厅禁用 ChatGPT 和 Claude",
+     "body": "瑞典政府办公厅从 10/26 起在员工电脑上屏蔽 ChatGPT 和 Claude 的网页版，理由是没有正式协议、有官员把敏感信息输进了公开服务。经过安全加固的微软 Copilot 成为指定工具，员工仍可以通过政府自己管控的平台调用这两家的模型。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Breakit",
+       "url": "https://www.breakit.se/artikel/47823/regeringskansliet-stoppar-claude-och-chatgpt"
+      },
+      {
+       "name": "CEOWORLD",
+       "url": "https://ceoworld.biz/2026/10/24/sweden-government-offices-block-chatgpt-claude-copilot/"
+      }
+     ]
+    },
+    {
+     "cat": "model",
+     "title": "Block 推出只用人声训练的语音模型 Dessa",
+     "body": "Jack Dorsey 的 Block 发布语音模型 Dessa：它从零开始只用真人对话录音训练，听到声音直接用声音回答，中间不转成文字，所以更能听出语气和情绪，也会像真人一样插话、应声。多数语音助手是先转文字再回答，会丢掉这些信息。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech"
+      },
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human"
+      },
+      {
+       "name": "The Decoder",
+       "url": "https://the-decoder.com/blocks-new-ai-model-dessa-was-trained-entirely-on-human-speech-to-catch-emotions-text-based-models-miss"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "Kimi K3.1 Pro 完整权重 11 月 4 日前开源",
+    "OpenAI 窃听案 11 月 6 日初审",
+    "星舰第 15 次试飞（11 月，尝试两级回收）"
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI 官网",
+     "ChatGPT 与 Codex 更新日志（OpenAI）",
+     "OpenAI API 更新日志",
+     "Anthropic 新闻页",
+     "Claude 发布说明",
+     "Claude Code 更新日志",
+     "Claude Code 每周摘要",
+     "Google DeepMind 博客",
+     "Google AI 栏目",
+     "Google Research 博客",
+     "Meta AI 博客",
+     "英伟达博客",
+     "英伟达新闻中心",
+     "xAI 新闻页",
+     "Apple Newsroom",
+     "Apple 开发者版本发布",
+     "Apple 开发者新闻",
+     "MacRumors",
+     "9to5Mac",
+     "SpaceX 官网更新",
+     "SpaceX 发射日程（Launch Library）",
+     "Hugging Face 博客",
+     "Mistral 新闻",
+     "EdSurge",
+     "Inside Higher Ed",
+     "英国签证与移民局（GOV.UK）",
+     "ICEF Monitor",
+     "The PIE News",
+     "雅思官方（IELTS）",
+     "教育部（工作动态）",
+     "中国教育报",
+     "TechCrunch AI",
+     "The Verge AI",
+     "Ars Technica AI",
+     "Wired AI",
+     "MIT Technology Review AI",
+     "The Decoder",
+     "量子位",
+     "The Robot Report",
+     "IEEE Spectrum 机器人",
+     "TechCrunch 机器人",
+     "Waymo 官方博客",
+     "Electrek",
+     "TechCrunch 交通",
+     "The Verge 交通",
+     "IEEE Spectrum 半导体",
+     "IEEE Spectrum 生物医学",
+     "STAT 神经科学",
+     "Techmeme",
+     "Hacker News 首页（≥100 分）",
+     "Hugging Face 每日论文（前 12）",
+     "AI News Radar（中转站）",
+     "Follow Builders（AI 圈人物 X）",
+     "Google 新闻关键词搜索（22 组）",
+     "@OpenAI",
+     "@AnthropicAI",
+     "@claudeai",
+     "AI 公司教育产品公告",
+     "Rolling Stone",
+     "VICE",
+     "Breakit",
+     "CEOWORLD",
+     "Techlicious",
+     "The Tribune（印度）",
+     "Free Press Journal",
+     "Startup Fortune"
+    ],
+    "candidates": 244
+   }
+  }
+ ],
+ "specials": [],
+ "models": []
+}

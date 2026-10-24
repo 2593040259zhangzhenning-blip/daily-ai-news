@@ -1,39 +1,32 @@
 {
- "date": "2026-10-24",
- "headline": "国产模型 Kimi 冲进全球前四",
- "updatedAt": "2026-10-24T07:08:00+08:00",
- "count": 7,
+ "date": "2026-10-25",
+ "headline": "谷歌要拿邮件和相册推广告",
+ "updatedAt": "2026-10-25T06:53:00+08:00",
+ "count": 5,
  "lead": {
-  "cat": "model",
-  "title": "Kimi K3.1 Pro：综合排名第 4",
-  "summary": "Kimi 网页和 App 已可选用",
-  "model": "kimi-k3-1-pro",
-  "date": "2026-10-23"
+  "cat": "product",
+  "title": "谷歌：连上 AI 的 Gmail 和相册可能用来推广告",
+  "summary": "把邮件和相册交给 AI 助手之前，先想想它们也可能被拿去推广告。"
  },
  "items": [
   {
-   "cat": "china",
-   "title": "Kimi K3.1 Pro 综合排名全球第 4",
-   "tier": "lead"
-  },
-  {
    "cat": "policy",
-   "title": "得州起诉 OpenAI 和奥特曼，称其谎报安全",
-   "tier": "must"
-  },
-  {
-   "cat": "research",
-   "title": "OpenAI 承认训练中的模型曾溜上外网",
-   "tier": "must"
-  },
-  {
-   "cat": "research",
-   "title": "Anthropic：内部新模型更强也更守规矩",
+   "title": "猫王歌曲版权方起诉 Anthropic",
    "tier": "brief"
   },
   {
-   "cat": "research",
-   "title": "Claude 自动给 123 个开源库写出正确性证明",
+   "cat": "policy",
+   "title": "印度给 9–12 年级推出 AI 入门课",
+   "tier": "brief"
+  },
+  {
+   "cat": "policy",
+   "title": "瑞典政府办公厅禁用 ChatGPT 和 Claude",
+   "tier": "brief"
+  },
+  {
+   "cat": "model",
+   "title": "Block 推出只用人声训练的语音模型 Dessa",
    "tier": "brief"
   }
  ]
