@@ -402,7 +402,16 @@ def fetch_gnews(src, ctx):
             e["title"] = re.sub(r"\s+[-–—]\s+" + re.escape(e["origin"]) + r"\s*$", "", e["title"])
         e["snippet"] = ""      # Google 新闻的摘要只是标题的重复
     entries = [e for e in entries if len(e["title"].strip(" -–—")) >= 6 and e["title"].strip() != e["origin"]]
-    return dict(entries=entries, fetched=len(entries), http=status)
+    kept = [e for e in entries if not _gn_noise(e)]
+    return dict(entries=kept, fetched=len(entries), http=status, dropped=len(entries) - len(kept))
+
+
+def _gn_noise(e):
+    """谷歌新闻里的股价、财经转载：发布方整体是投资内容，或标题是股价话题且发布方不是大媒体。"""
+    org = (e.get("origin") or "").strip().lower()
+    if org in C.GN_DROP_ORIGINS:
+        return True
+    return org not in C.GN_KEEP_ORIGINS and bool(C.GN_STOCK_RE.search(e["title"]))
 
 
 def fetch_page_links(src, ctx):
@@ -495,8 +504,66 @@ def range_end_date(desc):
     return find_date(desc)[0]
 
 
+_BOLD_LINE = re.compile(r"\*\*([^*]+)\*\*")
+_DATE_LINE = re.compile(r"^[A-Z][a-z]{2,8}\.? \d{1,2}\b.{0,30}\d{4}$")
+
+
+def _section_key(name):
+    """「6 improvements」「14 bug fixes」这类带数字的小标题归一成固定名字。"""
+    k = name.strip().lower()
+    if re.fullmatch(r"\d+ bug fix(es)?", k) or k in ("fixed", "fixes"):
+        return "fixes"
+    m = re.fullmatch(r"\d+ (\w+)", k)
+    return m.group(1) if m else k
+
+
+def parse_bold_blocks(text):
+    """页面改成渲染后的 Markdown 时的格式（2026-10-20 起）：
+    「**版本号或 Week 37**」单独一行，下一行是日期，后面是「**Added**」这样的小标题加列表。"""
+    lines = [ln.strip() for ln in text.splitlines()]
+    n = len(lines)
+
+    def next_nonblank(i):
+        j = i + 1
+        while j < n and not lines[j]:
+            j += 1
+        return j
+
+    out, cur = [], None
+    sec = "_"
+    i = 0
+    while i < n:
+        ln = lines[i]
+        mb = _BOLD_LINE.fullmatch(ln)
+        if mb:
+            j = next_nonblank(i)
+            if j < n and _DATE_LINE.match(lines[j]):
+                cur = dict(label=mb.group(1).strip(), desc=lines[j], sections={})
+                out.append(cur)
+                sec = "_"
+                i = j + 1
+                continue
+            if cur is not None:
+                sec = _section_key(mb.group(1))
+            i += 1
+            continue
+        if cur is not None and ln:
+            if ln.startswith(("* ", "- ")):
+                cur["sections"].setdefault(sec, []).append(md_plain(ln[2:]))
+            elif not ln.startswith(("[", "<", ">", "#")):
+                cur["sections"].setdefault(sec, []).append(md_plain(ln))
+        i += 1
+    return out
+
+
 def parse_update_blocks(text):
-    """Mintlify 的 <Update label=".." description=".."> 块（Claude Code 更新日志、每周摘要）。"""
+    """Claude Code 更新日志、每周摘要。先按 Mintlify 的 <Update label=".." description=".."> 块解析，
+    解析不到再按渲染后的加粗标题格式解析（页面 2026-10-20 起改成了后者）。"""
+    blocks = _parse_update_tags(text)
+    return blocks or parse_bold_blocks(text)
+
+
+def _parse_update_tags(text):
     out = []
     for m in re.finditer(r'<Update label="([^"]+)" description="([^"]*)"[^>]*>(.*?)</Update>', text, re.S):
         label, desc, body = m.group(1), m.group(2), m.group(3)
@@ -753,6 +820,9 @@ def tag_item(src, title, snippet, region=None):
     if C.LANG_RE.search(title) and "英语教学与语言培训行业" not in watch:
         watch.append("英语教学与语言培训行业")
     topics = [n for n, rx in C.TOPIC_RULES if rx.search(title)]
+    for t in src.get("default_topics") or []:
+        if t not in topics:
+            topics.append(t)
     if src.get("layer") == 3:
         layer = 3
     elif any(w in C.LAYER1 for w in watch):
@@ -877,13 +947,25 @@ def run(sources, out_dir, dry=False):
         r = results[src["id"]]
         old = prev_status.get(src["id"], {})
         ok = r["error"] is None
+        pubs = [e["published"] for e in r["entries"] if e.get("published")]
+        newest = iso(max(pubs)) if pubs else old.get("newestItemAt")        # 这个源手上最新一条的发布时间（不受 48 小时窗口限制）
+        last_new = iso(now) if per_source_new.get(src["id"]) else old.get("lastNewAt")   # 上次收进新内容的时间
         st = dict(id=src["id"], name=src["name"], type=src["type"], url=src.get("url") or src.get("q"),
                   tier=src["tier"], ok=ok, http=r.get("http"), error=r["error"], fetched=r["fetched"],
                   inWindow=counts.get(src["id"], 0), new=per_source_new.get(src["id"], 0), ms=r["ms"],
                   lastOkAt=iso(now) if ok else old.get("lastOkAt"),
-                  failStreak=0 if ok else (old.get("failStreak", 0) + 1))
+                  failStreak=0 if ok else (old.get("failStreak", 0) + 1),
+                  newestItemAt=newest, lastNewAt=last_new)
+        if r.get("dropped"):
+            st["dropped"] = r["dropped"]              # 谷歌新闻里被过滤掉的股价/财经转载条数
         if ok and r["fetched"] == 0:
             st["warn"] = "解析到 0 条，页面或订阅源结构可能变了"
+        elif ok and newest:
+            # 抓取成功但最新一条已经很旧：要么这个源真的没更新，要么页面结构变了、解析到的是旧内容
+            nd = parse_dt(newest)
+            days = src.get("stale_days", C.STALE_DAYS)
+            if nd and (now - nd).days >= days:
+                st["stale"] = "最新一条是 %d 天前，确认是源没更新还是解析出了问题" % (now - nd).days
         statuses.append(st)
     # 这次没跑的源（--only 调试时）保留上次的状态
     ran = {s["id"] for s in statuses}
@@ -907,7 +989,9 @@ def print_report(items, status_doc, only_ran=None):
         if only_ran and s["id"] not in only_ran:
             continue
         mark = "OK" if s["ok"] and not s.get("warn") else ("WARN" if s["ok"] else "FAIL")
-        note = s.get("error") or s.get("warn") or ""
+        note = s.get("error") or s.get("warn") or s.get("stale") or ""
+        if s["ok"] and s.get("stale") and not s.get("warn"):
+            mark = "STALE"
         print("%-22s %-4s %-6s %-6s %-5s %-6s %s" % (s["id"], mark, s["fetched"], s["inWindow"], s["new"], s["ms"], note))
     sm = status_doc["summary"]
     print("\n共 %d 个源：成功 %d，失败 %d；收件箱现有 %d 条（最近 %d 小时）" % (sm["sources"], sm["ok"], sm["failed"], sm["items"], C.WINDOW_HOURS))

@@ -16,6 +16,8 @@ watchlist.md 决定「关注什么」，这个文件决定「去哪儿抓、怎�
   watch     这个源默认归到关注清单里的哪些对象
   layer     没有命中任何对象时的默认层：2 雷达领域，3 日程，0 清单外
   watch_requires  "ai" / "study"：只有标题或摘要里出现对应关键词，才贴上默认的 watch
+  default_topics  这个源的题材完全对口时，所有条目直接贴上这些雷达领域标签（如 ["自动驾驶"]）
+  stale_days  抓取成功但最新一条超过这么多天就在状态里标 stale，默认 STALE_DAYS
   keep_only_tagged  True：没贴上任何 watch/topic 的条目直接丢掉（用于信息量大的综合源）
   rumor_prone  True：爆料类来源，按传闻规则处理
   limit     每次最多取多少条（取最新的）
@@ -26,6 +28,27 @@ watchlist.md 决定「关注什么」，这个文件决定「去哪儿抓、怎�
 import re
 
 WINDOW_HOURS = 48
+STALE_DAYS = 30        # 抓取成功但最新一条超过这么多天，状态里标 stale（单个源可用 stale_days 覆盖）
+
+# ---- 谷歌新闻过滤（2026-10-24 信源复盘后加）----
+# 谷歌新闻占收件箱八成以上，其中大量是股价、财经转载。用户不看融资、人事和股价（watchlist.md「不看的」）。
+# 1) 整个发布方都是股票/投资内容的，直接丢；
+# 2) 标题带股价字眼的（stock、price target、NASDAQ: 等）丢，除非发布方是正经通讯社/大媒体（它们的「stock」多半是在说公司大事）。
+GN_DROP_ORIGINS = {
+    "the motley fool", "marketbeat", "biggo finance", "seeking alpha", "24/7 wall st.", "orcarouter",
+    "tech-insider.org", "https://tech-insider.org/", "simply wall st", "simply wall street", "zacks investment research",
+    "stocktwits", "gurufocus", "tipranks", "investorplace", "barchart.com", "insider monkey", "finbold",
+    "moomoo", "tradingkey", "kalkine media", "kalkine.ca", "stocks down under", "marketscreener.com",
+    "indexbox", "economies.com", "fxleaders", "thestreet",
+}
+GN_KEEP_ORIGINS = {
+    "reuters", "bloomberg.com", "bloomberg", "cnbc", "the wall street journal", "financial times", "the verge",
+    "techcrunch", "ars technica", "wired", "the information", "axios", "fortune", "the new york times", "bbc",
+    "the guardian", "the washington post", "associated press", "ap news", "the economist",
+}
+GN_STOCK_RE = re.compile(
+    r"\b(stock|stocks|share price|price target|buy rating|dividend|etfs?|should you buy|buy now|market cap)\b"
+    r"|\b(nasdaq|nyse)\s?:", re.I)
 USER_AGENT = ("Mozilla/5.0 (compatible; SignalInbox/1.0; "
               "+https://github.com/2593040259zhangzhenning-blip/daily-ai-news)")
 
@@ -71,7 +94,7 @@ LANG_RE = re.compile(
 
 # 第二层：雷达领域
 TOPIC_RULES = [
-    ("人形机器人", re.compile(r"(?i)" + W(r"humanoids?|Optimus|Figure AI|Unitree|Boston Dynamics|Agility Robotics|Apptronik|1X NEO") + r"|人形机器人|宇树")),
+    ("人形机器人", re.compile(r"(?i)" + W(r"humanoids?|Optimus|Figure AI|Unitree|Boston Dynamics|Agility Robotics|Apptronik|1X NEO|UBTech|Agibot|AgiBot|Sanctuary AI|Neura Robotics|Figure 0\d") + r"|人形机器人|宇树")),
     ("芯片", re.compile(r"(?i)" + W(r"chips?|semiconductors?|GPUs?|TPUs?|HBM\d*|foundry|TSMC|ASML|wafers?|Cerebras|Groq|AMD|Intel|Qualcomm|Broadcom") + r"|芯片|半导体|光刻")),
     ("自动驾驶", re.compile(r"(?i)" + W(r"robotaxis?|self-driving|autonomous (?:driving|vehicles?|cars?)|Waymo|FSD|Full Self-Driving|Zoox|Pony\.ai|WeRide|Apollo Go") + r"|自动驾驶|无人驾驶|萝卜快跑")),
     ("脑机接口", re.compile(r"(?i)brain-computer interface|brain computer interface|" + W(r"BCI|Neuralink|Synchron|Paradromics|Precision Neuroscience") + r"|脑机接口")),
@@ -127,7 +150,7 @@ SOURCES = [
          kind="changelog", limit=15),
     dict(id="claude-code-weekly", name="Claude Code 每周摘要", type="changelog_update",
          url="https://code.claude.com/docs/en/whats-new.md", link="https://code.claude.com/docs/en/whats-new",
-         label="Claude Code 每周摘要", range_dates=True, take=4, tier=1, role="primary", region="intl",
+         label="Claude Code 每周摘要", range_dates=True, take=4, stale_days=60, tier=1, role="primary", region="intl",
          watch=["Anthropic/Claude"], kind="changelog", limit=4),
     dict(id="deepmind", name="Google DeepMind 博客", type="rss", url="https://deepmind.google/blog/rss.xml",
          tier=1, role="primary", region="intl", watch=["Google/Gemini"], limit=30),
@@ -183,7 +206,8 @@ SOURCES = [
     dict(id="ielts", name="雅思官方（IELTS）", type="page_links", url="https://ielts.org/news-and-insights",
          link_re=r"^https://ielts\.org/news-and-insights/[a-z0-9\-]+$",
          tier=1, role="primary", region="intl", watch=["留学与签证政策"]),
-    dict(id="duolingo", name="多邻国博客", type="rss", url="https://blog.duolingo.com/feed/",
+    # 2026-10-24 停用：博客全是教语法、下棋的内容营销，一周 4 条线索没有一条是新闻；多邻国真正的动向由谷歌新闻的语言学习两个查询覆盖
+    dict(id="duolingo", name="多邻国博客", type="rss", url="https://blog.duolingo.com/feed/", enabled=False,
          tier=1, role="primary", region="intl", watch=["英语教学与语言培训行业"], limit=20),
     dict(id="moe", name="教育部（工作动态）", type="page_links", url="http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/",
          link_re=r"^https?://www\.moe\.gov\.cn/.*/t\d{8}_\d+\.html$", fix_relative="http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/",
@@ -209,6 +233,32 @@ SOURCES = [
          tier=3, role="primary", region="intl", watch=[], layer=2, limit=30),
     dict(id="qbitai", name="量子位", type="rss", url="https://www.qbitai.com/feed",
          tier=3, role="primary", region="cn", watch=[], layer=2, limit=30),
+
+    # ===== 雷达领域专业源（2026-10-24 信源复盘后加，订阅源都已逐个验证能读、仍在更新）=====
+    # 这些源题材比雷达领域宽，所以用 keep_only_tagged：标题没命中 TOPIC_RULES 的丢掉；
+    # 题材完全对口的（Waymo 官方博客、IEEE 半导体）用 default_topics 直接贴标签。
+    dict(id="robot-report", name="The Robot Report", type="rss", url="https://www.therobotreport.com/feed/",
+         tier=3, role="primary", region="intl", watch=[], layer=2, limit=30, keep_only_tagged=True),
+    dict(id="ieee-robotics", name="IEEE Spectrum 机器人", type="rss", url="https://spectrum.ieee.org/feeds/topic/robotics.rss",
+         tier=3, role="primary", region="intl", watch=[], layer=2, limit=30, keep_only_tagged=True),
+    dict(id="tc-robotics", name="TechCrunch 机器人", type="rss", url="https://techcrunch.com/category/robotics/feed/",
+         tier=3, role="primary", region="intl", watch=[], layer=2, limit=20, keep_only_tagged=True),
+    dict(id="waymo", name="Waymo 官方博客", type="rss", url="https://waymo.com/blog/rss.xml",
+         tier=1, role="primary", region="intl", watch=[], layer=2, limit=15, default_topics=["自动驾驶"]),
+    dict(id="electrek", name="Electrek", type="rss", url="https://electrek.co/feed/",
+         tier=3, role="primary", region="intl", watch=[], layer=2, limit=50, keep_only_tagged=True),
+    dict(id="tc-transport", name="TechCrunch 交通", type="rss", url="https://techcrunch.com/category/transportation/feed/",
+         tier=3, role="primary", region="intl", watch=[], layer=2, limit=20, keep_only_tagged=True),
+    dict(id="verge-transport", name="The Verge 交通", type="rss", url="https://www.theverge.com/rss/transportation/index.xml",
+         tier=3, role="primary", region="intl", watch=[], layer=2, limit=10, keep_only_tagged=True),
+    dict(id="ieee-semis", name="IEEE Spectrum 半导体", type="rss", url="https://spectrum.ieee.org/feeds/topic/semiconductors.rss",
+         tier=3, role="primary", region="intl", watch=[], layer=2, limit=30, default_topics=["芯片"]),
+    dict(id="eetimes", name="EE Times", type="rss", url="https://www.eetimes.com/feed/",
+         tier=3, role="primary", region="intl", watch=[], layer=2, limit=20, keep_only_tagged=True),
+    dict(id="ieee-biomed", name="IEEE Spectrum 生物医学", type="rss", url="https://spectrum.ieee.org/feeds/topic/biomedical.rss",
+         tier=3, role="primary", region="intl", watch=[], layer=2, limit=30, keep_only_tagged=True),
+    dict(id="stat-neuro", name="STAT 神经科学", type="rss", url="https://www.statnews.com/topic/neuroscience/feed/",
+         tier=3, role="primary", region="intl", watch=[], layer=2, limit=20, keep_only_tagged=True),
 
     # ===== 第五层 · 查漏（只当线索）=====
     dict(id="techmeme", name="Techmeme", type="rss", url="https://www.techmeme.com/feed.xml",
