@@ -3,7 +3,7 @@
 > 给接手这个仓库的 Claude 看的。动手前先读完这份，再读 README.md、sources.md、specials.md、models.md。
 > 项目状态：前端已完结（2026 年 10 月）。**2026-10-16 起重新开工：信源改造 + 关注范围扩大**，方向已定，见 `sources-plan.md` 和 `watchlist.md`，接手时先读这两份。
 > **2026-10-18 加了「功能更新」**：新来源（Claude Code 更新日志和每周摘要、ChatGPT 与 Codex 更新日志、OpenAI API 更新日志）已进收件箱，每期数据新增可选字段 `updates`，早间任务第 5 步 f 负责写。网页显示 10-18 中午按用户确认的设计上线（见下面「功能更新」一条）。
-> **第一步已上线（2026-10-17）**：GitHub Actions 每小时抓取信源进收件箱 `data/inbox/`，早晚定时任务先读收件箱和关注清单，再用搜索补漏。第二步（共识打分、圈外位、每周复盘和建议关注）还没做，要等第一周的真实数据。
+> **第一步已上线（2026-10-17）**：GitHub Actions 每小时抓取信源进收件箱 `data/inbox/`，早晚定时任务先读收件箱和关注清单，再用搜索补漏。**2026-10-24 第二步上线**（共识打分 `scripts/consensus.py`、圈外候选、事件日志 `data/inbox/events-log.json`、每周六复盘 `data/reviews/`），同日按第一周复盘修了 Claude Code 更新日志的解析器、过滤了谷歌新闻的股价财经转载、加了 11 个雷达领域专业源，详见 `sources-plan.md`。
 
 ## 一句话
 
@@ -74,10 +74,10 @@ GitHub Actions（每小时）──抓取约 60 个信源──▶ data/inbox/ �
   - 两个任务都设为自动批准，模型用 Opus（用户 2026-10-01 决定保留 Opus，不换 Sonnet）。
   - 通知（2026-10-18 起）：早间任务正常完成不推送，最终回复只写「已发布」；只有没能发布时才用 PushNotification 推送。专题任务不受影响。
   - 提示词原文备份在 `tasks/`。实际生效的是定时任务里的版本；改提示词时，定时任务和 `tasks/` 里的文件要一起改。
-  - 2026-10-17 起早间任务的流程：先读 `watchlist.md`，再 `python3 scripts/inbox_view.py` 读收件箱（平时 `--hours 30`，昨天没跑成时 `--hours 48`），然后用搜索核实、补背景、查漏。收件箱读不到或太旧时，输出开头有「⚠」，任务退回到纯搜索流程，并在最终回复那一行里带一句「信源异常」。
+  - 2026-10-17 起早间任务的流程：先读 `watchlist.md`，再 `python3 scripts/inbox_view.py` 读收件箱（平时 `--hours 30`，昨天没跑成时 `--hours 48`），然后用搜索核实、补背景、查漏；输出最前面有「共识事件」和「圈外候选」两节（第 5 步 g）。圈外位的写法是标题开头加「圈外：」，每天最多 1 条，没有够格的就不收。收件箱读不到或太旧时，输出开头有「⚠」，任务退回到纯搜索流程，并在最终回复那一行里带一句「信源异常」。
   - 2026-10-18 起早间任务多一步 5f：从 `inbox_view.py` 的「功能更新候选」一节（更新日志类来源，条目带 `kind: "changelog"`）和 ChatGPT 发布说明里挑用户可见的变化写进 `updates`。更新日志类来源在 `inbox_config.py` 里用三种解析器：`changelog_update`（Claude Code 的 `<Update>` 块，抓 `.md` 版）、`changelog_api`（OpenAI API 的 Markdown）、`changelog_codex`（learn.chatgpt.com 的页面，跳过 GitHub 发版镜像）。
   - ChatGPT 发布说明（help.openai.com）对机房 IP 一律返回 Cloudflare 人机验证，抓取脚本读不到，所以由早间任务用网页读取工具直接读。AI HOT 不接（它的使用规则不允许公开镜像）。
-- **收件箱**：`.github/workflows/inbox.yml` 每小时（每小时 :17）跑 `scripts/fetch_inbox.py`，按 `scripts/inbox_config.py` 里的信源清单（2026-10-18 起 65 项，1 项停用，约 64 个在跑）抓取，把最近 48 小时的候选写进 `data/inbox/items.json`，每个源的成功与否和条数写进 `source-status.json`，页面变动监测的记忆在 `state.json`。三个文件由机器人每小时提交到 main，**不要手改**。加源、删源、改关键词规则都在 `inbox_config.py`；已停用的源把 `enabled=False`。工作流在 Actions 页面的运行摘要里也会列出各源抓取情况。
+- **收件箱**：`.github/workflows/inbox.yml` 每小时（每小时 :17）跑 `scripts/fetch_inbox.py`，按 `scripts/inbox_config.py` 里的信源清单（2026-10-24 起 78 项，2 项停用，约 76 个在跑）抓取，把最近 48 小时的候选写进 `data/inbox/items.json`，每个源的成功与否和条数写进 `source-status.json`，页面变动监测的记忆在 `state.json`。另有 `events-log.json`（共识中档以上的事件，每周复盘用）。这些文件由机器人每小时提交到 main，**不要手改**。每周六另一个工作流 `weekly-review.yml` 把复盘报告写进 `data/reviews/`。加源、删源、改关键词规则都在 `inbox_config.py`；已停用的源把 `enabled=False`。工作流在 Actions 页面的运行摘要里也会列出各源抓取情况。
 - **数据**：`data/issues/<日期>-1morning.json`、`-2evening.json`（只有 10-17 之前有）是原始数据，永久保存；`data/specials/`、`data/models/` 是专题和新模型卡；`index.json`、`days/`、`latest.json` 都由脚本重建，**不要手改**。当天新写了模型卡时，`latest.json` 的头条换成「XX：综合排名第几」，两个小组件点开直接跳到那张卡（`?d=日期&m=slug`；专题是 `&s=slug`）。
 - **发布**：网站从 `gh-pages` 分支发布。原因是自动化推送到 main 不会触发 Pages 重建，所以 `.github/workflows/pages.yml` 在每次推送和每 15 分钟把 gh-pages 同步到 main 并按需重新发布。
 - **iPhone 小组件**（Scriptable）：手机里只粘贴了一次 `widget/loader.js`，它每次从网站拉 `widget/daily-ai-news-widget.js` 来运行。所以改 widget 文件，手机自动跟着变；改 loader.js 则需要用户重新粘贴。

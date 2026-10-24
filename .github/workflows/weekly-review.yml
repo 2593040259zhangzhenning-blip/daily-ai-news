@@ -1,0 +1,35 @@
+# Signal 每周信源复盘：每周六北京时间 12:30 读事件日志和抓取状态，写 data/reviews/<年>-W<周>.md。
+# 报告怎么读、要不要据此改信源，由用户在对话里和 Claude 一起定；加不加关注对象永远由用户决定。
+name: 每周信源复盘
+on:
+  schedule:
+    - cron: "30 4 * * 6"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: inbox-fetch
+  cancel-in-progress: false
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: 生成复盘
+        run: python3 scripts/weekly_review.py --write >> "$GITHUB_STEP_SUMMARY"
+      - name: 提交
+        run: |
+          git config user.name "Signal Inbox Bot"
+          git config user.email "noreply@github.com"
+          git add data/reviews
+          if git diff --cached --quiet; then echo "没有变化"; exit 0; fi
+          git commit -m "每周信源复盘：$(date -u +%G-W%V)"
+          for i in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
+            sleep 5
+          done
+          echo "推送失败" >&2
+          exit 1

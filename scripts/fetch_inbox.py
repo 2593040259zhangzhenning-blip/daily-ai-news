@@ -42,6 +42,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import inbox_config as C  # noqa: E402
+import consensus  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 INBOX = ROOT / "data" / "inbox"
@@ -394,7 +395,10 @@ def fetch_rss(src, ctx):
 
 def fetch_gnews(src, ctx):
     loc = C.GNEWS_LOCALES[src.get("region", "intl")]
-    url = "https://news.google.com/rss/search?" + urllib.parse.urlencode(dict(q=src["q"], **loc))
+    if src.get("topic"):
+        url = "https://news.google.com/rss/headlines/section/topic/%s?%s" % (src["topic"], urllib.parse.urlencode(loc))
+    else:
+        url = "https://news.google.com/rss/search?" + urllib.parse.urlencode(dict(q=src["q"], **loc))
     status, data, ctype, final = http_get(url, accept="application/rss+xml, application/xml, text/xml, */*")
     entries = parse_feed(data)
     for e in entries:
@@ -975,9 +979,19 @@ def run(sources, out_dir, dry=False):
     status_doc = dict(generatedAt=iso(now), summary=dict(sources=len(statuses), ok=ok_n, failed=len(statuses) - ok_n,
                                                          items=len(items)), sources=statuses)
 
+    event_log = None
+    try:
+        by_id = {i["id"]: i for i in items}
+        event_log = consensus.update_log(load_json(out_dir / "events-log.json", {}),
+                                         consensus.cluster(items, threshold=0.5), by_id, now)
+    except Exception as e:      # 共识打分出错不能拖垮抓取
+        print("共识打分失败（不影响抓取）：%s %s" % (type(e).__name__, e), file=sys.stderr)
+
     if not dry:
         out_dir.mkdir(parents=True, exist_ok=True)
         write_items(out_dir / "items.json", iso(now), items)
+        if event_log is not None:
+            (out_dir / "events-log.json").write_text(json.dumps(event_log, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
         (out_dir / "source-status.json").write_text(json.dumps(status_doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         (out_dir / "state.json").write_text(json.dumps(state, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     return items, status_doc

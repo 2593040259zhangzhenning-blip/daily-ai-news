@@ -17,6 +17,15 @@
 
 **2026-10-18 补充（功能更新）：** 新增四个来源进收件箱：Claude Code 更新日志、Claude Code 每周摘要（官方文档站，抓 Markdown 版）、ChatGPT 与 Codex 更新日志（learn.chatgpt.com）、OpenAI API 更新日志（developers.openai.com，抓 Markdown 版）；Claude 发布说明和 ChatGPT 发布说明也标上了更新日志类标记。它们的条目在 `inbox_view.py` 里单独成「功能更新候选」一节，用来写每期的 `updates`（规则见 `watchlist.md`「功能更新」）。注意：Claude 发布说明（support.claude.com）是 Claude 应用的更新，不含 Claude Code，所以 Claude Code 之前一直没有被覆盖；Claude Code 每周摘要页最新一期只到 9 月 11 日那周，只当补充。ChatGPT 发布说明仍然靠早间任务用 WebFetch 读。这些页面在 GitHub 机房 IP 上能不能读到，以上线后 `source-status.json` 为准。
 
+**2026-10-24 信源复盘 + 第二步上线：** 第一周数据复盘后一次做了五件事。
+1. Claude Code 更新日志和每周摘要自 10-21 凌晨起连挂 82 次：页面从 `<Update>` 标签改成了加粗版本号加日期，解析器（`parse_bold_blocks`）已适配，两种格式都认。
+2. `source-status.json` 每个源加 `newestItemAt`（手上最新一条的发布时间）、`lastNewAt`（上次收进新内容）、`stale`（抓取成功但最新一条超过 30 天，单个源可用 `stale_days` 覆盖）、`dropped`（谷歌新闻过滤掉的条数）。以前只记成败，分不出「源死了」和「源没更新」。
+3. 谷歌新闻占收件箱约 84%，其中大量是股价财经转载：`inbox_config.GN_DROP_ORIGINS`（整个发布方都是投资内容的）加 `GN_STOCK_RE`（标题带股价字眼且发布方不是大媒体）过滤，一周数据上丢约 17%，被丢的真新闻都有别家转载。多邻国博客停用（一周 4 条全是内容营销）。
+4. 雷达领域加 11 个专业源（见 watchlist.md），验证过订阅源；`default_topics` 字段让题材完全对口的源直接贴雷达标签。Neuralink 官网更新页脚本渲染抓不到，没接。
+5. 第二步：`scripts/consensus.py` 按标题相似度把同一件事的条目合并成事件，按「几家独立来源在报」打分（转载站合算一家、聚合站只算半张编辑票、官方发了加 2），纯规则不用模型；`inbox_view.py` 开头多「共识事件」和「圈外候选」两节；每小时把中档以上的事件记进 `data/inbox/events-log.json`（保留 21 天）；每周六 Actions 跑 `weekly_review.py` 写 `data/reviews/`。圈外位发现新增谷歌新闻科技、科学头条栏目两个源。
+
+复盘时发现但没动的：本周 45 条新闻里，人形机器人、自动驾驶、芯片、脑机接口一条没上稿，原因是高门槛，不是漏报；AI 与教育的中国教育报条目以各省高校新闻稿为主，噪声大但国内教育照常关注，先不动；半数官方页面（Google AI、Meta AI、Mistral 等）一周没新内容，属于更新慢，用 `stale` 标记持续观察。
+
 ## 为什么改
 
 - 现在每期只靠模型临时用搜索引擎找新闻，每期候选只有 24–52 条。搜索引擎收录有延迟，常搜到转载站（Investing.com 转载路透、FourWeekMBA 等）。

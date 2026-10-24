@@ -113,9 +113,12 @@ EDU_EXEMPT = {"AI与教育", "留学与签证政策", "英语教学与语言培�
 RADAR = {"人形机器人", "芯片", "自动驾驶", "脑机接口", "AI全行业"}
 
 # ---- 信源清单 ------------------------------------------------------------
-def _gn(sid, name, q, watch=(), layer=2, region="intl", limit=15, requires=None, keep=False):
-    return dict(id=sid, name=name, type="gnews", q=q, tier=5, role="lead", region=region,
-                watch=list(watch), layer=layer, limit=limit, watch_requires=requires, keep_only_tagged=keep)
+def _gn(sid, name, q, watch=(), layer=2, region="intl", limit=15, requires=None, keep=False, topic=None):
+    d = dict(id=sid, name=name, type="gnews", q=q, tier=5, role="lead", region=region,
+             watch=list(watch), layer=layer, limit=limit, watch_requires=requires, keep_only_tagged=keep)
+    if topic:
+        d["topic"] = topic        # 谷歌新闻「头条」栏目（TECHNOLOGY / SCIENCE），不是关键词搜索
+    return d
 
 
 SOURCES = [
@@ -277,6 +280,10 @@ SOURCES = [
          tier=5, role="lead", region="intl", watch=[], layer=0, limit=60),
 
     # ===== Google 新闻关键词搜索（共识判断 + 清单外线索；链接是跳转地址，只当线索）=====
+    # 圈外位的来源：谷歌新闻科技、科学两个头条栏目。关键词搜索都是清单内的，清单外的大事只能靠这种「编辑挑的头条」发现；
+    # 它们在共识打分里只算一张编辑票（consensus.EDITOR_SOURCES），不当出处。layer=0：没命中清单就是清单外。
+    _gn("gn-top-tech", "Google 新闻头条：科技", "", layer=0, limit=40, topic="TECHNOLOGY"),
+    _gn("gn-top-science", "Google 新闻头条：科学", "", layer=0, limit=30, topic="SCIENCE"),
     _gn("gn-anthropic", "Google 新闻：Anthropic / Claude", "Anthropic OR Claude when:2d", ["Anthropic/Claude"], layer=1),
     _gn("gn-openai", "Google 新闻：OpenAI / ChatGPT", "OpenAI OR ChatGPT when:2d", ["OpenAI/ChatGPT"], layer=1),
     _gn("gn-google", "Google 新闻：Gemini / DeepMind", "Gemini OR DeepMind when:2d", ["Google/Gemini"], layer=1),

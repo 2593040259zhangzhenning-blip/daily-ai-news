@@ -9,8 +9,12 @@
   python3 scripts/inbox_view.py --status         # 只看各个源的抓取状态
   python3 scripts/inbox_view.py --checked        # 本次成功读取的来源名（直接抄进 scan.checked）
   python3 scripts/inbox_view.py --json           # 输出筛选后的原始 JSON
+  python3 scripts/inbox_view.py --no-events      # 不打印开头的「共识事件」「圈外候选」
 
 读法：
+  「共识事件」：程序把报同一件事的条目合并起来，按几家独立来源在报排序（中转站、聚合站不当出处，只算票）。
+  共识高不等于值得收，收不收仍按 watchlist.md 判断；它的用处是让你先看到「很多家都在报」的事，别漏。
+  「圈外候选」：不在关注清单里、但共识很高的事件，圈外位每天最多收 1 条。
   [一手] 链接就是原文，可以当出处（再按 sources.md 判断层级）。
   [线索] 聚合站、中转站、Google 新闻、个人 X 账号：只用来发现事件，出处必须回到原文。
   「功能更新候选」：产品更新日志（Claude Code、Claude 应用、ChatGPT / Codex、OpenAI API）里的条目，单独成一节，
@@ -25,6 +29,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import inbox_config as C  # noqa: E402
+import consensus as K  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 INBOX = ROOT / "data" / "inbox"
@@ -126,6 +131,50 @@ def show_group(title, items, args, lead_cap=10, rumor_cap=8):
     print()
 
 
+def event_line(e, urls):
+    tags = "、".join(e["watch"] + e["topics"]) or "清单外"
+    flags = []
+    if e["official"]:
+        flags.append("官方已发")
+    if "money_people" in e["flags"]:
+        flags.append("融资/人事/股价")
+    if "domestic" in e["flags"]:
+        flags.append("国内")
+    if "rumor" in e["flags"]:
+        flags.append("传闻类")
+    head = "[%s] %d 家在报%s%s · %s · %s" % (
+        K.level(e), e["real_outlets"], ("+%d 张编辑票" % e["editors"]) if e["editors"] else "",
+        ("（" + "、".join(flags) + "）") if flags else "", tags, e["title"])
+    rows = [head]
+    names = e["outlet_names"][:6]
+    if names:
+        rows.append("    在报：" + "、".join(names) + (" 等" if len(e["outlet_names"]) > 6 else ""))
+    if e["editor_names"]:
+        rows.append("    编辑挑了：" + "、".join(e["editor_names"]))
+    for nm, u in e["primary_links"][:2]:
+        rows.append("    一手：%s %s" % (nm, u))
+    return "\n".join(rows)
+
+
+def print_events(items, args):
+    events = K.cluster(items, threshold=0.5)
+    top = [e for e in events if K.level(e) in ("高", "中") and e["real_outlets"] >= 3]
+    top = top[:25] if not args.all else top
+    print("## 共识事件（几家独立来源在报；共 %d 个事件，下面是共识高、中档的前 %d 个）\n" % (len(events), len(top)))
+    for e in top:
+        print(event_line(e, args.urls))
+    if not top:
+        print("（这段时间没有共识中档以上的事件）")
+    print()
+    out = [e for e in events if K.is_outside(e)][:4]
+    print("## 圈外候选（不在关注清单里；全科技圈都在报才收，每天最多 1 条，标「圈外」；没有就不收）\n")
+    for e in out:
+        print(event_line(e, args.urls))
+    if not out:
+        print("（今天没有够格的圈外候选）")
+    print()
+
+
 def print_status(status):
     sm = status.get("summary", {})
     print("抓取状态：%d 个源，成功 %d，失败 %d；生成于 %s" % (
@@ -133,8 +182,9 @@ def print_status(status):
         pdt(status.get("generatedAt")).astimezone(BJ).strftime("%m-%d %H:%M") if pdt(status.get("generatedAt")) else "?"))
     for s in status.get("sources", []):
         mark = "OK  " if s["ok"] and not s.get("warn") else ("WARN" if s["ok"] else "FAIL")
+        mark = "STAL" if s["ok"] and s.get("stale") and not s.get("warn") else mark
         print("  %s %-20s 抓到 %-5s 窗口内 %-4s 新增 %-4s %s" % (mark, s["id"], s["fetched"], s["inWindow"], s["new"],
-                                                          s.get("error") or s.get("warn") or ""))
+                                                          s.get("error") or s.get("warn") or s.get("stale") or ""))
 
 
 def main():
@@ -145,6 +195,7 @@ def main():
     ap.add_argument("--status", action="store_true")
     ap.add_argument("--checked", action="store_true")
     ap.add_argument("--json", action="store_true")
+    ap.add_argument("--no-events", action="store_true")
     ap.add_argument("--dir", default=str(INBOX))
     args = ap.parse_args()
     d = Path(args.dir)
@@ -195,6 +246,12 @@ def main():
         print("⚠ 连续失败 3 次以上的源（这些源当前没有数据，需要手动查）：" +
               "；".join("%s（%s）" % (s["name"], s.get("error") or "未知") for s in bad))
     print()
+
+    if not args.no_events:
+        try:
+            print_events([i for i in items if i.get("kind") != "changelog"], args)
+        except Exception as e:      # 共识打分出错不能挡住后面的清单
+            print("（共识打分失败：%s %s，请直接看下面的清单）\n" % (type(e).__name__, e))
 
     cl = [i for i in items if i.get("kind") == "changelog"]
     items = [i for i in items if i.get("kind") != "changelog"]      # 更新日志只在「功能更新候选」里出现一次
