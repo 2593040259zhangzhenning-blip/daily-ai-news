@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-10-24T03:42:30Z",
+ "generatedAt": "2026-10-24T04:35:16Z",
  "summary": {
-  "sources": 64,
-  "ok": 62,
-  "failed": 2,
-  "items": 3645
+  "sources": 74,
+  "ok": 73,
+  "failed": 1,
+  "items": 3627
  },
  "sources": [
   {
@@ -19,9 +19,11 @@
    "fetched": 1318,
    "inWindow": 6,
    "new": 0,
-   "ms": 213,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 185,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T17:00:00Z",
+   "lastNewAt": null
   },
   {
    "id": "openai-chatgpt-codex-changelog",
@@ -32,12 +34,14 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 191,
+   "fetched": 145,
    "inWindow": 0,
    "new": 0,
-   "ms": 263,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 266,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-14T23:59:59Z",
+   "lastNewAt": null
   },
   {
    "id": "openai-api-changelog",
@@ -51,9 +55,11 @@
    "fetched": 186,
    "inWindow": 1,
    "new": 0,
-   "ms": 300,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 197,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-22T23:59:59Z",
+   "lastNewAt": null
   },
   {
    "id": "anthropic-news",
@@ -67,9 +73,11 @@
    "fetched": 26,
    "inWindow": 2,
    "new": 0,
-   "ms": 279,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 224,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": null,
+   "lastNewAt": null
   },
   {
    "id": "claude-notes",
@@ -83,9 +91,11 @@
    "fetched": 84,
    "inWindow": 0,
    "new": 0,
-   "ms": 588,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 393,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-21T23:59:59Z",
+   "lastNewAt": null
   },
   {
    "id": "claude-code-changelog",
@@ -93,15 +103,17 @@
    "type": "changelog_update",
    "url": "https://code.claude.com/docs/en/changelog.md",
    "tier": 1,
-   "ok": false,
-   "http": null,
-   "error": "没有解析到更新条目，页面格式可能变了",
-   "fetched": 0,
-   "inWindow": 0,
-   "new": 0,
-   "ms": 368,
-   "lastOkAt": "2026-10-20T17:42:24Z",
-   "failStreak": 82
+   "ok": true,
+   "http": 200,
+   "error": null,
+   "fetched": 430,
+   "inWindow": 3,
+   "new": 3,
+   "ms": 324,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T23:59:59Z",
+   "lastNewAt": "2026-10-24T04:35:16Z"
   },
   {
    "id": "claude-code-weekly",
@@ -109,15 +121,17 @@
    "type": "changelog_update",
    "url": "https://code.claude.com/docs/en/whats-new.md",
    "tier": 1,
-   "ok": false,
-   "http": null,
-   "error": "没有解析到更新条目，页面格式可能变了",
-   "fetched": 0,
+   "ok": true,
+   "http": 200,
+   "error": null,
+   "fetched": 24,
    "inWindow": 0,
    "new": 0,
-   "ms": 488,
-   "lastOkAt": "2026-10-20T17:42:24Z",
-   "failStreak": 82
+   "ms": 472,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-09-11T23:59:59Z",
+   "lastNewAt": null
   },
   {
    "id": "deepmind",
@@ -131,9 +145,11 @@
    "fetched": 100,
    "inWindow": 1,
    "new": 0,
-   "ms": 238,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 267,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-22T14:30:24Z",
+   "lastNewAt": null
   },
   {
    "id": "google-ai",
@@ -147,9 +163,11 @@
    "fetched": 20,
    "inWindow": 0,
    "new": 0,
-   "ms": 254,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 220,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-21T04:00:00Z",
+   "lastNewAt": null
   },
   {
    "id": "google-research",
@@ -164,8 +182,10 @@
    "inWindow": 1,
    "new": 0,
    "ms": 280,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T18:51:33Z",
+   "lastNewAt": null
   },
   {
    "id": "meta-ai",
@@ -179,9 +199,11 @@
    "fetched": 10,
    "inWindow": 0,
    "new": 0,
-   "ms": 2282,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 2036,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": null,
+   "lastNewAt": null
   },
   {
    "id": "nvidia-blog",
@@ -195,9 +217,11 @@
    "fetched": 18,
    "inWindow": 9,
    "new": 0,
-   "ms": 185,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 333,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T02:00:13Z",
+   "lastNewAt": null
   },
   {
    "id": "nvidia-news",
@@ -211,9 +235,11 @@
    "fetched": 20,
    "inWindow": 9,
    "new": 0,
-   "ms": 240,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 216,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T02:00:13Z",
+   "lastNewAt": null
   },
   {
    "id": "xai-news",
@@ -227,9 +253,11 @@
    "fetched": 87,
    "inWindow": 1,
    "new": 0,
-   "ms": 265,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 190,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": null,
+   "lastNewAt": null
   },
   {
    "id": "apple-newsroom",
@@ -243,9 +271,11 @@
    "fetched": 20,
    "inWindow": 3,
    "new": 0,
-   "ms": 75,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 165,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T06:10:35Z",
+   "lastNewAt": null
   },
   {
    "id": "apple-dev-releases",
@@ -259,9 +289,11 @@
    "fetched": 42,
    "inWindow": 1,
    "new": 0,
-   "ms": 126,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 115,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-22T21:00:00Z",
+   "lastNewAt": null
   },
   {
    "id": "apple-dev-news",
@@ -275,9 +307,11 @@
    "fetched": 147,
    "inWindow": 1,
    "new": 0,
-   "ms": 421,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 365,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-22T18:00:08Z",
+   "lastNewAt": null
   },
   {
    "id": "macrumors",
@@ -290,10 +324,12 @@
    "error": null,
    "fetched": 20,
    "inWindow": 41,
-   "new": 0,
-   "ms": 136,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "new": 1,
+   "ms": 91,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T04:02:07Z",
+   "lastNewAt": "2026-10-24T04:35:16Z"
   },
   {
    "id": "9to5mac",
@@ -305,11 +341,13 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 52,
+   "inWindow": 51,
    "new": 0,
-   "ms": 108,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 96,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T23:50:49Z",
+   "lastNewAt": null
   },
   {
    "id": "spacex-updates",
@@ -323,9 +361,11 @@
    "fetched": 31,
    "inWindow": 0,
    "new": 0,
-   "ms": 228,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 158,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-08T23:59:59Z",
+   "lastNewAt": null
   },
   {
    "id": "spacex-launches",
@@ -339,9 +379,11 @@
    "fetched": 20,
    "inWindow": 3,
    "new": 0,
-   "ms": 1178,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 458,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T02:22:27Z",
+   "lastNewAt": null
   },
   {
    "id": "hf-blog",
@@ -355,9 +397,11 @@
    "fetched": 890,
    "inWindow": 5,
    "new": 0,
-   "ms": 193,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 155,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T16:15:50Z",
+   "lastNewAt": null
   },
   {
    "id": "mistral",
@@ -371,9 +415,11 @@
    "fetched": 92,
    "inWindow": 0,
    "new": 0,
-   "ms": 153,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 133,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-21T12:00:20Z",
+   "lastNewAt": null
   },
   {
    "id": "edsurge",
@@ -387,9 +433,11 @@
    "fetched": 50,
    "inWindow": 0,
    "new": 0,
-   "ms": 543,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 397,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-21T00:00:00Z",
+   "lastNewAt": null
   },
   {
    "id": "insidehighered",
@@ -403,9 +451,11 @@
    "fetched": 10,
    "inWindow": 0,
    "new": 0,
-   "ms": 106,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 157,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T07:00:00Z",
+   "lastNewAt": null
   },
   {
    "id": "ukvi",
@@ -419,9 +469,11 @@
    "fetched": 20,
    "inWindow": 1,
    "new": 0,
-   "ms": 273,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 627,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T15:50:46Z",
+   "lastNewAt": null
   },
   {
    "id": "icef",
@@ -435,9 +487,11 @@
    "fetched": 8,
    "inWindow": 0,
    "new": 0,
-   "ms": 1222,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 1085,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-21T16:36:05Z",
+   "lastNewAt": null
   },
   {
    "id": "pie-news",
@@ -451,9 +505,11 @@
    "fetched": 10,
    "inWindow": 6,
    "new": 0,
-   "ms": 1504,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 974,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T14:25:15Z",
+   "lastNewAt": null
   },
   {
    "id": "ielts",
@@ -467,25 +523,11 @@
    "fetched": 8,
    "inWindow": 0,
    "new": 0,
-   "ms": 1900,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
-  },
-  {
-   "id": "duolingo",
-   "name": "多邻国博客",
-   "type": "rss",
-   "url": "https://blog.duolingo.com/feed/",
-   "tier": 1,
-   "ok": true,
-   "http": 200,
-   "error": null,
-   "fetched": 15,
-   "inWindow": 1,
-   "new": 0,
-   "ms": 174,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 355,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": null,
+   "lastNewAt": null
   },
   {
    "id": "moe",
@@ -499,9 +541,11 @@
    "fetched": 24,
    "inWindow": 0,
    "new": 0,
-   "ms": 1763,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 2083,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": null,
+   "lastNewAt": null
   },
   {
    "id": "jyb",
@@ -515,9 +559,11 @@
    "fetched": 331,
    "inWindow": 2,
    "new": 0,
-   "ms": 5152,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 3455,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": null,
+   "lastNewAt": null
   },
   {
    "id": "techcrunch-ai",
@@ -531,9 +577,11 @@
    "fetched": 20,
    "inWindow": 16,
    "new": 0,
-   "ms": 93,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 77,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T23:05:49Z",
+   "lastNewAt": null
   },
   {
    "id": "verge-ai",
@@ -547,9 +595,11 @@
    "fetched": 10,
    "inWindow": 22,
    "new": 0,
-   "ms": 119,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 112,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T21:11:07Z",
+   "lastNewAt": null
   },
   {
    "id": "ars-ai",
@@ -563,9 +613,11 @@
    "fetched": 20,
    "inWindow": 3,
    "new": 0,
-   "ms": 416,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 167,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T20:19:55Z",
+   "lastNewAt": null
   },
   {
    "id": "wired-ai",
@@ -579,9 +631,11 @@
    "fetched": 10,
    "inWindow": 3,
    "new": 0,
-   "ms": 98,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 84,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-22T19:56:32Z",
+   "lastNewAt": null
   },
   {
    "id": "mit-tr-ai",
@@ -595,9 +649,11 @@
    "fetched": 10,
    "inWindow": 4,
    "new": 0,
-   "ms": 123,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 116,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-22T21:17:29Z",
+   "lastNewAt": null
   },
   {
    "id": "the-decoder",
@@ -611,9 +667,11 @@
    "fetched": 10,
    "inWindow": 15,
    "new": 0,
-   "ms": 1455,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 1419,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T19:00:07Z",
+   "lastNewAt": null
   },
   {
    "id": "qbitai",
@@ -627,9 +685,209 @@
    "fetched": 10,
    "inWindow": 5,
    "new": 0,
-   "ms": 1445,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 1232,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T07:35:51Z",
+   "lastNewAt": null
+  },
+  {
+   "id": "robot-report",
+   "name": "The Robot Report",
+   "type": "rss",
+   "url": "https://www.therobotreport.com/feed/",
+   "tier": 3,
+   "ok": true,
+   "http": 200,
+   "error": null,
+   "fetched": 15,
+   "inWindow": 0,
+   "new": 0,
+   "ms": 167,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T20:06:28Z",
+   "lastNewAt": null
+  },
+  {
+   "id": "ieee-robotics",
+   "name": "IEEE Spectrum 机器人",
+   "type": "rss",
+   "url": "https://spectrum.ieee.org/feeds/topic/robotics.rss",
+   "tier": 3,
+   "ok": true,
+   "http": 200,
+   "error": null,
+   "fetched": 30,
+   "inWindow": 0,
+   "new": 0,
+   "ms": 193,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T15:30:02Z",
+   "lastNewAt": null
+  },
+  {
+   "id": "tc-robotics",
+   "name": "TechCrunch 机器人",
+   "type": "rss",
+   "url": "https://techcrunch.com/category/robotics/feed/",
+   "tier": 3,
+   "ok": true,
+   "http": 200,
+   "error": null,
+   "fetched": 20,
+   "inWindow": 1,
+   "new": 1,
+   "ms": 51,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-22T18:38:47Z",
+   "lastNewAt": "2026-10-24T04:35:16Z"
+  },
+  {
+   "id": "waymo",
+   "name": "Waymo 官方博客",
+   "type": "rss",
+   "url": "https://waymo.com/blog/rss.xml",
+   "tier": 1,
+   "ok": true,
+   "http": 200,
+   "error": null,
+   "fetched": 325,
+   "inWindow": 0,
+   "new": 0,
+   "ms": 317,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-20T00:00:00Z",
+   "lastNewAt": null
+  },
+  {
+   "id": "electrek",
+   "name": "Electrek",
+   "type": "rss",
+   "url": "https://electrek.co/feed/",
+   "tier": 3,
+   "ok": true,
+   "http": 200,
+   "error": null,
+   "fetched": 100,
+   "inWindow": 2,
+   "new": 2,
+   "ms": 115,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T22:59:39Z",
+   "lastNewAt": "2026-10-24T04:35:16Z"
+  },
+  {
+   "id": "tc-transport",
+   "name": "TechCrunch 交通",
+   "type": "rss",
+   "url": "https://techcrunch.com/category/transportation/feed/",
+   "tier": 3,
+   "ok": true,
+   "http": 200,
+   "error": null,
+   "fetched": 20,
+   "inWindow": 2,
+   "new": 2,
+   "ms": 329,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T04:00:00Z",
+   "lastNewAt": "2026-10-24T04:35:16Z"
+  },
+  {
+   "id": "verge-transport",
+   "name": "The Verge 交通",
+   "type": "rss",
+   "url": "https://www.theverge.com/rss/transportation/index.xml",
+   "tier": 3,
+   "ok": true,
+   "http": 200,
+   "error": null,
+   "fetched": 10,
+   "inWindow": 4,
+   "new": 4,
+   "ms": 57,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T15:24:45Z",
+   "lastNewAt": "2026-10-24T04:35:16Z"
+  },
+  {
+   "id": "ieee-semis",
+   "name": "IEEE Spectrum 半导体",
+   "type": "rss",
+   "url": "https://spectrum.ieee.org/feeds/topic/semiconductors.rss",
+   "tier": 3,
+   "ok": true,
+   "http": 200,
+   "error": null,
+   "fetched": 30,
+   "inWindow": 1,
+   "new": 1,
+   "ms": 239,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T18:00:03Z",
+   "lastNewAt": "2026-10-24T04:35:16Z"
+  },
+  {
+   "id": "eetimes",
+   "name": "EE Times",
+   "type": "rss",
+   "url": "https://www.eetimes.com/feed/",
+   "tier": 3,
+   "ok": false,
+   "http": 403,
+   "error": "HTTP 403",
+   "fetched": 0,
+   "inWindow": 0,
+   "new": 0,
+   "ms": 203,
+   "lastOkAt": null,
+   "failStreak": 1,
+   "newestItemAt": null,
+   "lastNewAt": null
+  },
+  {
+   "id": "ieee-biomed",
+   "name": "IEEE Spectrum 生物医学",
+   "type": "rss",
+   "url": "https://spectrum.ieee.org/feeds/topic/biomedical.rss",
+   "tier": 3,
+   "ok": true,
+   "http": 200,
+   "error": null,
+   "fetched": 30,
+   "inWindow": 0,
+   "new": 0,
+   "ms": 211,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-20T14:00:04Z",
+   "lastNewAt": null
+  },
+  {
+   "id": "stat-neuro",
+   "name": "STAT 神经科学",
+   "type": "rss",
+   "url": "https://www.statnews.com/topic/neuroscience/feed/",
+   "tier": 3,
+   "ok": true,
+   "http": 200,
+   "error": null,
+   "fetched": 20,
+   "inWindow": 0,
+   "new": 0,
+   "ms": 156,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-22T08:30:00Z",
+   "lastNewAt": null
   },
   {
    "id": "techmeme",
@@ -643,9 +901,11 @@
    "fetched": 15,
    "inWindow": 89,
    "new": 1,
-   "ms": 150,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 370,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T03:45:01Z",
+   "lastNewAt": "2026-10-24T04:35:16Z"
   },
   {
    "id": "hn",
@@ -658,10 +918,12 @@
    "error": null,
    "fetched": 30,
    "inWindow": 61,
-   "new": 1,
-   "ms": 265,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "new": 0,
+   "ms": 237,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T23:30:17Z",
+   "lastNewAt": null
   },
   {
    "id": "hf-papers",
@@ -673,11 +935,13 @@
    "http": 200,
    "error": null,
    "fetched": 50,
-   "inWindow": 3,
+   "inWindow": 2,
    "new": 0,
-   "ms": 169,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 135,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-22T13:14:38Z",
+   "lastNewAt": null
   },
   {
    "id": "ai-news-radar",
@@ -689,11 +953,13 @@
    "http": 200,
    "error": null,
    "fetched": 255,
-   "inWindow": 178,
+   "inWindow": 175,
    "new": 0,
-   "ms": 222,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 231,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T23:42:03Z",
+   "lastNewAt": null
   },
   {
    "id": "follow-builders",
@@ -705,11 +971,13 @@
    "http": 200,
    "error": null,
    "fetched": 33,
-   "inWindow": 40,
+   "inWindow": 39,
    "new": 0,
-   "ms": 358,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 220,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T05:59:01Z",
+   "lastNewAt": null
   },
   {
    "id": "gn-anthropic",
@@ -721,11 +989,14 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 280,
-   "new": 1,
-   "ms": 524,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "inWindow": 278,
+   "new": 2,
+   "ms": 499,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T04:00:00Z",
+   "lastNewAt": "2026-10-24T04:35:16Z",
+   "dropped": 8
   },
   {
    "id": "gn-openai",
@@ -737,11 +1008,14 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 331,
-   "new": 2,
-   "ms": 1973,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "inWindow": 333,
+   "new": 5,
+   "ms": 1977,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T04:15:09Z",
+   "lastNewAt": "2026-10-24T04:35:16Z",
+   "dropped": 8
   },
   {
    "id": "gn-google",
@@ -753,11 +1027,14 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 184,
+   "inWindow": 181,
    "new": 1,
-   "ms": 3361,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 3446,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T04:00:00Z",
+   "lastNewAt": "2026-10-24T04:35:16Z",
+   "dropped": 12
   },
   {
    "id": "gn-meta",
@@ -768,12 +1045,15 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 78,
-   "inWindow": 87,
-   "new": 2,
-   "ms": 4769,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "fetched": 77,
+   "inWindow": 86,
+   "new": 1,
+   "ms": 4874,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T02:51:22Z",
+   "lastNewAt": "2026-10-24T04:35:16Z",
+   "dropped": 20
   },
   {
    "id": "gn-nvidia",
@@ -787,9 +1067,12 @@
    "fetched": 100,
    "inWindow": 357,
    "new": 2,
-   "ms": 6171,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 6369,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T04:01:00Z",
+   "lastNewAt": "2026-10-24T04:35:16Z",
+   "dropped": 29
   },
   {
    "id": "gn-apple",
@@ -801,11 +1084,14 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 390,
-   "new": 3,
-   "ms": 7535,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "inWindow": 385,
+   "new": 1,
+   "ms": 7843,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T02:15:00Z",
+   "lastNewAt": "2026-10-24T04:35:16Z",
+   "dropped": 4
   },
   {
    "id": "gn-spacex",
@@ -817,11 +1103,14 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 333,
+   "inWindow": 332,
    "new": 3,
-   "ms": 8723,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 9038,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T04:10:19Z",
+   "lastNewAt": "2026-10-24T04:35:16Z",
+   "dropped": 34
   },
   {
    "id": "gn-xai-mistral",
@@ -833,11 +1122,14 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 136,
+   "inWindow": 133,
    "new": 0,
-   "ms": 10134,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 10500,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T01:34:08Z",
+   "lastNewAt": null,
+   "dropped": 15
   },
   {
    "id": "gn-humanoid",
@@ -849,11 +1141,14 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 166,
-   "new": 4,
-   "ms": 10451,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "inWindow": 164,
+   "new": 0,
+   "ms": 10571,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T03:28:17Z",
+   "lastNewAt": null,
+   "dropped": 6
   },
   {
    "id": "gn-chips",
@@ -865,11 +1160,14 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 336,
-   "new": 4,
-   "ms": 10464,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "inWindow": 329,
+   "new": 1,
+   "ms": 12008,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T03:16:00Z",
+   "lastNewAt": "2026-10-24T04:35:16Z",
+   "dropped": 38
   },
   {
    "id": "gn-autonomy",
@@ -881,11 +1179,14 @@
    "http": 200,
    "error": null,
    "fetched": 100,
-   "inWindow": 183,
+   "inWindow": 182,
    "new": 0,
-   "ms": 11782,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 11941,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T00:48:40Z",
+   "lastNewAt": null,
+   "dropped": 5
   },
   {
    "id": "gn-bci",
@@ -896,12 +1197,15 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 20,
-   "inWindow": 28,
+   "fetched": 19,
+   "inWindow": 27,
    "new": 0,
-   "ms": 11804,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 11831,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T16:14:43Z",
+   "lastNewAt": null,
+   "dropped": 1
   },
   {
    "id": "gn-edu-ai",
@@ -912,12 +1216,14 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 92,
+   "fetched": 93,
    "inWindow": 93,
-   "new": 0,
-   "ms": 12587,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "new": 1,
+   "ms": 11962,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T04:14:28Z",
+   "lastNewAt": "2026-10-24T04:35:16Z"
   },
   {
    "id": "gn-the",
@@ -931,9 +1237,11 @@
    "fetched": 100,
    "inWindow": 1,
    "new": 0,
-   "ms": 11984,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 12142,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T02:21:28Z",
+   "lastNewAt": null
   },
   {
    "id": "gn-abroad",
@@ -944,12 +1252,14 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 44,
-   "inWindow": 45,
-   "new": 0,
-   "ms": 11932,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "fetched": 43,
+   "inWindow": 44,
+   "new": 2,
+   "ms": 11980,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T23:57:32Z",
+   "lastNewAt": "2026-10-24T04:35:16Z"
   },
   {
    "id": "gn-ielts",
@@ -960,12 +1270,14 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 37,
-   "inWindow": 25,
-   "new": 1,
-   "ms": 11920,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "fetched": 35,
+   "inWindow": 24,
+   "new": 0,
+   "ms": 11876,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T03:35:15Z",
+   "lastNewAt": null
   },
   {
    "id": "gn-english",
@@ -976,12 +1288,15 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 41,
-   "inWindow": 42,
-   "new": 0,
-   "ms": 11853,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "fetched": 42,
+   "inWindow": 43,
+   "new": 2,
+   "ms": 11914,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T02:00:00Z",
+   "lastNewAt": "2026-10-24T04:35:16Z",
+   "dropped": 9
   },
   {
    "id": "gn-zh-edu",
@@ -992,12 +1307,14 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 42,
-   "inWindow": 24,
-   "new": 0,
-   "ms": 11884,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "fetched": 44,
+   "inWindow": 25,
+   "new": 2,
+   "ms": 11865,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T22:48:16Z",
+   "lastNewAt": "2026-10-24T04:35:16Z"
   },
   {
    "id": "gn-zh-abroad",
@@ -1008,12 +1325,14 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 5,
-   "inWindow": 6,
+   "fetched": 4,
+   "inWindow": 5,
    "new": 0,
-   "ms": 11783,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "ms": 11832,
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-23T09:00:00Z",
+   "lastNewAt": null
   },
   {
    "id": "gn-zh-english",
@@ -1024,12 +1343,14 @@
    "ok": true,
    "http": 200,
    "error": null,
-   "fetched": 8,
+   "fetched": 9,
    "inWindow": 13,
-   "new": 1,
+   "new": 2,
    "ms": 11951,
-   "lastOkAt": "2026-10-24T03:42:30Z",
-   "failStreak": 0
+   "lastOkAt": "2026-10-24T04:35:16Z",
+   "failStreak": 0,
+   "newestItemAt": "2026-10-24T04:18:00Z",
+   "lastNewAt": "2026-10-24T04:35:16Z"
   }
  ]
 }
