@@ -1,32 +1,17 @@
 {
- "date": "2026-10-25",
- "headline": "谷歌要拿邮件和相册推广告",
- "updatedAt": "2026-10-25T06:53:00+08:00",
- "count": 5,
+ "date": "2026-10-26",
+ "headline": "OpenAI 打折抢 Anthropic 客户",
+ "updatedAt": "2026-10-26T06:52:42+08:00",
+ "count": 2,
  "lead": {
-  "cat": "product",
-  "title": "谷歌：连上 AI 的 Gmail 和相册可能用来推广告",
-  "summary": "把邮件和相册交给 AI 助手之前，先想想它们也可能被拿去推广告。"
+  "cat": "biz",
+  "title": "OpenAI 最高打一折抢 Anthropic 大客户",
+  "summary": "Claude 与 ChatGPT 的企业价格战开打，OpenAI 用最高九成折扣抢客户。"
  },
  "items": [
   {
-   "cat": "policy",
-   "title": "猫王歌曲版权方起诉 Anthropic",
-   "tier": "brief"
-  },
-  {
-   "cat": "policy",
-   "title": "印度给 9–12 年级推出 AI 入门课",
-   "tier": "brief"
-  },
-  {
-   "cat": "policy",
-   "title": "瑞典政府办公厅禁用 ChatGPT 和 Claude",
-   "tier": "brief"
-  },
-  {
-   "cat": "model",
-   "title": "Block 推出只用人声训练的语音模型 Dessa",
+   "cat": "product",
+   "title": "iPhone Duo 屏幕开裂，iFixit 拆机找原因",
    "tier": "brief"
   }
  ]

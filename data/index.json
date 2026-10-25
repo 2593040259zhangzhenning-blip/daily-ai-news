@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-24T22:53:27+00:00",
+ "generatedAt": "2026-10-25T22:52:42+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -252,6 +252,14 @@
    "headline": "谷歌要拿邮件和相册推广告",
    "updatedAt": "2026-10-25T06:53:00+08:00",
    "count": 5,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-10-26",
+   "headline": "OpenAI 打折抢 Anthropic 客户",
+   "updatedAt": "2026-10-26T06:52:42+08:00",
+   "count": 2,
    "specials": [],
    "models": []
   }

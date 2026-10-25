@@ -1,0 +1,128 @@
+{
+ "date": "2026-10-26",
+ "issues": [
+  {
+   "key": "2026-10-26-1morning",
+   "date": "2026-10-26",
+   "edition": "morning",
+   "createdAt": "2026-10-26T06:52:42+08:00",
+   "headline": "OpenAI 打折抢 Anthropic 客户",
+   "items": [
+    {
+     "cat": "biz",
+     "title": "OpenAI 最高打一折抢 Anthropic 大客户",
+     "body": "据 The Information 报道，OpenAI 正用三折到九折不等的大幅折扣，把企业客户从 Anthropic 手里挖走：Replit 在一份年费超过 1 亿美元的合同上拿到三成以上折扣后改用 OpenAI；Rippling 写代码的活儿交给 OpenAI 的比例从 16% 涨到 52%，给 Anthropic 的从 57% 降到 18%；DataCamp 说 AI 开销因此省了八到九成。OpenAI 在拿利润换市场份额，Claude 和 ChatGPT 之间的价格战正在打响，最终可能传导到普通用户的订阅和额度上。",
+     "score": 6,
+     "tier": "lead",
+     "summary": "Claude 与 ChatGPT 的企业价格战开打，OpenAI 用最高九成折扣抢客户。",
+     "sources": [
+      {
+       "name": "The Decoder",
+       "url": "https://the-decoder.com/openai-offers-discounts-up-to-90-percent-to-poach-anthropics-biggest-customers/"
+      },
+      {
+       "name": "The Next Web",
+       "url": "https://thenextweb.com/news/anthropic-openai-enterprise-discounts-tokens-the-information"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "iPhone Duo 屏幕开裂，iFixit 拆机找原因",
+     "body": "首批 iPhone Duo 用户反映内屏在折痕处出现裂纹和亮线，有的在开机设置时就坏了。iFixit 拆机后推测，问题出在屏幕排线穿过铰链的位置附近，中间支撑条下沉不够可能在折叠处形成应力集中，但这只是推测。它给了 5/10 的可修复分，是折叠屏里最高的；保外换内屏要 999 美元，苹果目前对受影响的机器换新。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "iFixit",
+       "url": "https://www.ifixit.com/News/119895/iphone-duo-teardown"
+      },
+      {
+       "name": "9to5Mac",
+       "url": "https://9to5mac.com/2026/10/25/ifixit-tears-down-iphone-duo-finds-possible-causes-of-early-screen-failures/"
+      },
+      {
+       "name": "The National",
+       "url": "https://www.thenationalnews.com/future/technology/2026/10/25/apples-iphone-duo-faces-screen-damage-complaints-as-first-buyers-report-cracks/"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "苹果 10/28 洛杉矶「Pro and tell」活动（北京时间 10/29 凌晨 1 点），传闻发布触屏 OLED MacBook Pro",
+    "Kimi K3.1 Pro 完整权重 11 月 4 日前开源",
+    "星舰第 15 次试飞（11 月，尝试两级回收）"
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI 官网",
+     "ChatGPT 与 Codex 更新日志（OpenAI）",
+     "OpenAI API 更新日志",
+     "Anthropic 新闻页",
+     "Claude 发布说明",
+     "Claude Code 更新日志",
+     "Claude Code 每周摘要",
+     "Google DeepMind 博客",
+     "Google AI 栏目",
+     "Google Research 博客",
+     "Meta AI 博客",
+     "英伟达博客",
+     "英伟达新闻中心",
+     "xAI 新闻页",
+     "Apple Newsroom",
+     "Apple 开发者版本发布",
+     "Apple 开发者新闻",
+     "MacRumors",
+     "9to5Mac",
+     "SpaceX 官网更新",
+     "SpaceX 发射日程（Launch Library）",
+     "Hugging Face 博客",
+     "Mistral 新闻",
+     "EdSurge",
+     "Inside Higher Ed",
+     "英国签证与移民局（GOV.UK）",
+     "ICEF Monitor",
+     "The PIE News",
+     "雅思官方（IELTS）",
+     "教育部（工作动态）",
+     "中国教育报",
+     "TechCrunch AI",
+     "The Verge AI",
+     "Ars Technica AI",
+     "Wired AI",
+     "MIT Technology Review AI",
+     "The Decoder",
+     "量子位",
+     "The Robot Report",
+     "IEEE Spectrum 机器人",
+     "TechCrunch 机器人",
+     "Waymo 官方博客",
+     "Electrek",
+     "TechCrunch 交通",
+     "The Verge 交通",
+     "IEEE Spectrum 半导体",
+     "IEEE Spectrum 生物医学",
+     "STAT 神经科学",
+     "Techmeme",
+     "Hacker News 首页（≥100 分）",
+     "Hugging Face 每日论文（前 12）",
+     "AI News Radar（中转站）",
+     "Follow Builders（AI 圈人物 X）",
+     "Google 新闻关键词搜索（22 组）",
+     "ChatGPT 发布说明",
+     "@OpenAI",
+     "@AnthropicAI",
+     "@claudeai",
+     "AI 公司教育产品公告",
+     "The Information（经转述）",
+     "iFixit",
+     "The Next Web",
+     "The National"
+    ],
+    "candidates": 198
+   }
+  }
+ ],
+ "specials": [],
+ "models": []
+}
