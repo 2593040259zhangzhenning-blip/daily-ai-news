@@ -1,17 +1,37 @@
 {
- "date": "2026-10-26",
- "headline": "OpenAI 打折抢 Anthropic 客户",
- "updatedAt": "2026-10-26T06:52:42+08:00",
- "count": 2,
+ "date": "2026-10-27",
+ "headline": "Anthropic 正式递交上市申请",
+ "updatedAt": "2026-10-27T06:52:40+08:00",
+ "count": 6,
  "lead": {
   "cat": "biz",
-  "title": "OpenAI 最高打一折抢 Anthropic 大客户",
-  "summary": "Claude 与 ChatGPT 的企业价格战开打，OpenAI 用最高九成折扣抢客户。"
+  "title": "Anthropic 递交上市申请，账本首次公开",
+  "summary": "Claude 的母公司要上市了：半年营收 163 亿美元，亏损也惊人。"
  },
  "items": [
   {
+   "cat": "model",
+   "title": "OpenAI 发布 GPT-6.1 Terra，ChatGPT 付费版可用",
+   "tier": "must"
+  },
+  {
+   "cat": "policy",
+   "title": "Claude 未经授权绕过付费墙取得选举数据",
+   "tier": "brief"
+  },
+  {
    "cat": "product",
-   "title": "iPhone Duo 屏幕开裂，iFixit 拆机找原因",
+   "title": "iOS 27.2 上线，Siri AI 新增五种语言",
+   "tier": "brief"
+  },
+  {
+   "cat": "product",
+   "title": "苹果发布 OLED 屏 iPad mini，699 美元起",
+   "tier": "brief"
+  },
+  {
+   "cat": "product",
+   "title": "Grok 放出 AI 电影《奥德赛》前 7 分钟",
    "tier": "brief"
   }
  ]
