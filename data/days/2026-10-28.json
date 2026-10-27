@@ -1,0 +1,247 @@
+{
+ "date": "2026-10-28",
+ "issues": [
+  {
+   "key": "2026-10-28-1morning",
+   "date": "2026-10-28",
+   "edition": "morning",
+   "createdAt": "2026-10-28T06:53:24+08:00",
+   "headline": "OpenAI 称 AI 攻下三道科学难题",
+   "items": [
+    {
+     "cat": "research",
+     "title": "OpenAI 称内部模型破解三道科学难题",
+     "body": "OpenAI 10/26 宣布，它尚未公开的内部模型在数学、计算机科学和物理上各解决了一个长期悬而未决的问题，其中计算机科学那项声称推翻了「指数时间假设」，和著名的千禧年大奖难题相关。它请了包括一位诺贝尔奖得主在内的外部专家来核查证明，并推出和学术界合作的新方式。结论尚未经过同行评审，也有研究者不满 OpenAI 只公布结果、不开放模型；据 The Information 报道，Anthropic 同一天也宣称在密码学上取得突破。",
+     "score": 7,
+     "tier": "lead",
+     "summary": "AI 开始挑战顶尖理论难题，但证明是否成立还要等专家核查。",
+     "sources": [
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1019143/openai-eth-kaseya-science-math-physics"
+      },
+      {
+       "name": "The Decoder",
+       "url": "https://the-decoder.com/openai-asks-outside-experts-including-a-nobel-laureate-to-check-proofs-its-ai-produced-in-math-computer-science-and-physics"
+      },
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/10/27/frontier-ai-labs-say-their-models-refuted-the-exponential-time-hypothesis-what-does-that-mean"
+      },
+      {
+       "name": "OpenAI 论文（GitHub）",
+       "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "苹果发布 M6 款 14 寸 MacBook Pro 和 iMac",
+     "body": "苹果 10/27 用新闻稿发布换上 M6 芯片的 14 英寸 MacBook Pro 和 24 英寸 iMac，主打更快的性能和本地 AI 能力；iMac 还换上自研 N1 无线芯片，支持 Wi-Fi 7 和蓝牙 6，固态硬盘也更快，外观配色沿用旧款。传闻中带触屏和 OLED 的新 MacBook Pro 预计在北京时间 10/29 凌晨的发布活动上亮相。",
+     "score": 6,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Apple Newsroom",
+       "url": "https://www.apple.com/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6"
+      },
+      {
+       "name": "Apple Newsroom",
+       "url": "https://www.apple.com/newsroom/2026/10/apple-unveils-new-imac-with-m6"
+      },
+      {
+       "name": "MacRumors",
+       "url": "https://www.macrumors.com/2026/10/27/apple-announces-new-imac-with-m6-chip-and-more"
+      }
+     ]
+    },
+    {
+     "cat": "model",
+     "title": "谷歌发布世界模型 Genie 4",
+     "body": "Google DeepMind 10/27 发布 Genie 4，能按指令实时生成可以走动探索的虚拟场景：同一场景能保持连贯约两分钟，是上一代的两倍，还新增了声音，物理效果和人物动作更逼真，用户可以实时操控。世界模型被看作训练机器人和制作影视、游戏的新工具。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Google DeepMind 博客",
+       "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation"
+      },
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering"
+      },
+      {
+       "name": "Ars Technica",
+       "url": "https://arstechnica.com/google/2026/10/deepminds-genie-4-world-model-adds-audio-and-more-realistic-people-to-simulations"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "苹果办公三件套加入 AI 助手",
+     "body": "Pages、Keynote 和 Numbers 加入测试版「智能助手」，能起草和改写文稿、生成幻灯片和演讲备注、帮忙写表格公式。只给 Apple Creator Studio 订阅用户（美国 12.99 美元/月），目前只支持美式英语。苹果 10/27 又给 Creator Studio 加了一批 AI 功能，据 9to5Mac 报道部分用的是 OpenAI 的模型。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Apple Newsroom",
+       "url": "https://www.apple.com/newsroom/2026/10/apple-creator-studio-adds-powerful-new-ai-features-and-even-more-creative-tools"
+      },
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/tech/1019373/apple-pages-keynote-numbers-ai-chatbot-update"
+      },
+      {
+       "name": "9to5Mac",
+       "url": "https://9to5mac.com/2026/10/27/apple-creator-studio-gets-powerful-new-ai-features-using-openai-models"
+      },
+      {
+       "name": "iGeeksBlog",
+       "url": "https://www.igeeksblog.com/apple-intelligent-assistant-pages-keynote-numbers/"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "ChatGPT 能连 iCloud 邮件和日历了",
+     "body": "ChatGPT 的插件目录上线了读取 iCloud 邮件和日历的插件，连上后可以把两边放在一起搜，比如查上次和某人见面是哪天、前后来往了哪些邮件。插件由德国公司 CERTENTIC 开发，不是苹果官方出品，只能读、不能发信或改日程。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "ChatGPT 插件目录",
+       "url": "https://chatgpt.com/plugins/plugin_asdk_app_6ab0c34033808191955924a341a2876b"
+      },
+      {
+       "name": "9to5Mac",
+       "url": "https://9to5mac.com/2026/10/27/icloud-mail-and-calendar-plugins-now-work-with-chatgpt"
+      },
+      {
+       "name": "MacRumors",
+       "url": "https://www.macrumors.com/2026/10/27/chatgpt-icloud-mail-calendar-plugin"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "Waymo 无人出租车再扩约 250 平方英里",
+     "body": "Waymo 宣布一周内把无人驾驶出租车的服务范围扩大近 250 平方英里，涉及洛杉矶、纳什维尔、奥兰多、圣迭戈等 5 个城市。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Electrek",
+       "url": "https://electrek.co/2026/10/27/waymo-expansion-250-square-miles-five-cities"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "苹果「Pro and tell」活动（北京时间 10/29 凌晨 1 点），预计发布触屏 OLED MacBook Pro",
+    "Kimi K3.1 Pro 完整权重 11 月 4 日前开源",
+    "星舰第 15 次试飞（11 月，尝试两级回收）"
+   ],
+   "updates": [
+    {
+     "product": "Claude Code",
+     "text": "全屏模式下，排队等待的消息点一下下面的提示就能立刻发出",
+     "date": "2026-10-27",
+     "sources": [
+      {
+       "name": "Claude Code 更新日志",
+       "url": "https://code.claude.com/docs/en/changelog"
+      }
+     ]
+    },
+    {
+     "product": "Claude Code",
+     "text": "新建或修改云端定时任务时，选模型的地方可以顺便设置思考强度",
+     "date": "2026-10-27",
+     "sources": [
+      {
+       "name": "Claude Code 更新日志",
+       "url": "https://code.claude.com/docs/en/changelog"
+      }
+     ]
+    },
+    {
+     "product": "Claude Code",
+     "text": "VS Code 里 Claude 回复中的代码块有了语法高亮，浅色、深色主题都支持",
+     "date": "2026-10-26",
+     "sources": [
+      {
+       "name": "Claude Code 更新日志",
+       "url": "https://code.claude.com/docs/en/changelog"
+      }
+     ]
+    }
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI 官网",
+     "ChatGPT 与 Codex 更新日志（OpenAI）",
+     "OpenAI API 更新日志",
+     "Anthropic 新闻页",
+     "Claude 发布说明",
+     "Claude Code 更新日志",
+     "Claude Code 每周摘要",
+     "Google DeepMind 博客",
+     "Google AI 栏目",
+     "Google Research 博客",
+     "Meta AI 博客",
+     "英伟达博客",
+     "英伟达新闻中心",
+     "xAI 新闻页",
+     "Apple Newsroom",
+     "Apple 开发者版本发布",
+     "Apple 开发者新闻",
+     "MacRumors",
+     "9to5Mac",
+     "SpaceX 官网更新",
+     "SpaceX 发射日程（Launch Library）",
+     "Hugging Face 博客",
+     "Mistral 新闻",
+     "EdSurge",
+     "Inside Higher Ed",
+     "英国签证与移民局（GOV.UK）",
+     "ICEF Monitor",
+     "The PIE News",
+     "雅思官方（IELTS）",
+     "教育部（工作动态）",
+     "中国教育报",
+     "TechCrunch AI",
+     "The Verge AI",
+     "Ars Technica AI",
+     "Wired AI",
+     "MIT Technology Review AI",
+     "The Decoder",
+     "量子位",
+     "The Robot Report",
+     "IEEE Spectrum 机器人",
+     "TechCrunch 机器人",
+     "Waymo 官方博客",
+     "Electrek",
+     "TechCrunch 交通",
+     "The Verge 交通",
+     "IEEE Spectrum 半导体",
+     "IEEE Spectrum 生物医学",
+     "STAT 神经科学",
+     "Techmeme",
+     "Hacker News 首页（≥100 分）",
+     "Hugging Face 每日论文（前 12）",
+     "AI News Radar（中转站）",
+     "Follow Builders（AI 圈人物 X）",
+     "Google 新闻关键词搜索（22 组）",
+     "ChatGPT 发布说明",
+     "ChatGPT 插件目录",
+     "AI 公司教育产品公告",
+     "iGeeksBlog",
+     "Mac4Ever"
+    ],
+    "candidates": 303
+   }
+  }
+ ],
+ "specials": [],
+ "models": []
+}
