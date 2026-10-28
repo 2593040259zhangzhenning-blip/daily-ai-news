@@ -1,0 +1,75 @@
+{
+ "slug": "gemini-4-carbon",
+ "date": "2026-10-29",
+ "name": "Gemini 4 Carbon",
+ "org": "Google",
+ "createdAt": "2026-10-29T06:55:00+08:00",
+ "self": "Gemini 4 Carbon",
+ "board": {
+  "source": "Artificial Analysis 综合指数 v5.0",
+  "asof": "2026-10-29",
+  "rows": [
+   {
+    "name": "Gemini 4 Carbon",
+    "score": 59,
+    "rank": 1
+   },
+   {
+    "name": "Opus 5.5",
+    "score": 58,
+    "rank": 2
+   },
+   {
+    "name": "GPT-6 Astra",
+    "score": 57,
+    "rank": 3
+   },
+   {
+    "name": "GPT-6.1 Sol",
+    "score": 55,
+    "rank": 4
+   },
+   {
+    "name": "Gemini 4 Argon",
+    "score": 50,
+    "rank": 5
+   },
+   {
+    "name": "Kimi K3.1 Pro",
+    "score": 46,
+    "rank": 6
+   }
+  ]
+ },
+ "use": [
+  {
+   "where": "Gemini App",
+   "value": "暂未开放",
+   "note": "先给网络安全团队试用"
+  }
+ ],
+ "sources": [
+  {
+   "name": "Google DeepMind 博客",
+   "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model"
+  },
+  {
+   "name": "9to5Google",
+   "url": "https://9to5google.com/2026/10/28/gemini-4-carbon-announcement/"
+  },
+  {
+   "name": "TestingCatalog",
+   "url": "https://www.testingcatalog.com/google-unveils-gemini-4-carbon-for-cyber-defenders/"
+  },
+  {
+   "name": "WinBuzzer（AA 综合指数 v5）",
+   "url": "https://winbuzzer.com/2026/10/28/artificial-analysis-reweights-ai-rankings-toward-private-tests-xcxwbn/"
+  },
+  {
+   "name": "Artificial Analysis 排行榜",
+   "url": "https://artificialanalysis.ai/leaderboards/models"
+  }
+ ],
+ "pos": 1,
+ "rankText": "第 1"
+}

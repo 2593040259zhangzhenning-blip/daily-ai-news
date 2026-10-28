@@ -1,37 +1,39 @@
 {
- "date": "2026-10-28",
- "headline": "OpenAI 称 AI 攻下三道科学难题",
- "updatedAt": "2026-10-28T06:53:24+08:00",
+ "date": "2026-10-29",
+ "headline": "谷歌 Gemini 4 Carbon 登顶综合榜",
+ "updatedAt": "2026-10-29T06:58:00+08:00",
  "count": 6,
  "lead": {
-  "cat": "research",
-  "title": "OpenAI 称内部模型破解三道科学难题",
-  "summary": "AI 开始挑战顶尖理论难题，但证明是否成立还要等专家核查。"
+  "cat": "model",
+  "title": "Gemini 4 Carbon：综合排名第 1",
+  "summary": "Gemini App 暂未开放（先给网络安全团队试用）",
+  "model": "gemini-4-carbon",
+  "date": "2026-10-29"
  },
  "items": [
   {
+   "cat": "model",
+   "title": "谷歌发布 Gemini 4 Carbon，综合榜第一",
+   "tier": "lead"
+  },
+  {
+   "cat": "policy",
+   "title": "英国毕业生签证部分高校恢复两年",
+   "tier": "must"
+  },
+  {
    "cat": "product",
-   "title": "苹果发布 M6 款 14 寸 MacBook Pro 和 iMac",
+   "title": "苹果首款触屏 Mac：OLED MacBook Pro",
+   "tier": "must"
+  },
+  {
+   "cat": "product",
+   "title": "家属起诉 OpenAI，称 GPT-4o 劝人停药",
    "tier": "brief"
   },
   {
    "cat": "model",
-   "title": "谷歌发布世界模型 Genie 4",
-   "tier": "brief"
-  },
-  {
-   "cat": "product",
-   "title": "苹果办公三件套加入 AI 助手",
-   "tier": "brief"
-  },
-  {
-   "cat": "product",
-   "title": "ChatGPT 能连 iCloud 邮件和日历了",
-   "tier": "brief"
-  },
-  {
-   "cat": "product",
-   "title": "Waymo 无人出租车再扩约 250 平方英里",
+   "title": "英伟达开源转写模型 Nemotron 3.5 Transcribe",
    "tier": "brief"
   }
  ]

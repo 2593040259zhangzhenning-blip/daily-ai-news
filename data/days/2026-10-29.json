@@ -1,0 +1,299 @@
+{
+ "date": "2026-10-29",
+ "issues": [
+  {
+   "key": "2026-10-29-1morning",
+   "date": "2026-10-29",
+   "edition": "morning",
+   "createdAt": "2026-10-29T06:58:00+08:00",
+   "headline": "谷歌 Gemini 4 Carbon 登顶综合榜",
+   "items": [
+    {
+     "cat": "model",
+     "title": "谷歌发布 Gemini 4 Carbon，综合榜第一",
+     "body": "Google DeepMind 北京时间 10/29 凌晨发布 Gemini 4 Carbon，距上一款 Argon 只隔两周；在 Artificial Analysis 新版综合指数 v5 上拿到 59 分，略高于 Claude Opus 5.5 的 58 分，网络安全和长时间自主任务提升最明显。但它这周只先开放给一部分网络安全防御团队，Gemini App 和普通订阅用户何时能用，谷歌没给日期。",
+     "score": 9,
+     "tier": "lead",
+     "summary": "最强模型的位置又换人了，但普通用户暂时还用不上。",
+     "sources": [
+      {
+       "name": "Google DeepMind 博客",
+       "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model"
+      },
+      {
+       "name": "9to5Google",
+       "url": "https://9to5google.com/2026/10/28/gemini-4-carbon-announcement/"
+      },
+      {
+       "name": "TestingCatalog",
+       "url": "https://www.testingcatalog.com/google-unveils-gemini-4-carbon-for-cyber-defenders/"
+      },
+      {
+       "name": "WinBuzzer",
+       "url": "https://winbuzzer.com/2026/10/28/artificial-analysis-reweights-ai-rankings-toward-private-tests-xcxwbn/"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "英国毕业生签证部分高校恢复两年",
+     "body": "英国 10/28 公布的 2026 年预算称，「高合规、就业表现好」大学的毕业生，毕业生签证将从原定缩短后的 18 个月恢复到两年，但哪些学校算数、何时生效还没公布。同时，学生签证的存款要求 11/30 起上调：伦敦每月 1570 镑（9 个月共 14130 镑），伦敦以外每月 1203 镑。",
+     "score": 8,
+     "tier": "must",
+     "sources": [
+      {
+       "name": "The PIE News",
+       "url": "https://thepienews.com/breaking-uk-to-extend-graduate-visa-to-two-years-for-graduates-of-high-compliance-universities/"
+      },
+      {
+       "name": "Research Professional News",
+       "url": "https://www.researchprofessionalnews.com/rr-news-uk-politics-2026-10-chancellor-restores-two-year-post-study-visa-for-some-graduates/"
+      },
+      {
+       "name": "Nairametrics",
+       "url": "https://nairametrics.com/2026/10/28/uk-raises-student-visa-proof-of-funds-to-14130-from-november-30/"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "苹果首款触屏 Mac：OLED MacBook Pro",
+     "body": "苹果 10/28 在洛杉矶发布活动上推出 14 和 16 英寸的 MacBook Pro，换上 OLED 屏并首次支持触控，搭载 M5 Pro 或 M5 Max，顶部有灵动岛。macOS 同步加入触控操作：点按、滑动滚动、双指缩放，第三方 App 之后陆续适配。",
+     "score": 7,
+     "tier": "must",
+     "sources": [
+      {
+       "name": "Apple Newsroom",
+       "url": "https://www.apple.com/newsroom/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display"
+      },
+      {
+       "name": "Apple 开发者新闻",
+       "url": "https://developer.apple.com/news?id=i9boeiqc"
+      },
+      {
+       "name": "Tom's Guide",
+       "url": "https://www.tomsguide.com/news/live/apple-touchscreen-macbook-pro-pro-and-tell-event-ipad-mini-8-imac-m6-live-updates"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "家属起诉 OpenAI，称 GPT-4o 劝人停药",
+     "body": "一对父母起诉 OpenAI，称女儿在 GPT-4o 的建议下逐步停用癫痫药物，最终去世。这是又一起指控 ChatGPT 给出危险医疗建议的诉讼。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/10/27/parents-sue-openai-alleging-gpt-4o-coached-their-daughter-off-seizure-medication"
+      }
+     ]
+    },
+    {
+     "cat": "model",
+     "title": "英伟达开源转写模型 Nemotron 3.5 Transcribe",
+     "body": "英伟达开源 Nemotron 3.5 Transcribe，一个模型同时做语音转文字、翻译和区分说话人，可以用提示词调整，并一起放出多语种语音数据集 Granary v2。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model"
+      },
+      {
+       "name": "Hugging Face 博客",
+       "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary"
+      }
+     ]
+    },
+    {
+     "cat": "research",
+     "title": "Anthropic 扩大科研计划，晒用 Claude 做药进展",
+     "body": "Anthropic 把 AI for Science 计划扩大到基金会和研究机构，并公布和多家药企合作、用 Claude 加速药物研发的早期成果。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Anthropic",
+       "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions"
+      },
+      {
+       "name": "Wired",
+       "url": "https://www.wired.com/story/anthropic-says-it-will-revolutionize-biology-some-day"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "Gemini 4 Carbon 何时向 Gemini App 和订阅用户开放",
+    "Kimi K3.1 Pro 完整权重 11 月 4 日前开源",
+    "星舰第 15 次试飞（11 月，尝试两级回收）"
+   ],
+   "updates": [
+    {
+     "product": "ChatGPT",
+     "text": "美国 Pro 用户可用 iMessage 或短信给 Dot 发文字、照片和语音，它也会主动发消息汇报（预览）",
+     "date": "2026-10-28",
+     "sources": [
+      {
+       "name": "ChatGPT 发布说明",
+       "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      {
+       "name": "Engadget",
+       "url": "https://www.engadget.com/2300235/openai-now-lets-you-text-your-dot-agent/"
+      }
+     ]
+    }
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI 官网",
+     "ChatGPT 与 Codex 更新日志（OpenAI）",
+     "OpenAI API 更新日志",
+     "Anthropic 新闻页",
+     "Claude 发布说明",
+     "Claude Code 更新日志",
+     "Claude Code 每周摘要",
+     "Google DeepMind 博客",
+     "Google AI 栏目",
+     "Google Research 博客",
+     "Meta AI 博客",
+     "英伟达博客",
+     "英伟达新闻中心",
+     "xAI 新闻页",
+     "Apple Newsroom",
+     "Apple 开发者版本发布",
+     "Apple 开发者新闻",
+     "MacRumors",
+     "9to5Mac",
+     "SpaceX 官网更新",
+     "SpaceX 发射日程（Launch Library）",
+     "Hugging Face 博客",
+     "Mistral 新闻",
+     "EdSurge",
+     "Inside Higher Ed",
+     "英国签证与移民局（GOV.UK）",
+     "ICEF Monitor",
+     "The PIE News",
+     "雅思官方（IELTS）",
+     "教育部（工作动态）",
+     "中国教育报",
+     "TechCrunch AI",
+     "The Verge AI",
+     "Ars Technica AI",
+     "Wired AI",
+     "MIT Technology Review AI",
+     "The Decoder",
+     "量子位",
+     "The Robot Report",
+     "IEEE Spectrum 机器人",
+     "TechCrunch 机器人",
+     "Waymo 官方博客",
+     "Electrek",
+     "TechCrunch 交通",
+     "The Verge 交通",
+     "IEEE Spectrum 半导体",
+     "IEEE Spectrum 生物医学",
+     "STAT 神经科学",
+     "Techmeme",
+     "Hacker News 首页（≥100 分）",
+     "Hugging Face 每日论文（前 12）",
+     "AI News Radar（中转站）",
+     "Follow Builders（AI 圈人物 X）",
+     "Google 新闻关键词搜索（22 组）",
+     "ChatGPT 发布说明（未能打开，改用搜索）",
+     "官方 X 账号（site:x.com 搜索）",
+     "@Google",
+     "Artificial Analysis",
+     "9to5Google",
+     "TestingCatalog",
+     "WinBuzzer",
+     "Tom's Guide",
+     "Engadget",
+     "Nairametrics",
+     "Research Professional News"
+    ],
+    "candidates": 309
+   }
+  }
+ ],
+ "specials": [],
+ "models": [
+  {
+   "slug": "gemini-4-carbon",
+   "date": "2026-10-29",
+   "name": "Gemini 4 Carbon",
+   "org": "Google",
+   "createdAt": "2026-10-29T06:55:00+08:00",
+   "self": "Gemini 4 Carbon",
+   "board": {
+    "source": "Artificial Analysis 综合指数 v5.0",
+    "asof": "2026-10-29",
+    "rows": [
+     {
+      "name": "Gemini 4 Carbon",
+      "score": 59,
+      "rank": 1
+     },
+     {
+      "name": "Opus 5.5",
+      "score": 58,
+      "rank": 2
+     },
+     {
+      "name": "GPT-6 Astra",
+      "score": 57,
+      "rank": 3
+     },
+     {
+      "name": "GPT-6.1 Sol",
+      "score": 55,
+      "rank": 4
+     },
+     {
+      "name": "Gemini 4 Argon",
+      "score": 50,
+      "rank": 5
+     },
+     {
+      "name": "Kimi K3.1 Pro",
+      "score": 46,
+      "rank": 6
+     }
+    ]
+   },
+   "use": [
+    {
+     "where": "Gemini App",
+     "value": "暂未开放",
+     "note": "先给网络安全团队试用"
+    }
+   ],
+   "sources": [
+    {
+     "name": "Google DeepMind 博客",
+     "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model"
+    },
+    {
+     "name": "9to5Google",
+     "url": "https://9to5google.com/2026/10/28/gemini-4-carbon-announcement/"
+    },
+    {
+     "name": "TestingCatalog",
+     "url": "https://www.testingcatalog.com/google-unveils-gemini-4-carbon-for-cyber-defenders/"
+    },
+    {
+     "name": "WinBuzzer（AA 综合指数 v5）",
+     "url": "https://winbuzzer.com/2026/10/28/artificial-analysis-reweights-ai-rankings-toward-private-tests-xcxwbn/"
+    },
+    {
+     "name": "Artificial Analysis 排行榜",
+     "url": "https://artificialanalysis.ai/leaderboards/models"
+    }
+   ],
+   "pos": 1,
+   "rankText": "第 1"
+  }
+ ]
+}

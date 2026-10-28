@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-27T22:53:24+00:00",
+ "generatedAt": "2026-10-28T22:54:50+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -278,6 +278,19 @@
    "count": 6,
    "specials": [],
    "models": []
+  },
+  {
+   "date": "2026-10-29",
+   "headline": "谷歌 Gemini 4 Carbon 登顶综合榜",
+   "updatedAt": "2026-10-29T06:58:00+08:00",
+   "count": 6,
+   "specials": [],
+   "models": [
+    {
+     "slug": "gemini-4-carbon",
+     "name": "Gemini 4 Carbon"
+    }
+   ]
   }
  ]
 }
