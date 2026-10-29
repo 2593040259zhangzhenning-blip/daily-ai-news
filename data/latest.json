@@ -1,39 +1,37 @@
 {
- "date": "2026-10-29",
- "headline": "谷歌 Gemini 4 Carbon 登顶综合榜",
- "updatedAt": "2026-10-29T06:58:00+08:00",
- "count": 6,
+ "date": "2026-10-30",
+ "headline": "OpenAI 给 Pro 用户额度翻倍",
+ "updatedAt": "2026-10-30T07:00:00+08:00",
+ "count": 7,
  "lead": {
-  "cat": "model",
-  "title": "Gemini 4 Carbon：综合排名第 1",
-  "summary": "Gemini App 暂未开放（先给网络安全团队试用）",
-  "model": "gemini-4-carbon",
-  "date": "2026-10-29"
+  "cat": "product",
+  "title": "OpenAI 撤回 Pro 降额，Work 和 Codex 额度翻倍",
+  "summary": "ChatGPT 高价档用得更多了，Plus 用户这次没变化。"
  },
  "items": [
   {
    "cat": "model",
-   "title": "谷歌发布 Gemini 4 Carbon，综合榜第一",
-   "tier": "lead"
-  },
-  {
-   "cat": "policy",
-   "title": "英国毕业生签证部分高校恢复两年",
-   "tier": "must"
-  },
-  {
-   "cat": "product",
-   "title": "苹果首款触屏 Mac：OLED MacBook Pro",
-   "tier": "must"
-  },
-  {
-   "cat": "product",
-   "title": "家属起诉 OpenAI，称 GPT-4o 劝人停药",
+   "title": "Mistral 开放万亿参数模型 Le Chonk 权重",
    "tier": "brief"
   },
   {
-   "cat": "model",
-   "title": "英伟达开源转写模型 Nemotron 3.5 Transcribe",
+   "cat": "policy",
+   "title": "OpenAI 改写模型行为准则，收成五条价值观",
+   "tier": "brief"
+  },
+  {
+   "cat": "policy",
+   "title": "达特茅斯教务长因隐瞒用 AI 辞职",
+   "tier": "brief"
+  },
+  {
+   "cat": "biz",
+   "title": "美国曾调查针对黄仁勋的中国间谍嫌疑",
+   "tier": "brief"
+  },
+  {
+   "cat": "policy",
+   "title": "美国认定进口机器人威胁国家安全",
    "tier": "brief"
   }
  ]

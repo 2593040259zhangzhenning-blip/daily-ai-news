@@ -1,0 +1,230 @@
+{
+ "key": "2026-10-30-1morning",
+ "date": "2026-10-30",
+ "edition": "morning",
+ "createdAt": "2026-10-30T07:00:00+08:00",
+ "headline": "OpenAI 给 Pro 用户额度翻倍",
+ "items": [
+  {
+   "cat": "product",
+   "title": "OpenAI 撤回 Pro 降额，Work 和 Codex 额度翻倍",
+   "body": "OpenAI 10/29 宣布，Pro 100、Pro 500 和 Business Premium 在 ChatGPT Work 和 Codex 上共用的额度翻倍，原定 10/30 生效的 Pro 200 降额取消，额度低的那批 Pro 200 用户也提到高档；Plus 不变。同时，符合条件的 Pro 和 Business 订阅者每月可领最高 500 美元的 API 额度。媒体普遍认为这是在和 Anthropic 抢重度编程用户。",
+   "score": 7,
+   "tier": "lead",
+   "summary": "ChatGPT 高价档用得更多了，Plus 用户这次没变化。",
+   "sources": [
+    {
+     "name": "ChatGPT 发布说明",
+     "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+    },
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/openai-doubles-usage-limits-on-pro-plans-as-competition-with-anthropic-heats-up"
+    },
+    {
+     "name": "OpenAI API 更新日志",
+     "url": "https://developers.openai.com/api/docs/changelog"
+    },
+    {
+     "name": "@OpenAIDevs（X）",
+     "url": "https://x.com/OpenAIDevs/status/2115583698074755078"
+    }
+   ]
+  },
+  {
+   "cat": "model",
+   "title": "Mistral 开放万亿参数模型 Le Chonk 权重",
+   "body": "Mistral 10/29 公开了 Mistral Large 4（昵称 Le Chonk）的权重，约一万亿参数，主打智能体编程和网络安全防御，企业和政府可以自己下载部署。Mistral 称它在 Artificial Analysis 的编程智能体榜上领先所有开源模型，整体能力与中国的 GLM-5.3 相当。",
+   "score": 6,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Mistral",
+     "url": "https://mistral.ai/news/mistral-large-4-oss"
+    },
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/29/mistral-releases-weights-for-its-trillion-parameter-ai-model-targeting-cybersecurity/"
+    },
+    {
+     "name": "Wired",
+     "url": "https://www.wired.com/story/mistral-says-le-chonk-surpasses-chinese-models-cybersecurity"
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "OpenAI 改写模型行为准则，收成五条价值观",
+   "body": "OpenAI 10/29 更新 Model Spec：要求模型揣摩用户真正想要什么，而不是只按字面执行，删掉大部分细碎的文风规定，改以忠于人的意图、减少伤害、诚实透明、尊重人的自主、关怀五条价值为核心。OpenAI 承认现有模型还没完全做到。同一天它还公开了监控模型「跑偏」的做法。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "OpenAI 官网",
+     "url": "https://openai.com/index/updated-model-spec"
+    },
+    {
+     "name": "OpenAI 官网",
+     "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment"
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "达特茅斯教务长因隐瞒用 AI 辞职",
+   "body": "达特茅斯学院教务长 Santiago Schnell 辞职。教师委员会调查发现，他用 Claude 大幅修改论文稿、生成图表却没按期刊要求披露，给全国性报纸写的评论文章也违规未披露用了 AI。高校对学术写作中 AI 使用的披露要求正在变严。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Inside Higher Ed",
+     "url": "https://www.insidehighered.com/news/governance/executive-leadership/2026/10/28/dartmouth-provost-resigns-over-ai-use"
+    },
+    {
+     "name": "NHPR",
+     "url": "https://www.nhpr.org/education/2026-10-29/ai-use-dartmouth-college-provost-resigns-after-review"
+    }
+   ]
+  },
+  {
+   "cat": "biz",
+   "title": "美国曾调查针对黄仁勋的中国间谍嫌疑",
+   "body": "据《纽约时报》报道，美国情报部门曾监视新加坡云服务商 Megaspeed 一位高管约一年，怀疑她借与黄仁勋的密切关系打探英伟达的计划和对华出口芯片的动向。英伟达否认，称双方往来属于正常业务。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/29/u-s-investigated-chinese-spy-plot-aimed-at-nvidia-ceo/"
+    },
+    {
+     "name": "Fox Business",
+     "url": "https://www.foxbusiness.com/business-leaders/suspected-chinese-intelligence-asset-gained-access-nvidia-ceo-jensen-huang-report"
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "美国认定进口机器人威胁国家安全",
+   "body": "特朗普 10/28 签署公告，按「232 条款」认定进口机器人、工业机械及零部件威胁美国国家安全，暂不加关税，先由商务部和贸易代表与各国谈判。人形机器人等行业的供应链可能受影响。",
+   "score": 4,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "White House",
+     "url": "https://www.whitehouse.gov/fact-sheets/2026/10/fact-sheet-president-donald-j-trump-adjusts-imports-of-robotics-industrial-machinery-and-their-parts-and-components-into-the-united-states/"
+    },
+    {
+     "name": "Ars Technica",
+     "url": "https://arstechnica.com/gadgets/2026/10/trump-declares-robot-imports-a-national-security-threat"
+    },
+    {
+     "name": "The Robot Report",
+     "url": "https://www.therobotreport.com/white-house-makes-section-232-determination-regarding-foreign-made-robots/"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "Gemini 能在对话里直接生成和编辑文档",
+   "body": "Gemini 应用现在可以在聊天中直接生成、预览和修改文档、PDF、演示文稿和表格，并能存成 Google 文档等格式，不用再复制粘贴。",
+   "score": 4,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "The Verge",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs"
+    },
+    {
+     "name": "@GeminiApp（X）",
+     "url": "https://x.com/GeminiApp/status/2115845164824711247"
+    }
+   ]
+  }
+ ],
+ "watch": [
+  "Gemini 4 Carbon 何时向 Gemini App 和订阅用户开放",
+  "Kimi K3.1 Pro 完整权重 11 月 4 日前开源",
+  "星舰第 15 次试飞（11 月，马斯克称将首次尝试塔架捕获飞船）"
+ ],
+ "updates": [
+  {
+   "product": "Claude",
+   "text": "iPad 和 iPhone Duo 上，Claude 做出的内容改在聊天旁边并排打开，还能全屏细看",
+   "date": "2026-10-30",
+   "sources": [
+    {
+     "name": "@claudeai（X）",
+     "url": "https://x.com/claudeai/status/2115859377488072879"
+    }
+   ]
+  }
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI 官网",
+   "ChatGPT 与 Codex 更新日志（OpenAI）",
+   "OpenAI API 更新日志",
+   "Anthropic 新闻页",
+   "Claude 发布说明",
+   "Claude Code 更新日志",
+   "Claude Code 每周摘要",
+   "Google DeepMind 博客",
+   "Google AI 栏目",
+   "Google Research 博客",
+   "Meta AI 博客",
+   "英伟达博客",
+   "英伟达新闻中心",
+   "xAI 新闻页",
+   "Apple Newsroom",
+   "Apple 开发者版本发布",
+   "Apple 开发者新闻",
+   "MacRumors",
+   "9to5Mac",
+   "SpaceX 官网更新",
+   "SpaceX 发射日程（Launch Library）",
+   "Hugging Face 博客",
+   "Mistral 新闻",
+   "EdSurge",
+   "Inside Higher Ed",
+   "英国签证与移民局（GOV.UK）",
+   "ICEF Monitor",
+   "The PIE News",
+   "雅思官方（IELTS）",
+   "教育部（工作动态）",
+   "中国教育报",
+   "TechCrunch AI",
+   "The Verge AI",
+   "Ars Technica AI",
+   "Wired AI",
+   "MIT Technology Review AI",
+   "The Decoder",
+   "量子位",
+   "The Robot Report",
+   "IEEE Spectrum 机器人",
+   "TechCrunch 机器人",
+   "Waymo 官方博客",
+   "Electrek",
+   "TechCrunch 交通",
+   "The Verge 交通",
+   "IEEE Spectrum 半导体",
+   "IEEE Spectrum 生物医学",
+   "STAT 神经科学",
+   "Techmeme",
+   "Hacker News 首页（≥100 分）",
+   "Hugging Face 每日论文（前 12）",
+   "AI News Radar（中转站）",
+   "Follow Builders（AI 圈人物 X）",
+   "Google 新闻关键词搜索（22 组）",
+   "X 官方账号与关键人物（经 Grok，21 个账号）",
+   "ChatGPT 发布说明（经 Grok）",
+   "AI 公司教育产品公告",
+   "Kingy AI",
+   "White House",
+   "NHPR",
+   "Fox Business",
+   "Superpower Daily"
+  ],
+  "candidates": 306
+ }
+}

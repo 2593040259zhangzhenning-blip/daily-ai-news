@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-28T22:54:50+00:00",
+ "generatedAt": "2026-10-29T22:53:21+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -291,6 +291,14 @@
      "name": "Gemini 4 Carbon"
     }
    ]
+  },
+  {
+   "date": "2026-10-30",
+   "headline": "OpenAI 给 Pro 用户额度翻倍",
+   "updatedAt": "2026-10-30T07:00:00+08:00",
+   "count": 7,
+   "specials": [],
+   "models": []
   }
  ]
 }
