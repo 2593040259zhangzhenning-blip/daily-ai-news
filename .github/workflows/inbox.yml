@@ -6,6 +6,9 @@ name: 抓取收件箱
 on:
   schedule:
     - cron: "17 * * * *"
+    # 2026-10-25 起 GitHub 的定时触发常常掉队（四五个小时才跑一次），多挂一个半点的触发多一次机会。
+    # 两个撞在一起时 concurrency 会排队，不会重复抓。早间任务开跑时另外会自己现抓一遍（inbox_view.py --fresh）。
+    - cron: "47 * * * *"
   workflow_dispatch:
   push:
     branches: [main]

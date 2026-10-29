@@ -143,9 +143,17 @@ def _polite_wait(host):
         _HOST_LAST[host] = time.time()
 
 
-def http_get(url, accept="*/*", timeout=30, retries=1):
-    """返回 (状态码, 字节, Content-Type, 最终地址)。失败抛 FetchError。"""
+BACKOFF = (4, 12, 30)      # 429/5xx 重试前等几秒，一次比一次久
+
+
+def http_get(url, accept="*/*", timeout=30, retries=None):
+    """返回 (状态码, 字节, Content-Type, 最终地址)。失败抛 FetchError。
+
+    谷歌新闻对 GitHub 机房 IP 偶尔整批返回 503（2026-10-29 晚 22 组全挂），所以 google.com 多重试两次、等得更久。
+    """
     host = urllib.parse.urlparse(url).hostname or ""
+    if retries is None:
+        retries = 3 if host.endswith("google.com") else 1
     for attempt in range(retries + 1):
         try:
             _polite_wait(host)
@@ -156,7 +164,7 @@ def http_get(url, accept="*/*", timeout=30, retries=1):
                 return r.status, r.read(), r.headers.get("Content-Type", ""), r.geturl()
         except urllib.error.HTTPError as e:
             if e.code in (429, 500, 502, 503, 504) and attempt < retries:
-                time.sleep(4)
+                time.sleep(BACKOFF[min(attempt, len(BACKOFF) - 1)])
                 continue
             raise FetchError("HTTP %d" % e.code, e.code)
         except (urllib.error.URLError, TimeoutError, OSError) as e:
@@ -838,7 +846,8 @@ def tag_item(src, title, snippet, region=None):
     flags = []
     if src.get("rumor_prone"):
         flags.append("rumor")
-    if C.MONEY_PEOPLE_RE.search(title):
+    money_re = C.MONEY_STRONG_RE if (set(watch) & C.EDU_EXEMPT and not set(watch) - C.EDU_EXEMPT) else C.MONEY_PEOPLE_RE
+    if money_re.search(title):
         flags.append("money_people")
     region = region or src.get("region", "intl")
     if region == "cn" and not (set(watch) & C.EDU_EXEMPT):
@@ -986,6 +995,10 @@ def run(sources, out_dir, dry=False):
                                          consensus.cluster(items, threshold=0.5), by_id, now)
     except Exception as e:      # 共识打分出错不能拖垮抓取
         print("共识打分失败（不影响抓取）：%s %s" % (type(e).__name__, e), file=sys.stderr)
+
+    # 抓取节奏记录：每次运行的时间，保留 14 天，周复盘用它看 GitHub 定时触发有没有掉队
+    runs = [r for r in state.get("runs", []) if (parse_dt(r) or now) >= now - timedelta(days=14)]
+    state["runs"] = runs + [iso(now)]
 
     if not dry:
         out_dir.mkdir(parents=True, exist_ok=True)

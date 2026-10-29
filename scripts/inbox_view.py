@@ -10,6 +10,8 @@
   python3 scripts/inbox_view.py --checked        # 本次成功读取的来源名（直接抄进 scan.checked）
   python3 scripts/inbox_view.py --json           # 输出筛选后的原始 JSON
   python3 scripts/inbox_view.py --no-events      # 不打印开头的「共识事件」「圈外候选」
+  python3 scripts/inbox_view.py --fresh          # 先在本机现抓一遍（写到 /tmp/signal-inbox，不动仓库），再读（早间任务用）
+  python3 scripts/inbox_view.py --checked --fresh  # 同上，30 分钟内抓过就直接复用那一份
 
 读法：
   「共识事件」：程序把报同一件事的条目合并起来，按几家独立来源在报排序（中转站、聚合站不当出处，只算票）。
@@ -20,7 +22,13 @@
   「功能更新候选」：产品更新日志（Claude Code、Claude 应用、ChatGPT / Codex、OpenAI API）里的条目，单独成一节，
   不会再出现在下面按对象分的组里；是否写进当期的 updates 由定时任务按 watchlist.md 判断（只要用户能感觉到的变化）。
   时间前面的 ~ 表示来源没给发布时间，用的是「收件箱第一次发现它的时间」。
+  「Grok 侦察」（2026-10-30 起）：Grok Bot 每天 06:15 前后写的 data/grok/scout/<日期>.json，X 上的官方账号帖子、关键人物帖子、
+  X 上热议的事。[一手·Grok] 是官方账号的帖子，可以当出处（做头条或必看还要再有一个非 Grok 的来源）；[线索·Grok] 只用来发现事件。
+  ChatGPT 发布说明也由 Grok 读，出现在「功能更新候选」里。
 """
+import shutil
+import subprocess
+import time
 import argparse
 import json
 import sys
@@ -30,12 +38,15 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import inbox_config as C  # noqa: E402
 import consensus as K  # noqa: E402
+import grok_io as G  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 INBOX = ROOT / "data" / "inbox"
 UTC = timezone.utc
 BJ = timezone(timedelta(hours=8))
 STALE_HOURS = 3
+FRESH_DIR = Path("/tmp/signal-inbox")
+FRESH_REUSE_MIN = 30
 
 LAYER1_ORDER = ["Anthropic/Claude", "OpenAI/ChatGPT", "Google/Gemini", "Meta/Muse", "英伟达", "苹果", "SpaceX",
                 "AI与教育", "留学与签证政策", "英语教学与语言培训行业"]
@@ -187,6 +198,55 @@ def print_status(status):
                                                           s.get("error") or s.get("warn") or s.get("stale") or ""))
 
 
+def refresh(args):
+    """早间任务开跑时现抓一遍：GitHub 的每小时定时触发经常掉队（2026-10-25 起常常四五个小时才跑一次），
+    靠这一步保证 06:50 读到的是几分钟前的消息。抓到临时目录，不提交，不会和机器人的每小时提交打架。
+    抓不成就退回仓库里的收件箱，并返回一句说明。"""
+    stamp = FRESH_DIR / ".refreshed"
+    if stamp.exists() and time.time() - stamp.stat().st_mtime < FRESH_REUSE_MIN * 60:
+        return FRESH_DIR, None
+    try:
+        if FRESH_DIR.exists():
+            shutil.rmtree(FRESH_DIR)
+        shutil.copytree(INBOX, FRESH_DIR)      # 带上旧状态：页面变动监测要靠它判断哪些链接是新的
+        r = subprocess.run([sys.executable, str(Path(__file__).resolve().parent / "fetch_inbox.py"), "--out", str(FRESH_DIR)],
+                           capture_output=True, text=True, timeout=300)
+        if r.returncode != 0:
+            raise RuntimeError((r.stderr or r.stdout).strip().splitlines()[-1:] or ["退出码 %d" % r.returncode])
+        stamp.write_text("ok")
+        return FRESH_DIR, None
+    except Exception as e:      # 现抓失败不能挡住任务
+        return INBOX, "现抓失败（%s），用的是仓库里机器人上次抓的收件箱" % str(e)[:160]
+
+
+def grok_time(t):
+    return t.astimezone(BJ).strftime("%m-%d %H:%M") if t else "时间不明"
+
+
+def grok_lines(sc):
+    """把侦察文件里的 X 帖子和热议打印成候选行。"""
+    rows = []
+    posts = sorted(sc["x"]["posts"], key=lambda p: (not p["official"], -(p["postedAt"].timestamp() if p["postedAt"] else 0)))
+    for p in posts:
+        PRINTED[0] += 1
+        kind = "一手·Grok" if p["official"] else "线索·Grok"
+        r = "[%s] %s · %s · %s%s\n    %s" % (kind, grok_time(p["postedAt"]), p["account"],
+                                           ("%s · " % p["watch"]) if p["watch"] else "", p["summary"], p["url"])
+        if p["links"]:
+            r += "\n    帖子里的链接：" + " ".join(p["links"])
+        rows.append(r)
+    for b in sc["x"]["buzz"]:
+        PRINTED[0] += 1
+        r = "[线索·Grok·热议] %s%s%s" % (("%s · " % b["watch"]) if b["watch"] else "", b["title"],
+                                     "（Grok 说已有官方确认）" if b["confirmed"] else "")
+        if b["accounts"]:
+            r += "\n    在说的人：" + "、".join(b["accounts"])
+        if b["urls"]:
+            r += "\n    " + " ".join(b["urls"])
+        rows.append(r)
+    return rows
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--hours", type=float, default=30)
@@ -197,8 +257,13 @@ def main():
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--no-events", action="store_true")
     ap.add_argument("--dir", default=str(INBOX))
+    ap.add_argument("--fresh", action="store_true")
     args = ap.parse_args()
     d = Path(args.dir)
+    fresh_note = None
+    if args.fresh:
+        d, fresh_note = refresh(args)
+    scout, scout_probs, _ = G.latest_scout()
     try:
         doc = json.loads((d / "items.json").read_text(encoding="utf-8"))
         status = json.loads((d / "source-status.json").read_text(encoding="utf-8"))
@@ -214,6 +279,11 @@ def main():
         gn = [s for s in ok if s["id"].startswith("gn-")]
         if gn:
             names.append("Google 新闻关键词搜索（%d 组）" % len(gn))
+        if scout and scout["x"]["ok"]:
+            names.append("X 官方账号与关键人物（经 Grok，%d 个账号）" % len(scout["x"]["checked"]) if scout["x"]["checked"]
+                         else "X 官方账号与关键人物（经 Grok）")
+        if scout and scout["chatgptReleaseNotes"]["ok"]:
+            names.append("ChatGPT 发布说明（经 Grok）")
         print(json.dumps(names, ensure_ascii=False))
         return 0
 
@@ -238,9 +308,25 @@ def main():
 
     print("# 收件箱（北京时间 %s 生成；最近 %g 小时内共 %d 条，下面按关注清单挑出相关的部分列出，实际列出的条数见末尾）" % (
         gen.astimezone(BJ).strftime("%m-%d %H:%M") if gen else "?", args.hours, len(items)))
+    if fresh_note:
+        print("⚠ " + fresh_note + "。")
     if age is None or age > STALE_HOURS:
         print("⚠ 收件箱已经 %s 小时没更新（正常每小时一次）：GitHub Actions 可能停了。"
               "不要只信收件箱，按旧流程用搜索补全，并在最终回复里提一句。" % ("%.0f" % age if age else "?"))
+    gn_all = [s for s in status.get("sources", []) if s["id"].startswith("gn-")]
+    gn_bad = [s for s in gn_all if not s["ok"]]
+    if gn_all and len(gn_bad) * 2 >= len(gn_all):
+        print("⚠ 谷歌新闻 %d 组里有 %d 组这次没抓到（%s）：关注对象的媒体报道会明显变少，第一层对象要用搜索逐个补查。" % (
+            len(gn_all), len(gn_bad), gn_bad[0].get("error") or "未知"))
+    if not scout:
+        print("⚠ Grok 侦察：%s。X 部分照旧用 site:x.com 搜索，ChatGPT 发布说明照旧用 WebFetch 读。" % "；".join(scout_probs))
+    else:
+        if not scout["x"]["ok"]:
+            print("⚠ Grok 侦察这次没查成 X（%s）：X 部分照旧用 site:x.com 搜索。" % scout["x"]["error"])
+        if not scout["chatgptReleaseNotes"]["ok"]:
+            print("⚠ Grok 这次没读到 ChatGPT 发布说明（%s）：照旧用 WebFetch 读。" % scout["chatgptReleaseNotes"]["error"])
+        if scout_probs:
+            print("（Grok 侦察文件有格式问题，已丢掉不合格的条目：%s）" % "；".join(scout_probs))
     bad = [s for s in status.get("sources", []) if not s["ok"] and s.get("failStreak", 0) >= 3]
     if bad:
         print("⚠ 连续失败 3 次以上的源（这些源当前没有数据，需要手动查）：" +
@@ -261,10 +347,33 @@ def main():
     l0 = [i for i in items if i["layer"] == 0 and "domestic" not in i.get("flags", [])]
     cn = [i for i in items if "domestic" in i.get("flags", [])]
 
-    print("## 功能更新候选（产品更新日志，共 %d 条；工程细节居多，只挑用户能感觉到的变化写进 updates）\n" % len(cl))
+    if scout:
+        x = scout["x"]
+        print("## Grok 侦察 · X（Grok Bot 北京时间 %s 写入；官方帖 %d 条、个人帖 %d 条、热议 %d 件）\n" % (
+            grok_time(scout["generatedAt"]), sum(p["official"] for p in x["posts"]),
+            sum(not p["official"] for p in x["posts"]), len(x["buzz"])))
+        rows = grok_lines(scout)
+        print("\n".join(rows) if rows else ("（Grok 查了，过去 24 小时关注对象在 X 上没有值得看的新帖）" if x["ok"] else "（X 没查成，见开头的 ⚠）"))
+        print()
+
+    rn = scout["chatgptReleaseNotes"] if scout else None
+    rn_rows = []
+    if rn and rn["ok"]:
+        recent = (now.astimezone(BJ) - timedelta(days=3)).strftime("%Y-%m-%d")
+        for e in rn["entries"]:
+            if e["date"] >= recent:
+                PRINTED[0] += 1
+                rn_rows.append("[一手·Grok] %s（仅日期） · ChatGPT 发布说明 · %s%s\n    %s" % (
+                    e["date"][5:], e["title"], ("——" + e["summary"]) if e["summary"] else "", rn["url"]))
+    print("## 功能更新候选（产品更新日志，共 %d 条%s；工程细节居多，只挑用户能感觉到的变化写进 updates）\n" % (
+        len(cl) + len(rn_rows), "，含 Grok 读的 ChatGPT 发布说明 %d 条" % len(rn_rows) if rn and rn["ok"] else ""))
     for i in cl:
         print(line(i, args.urls))
-    if not cl:
+    for r in rn_rows:
+        print(r)
+    if rn and rn["ok"] and not rn_rows:
+        print("（Grok 读了 ChatGPT 发布说明，最近 3 天没有新条目）")
+    if not cl and not rn_rows:
         print("（这段时间更新日志类来源没有新条目）")
     print()
 

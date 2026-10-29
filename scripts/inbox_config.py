@@ -106,6 +106,11 @@ MONEY_PEOPLE_RE = re.compile(
     r"(?i)" + W(r"raises?|raised|funding round|Series [A-G]|valuation|IPO|stock|shares|share price|stake|appoints?|hires?|"
                 r"departs?|steps? down|poach(?:es|ed)?|layoffs?|acquires?|acquisition|buyout") +
     r"|融资|估值|股价|上市|任命|离职|跳槽|裁员|收购")
+# 教育、留学、语培三项里「raises」多半是「提高门槛/费用」（如英国 2026-10 上调学生签证存款要求），不算融资；
+# 这三项只认明确的融资股价词。
+MONEY_STRONG_RE = re.compile(
+    r"(?i)" + W(r"funding round|Series [A-G]|valuation|IPO|stock|shares|share price|stake|layoffs?|acquires?|acquisition|buyout") +
+    r"|融资|估值|股价|裁员|收购")
 
 LAYER1 = {"Anthropic/Claude", "OpenAI/ChatGPT", "Google/Gemini", "Meta/Muse", "英伟达", "苹果", "SpaceX",
           "AI与教育", "留学与签证政策", "英语教学与语言培训行业"}

@@ -11,6 +11,10 @@
   2. 共识高但 Signal 没收的事件：程序判断，按规则本来就不收的（融资/人事/股价、国内）单列。判断「收没收」是用链接和关键词对的，
      可能有漏判，列出来是让你核对，不是结论。
   3. 建议关注：没在关注清单里、但在高共识事件里反复出现的名字，每条附一个例子。「为什么你可能会在意」留给读这份报告的 Claude 写。
+  4. Grok 独立查漏（2026-10-30 起）：Grok Bot 每天 09:00 前后读当天这期写的 data/grok/review/<日期>.json——它认为该收没收的、
+     已发条目里可疑的事实；外加 Grok 每天侦察文件（data/grok/scout/）到没到、X 和 ChatGPT 发布说明查没查成。
+     这是另一个模型的看法，不是结论：读报告的 Claude 要逐条按 watchlist.md 判断是真漏、取舍，还是 Grok 判断错了。
+信源体检里另有「抓取节奏」：一周里收件箱实际抓了几次、最长隔了多久（data/inbox/state.json 的 runs）。
 关注 ≠ 喜欢：加不加由用户决定，系统不根据点击行为自动调整。
 """
 import argparse
@@ -23,6 +27,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import inbox_config as C  # noqa: E402
+import grok_io as G  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 UTC = timezone.utc
@@ -134,6 +139,14 @@ def build(days=7):
         if s.get("ok") and not s.get("stale") and (ln is None or ln < since) and not s["id"].startswith("gn-"):
             silent.append(s)
     L.append("共 %d 个源，当前成功 %d 个。" % (len(srcs), len(srcs) - len(bad)))
+    runs = sorted(t for t in (pdt(r) for r in load(ROOT / "data" / "inbox" / "state.json", {}).get("runs", [])) if t and t >= since)
+    if len(runs) >= 2:
+        gaps = [(b - a).total_seconds() / 3600 for a, b in zip(runs, runs[1:])]
+        worst = max(gaps)
+        L.append("")
+        L.append("抓取节奏：这 %d 天收件箱实际抓了 %d 次（按计划约 %d 次），最长隔了 %.1f 小时%s。" % (
+            days, len(runs), days * 24, worst,
+            "，GitHub 定时触发明显掉队（早间任务开跑时会自己现抓，不影响当期，但白天的事件日志会稀）" if worst >= 3 else ""))
     if bad:
         L.append("")
         L.append("**现在抓取失败的：**")
@@ -206,6 +219,46 @@ def build(days=7):
         L.append("加不加由你决定；不加的以后仍可通过「圈外位」进来。")
     else:
         L.append("这周没有名字反复出现 3 次以上的。")
+    L.append("")
+    # 4. Grok 独立查漏
+    L.append("## 四、Grok 独立查漏（另一个模型的看法，逐条核对，不是结论）")
+    L.append("")
+    since_bj = since.astimezone(BJ).replace(hour=0, minute=0, second=0)
+    scouts = G.files_between("scout", since_bj)
+    reviews = G.files_between("review", since_bj)
+    day_list = [(since_bj + timedelta(days=i)).strftime("%Y-%m-%d") for i in range(days + 1)]
+    day_list = [d for d in day_list if d <= now.astimezone(BJ).strftime("%Y-%m-%d")]
+    sc_by = {d: (doc, pr) for d, doc, pr in scouts}
+    rv_by = {d: (doc, pr) for d, doc, pr in reviews}
+    no_sc = [d[5:] for d in day_list if d not in sc_by or sc_by[d][0] is None]
+    x_fail = [d[5:] for d, (doc, _) in sc_by.items() if doc and not doc["x"]["ok"]]
+    rn_fail = [d[5:] for d, (doc, _) in sc_by.items() if doc and not doc["chatgptReleaseNotes"]["ok"]]
+    no_rv = [d[5:] for d in day_list if d not in rv_by or rv_by[d][0] is None]
+    if not scouts and not reviews:
+        L.append("这段时间 Grok 一个文件都没写（例程没开，或还没接上仓库）。")
+    else:
+        L.append("侦察：%d 天里到了 %d 份%s%s%s。" % (
+            len(day_list), len(day_list) - len(no_sc), ("；缺 " + "、".join(no_sc)) if no_sc else "",
+            ("；X 没查成 " + "、".join(x_fail)) if x_fail else "", ("；ChatGPT 发布说明没读到 " + "、".join(rn_fail)) if rn_fail else ""))
+        L.append("查漏：到了 %d 份%s。" % (len(day_list) - len(no_rv), ("；缺 " + "、".join(no_rv)) if no_rv else ""))
+        probs = ["%s %s：%s" % (k, d[5:], "；".join(pr)) for k, lst in (("侦察", scouts), ("查漏", reviews)) for d, _, pr in lst if pr]
+        if probs:
+            L.append("格式问题（不合格的条目已丢掉）：" + " / ".join(probs[:6]))
+        L.append("")
+        missed = [(d, m) for d, (doc, _) in sorted(rv_by.items()) if doc for m in doc["missed"]]
+        doubts = [(d, x) for d, (doc, _) in sorted(rv_by.items()) if doc for x in doc["doubts"]]
+        if missed:
+            L.append("**Grok 认为该收没收的（%d 条，高的在前）：**" % len(missed))
+            for d, m in sorted(missed, key=lambda t: (t[1]["severity"] != "高", t[0])):
+                L.append("- [%s · %s] %s%s——%s %s" % (d[5:], m["severity"], ("%s · " % m["watch"]) if m["watch"] else "",
+                         m["title"], m["why"], " ".join(m["urls"][:2])))
+        else:
+            L.append("Grok 这周没报漏。")
+        if doubts:
+            L.append("")
+            L.append("**Grok 觉得已发条目里可疑的（%d 条）：**" % len(doubts))
+            for d, x in doubts:
+                L.append("- [%s] 「%s」：%s %s" % (d[5:], x["item"], x["problem"], " ".join(x["urls"][:2])))
     L.append("")
     return "\n".join(L), wk
 

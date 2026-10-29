@@ -17,6 +17,12 @@
 
 **2026-10-18 补充（功能更新）：** 新增四个来源进收件箱：Claude Code 更新日志、Claude Code 每周摘要（官方文档站，抓 Markdown 版）、ChatGPT 与 Codex 更新日志（learn.chatgpt.com）、OpenAI API 更新日志（developers.openai.com，抓 Markdown 版）；Claude 发布说明和 ChatGPT 发布说明也标上了更新日志类标记。它们的条目在 `inbox_view.py` 里单独成「功能更新候选」一节，用来写每期的 `updates`（规则见 `watchlist.md`「功能更新」）。注意：Claude 发布说明（support.claude.com）是 Claude 应用的更新，不含 Claude Code，所以 Claude Code 之前一直没有被覆盖；Claude Code 每周摘要页最新一期只到 9 月 11 日那周，只当补充。ChatGPT 发布说明仍然靠早间任务用 WebFetch 读。这些页面在 GitHub 机房 IP 上能不能读到，以上线后 `source-status.json` 为准。
 
+**2026-10-30 「终极成熟版」：接入 Grok Bot + 收件箱加固。** 用户有了 Grok Bot（付费会员），让它补两个盲区、再当独立第二意见，全部细节在 `grok.md`：
+- Grok 每天 06:10 侦察 X（官方账号、关键人物、热议）和 ChatGPT 发布说明 → `data/grok/scout/`；`inbox_view.py` 列成「Grok 侦察 · X」一节。取代早间任务里的 `site:x.com` 逐个搜（Grok 没查成时才退回去）。
+- Grok 每天 09:00 独立查漏 → `data/grok/review/`，只进周复盘第四节，不上网页（用户 10-30 确认）。
+- 收件箱加固：10-25 起 GitHub 每小时触发常掉队到四五个小时一次，于是 (1) 工作流多挂一个 :47 的触发，(2) 早间任务开跑时 `inbox_view.py --fresh` 在本机现抓一遍（抓到 /tmp，不提交，半分钟左右）；谷歌新闻 503 时多重试两次、等得更久（10-29 晚 22 组整批 503）；谷歌新闻一半以上没抓到时 inbox_view 开头标「⚠」；`state.json` 记每次抓取时间，周复盘显示抓取节奏。
+- 修了一处误标：教育、留学、语培三项里的「raises」多半是「提高门槛」（英国 10 月上调学生签证存款），不再标成融资。
+
 **2026-10-24 信源复盘 + 第二步上线：** 第一周数据复盘后一次做了五件事。
 1. Claude Code 更新日志和每周摘要自 10-21 凌晨起连挂 82 次：页面从 `<Update>` 标签改成了加粗版本号加日期，解析器（`parse_bold_blocks`）已适配，两种格式都认。
 2. `source-status.json` 每个源加 `newestItemAt`（手上最新一条的发布时间）、`lastNewAt`（上次收进新内容）、`stale`（抓取成功但最新一条超过 30 天，单个源可用 `stale_days` 覆盖）、`dropped`（谷歌新闻过滤掉的条数）。以前只记成败，分不出「源死了」和「源没更新」。

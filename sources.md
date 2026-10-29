@@ -37,8 +37,8 @@ AI HOT（aihot.news）不接：它的使用规则不允许公开镜像，而收�
 
 | 要查什么 | 怎么查 | 为什么收件箱没有 |
 |---|---|---|
-| ChatGPT 发布说明（也是功能更新的来源） | 用 WebFetch 打开 help.openai.com/en/articles/6825453-chatgpt-release-notes，只看最近几天的条目；打不开就搜 `site:help.openai.com ChatGPT release notes` | OpenAI 帮助中心对自动抓取一律返回 Cloudflare 人机验证，GitHub 上抓不到 |
-| 公司官方 X 账号 | `site:x.com 账号名`：@OpenAI、@OpenAIDevs、@AnthropicAI、@claudeai、@GoogleDeepMind、@AIatMeta、@nvidia、@SpaceX、@xai | X 不允许自动读取，也没有接付费接口 |
+| ChatGPT 发布说明（也是功能更新的来源） | 2026-10-30 起由 Grok 用浏览器读，进 `inbox_view.py` 的「功能更新候选」（见 `grok.md`）。Grok 没读到时才用 WebFetch 打开 help.openai.com/en/articles/6825453-chatgpt-release-notes，只看最近几天的条目；打不开就搜 `site:help.openai.com ChatGPT release notes` | OpenAI 帮助中心对自动抓取一律返回 Cloudflare 人机验证，GitHub 上抓不到 |
+| 公司官方 X 账号 | 2026-10-30 起先看 Grok 侦察（`inbox_view.py` 的「Grok 侦察 · X」一节，Grok 能原生读 X，查的账号见 `grok.md`）。官方帖可当出处，做头条或必看要再有一个非 Grok 来源。Grok 没查成时照旧 `site:x.com 账号名`：@OpenAI、@OpenAIDevs、@AnthropicAI、@claudeai、@GoogleDeepMind、@AIatMeta、@nvidia、@SpaceX、@xai | X 不允许自动读取，也没有接付费接口；Grok 是用户已付费的会员，不另花钱 |
 | 付费墙媒体 | Reuters、Bloomberg、Financial Times、The Information：读不到全文时只用标题和其他媒体的转述，正文里写明是据某某报道 | 读不到正文 |
 | AI 公司的教育产品公告 | ChatGPT Edu、Claude for Education、Gemini for Education 等 | 没有统一的订阅源 |
 | 国内公司动态（只为核实「质的突破」） | DeepSeek、通义 / Qwen（qwenlm.github.io）、月之暗面 Kimi、智谱（z.ai）、字节豆包；中文媒体：机器之心、36氪、晚点 LatePost、财新 | 国内消息按 `watchlist.md` 的规则只在突破时收，不日常抓 |
