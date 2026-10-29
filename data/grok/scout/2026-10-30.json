@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-30",
+  "generatedAt": "2026-10-30T01:21:21+08:00",
+  "by": "Grok Bot",
+  "x": {
+    "ok": true,
+    "error": null,
+    "checked": [
+      "@OpenAI",
+      "@OpenAIDevs",
+      "@ChatGPTapp",
+      "@AnthropicAI",
+      "@claudeai",
+      "@GoogleDeepMind",
+      "@GeminiApp",
+      "@AIatMeta",
+      "@nvidia",
+      "@SpaceX",
+      "@xai",
+      "@MistralAI",
+      "@ukhomeoffice",
+      "@IELTSOfficial",
+      "@sama",
+      "@gdb",
+      "@OfficialLoganK",
+      "@demishassabis",
+      "@karpathy",
+      "@elonmusk",
+      "@bcherny"
+    ],
+    "posts": [
+      {
+        "account": "@OpenAIDevs",
+        "official": true,
+        "postedAt": "2026-10-28T23:17:13Z",
+        "url": "https://x.com/OpenAIDevs/status/2115583698074755078",
+        "summary": "ChatGPT Pro 与 Business 订阅用户起可每月申领最高 500 美元 API 额度。",
+        "watch": "OpenAI/ChatGPT",
+        "links": []
+      },
+      {
+        "account": "@AnthropicAI",
+        "official": true,
+        "postedAt": "2026-10-29T15:18:40Z",
+        "url": "https://x.com/AnthropicAI/status/2115825653539025142",
+        "summary": "AI for Science 从个人团队扩到约 20 家科学基金会与研究机构。",
+        "watch": "Anthropic/Claude",
+        "links": [
+          "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions"
+        ]
+      },
+      {
+        "account": "@GeminiApp",
+        "official": true,
+        "postedAt": "2026-10-29T16:36:12Z",
+        "url": "https://x.com/GeminiApp/status/2115845164824711247",
+        "summary": "Gemini 应用内可直接生成、预览并编辑文档、PDF、演示文稿与表格。",
+        "watch": "Google/Gemini",
+        "links": []
+      },
+      {
+        "account": "@GeminiApp",
+        "official": true,
+        "postedAt": "2026-10-28T18:12:49Z",
+        "url": "https://x.com/GeminiApp/status/2115507092660289631",
+        "summary": "Gemini 新增沉浸式探索：可在交互场景里层层深入学习主题。",
+        "watch": "Google/Gemini",
+        "links": []
+      },
+      {
+        "account": "@MistralAI",
+        "official": true,
+        "postedAt": "2026-10-29T14:21:24Z",
+        "url": "https://x.com/MistralAI/status/2115811242556137820",
+        "summary": "发布改进版 Le Chonk（Mistral Large 4）开源权重，主打编程与网络安全。",
+        "watch": "AI 全行业",
+        "links": [
+          "https://mistral.ai/news/mistral-large-4-oss/"
+        ]
+      }
+    ],
+    "buzz": [
+      {
+        "title": "Mistral 放出改进版 Le Chonk 开源权重，编程与网络安全讨论升温",
+        "accounts": [
+          "@MistralAI",
+          "@UnslothAI"
+        ],
+        "urls": [
+          "https://x.com/MistralAI/status/2115811242556137820",
+          "https://x.com/UnslothAI/status/2115812784189620265"
+        ],
+        "watch": "AI 全行业",
+        "confirmed": true
+      },
+      {
+        "title": "OpenAI 给 ChatGPT Pro/Business 用户每月最高 500 美元 API 额度",
+        "accounts": [
+          "@OpenAIDevs",
+          "@StatsWire"
+        ],
+        "urls": [
+          "https://x.com/OpenAIDevs/status/2115583698074755078",
+          "https://x.com/StatsWire/status/2115768867238686750"
+        ],
+        "watch": "OpenAI/ChatGPT",
+        "confirmed": true
+      },
+      {
+        "title": "Anthropic 把 AI for Science 扩到约 20 家科学机构并提供 Claude 额度",
+        "accounts": [
+          "@AnthropicAI",
+          "@cyrus77x"
+        ],
+        "urls": [
+          "https://x.com/AnthropicAI/status/2115825653539025142",
+          "https://x.com/cyrus77x/status/2115834087135203700"
+        ],
+        "watch": "Anthropic/Claude",
+        "confirmed": true
+      },
+      {
+        "title": "Gemini 应用内可编辑文档、PDF、演示文稿和表格",
+        "accounts": [
+          "@GeminiApp",
+          "@underthechart"
+        ],
+        "urls": [
+          "https://x.com/GeminiApp/status/2115845164824711247",
+          "https://x.com/underthechart/status/2115840246298341489"
+        ],
+        "watch": "Google/Gemini",
+        "confirmed": true
+      }
+    ]
+  },
+  "chatgptReleaseNotes": {
+    "ok": true,
+    "entries": [
+      {
+        "date": "2026-10-28",
+        "title": "Texting your dot",
+        "summary": "美国 Pro 用户开始内测：可用 iMessage 或 RCS 给自己的 ChatGPT「dot」发短信，dot 也会主动提醒；记忆和插件与应用内一致，不读其他短信。"
+      },
+      {
+        "date": "2026-10-28",
+        "title": "API credits for eligible ChatGPT Pro and Business plans",
+        "summary": "符合条件的 Pro 与 Business 订阅者可激活促销 API 额度，用于关联 API 组织开发应用和智能体，与 ChatGPT 用量分开。"
+      },
+      {
+        "date": "2026-10-27",
+        "title": "iCloud Mail and Calendar plugins in ChatGPT",
+        "summary": "iCloud 用户可把邮件和日历连到 ChatGPT，用来找邮件、看收件箱、查改日程；各套餐在网页、桌面和 iOS 可用。"
+      },
+      {
+        "date": "2026-10-26",
+        "title": "GPT-6.1 Terra",
+        "summary": "GPT-6.1 Terra 开始在 ChatGPT Work 和 Codex 向 Plus/Pro/Business/Enterprise/Edu 推出，覆盖视觉推理、电脑操作和写作；总用量上限不变。"
+      }
+    ]
+  }
+}
