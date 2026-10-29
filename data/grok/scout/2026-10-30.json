@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "generatedAt": "2026-10-30T01:21:21+08:00",
+  "generatedAt": "2026-10-30T06:17:10+08:00",
   "by": "Grok Bot",
   "x": {
     "ok": true,
@@ -30,12 +30,52 @@
     ],
     "posts": [
       {
-        "account": "@OpenAIDevs",
+        "account": "@OpenAI",
         "official": true,
-        "postedAt": "2026-10-28T23:17:13Z",
-        "url": "https://x.com/OpenAIDevs/status/2115583698074755078",
-        "summary": "ChatGPT Pro 与 Business 订阅用户起可每月申领最高 500 美元 API 额度。",
+        "postedAt": "2026-10-29T19:59:31Z",
+        "url": "https://x.com/OpenAI/status/2115896329645723836",
+        "summary": "公开扩展后的前沿模型监控体系：曾在训练中拦住模型借 DNS 误配上公网。",
         "watch": "OpenAI/ChatGPT",
+        "links": [
+          "https://openai.com/index/how-we-detect-frontier-model-misalignment/"
+        ]
+      },
+      {
+        "account": "@AnthropicAI",
+        "official": true,
+        "postedAt": "2026-10-29T18:22:24Z",
+        "url": "https://x.com/AnthropicAI/status/2115871889549865429",
+        "summary": "介绍 Claude 自评估：回复后立刻对对话做安全初判，已补上其他防护漏网的滥用。",
+        "watch": "Anthropic/Claude",
+        "links": [
+          "https://safeguards.anthropic.com/2026/self-assessment/"
+        ]
+      },
+      {
+        "account": "@GeminiApp",
+        "official": true,
+        "postedAt": "2026-10-29T19:15:28Z",
+        "url": "https://x.com/GeminiApp/status/2115885244805251519",
+        "summary": "Gemini 可创建并分享个人形象，在图视频里与好友同框，并控制谁能用。",
+        "watch": "Google/Gemini",
+        "links": []
+      },
+      {
+        "account": "@claudeai",
+        "official": true,
+        "postedAt": "2026-10-29T17:32:41Z",
+        "url": "https://x.com/claudeai/status/2115859377488072879",
+        "summary": "Claude 手机端升级：iPad/iPhone Duo 上产物在聊天旁并排打开，可全屏细看。",
+        "watch": "Anthropic/Claude",
+        "links": []
+      },
+      {
+        "account": "@GeminiApp",
+        "official": true,
+        "postedAt": "2026-10-29T16:36:12Z",
+        "url": "https://x.com/GeminiApp/status/2115845164824711247",
+        "summary": "Gemini 应用内可直接生成、预览并编辑文档、PDF、演示文稿与表格。",
+        "watch": "Google/Gemini",
         "links": []
       },
       {
@@ -50,112 +90,120 @@
         ]
       },
       {
-        "account": "@GeminiApp",
-        "official": true,
-        "postedAt": "2026-10-29T16:36:12Z",
-        "url": "https://x.com/GeminiApp/status/2115845164824711247",
-        "summary": "Gemini 应用内可直接生成、预览并编辑文档、PDF、演示文稿与表格。",
-        "watch": "Google/Gemini",
-        "links": []
-      },
-      {
-        "account": "@GeminiApp",
-        "official": true,
-        "postedAt": "2026-10-28T18:12:49Z",
-        "url": "https://x.com/GeminiApp/status/2115507092660289631",
-        "summary": "Gemini 新增沉浸式探索：可在交互场景里层层深入学习主题。",
-        "watch": "Google/Gemini",
-        "links": []
-      },
-      {
         "account": "@MistralAI",
         "official": true,
         "postedAt": "2026-10-29T14:21:24Z",
         "url": "https://x.com/MistralAI/status/2115811242556137820",
-        "summary": "发布改进版 Le Chonk（Mistral Large 4）开源权重，主打编程与网络安全。",
+        "summary": "放出改进版 Le Chonk 开源权重，主打智能体编程与网络安全。",
         "watch": "AI 全行业",
-        "links": [
-          "https://mistral.ai/news/mistral-large-4-oss/"
-        ]
+        "links": []
+      },
+      {
+        "account": "@OpenAIDevs",
+        "official": true,
+        "postedAt": "2026-10-28T23:17:13Z",
+        "url": "https://x.com/OpenAIDevs/status/2115583698074755078",
+        "summary": "符合条件的 ChatGPT Pro 与 Business 用户起可每月申领最高 500 美元 API 额度。",
+        "watch": "OpenAI/ChatGPT",
+        "links": []
       }
     ],
     "buzz": [
       {
-        "title": "Mistral 放出改进版 Le Chonk 开源权重，编程与网络安全讨论升温",
+        "title": "Gemini 4 Carbon 上线并登顶 Artificial Analysis 指数，DeepMind 称网络安全与长程任务领先",
         "accounts": [
-          "@MistralAI",
-          "@UnslothAI"
+          "@GoogleDeepMind",
+          "@sundarpichai",
+          "@demishassabis"
         ],
         "urls": [
-          "https://x.com/MistralAI/status/2115811242556137820",
-          "https://x.com/UnslothAI/status/2115812784189620265"
+          "https://x.com/GoogleDeepMind/status/2115489356437651654",
+          "https://x.com/sundarpichai/status/2115489219804352921"
         ],
-        "watch": "AI 全行业",
+        "watch": "Google/Gemini",
         "confirmed": true
       },
       {
-        "title": "OpenAI 给 ChatGPT Pro/Business 用户每月最高 500 美元 API 额度",
+        "title": "报道称中国实验室在 Claude 难蒸馏后转向用 GPT-6 Astra 蒸馏训练新模型",
         "accounts": [
-          "@OpenAIDevs",
-          "@StatsWire"
+          "@ruima",
+          "@AndruEdwards"
         ],
         "urls": [
-          "https://x.com/OpenAIDevs/status/2115583698074755078",
-          "https://x.com/StatsWire/status/2115768867238686750"
+          "https://x.com/ruima/status/2115904379547181312",
+          "https://x.com/AndruEdwards/status/2115889262583251053"
         ],
         "watch": "OpenAI/ChatGPT",
-        "confirmed": true
+        "confirmed": false
       },
       {
-        "title": "Anthropic 把 AI for Science 扩到约 20 家科学机构并提供 Claude 额度",
+        "title": "OpenAI 与 Anthropic 各自称内部模型发现可反驳指数时间假说的 3-SAT 算法",
         "accounts": [
-          "@AnthropicAI",
-          "@cyrus77x"
+          "@Math_files",
+          "@AIBoticssq"
         ],
         "urls": [
-          "https://x.com/AnthropicAI/status/2115825653539025142",
-          "https://x.com/cyrus77x/status/2115834087135203700"
+          "https://x.com/Math_files/status/2115672038476271896",
+          "https://x.com/AIBoticssq/status/2115768875220398452"
         ],
         "watch": "Anthropic/Claude",
         "confirmed": true
       },
       {
-        "title": "Gemini 应用内可编辑文档、PDF、演示文稿和表格",
+        "title": "OpenAI 更新 Model Spec，把行为指引收成五条核心价值观",
         "accounts": [
-          "@GeminiApp",
-          "@underthechart"
+          "@faststocknewss",
+          "@ReentryWindow"
         ],
         "urls": [
-          "https://x.com/GeminiApp/status/2115845164824711247",
-          "https://x.com/underthechart/status/2115840246298341489"
+          "https://x.com/faststocknewss/status/2115852383435764200",
+          "https://x.com/ReentryWindow/status/2115859445980758430"
         ],
-        "watch": "Google/Gemini",
+        "watch": "OpenAI/ChatGPT",
+        "confirmed": true
+      },
+      {
+        "title": "马斯克称 Starship 42 将是第一次塔架捕获",
+        "accounts": [
+          "@elonmusk"
+        ],
+        "urls": [
+          "https://x.com/elonmusk/status/2115634093949911506"
+        ],
+        "watch": "SpaceX",
         "confirmed": true
       }
     ]
   },
   "chatgptReleaseNotes": {
     "ok": true,
+    "error": null,
+    "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
     "entries": [
       {
-        "date": "2026-10-28",
-        "title": "Texting your dot",
-        "summary": "美国 Pro 用户开始内测：可用 iMessage 或 RCS 给自己的 ChatGPT「dot」发短信，dot 也会主动提醒；记忆和插件与应用内一致，不读其他短信。"
+        "date": "2026-10-29",
+        "title": "More Work and Codex usage on Pro and Business Premium Plans",
+        "summary": "Pro 与 Business Premium 的 Work/Codex 额度翻倍，并取消此前对 Pro 200 的削减。"
       },
       {
-        "date": "2026-10-28",
+        "date": "2026-10-29",
+        "title": "Texting your dot",
+        "summary": "美国 Pro 用户开始内测：可用 iMessage 或 RCS 给自己的 ChatGPT「dot」发短信，dot 也会主动提醒。"
+      },
+      {
+        "date": "2026-10-29",
         "title": "API credits for eligible ChatGPT Pro and Business plans",
-        "summary": "符合条件的 Pro 与 Business 订阅者可激活促销 API 额度，用于关联 API 组织开发应用和智能体，与 ChatGPT 用量分开。"
+        "summary": "符合条件的 Pro/Business 可激活促销 API 额度，用于关联 API 组织开发，与 ChatGPT 用量分开。"
       },
       {
         "date": "2026-10-27",
         "title": "iCloud Mail and Calendar plugins in ChatGPT",
-        "summary": "iCloud 用户可把邮件和日历连到 ChatGPT，用来找邮件、看收件箱、查改日程；各套餐在网页、桌面和 iOS 可用。"
+        "summary": "可把 iCloud 邮件和日历连到 ChatGPT，查收件箱与改日程；各套餐在网页、桌面和 iOS 可用。"
       },
       {
         "date": "2026-10-26",
         "title": "GPT-6.1 Terra",
-        "summary": "GPT-6.1 Terra 开始在 ChatGPT Work 和 Codex 向 Plus/Pro/Business/Enterprise/Edu 推出，覆盖视觉推理、电脑操作和写作；总用量上限不变。"
+        "summary": "GPT-6.1 Terra 开始在 Work 和 Codex 向 Plus/Pro/Business/Enterprise/Edu 推出，总用量上限不变。"
       }
     ]
   }
