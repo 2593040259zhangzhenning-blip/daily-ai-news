@@ -235,7 +235,10 @@ def grok_lines(sc):
         if p["links"]:
             r += "\n    帖子里的链接：" + " ".join(p["links"])
         rows.append(r)
+    post_urls = {p["url"] for p in sc["x"]["posts"]}
     for b in sc["x"]["buzz"]:
+        if b["urls"] and any(u.split("?")[0] in post_urls for u in b["urls"]):
+            continue                      # 热议里引的就是上面已列出的官方帖，不重复列
         PRINTED[0] += 1
         r = "[线索·Grok·热议] %s%s%s" % (("%s · " % b["watch"]) if b["watch"] else "", b["title"],
                                      "（Grok 说已有官方确认）" if b["confirmed"] else "")
