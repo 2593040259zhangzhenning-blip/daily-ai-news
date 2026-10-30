@@ -1,0 +1,212 @@
+{
+ "date": "2026-10-31",
+ "issues": [
+  {
+   "key": "2026-10-31-1morning",
+   "date": "2026-10-31",
+   "edition": "morning",
+   "createdAt": "2026-10-31T06:53:00+08:00",
+   "headline": "Claude 高价档改名，取消 5 小时上限",
+   "items": [
+    {
+     "cat": "product",
+     "title": "Claude Max 档改名 Ultra，取消 5 小时上限",
+     "body": "Anthropic 10/30 调整订阅：原 Max 5x 改叫 Max（100 美元/月），原 Max 20x 改叫 Ultra（200 美元/月），价格不变、老用户自动迁移。通过验证的 Ultra 账号不再受每 5 小时的用量上限限制，大部分老订阅用户当天起生效，新账号验证后会收到邮件通知；每周上限不变。Ultra 附带的 API 额度也提到每月 200 美元。",
+     "score": 8,
+     "tier": "lead",
+     "summary": "200 美元档的 Claude 不用再等 5 小时重置，只剩每周上限。",
+     "sources": [
+      {
+       "name": "@claudeai（X）",
+       "url": "https://x.com/claudeai/status/2116220869479428500"
+      },
+      {
+       "name": "Claude 定价页",
+       "url": "https://claude.com/pricing"
+      },
+      {
+       "name": "ShiftDelete",
+       "url": "https://en.shiftdelete.net/claude-ultra-plan/"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "苹果 AI 下周在国行 iPhone 开测",
+     "body": "苹果在中国官网宣布，iOS 27.3 首个开发者测试版北京时间 11/4 推出，国行 iPhone 15 Pro 及更新机型首次能用部分 Apple Intelligence 功能：写作工具、Genmoji、清除、通知摘要和优先通知、AirPods 实时翻译；正式版 12 月推送。需要把系统和 Siri 语言设为简体中文，新版 Siri 这次还不在其中。据报道国内版由阿里通义千问模型支持。",
+     "score": 7,
+     "tier": "must",
+     "sources": [
+      {
+       "name": "MacRumors",
+       "url": "https://www.macrumors.com/2026/10/30/apple-says-ios-27-3-beta-coming-next-week/"
+      },
+      {
+       "name": "9to5Mac",
+       "url": "https://9to5mac.com/2026/10/30/apple-confirms-ios-27-3-beta-is-coming-next-week-with-apple-intelligence-in-china/"
+      },
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/tech/1023974/apple-intelligence-china-ios-27-3"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "Cursor 商店的 Claude Code 扩展被植入后门",
+     "body": "Cursor 称，它自家扩展商店里的 Claude Code 扩展 2.1.312 和 2.1.313 两个版本并非 Anthropic 所做，美西时间 10/29 挂了约 11 小时，会收集电脑信息并试图装上 SSH 后门，Windows 和 Mac 都受影响。这段时间在 Cursor 里装过或更新过这个扩展的人，要按 Cursor 的公告自查并更换密码和密钥；在终端或 VS Code 官方商店里用 Claude Code 的不在通报范围内。",
+     "score": 6,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Cursor 官方博客",
+       "url": "https://cursor.com/blog/claude-code-extension-security-notice"
+      },
+      {
+       "name": "Ars Technica",
+       "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours"
+      },
+      {
+       "name": "BleepingComputer",
+       "url": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "Gemini Notebook 加入数百本免费教材",
+     "body": "谷歌给 Gemini Notebook 加了一个教材库，学生可以免费把 OpenStax、Open Textbook Library 和印度 S Chand 出版社的数百本教材加为资料来源，再让 AI 围绕教材答疑、总结。入口在「添加来源」里的「教材」。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "iPhone in Canada",
+       "url": "https://www.iphoneincanada.ca/2026/10/29/gemini-notebook-now-has-hundreds-of-free-textbooks-for-students/"
+      },
+      {
+       "name": "Digit",
+       "url": "https://www.digit.in/news/general/students-can-now-access-free-textbooks-directly-in-google-gemini-notebook-here-is-how.html"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "四大 AI 公司支持网站一键拒绝被拿去训练",
+     "body": "OpenAI、谷歌、微软和 Anthropic 共同支持一项提交给 IETF 的新标准：网站在 robots.txt 里加一条信号，就能一次性告诉各家 AI 公司别用自己的内容训练模型，不用再逐家设置。OpenAI 同日也发文说明了自己的做法。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out"
+      },
+      {
+       "name": "OpenAI 官网",
+       "url": "https://openai.com/index/helping-websites-express-ai-training-preferences"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "Waymo 下一款无人出租车用丰田 bZ4X",
+     "body": "Waymo 宣布和丰田深化合作，把丰田 bZ4X 电动 SUV 改造成下一代无人驾驶出租车，2027 年先在日本投入，之后也会用于英国。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Waymo 官方博客",
+       "url": "https://waymo.com/blog/2026/10/toyota-bz4x-partnership"
+      },
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/10/30/waymos-next-robotaxi-will-be-a-toyota-bz4x-destined-for-japan-and-the-uk"
+      },
+      {
+       "name": "Electrek",
+       "url": "https://electrek.co/2026/10/30/waymo-toyota-bz4x-robotaxi-japan-2027"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "iOS 27.3 测试版北京时间 11/4 推出，国行 Apple Intelligence 开测",
+    "Kimi K3.1 Pro 完整权重 11 月 4 日前开源",
+    "Gemini 4 Carbon 何时向 Gemini App 和订阅用户开放"
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI 官网",
+     "ChatGPT 与 Codex 更新日志（OpenAI）",
+     "OpenAI API 更新日志",
+     "Anthropic 新闻页",
+     "Claude 发布说明",
+     "Claude Code 更新日志",
+     "Claude Code 每周摘要",
+     "Google DeepMind 博客",
+     "Google AI 栏目",
+     "Google Research 博客",
+     "Meta AI 博客",
+     "英伟达博客",
+     "英伟达新闻中心",
+     "xAI 新闻页",
+     "Apple Newsroom",
+     "Apple 开发者版本发布",
+     "Apple 开发者新闻",
+     "MacRumors",
+     "9to5Mac",
+     "SpaceX 官网更新",
+     "SpaceX 发射日程（Launch Library）",
+     "Hugging Face 博客",
+     "Mistral 新闻",
+     "EdSurge",
+     "Inside Higher Ed",
+     "英国签证与移民局（GOV.UK）",
+     "ICEF Monitor",
+     "The PIE News",
+     "雅思官方（IELTS）",
+     "教育部（工作动态）",
+     "中国教育报",
+     "TechCrunch AI",
+     "The Verge AI",
+     "Ars Technica AI",
+     "Wired AI",
+     "MIT Technology Review AI",
+     "The Decoder",
+     "量子位",
+     "The Robot Report",
+     "IEEE Spectrum 机器人",
+     "TechCrunch 机器人",
+     "Waymo 官方博客",
+     "Electrek",
+     "TechCrunch 交通",
+     "The Verge 交通",
+     "IEEE Spectrum 半导体",
+     "IEEE Spectrum 生物医学",
+     "STAT 神经科学",
+     "Techmeme",
+     "Hacker News 首页（≥100 分）",
+     "Hugging Face 每日论文（前 12）",
+     "AI News Radar（中转站）",
+     "Follow Builders（AI 圈人物 X）",
+     "Google 新闻关键词搜索（22 组）",
+     "X 官方账号与关键人物（经 Grok，21 个账号）",
+     "ChatGPT 发布说明（经 Grok）",
+     "@claudeai（X）",
+     "Claude 定价页",
+     "Cursor 官方博客",
+     "MacRumors",
+     "9to5Mac",
+     "AI 公司教育产品公告",
+     "ShiftDelete",
+     "CellCog",
+     "iPhone in Canada",
+     "Help Net Security",
+     "BleepingComputer"
+    ],
+    "candidates": 308
+   }
+  }
+ ],
+ "specials": [],
+ "models": []
+}

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-29T22:53:21+00:00",
+ "generatedAt": "2026-10-30T22:53:20+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -297,6 +297,14 @@
    "headline": "OpenAI 给 Pro 用户额度翻倍",
    "updatedAt": "2026-10-30T07:00:00+08:00",
    "count": 7,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-10-31",
+   "headline": "Claude 高价档改名，取消 5 小时上限",
+   "updatedAt": "2026-10-31T06:53:00+08:00",
+   "count": 6,
    "specials": [],
    "models": []
   }

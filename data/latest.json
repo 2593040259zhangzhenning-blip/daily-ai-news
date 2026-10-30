@@ -1,37 +1,37 @@
 {
- "date": "2026-10-30",
- "headline": "OpenAI 给 Pro 用户额度翻倍",
- "updatedAt": "2026-10-30T07:00:00+08:00",
- "count": 7,
+ "date": "2026-10-31",
+ "headline": "Claude 高价档改名，取消 5 小时上限",
+ "updatedAt": "2026-10-31T06:53:00+08:00",
+ "count": 6,
  "lead": {
   "cat": "product",
-  "title": "OpenAI 撤回 Pro 降额，Work 和 Codex 额度翻倍",
-  "summary": "ChatGPT 高价档用得更多了，Plus 用户这次没变化。"
+  "title": "Claude Max 档改名 Ultra，取消 5 小时上限",
+  "summary": "200 美元档的 Claude 不用再等 5 小时重置，只剩每周上限。"
  },
  "items": [
   {
-   "cat": "model",
-   "title": "Mistral 开放万亿参数模型 Le Chonk 权重",
+   "cat": "product",
+   "title": "苹果 AI 下周在国行 iPhone 开测",
+   "tier": "must"
+  },
+  {
+   "cat": "product",
+   "title": "Cursor 商店的 Claude Code 扩展被植入后门",
+   "tier": "brief"
+  },
+  {
+   "cat": "product",
+   "title": "Gemini Notebook 加入数百本免费教材",
    "tier": "brief"
   },
   {
    "cat": "policy",
-   "title": "OpenAI 改写模型行为准则，收成五条价值观",
+   "title": "四大 AI 公司支持网站一键拒绝被拿去训练",
    "tier": "brief"
   },
   {
-   "cat": "policy",
-   "title": "达特茅斯教务长因隐瞒用 AI 辞职",
-   "tier": "brief"
-  },
-  {
-   "cat": "biz",
-   "title": "美国曾调查针对黄仁勋的中国间谍嫌疑",
-   "tier": "brief"
-  },
-  {
-   "cat": "policy",
-   "title": "美国认定进口机器人威胁国家安全",
+   "cat": "product",
+   "title": "Waymo 下一款无人出租车用丰田 bZ4X",
    "tier": "brief"
   }
  ]
