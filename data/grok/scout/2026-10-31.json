@@ -1,0 +1,164 @@
+{
+  "date": "2026-10-31",
+  "generatedAt": "2026-10-31T06:22:00+08:00",
+  "by": "Grok Bot",
+  "x": {
+    "ok": true,
+    "error": null,
+    "checked": [
+      "@OpenAI",
+      "@OpenAIDevs",
+      "@ChatGPTapp",
+      "@AnthropicAI",
+      "@claudeai",
+      "@GoogleDeepMind",
+      "@GeminiApp",
+      "@AIatMeta",
+      "@nvidia",
+      "@SpaceX",
+      "@xai",
+      "@MistralAI",
+      "@ukhomeoffice",
+      "@IELTSOfficial",
+      "@sama",
+      "@gdb",
+      "@OfficialLoganK",
+      "@demishassabis",
+      "@karpathy",
+      "@elonmusk",
+      "@bcherny"
+    ],
+    "posts": [
+      {
+        "account": "@claudeai",
+        "official": true,
+        "postedAt": "2026-10-30T17:29:07Z",
+        "url": "https://x.com/claudeai/status/2116220869479428500",
+        "summary": "Max 套餐改名：Max 5x→Max、Max 20x→Ultra；已验证 Ultra 起取消 5 小时用量上限。",
+        "watch": "Anthropic/Claude",
+        "links": [
+          "https://claude.com/pricing"
+        ]
+      },
+      {
+        "account": "@bcherny",
+        "official": false,
+        "postedAt": "2026-10-30T17:36:57Z",
+        "url": "https://x.com/bcherny/status/2116222842413142111",
+        "summary": "确认已验证 Ultra 账号取消 5 小时用量上限。",
+        "watch": "Anthropic/Claude",
+        "links": []
+      },
+      {
+        "account": "@OpenAI",
+        "official": true,
+        "postedAt": "2026-10-30T15:12:35Z",
+        "url": "https://x.com/OpenAI/status/2116186509384815084",
+        "summary": "推出面向企业的 Private Intelligence，加强敏感数据管控下使用最强模型。",
+        "watch": "OpenAI/ChatGPT",
+        "links": [
+          "https://openai.com/business/private-intelligence/"
+        ]
+      }
+    ],
+    "buzz": [
+      {
+        "title": "OpenCode 宣布可用 Claude 订阅在 OpenCode 里跑模型，社区讨论是否违约",
+        "accounts": [
+          "@opencode",
+          "@xiaohuang0123"
+        ],
+        "urls": [
+          "https://x.com/opencode/status/2116198602523513081",
+          "https://x.com/xiaohuang0123/status/2116236257718354332"
+        ],
+        "watch": "Anthropic/Claude",
+        "confirmed": true
+      },
+      {
+        "title": "讨论称 Artificial Analysis HLE-Diamond 上 Gemini 4 Carbon 约 69% 略高于 Opus 5.5",
+        "accounts": [
+          "@TheTokenGossip",
+          "@chatgpt_kazlily"
+        ],
+        "urls": [
+          "https://x.com/TheTokenGossip/status/2116151974819205495",
+          "https://x.com/chatgpt_kazlily/status/2116136668252254590"
+        ],
+        "watch": "Google/Gemini",
+        "confirmed": false
+      },
+      {
+        "title": "传闻 OpenAI 内部在测 GPT-6.2 Betelgeuse/Bel，意图对标 Gemini 4 Carbon",
+        "accounts": [
+          "@marcthecreatorr",
+          "@patience_cave"
+        ],
+        "urls": [
+          "https://x.com/marcthecreatorr/status/2116110549599535295",
+          "https://x.com/patience_cave/status/2116205577991057904"
+        ],
+        "watch": "OpenAI/ChatGPT",
+        "confirmed": false
+      },
+      {
+        "title": "讨论称 Starship Flight 15 拟双塔架捕获，Ship 42 静态点火完成、窗口或在 11 月中旬",
+        "accounts": [
+          "@MoodSpaceX",
+          "@Kisalay_"
+        ],
+        "urls": [
+          "https://x.com/MoodSpaceX/status/2116224110925647883",
+          "https://x.com/Kisalay_/status/2116236193365115022"
+        ],
+        "watch": "SpaceX",
+        "confirmed": false
+      },
+      {
+        "title": "英国毕业生签证调整讨论：部分院校仍可两年，其余或自 2027 年改为 18 个月",
+        "accounts": [
+          "@BusInsiderSSA",
+          "@tt_edugraph"
+        ],
+        "urls": [
+          "https://x.com/BusInsiderSSA/status/2116162706533183563",
+          "https://x.com/tt_edugraph/status/2116127993148194924"
+        ],
+        "watch": "留学与签证政策",
+        "confirmed": false
+      }
+    ]
+  },
+  "chatgptReleaseNotes": {
+    "ok": true,
+    "error": null,
+    "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    "entries": [
+      {
+        "date": "2026-10-29",
+        "title": "More Work and Codex usage on Pro and Business Premium Plans",
+        "summary": "Pro 与 Business Premium 的 Work/Codex 额度翻倍，并取消此前对 Pro 200 的削减。"
+      },
+      {
+        "date": "2026-10-28",
+        "title": "Texting your dot",
+        "summary": "美国 Pro 用户开始内测：可用 iMessage 或 RCS 给自己的 ChatGPT「dot」发短信，dot 也会主动提醒。"
+      },
+      {
+        "date": "2026-10-28",
+        "title": "API credits for eligible ChatGPT Pro and Business plans",
+        "summary": "符合条件的 Pro/Business 可激活促销 API 额度，用于关联 API 组织开发，与 ChatGPT 用量分开。"
+      },
+      {
+        "date": "2026-10-27",
+        "title": "iCloud Mail and Calendar plugins in ChatGPT",
+        "summary": "可把 iCloud 邮件和日历连到 ChatGPT，查收件箱与改日程；各套餐在网页、桌面和 iOS 可用。"
+      },
+      {
+        "date": "2026-10-26",
+        "title": "GPT-6.1 Terra",
+        "summary": "GPT-6.1 Terra 开始在 Work 和 Codex 向 Plus/Pro/Business/Enterprise/Edu 推出，总用量上限不变。"
+      }
+    ]
+  }
+}
