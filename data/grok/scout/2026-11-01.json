@@ -1,0 +1,187 @@
+{
+  "date": "2026-11-01",
+  "generatedAt": "2026-11-01T06:15:49+08:00",
+  "by": "Grok Bot",
+  "x": {
+    "ok": true,
+    "error": null,
+    "checked": [
+      "@OpenAI",
+      "@OpenAIDevs",
+      "@ChatGPTapp",
+      "@AnthropicAI",
+      "@claudeai",
+      "@GoogleDeepMind",
+      "@GeminiApp",
+      "@AIatMeta",
+      "@nvidia",
+      "@SpaceX",
+      "@xai",
+      "@MistralAI",
+      "@ukhomeoffice",
+      "@IELTSOfficial",
+      "@sama",
+      "@gdb",
+      "@OfficialLoganK",
+      "@demishassabis",
+      "@karpathy",
+      "@elonmusk",
+      "@bcherny"
+    ],
+    "posts": [
+      {
+        "account": "@GoogleDeepMind",
+        "official": true,
+        "postedAt": "2026-10-31T13:33:39Z",
+        "url": "https://x.com/GoogleDeepMind/status/2116524000977285321",
+        "summary": "推出基于 Gemini 的 PlanAssist，协助英国规划官员审建改申请，评估时间可缩短约 58%。",
+        "watch": "Google/Gemini",
+        "links": [
+          "https://deepmind.google/blog/speeding-up-planning-decisions-with-ai/"
+        ]
+      },
+      {
+        "account": "@SpaceX",
+        "official": true,
+        "postedAt": "2026-10-31T05:27:04Z",
+        "url": "https://x.com/SpaceX/status/2116401549828391177",
+        "summary": "Falcon 9 从加州发射 27 颗 Starlink 卫星，部署已确认。",
+        "watch": "SpaceX",
+        "links": []
+      },
+      {
+        "account": "@AnthropicAI",
+        "official": true,
+        "postedAt": "2026-10-31T01:59:06Z",
+        "url": "https://x.com/AnthropicAI/status/2116349211549843666",
+        "summary": "发布自动化隐蔽涌现错位研究：用大量 Claude 代理生成可绕过训练数据监控的样本。",
+        "watch": "Anthropic/Claude",
+        "links": [
+          "https://alignment.anthropic.com/2026/automated-em-search/"
+        ]
+      },
+      {
+        "account": "@OpenAIDevs",
+        "official": true,
+        "postedAt": "2026-10-30T23:08:03Z",
+        "url": "https://x.com/OpenAIDevs/status/2116306164375863343",
+        "summary": "Agents API 本周更新：Auto Review、异步压缩、时间感知、随时改工具与系统提示缓存。",
+        "watch": "OpenAI/ChatGPT",
+        "links": []
+      },
+      {
+        "account": "@GeminiApp",
+        "official": true,
+        "postedAt": "2026-10-30T23:01:52Z",
+        "url": "https://x.com/GeminiApp/status/2116304609383710988",
+        "summary": "Gemini Drops 上新：可用前沿模型 Gemini 4 Argon，并加强应用连接与个性化能力。",
+        "watch": "Google/Gemini",
+        "links": []
+      }
+    ],
+    "buzz": [
+      {
+        "title": "帮助页称自 12 月起 ChatGPT 与 Codex 共用一份额度，Plus/Pro/Business 受影响",
+        "accounts": [
+          "@CodexUpdate",
+          "@usehooo"
+        ],
+        "urls": [
+          "https://x.com/CodexUpdate/status/2116620807929799050",
+          "https://x.com/usehooo/status/2116423172660859059"
+        ],
+        "watch": "OpenAI/ChatGPT",
+        "confirmed": true
+      },
+      {
+        "title": "OpenAI 对同设备付费账号数量设限，超限会提示 Device limit reached",
+        "accounts": [
+          "@wawaup1024",
+          "@CodexUpdate"
+        ],
+        "urls": [
+          "https://x.com/wawaup1024/status/2116435401447776339",
+          "https://x.com/CodexUpdate/status/2116564716155813888"
+        ],
+        "watch": "OpenAI/ChatGPT",
+        "confirmed": true
+      },
+      {
+        "title": "讨论称 Anthropic 用 Claude 将 Messages API 重写成 Rust，CPU 降约四成、团队零 Rust 工程师",
+        "accounts": [
+          "@geek_zard",
+          "@leozhangai"
+        ],
+        "urls": [
+          "https://x.com/geek_zard/status/2116352113492263151",
+          "https://x.com/leozhangai/status/2116379687458865609"
+        ],
+        "watch": "Anthropic/Claude",
+        "confirmed": false
+      },
+      {
+        "title": "讨论称 Starship Flight 15 瞄准 11 月双塔架捕获，Ship 42 与 Booster 22 静态点火完成",
+        "accounts": [
+          "@CoffeeNGrit",
+          "@satguy01"
+        ],
+        "urls": [
+          "https://x.com/CoffeeNGrit/status/2116356988657635382",
+          "https://x.com/satguy01/status/2116464951338697115"
+        ],
+        "watch": "SpaceX",
+        "confirmed": false
+      },
+      {
+        "title": "英国毕业生签证调整讨论：高合规院校或仍两年，其余 2027 起或改为 18 个月",
+        "accounts": [
+          "@VisaScoring",
+          "@IshanYash17"
+        ],
+        "urls": [
+          "https://x.com/VisaScoring/status/2116383490551980157",
+          "https://x.com/IshanYash17/status/2116511139374969188"
+        ],
+        "watch": "留学与签证政策",
+        "confirmed": false
+      }
+    ]
+  },
+  "chatgptReleaseNotes": {
+    "ok": true,
+    "error": null,
+    "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    "entries": [
+      {
+        "date": "2026-10-30",
+        "title": "Account switching on iOS and Android",
+        "summary": "手机 App 可同时登录最多 2 个账号并切换，各自保留聊天、记忆、设置和订阅。"
+      },
+      {
+        "date": "2026-10-29",
+        "title": "More Work and Codex usage on Pro and Business Premium Plans",
+        "summary": "Pro 与 Business Premium 的 Work/Codex 额度翻倍，并取消此前对 Pro 200 的削减。"
+      },
+      {
+        "date": "2026-10-28",
+        "title": "Texting your dot",
+        "summary": "美国 Pro 用户开始内测：可用 iMessage 或 RCS 给自己的 ChatGPT「dot」发短信，dot 也会主动提醒。"
+      },
+      {
+        "date": "2026-10-28",
+        "title": "API credits for eligible ChatGPT Pro and Business plans",
+        "summary": "符合条件的 Pro/Business 可激活促销 API 额度，用于关联 API 组织开发，与 ChatGPT 用量分开。"
+      },
+      {
+        "date": "2026-10-27",
+        "title": "iCloud Mail and Calendar plugins in ChatGPT",
+        "summary": "可把 iCloud 邮件和日历连到 ChatGPT，查收件箱与改日程；各套餐在网页、桌面和 iOS 可用。"
+      },
+      {
+        "date": "2026-10-26",
+        "title": "GPT-6.1 Terra",
+        "summary": "GPT-6.1 Terra 开始在 Work 和 Codex 向 Plus/Pro/Business/Enterprise/Edu 推出，总用量上限不变。"
+      }
+    ]
+  }
+}
