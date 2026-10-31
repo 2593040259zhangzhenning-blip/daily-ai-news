@@ -1,37 +1,32 @@
 {
- "date": "2026-10-31",
- "headline": "Claude 高价档改名，取消 5 小时上限",
- "updatedAt": "2026-10-31T06:53:00+08:00",
- "count": 6,
+ "date": "2026-11-01",
+ "headline": "ChatGPT 与 Codex 将共用额度",
+ "updatedAt": "2026-11-01T06:58:00+08:00",
+ "count": 5,
  "lead": {
   "cat": "product",
-  "title": "Claude Max 档改名 Ultra，取消 5 小时上限",
-  "summary": "200 美元档的 Claude 不用再等 5 小时重置，只剩每周上限。"
+  "title": "ChatGPT 和 Codex 12 月起共用一份额度",
+  "summary": "以后 ChatGPT 和 Codex 一起花同一份额度，重度用户要算着用。"
  },
  "items": [
   {
-   "cat": "product",
-   "title": "苹果 AI 下周在国行 iPhone 开测",
-   "tier": "must"
-  },
-  {
-   "cat": "product",
-   "title": "Cursor 商店的 Claude Code 扩展被植入后门",
+   "cat": "research",
+   "title": "Claude 自主给活体小鼠做了脑部注射",
    "tier": "brief"
   },
   {
    "cat": "product",
-   "title": "Gemini Notebook 加入数百本免费教材",
+   "title": "Meta 被曝和傅利叶合造人形机器人",
    "tier": "brief"
   },
   {
    "cat": "policy",
-   "title": "四大 AI 公司支持网站一键拒绝被拿去训练",
+   "title": "美司法部：AI「幽灵学生」骗走数百万助学贷款",
    "tier": "brief"
   },
   {
-   "cat": "product",
-   "title": "Waymo 下一款无人出租车用丰田 bZ4X",
+   "cat": "research",
+   "title": "谷歌太空 AI 卫星首次传回回答",
    "tier": "brief"
   }
  ]

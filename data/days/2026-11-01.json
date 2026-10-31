@@ -1,0 +1,187 @@
+{
+ "date": "2026-11-01",
+ "issues": [
+  {
+   "key": "2026-11-01-1morning",
+   "date": "2026-11-01",
+   "edition": "morning",
+   "createdAt": "2026-11-01T06:58:00+08:00",
+   "headline": "ChatGPT 与 Codex 将共用额度",
+   "items": [
+    {
+     "cat": "product",
+     "title": "ChatGPT 和 Codex 12 月起共用一份额度",
+     "body": "OpenAI 帮助中心新文章说明，12 月起 Plus、Pro 和 Business 订阅里，ChatGPT 和 Codex 的用量将算进同一份按 token 计的额度，用的模型越强、任务越复杂，消耗越快；剩余量和重置时间可在「设置 → 用量」里看到，普通即时聊天不占这份额度。具体哪天生效、各档给多少，OpenAI 还没公布。常用 Codex 写代码的人，12 月后在 ChatGPT 里跑智能体任务也会挤占同一份额度。",
+     "score": 7,
+     "tier": "lead",
+     "summary": "以后 ChatGPT 和 Codex 一起花同一份额度，重度用户要算着用。",
+     "sources": [
+      {
+       "name": "OpenAI 帮助中心",
+       "url": "https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits"
+      },
+      {
+       "name": "TokenPost",
+       "url": "https://www.tokenpost.com/news/technology/45608"
+      },
+      {
+       "name": "Windows Report",
+       "url": "https://windowsreport.com/openai-likely-to-make-chatgpt-and-codex-share-usage-limits-starting-in-december/"
+      }
+     ]
+    },
+    {
+     "cat": "research",
+     "title": "Claude 自主给活体小鼠做了脑部注射",
+     "body": "初创公司 Exin Therapeutics 称，Claude Sonnet 5 从 19 种候选疗法里自己选药、定脑区，按三篇论文算出坐标，再操控电动手术设备给一只癫痫模型小鼠完成注射，全程盯着摄像头汇报；兽医批准每个不可逆步骤并握着急停。Opus 5.5 和 Opus 5 拒绝做这台手术。成果只有一只小鼠，也还没经同行评审。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "The Decoder",
+       "url": "https://the-decoder.com/a-claude-model-autonomously-chose-a-gene-therapy-and-operated-on-a-mouse-brain-with-no-human-decision-making/"
+      },
+      {
+       "name": "Wired",
+       "url": "https://www.wired.com/story/an-ai-agent-did-brain-surgery-on-live-mouse"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "Meta 被曝和傅利叶合造人形机器人",
+     "body": "据 The Information 报道，Meta 已和中国机器人公司傅利叶（Fourier）做出一台人形机器人原型，正在开发第二版，方向是家用机器人。Meta 尚未回应，路透社称无法立即核实。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "KFGO（路透社）",
+       "url": "https://kfgo.com/2026/10/31/meta-builds-humanoid-robot-with-chinese-startup-fourier-the-information-says/"
+      },
+      {
+       "name": "Investing.com",
+       "url": "https://uk.investing.com/news/stock-market-news/meta-builds-humanoid-robot-with-chinas-fourier-as-home-robot-push-expands-report-4947174"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "美司法部：AI「幽灵学生」骗走数百万助学贷款",
+     "body": "美国司法部披露，数千个虚构的「幽灵学生」借 AI 代上网课、完成作业，冒领了数百万美元的联邦学生贷款和助学金。网课平台和学校的身份核验可能因此收紧。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Ars Technica",
+       "url": "https://arstechnica.com/tech-policy/2026/10/doj-exposes-ghost-students-using-ai-to-complete-courses-steal-student-loans"
+      }
+     ]
+    },
+    {
+     "cat": "research",
+     "title": "谷歌太空 AI 卫星首次传回回答",
+     "body": "谷歌 Suncatcher 计划 10 月初发射的实验卫星搭载 TPU 芯片，现已在轨道上跑起 AI 模型，并把第一条生成的回答（一首诗）传回地面。这是验证「把数据中心搬上太空」的第一步。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission"
+      },
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "iOS 27.3 测试版北京时间 11/4 推出，国行 Apple Intelligence 开测",
+    "Kimi K3.1 Pro 完整权重 11 月 4 日前开源",
+    "星舰第 15 次试飞（11 月，尝试塔架捕获飞船）"
+   ],
+   "updates": [
+    {
+     "product": "ChatGPT",
+     "text": "iPhone 和安卓 App 能同时登录两个账号随时切换，各自的聊天、记忆和订阅分开",
+     "date": "2026-10-30",
+     "sources": [
+      {
+       "name": "ChatGPT 发布说明",
+       "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      }
+     ]
+    }
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI 官网",
+     "ChatGPT 与 Codex 更新日志（OpenAI）",
+     "OpenAI API 更新日志",
+     "Anthropic 新闻页",
+     "Claude 发布说明",
+     "Claude Code 更新日志",
+     "Claude Code 每周摘要",
+     "Google DeepMind 博客",
+     "Google AI 栏目",
+     "Google Research 博客",
+     "Meta AI 博客",
+     "英伟达博客",
+     "英伟达新闻中心",
+     "xAI 新闻页",
+     "Apple Newsroom",
+     "Apple 开发者版本发布",
+     "Apple 开发者新闻",
+     "MacRumors",
+     "9to5Mac",
+     "SpaceX 官网更新",
+     "SpaceX 发射日程（Launch Library）",
+     "Hugging Face 博客",
+     "Mistral 新闻",
+     "EdSurge",
+     "Inside Higher Ed",
+     "英国签证与移民局（GOV.UK）",
+     "ICEF Monitor",
+     "The PIE News",
+     "雅思官方（IELTS）",
+     "教育部（工作动态）",
+     "中国教育报",
+     "TechCrunch AI",
+     "The Verge AI",
+     "Ars Technica AI",
+     "Wired AI",
+     "MIT Technology Review AI",
+     "The Decoder",
+     "量子位",
+     "The Robot Report",
+     "IEEE Spectrum 机器人",
+     "TechCrunch 机器人",
+     "Waymo 官方博客",
+     "Electrek",
+     "TechCrunch 交通",
+     "The Verge 交通",
+     "IEEE Spectrum 半导体",
+     "IEEE Spectrum 生物医学",
+     "STAT 神经科学",
+     "Techmeme",
+     "Hacker News 首页（≥100 分）",
+     "Hugging Face 每日论文（前 12）",
+     "AI News Radar（中转站）",
+     "Follow Builders（AI 圈人物 X）",
+     "Google 新闻关键词搜索（22 组）",
+     "X 官方账号与关键人物（经 Grok，21 个账号）",
+     "ChatGPT 发布说明（经 Grok）",
+     "OpenAI 帮助中心",
+     "AI 公司教育产品公告",
+     "TokenPost",
+     "Windows Report",
+     "KFGO（路透社转载）",
+     "Investing.com"
+    ],
+    "candidates": 249
+   }
+  }
+ ],
+ "specials": [],
+ "models": []
+}

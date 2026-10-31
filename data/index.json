@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-30T22:53:20+00:00",
+ "generatedAt": "2026-10-31T22:53:39+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -305,6 +305,14 @@
    "headline": "Claude 高价档改名，取消 5 小时上限",
    "updatedAt": "2026-10-31T06:53:00+08:00",
    "count": 6,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-11-01",
+   "headline": "ChatGPT 与 Codex 将共用额度",
+   "updatedAt": "2026-11-01T06:58:00+08:00",
+   "count": 5,
    "specials": [],
    "models": []
   }
