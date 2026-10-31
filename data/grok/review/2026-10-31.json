@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-31",
+  "issue": "2026-10-31-1morning",
+  "generatedAt": "2026-10-31T09:09:01+08:00",
+  "by": "Grok Bot",
+  "ok": true,
+  "error": null,
+  "missed": [
+    {
+      "title": "谷歌 Suncatcher 卫星首次在轨用 TPU 跑出 AI 回复",
+      "why": "第一层 Google/Gemini：谷歌官方博客 10/30 称 Project Suncatcher 原型星完成「Hello World」，星上 Gemma 4 经地面站上行提示后下行俳句，是数据中心级 TPU 首次在轨完成推理；The Verge、TechCrunch 同日报道，下一步测热应力与辐射，2027 年计划双星光链路。当期未收。",
+      "watch": "Google/Gemini",
+      "layer": 1,
+      "severity": "高",
+      "happenedAt": "2026-10-30",
+      "urls": [
+        "https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-satellite-response/",
+        "https://www.theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission",
+        "https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/"
+      ]
+    },
+    {
+      "title": "OpenAI 将发社区安全报告，并收紧青少年武器相关回答",
+      "why": "第一层 OpenAI/ChatGPT：官方 10/30 宣布承诺发 Community Safety Report（首期 2027 初、覆盖 2026 下半年），并对全体用户限制大规模袭击细节；对青少年进一步限制武器与安防系统实用信息，强化年龄预测，多轮暴力相关对话可自动结束并可能暂停账号；路透、Bloomberg Law 等转载。当期未收。",
+      "watch": "OpenAI/ChatGPT",
+      "layer": 1,
+      "severity": "中",
+      "happenedAt": "2026-10-30",
+      "urls": [
+        "https://openai.com/index/community-safety-report-and-new-protections-for-teens/",
+        "https://economictimes.indiatimes.com/tech/artificial-intelligence/openai-to-limit-weapons-information-for-teens-on-chatgpt-in-violence-prevention-push/articleshow/135374006.cms"
+      ]
+    }
+  ],
+  "doubts": [
+    {
+      "item": "苹果 AI 下周在国行 iPhone 开测",
+      "problem": "正文写「国内版由阿里通义千问模型支持」偏笼统；MacRumors/The Verge 写的是与阿里合作，在 Siri、写作工具和视觉智能里接入通义（Qwen）助手，并不等于整套国行 Apple Intelligence 都由通义支撑。另：语言条件写「系统和 Siri 语言设为简体中文」，MacRumors 写设备与 Siri 语言需为英语或简体中文。",
+      "urls": [
+        "https://www.macrumors.com/2026/10/30/apple-says-ios-27-3-beta-coming-next-week/",
+        "https://www.theverge.com/tech/1023974/apple-intelligence-china-ios-27-3"
+      ]
+    }
+  ]
+}
