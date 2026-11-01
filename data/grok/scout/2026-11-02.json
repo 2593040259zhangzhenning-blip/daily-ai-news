@@ -1,0 +1,199 @@
+{
+  "date": "2026-11-02",
+  "generatedAt": "2026-11-02T06:27:18+08:00",
+  "by": "Grok Bot",
+  "x": {
+    "ok": true,
+    "error": null,
+    "checked": [
+      "@OpenAI",
+      "@OpenAIDevs",
+      "@ChatGPTapp",
+      "@AnthropicAI",
+      "@claudeai",
+      "@GoogleDeepMind",
+      "@GeminiApp",
+      "@AIatMeta",
+      "@nvidia",
+      "@SpaceX",
+      "@xai",
+      "@MistralAI",
+      "@ukhomeoffice",
+      "@IELTSOfficial",
+      "@sama",
+      "@gdb",
+      "@OfficialLoganK",
+      "@demishassabis",
+      "@karpathy",
+      "@elonmusk",
+      "@bcherny"
+    ],
+    "posts": [
+      {
+        "account": "@karpathy",
+        "official": false,
+        "postedAt": "2026-11-01T18:14:46.000Z",
+        "url": "https://x.com/karpathy/status/2116957135661945283",
+        "summary": "发布周末作品 HackerTube：用 Claude 从 HN 二十年评论筛出常被推荐的技术视频站。",
+        "watch": "AI 全行业（国外）",
+        "links": [
+          "https://hackertube.org/"
+        ]
+      },
+      {
+        "account": "@elonmusk",
+        "official": false,
+        "postedAt": "2026-11-01T20:23:48.000Z",
+        "url": "https://x.com/elonmusk/status/2116989604104392969",
+        "summary": "宣布 Grok Bot 可调研亲友喜好并代购礼物。",
+        "watch": "AI 全行业（国外）",
+        "links": []
+      }
+    ],
+    "buzz": [
+      {
+        "title": "传 Codex 用量面板出现 gpt-6.2-astra 灰度，官方未确认",
+        "accounts": [
+          "@leo114119",
+          "@xiax0603"
+        ],
+        "urls": [
+          "https://x.com/leo114119/status/2116796839509057790",
+          "https://x.com/xiax0603/status/2116879785263857768"
+        ],
+        "watch": "OpenAI/ChatGPT",
+        "confirmed": false
+      },
+      {
+        "title": "Claude Code v2.1.316 起 Pro 默认推荐模型显示为 Haiku 5.5",
+        "accounts": [
+          "@bebuu_ai",
+          "@claude_news"
+        ],
+        "urls": [
+          "https://x.com/bebuu_ai/status/2116905471588327494",
+          "https://x.com/claude_news/status/2116885230413918591"
+        ],
+        "watch": "Anthropic/Claude",
+        "confirmed": false
+      },
+      {
+        "title": "Starship Flight 15 瞄准 11 月双塔架捕获，Ship 42 与 Booster 22 静火已完成",
+        "accounts": [
+          "@mark_k",
+          "@MoodSpaceX"
+        ],
+        "urls": [
+          "https://x.com/mark_k/status/2116851192097575218",
+          "https://x.com/MoodSpaceX/status/2116993681911840803"
+        ],
+        "watch": "SpaceX",
+        "confirmed": false
+      },
+      {
+        "title": "英媒讨论毕业生签证：2027 年起多数或 18 个月，高合规院校或仍两年",
+        "accounts": [
+          "@EconomicTimes",
+          "@emmacourageblog"
+        ],
+        "urls": [
+          "https://x.com/EconomicTimes/status/2116777080327409754",
+          "https://x.com/emmacourageblog/status/2116970044165063050"
+        ],
+        "watch": "留学与签证政策",
+        "confirmed": false
+      },
+      {
+        "title": "NVIDIA 称 AI agents 已协助 SETI 艾伦望远镜阵列实时处理射电数据",
+        "accounts": [
+          "@AGTPinsights",
+          "@innoworkspro"
+        ],
+        "urls": [
+          "https://x.com/AGTPinsights/status/2116727897863885156",
+          "https://x.com/innoworkspro/status/2116744821507588530"
+        ],
+        "watch": "英伟达",
+        "confirmed": true
+      },
+      {
+        "title": "为欧盟 AI Act，Anthropic 扩 Claude 隐形水印，xAI 称 Grok API 11/7 默认开启",
+        "accounts": [
+          "@NFT_Chen",
+          "@awhxtech",
+          "@Withoutqaz"
+        ],
+        "urls": [
+          "https://x.com/NFT_Chen/status/2116756562127831299",
+          "https://x.com/awhxtech/status/2116997178644406647"
+        ],
+        "watch": "AI 全行业（国外）",
+        "confirmed": true
+      },
+      {
+        "title": "Claude self-assessment 被英文圈称为「告密」，隐私争议升温",
+        "accounts": [
+          "@xiaoshan0413",
+          "@stretchcloud",
+          "@xingzengji"
+        ],
+        "urls": [
+          "https://x.com/xiaoshan0413/status/2116819542668407143",
+          "https://x.com/stretchcloud/status/2116911893579530567"
+        ],
+        "watch": "Anthropic/Claude",
+        "confirmed": true
+      },
+      {
+        "title": "GPT-6 Astra 在 AA-Robotics/Playground 机器人基准上领先专用模型",
+        "accounts": [
+          "@martinvars",
+          "@vkdefi"
+        ],
+        "urls": [
+          "https://x.com/martinvars/status/2116948130830938298",
+          "https://x.com/vkdefi/status/2116860293502451800"
+        ],
+        "watch": "OpenAI/ChatGPT",
+        "confirmed": false
+      }
+    ]
+  },
+  "chatgptReleaseNotes": {
+    "ok": true,
+    "error": null,
+    "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    "entries": [
+      {
+        "date": "2026-10-30",
+        "title": "Account switching on iOS and Android",
+        "summary": "ChatGPT 的 iOS 和 Android 应用开始支持同时保持最多两个账号的登录，可在设置中切换而无需退出，各账号的聊天、记忆、设置和订阅相互独立。"
+      },
+      {
+        "date": "2026-10-29",
+        "title": "More Work and Codex usage on Pro and Business Premium Plans",
+        "summary": "Pro 与 Business Premium 的 Work 和 Codex 用量上调，Pro 100 与 Pro 500 翻倍，并取消此前宣布的 Pro 200 削减，较低额度的 Pro 200 用户自 10 月 29 日起也翻倍至同一上限。"
+      },
+      {
+        "date": "2026-10-28",
+        "title": "Texting your dot",
+        "summary": "美国 Pro 用户开始内测通过 iMessage 或 RCS 给自己的 dot 发短信，dot 也会主动发来可能相关的更新，且不会读取其他短信对话。"
+      },
+      {
+        "date": "2026-10-28",
+        "title": "API credits for eligible ChatGPT Pro and Business plans",
+        "summary": "符合条件的 ChatGPT Pro 和 Business 订阅者可激活促销 API 额度，用于在关联的 API 组织中开发应用和智能体，该额度与 ChatGPT 用量额度分开计算。"
+      },
+      {
+        "date": "2026-10-27",
+        "title": "iCloud Mail and Calendar plugins in ChatGPT",
+        "summary": "iCloud 用户现可将邮件和日历连接到 ChatGPT，用来查找邮件、浏览收件箱、查看日程并更新日历事件，所有套餐的网页、桌面应用和 iOS 均可使用。"
+      },
+      {
+        "date": "2026-10-26",
+        "title": "GPT-6.1 Terra",
+        "summary": "GPT-6.1 Terra 正在 ChatGPT Work 和 Codex 中向 Plus、Pro、Business、Enterprise 和 Edu 推出，支持视觉推理、电脑操作和写作，套餐总体用量上限不变。"
+      }
+    ]
+  }
+}
