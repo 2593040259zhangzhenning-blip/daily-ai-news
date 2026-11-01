@@ -1,0 +1,110 @@
+{
+ "date": "2026-11-02",
+ "issues": [
+  {
+   "key": "2026-11-02-1morning",
+   "date": "2026-11-02",
+   "edition": "morning",
+   "createdAt": "2026-11-02T07:02:00+08:00",
+   "headline": "Claude Code 不再帮你复刻现成游戏",
+   "items": [
+    {
+     "cat": "product",
+     "title": "Claude Code 不再帮人复刻现成游戏",
+     "body": "10 月 27 日前后，Claude Code 在 Opus 5.5 上开始拒绝照着某款现有游戏做复刻版，改名或声称是原创也不行。Anthropic 员工 Addy Osmani 在 X 上证实，公司在提示词里加了两句话来引导模型避开这类请求，原创游戏、按类型做的游戏和用自己设计做的游戏不受影响；但有开发者反映正常项目也被误拦。起因是近几周 Steam 上涌入大量 AI 仿制游戏。",
+     "score": 6,
+     "tier": "lead",
+     "summary": "用 Claude Code 做「照着某款游戏抄一个」会被拒，原创不受影响。",
+     "sources": [
+      {
+       "name": "PC Gamer",
+       "url": "https://www.pcgamer.com/gaming-industry/anthropic-updates-claude-to-steer-it-away-from-letting-users-clone-games-following-weeks-of-steam-being-inundated-with-ai-slop/"
+      },
+      {
+       "name": "Kotaku",
+       "url": "https://kotaku.com/anthropic-nerfs-claude-again-to-stop-users-from-making-ai-slop-out-of-any-specific-existing-game-2000751665"
+      },
+      {
+       "name": "XDA Developers",
+       "url": "https://www.xda-developers.com/anthropic-testing-potential-crackdown-on-vibe-coded-ports-of-existing-games/"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "iOS 27.3 测试版北京时间 11/4 推出，国行 Apple Intelligence 开测",
+    "Kimi K3.1 Pro 完整权重 11 月 4 日前开源",
+    "星舰第 15 次试飞（11 月，尝试塔架捕获飞船）"
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI 官网",
+     "ChatGPT 与 Codex 更新日志（OpenAI）",
+     "OpenAI API 更新日志",
+     "Anthropic 新闻页",
+     "Claude 发布说明",
+     "Claude Code 更新日志",
+     "Claude Code 每周摘要",
+     "Google DeepMind 博客",
+     "Google AI 栏目",
+     "Google Research 博客",
+     "Meta AI 博客",
+     "英伟达博客",
+     "英伟达新闻中心",
+     "xAI 新闻页",
+     "Apple Newsroom",
+     "Apple 开发者版本发布",
+     "Apple 开发者新闻",
+     "MacRumors",
+     "9to5Mac",
+     "SpaceX 官网更新",
+     "SpaceX 发射日程（Launch Library）",
+     "Hugging Face 博客",
+     "Mistral 新闻",
+     "EdSurge",
+     "Inside Higher Ed",
+     "英国签证与移民局（GOV.UK）",
+     "ICEF Monitor",
+     "The PIE News",
+     "雅思官方（IELTS）",
+     "教育部（工作动态）",
+     "中国教育报",
+     "TechCrunch AI",
+     "The Verge AI",
+     "Ars Technica AI",
+     "Wired AI",
+     "MIT Technology Review AI",
+     "The Decoder",
+     "量子位",
+     "The Robot Report",
+     "IEEE Spectrum 机器人",
+     "TechCrunch 机器人",
+     "Waymo 官方博客",
+     "Electrek",
+     "TechCrunch 交通",
+     "The Verge 交通",
+     "IEEE Spectrum 半导体",
+     "IEEE Spectrum 生物医学",
+     "STAT 神经科学",
+     "Techmeme",
+     "Hacker News 首页（≥100 分）",
+     "Hugging Face 每日论文（前 12）",
+     "AI News Radar（中转站）",
+     "Follow Builders（AI 圈人物 X）",
+     "Google 新闻关键词搜索（22 组）",
+     "X 官方账号与关键人物（经 Grok，21 个账号）",
+     "ChatGPT 发布说明（经 Grok）",
+     "Kotaku",
+     "PC Gamer",
+     "Claude 博客",
+     "OpenAI API 更新日志（网页）",
+     "AI 公司教育产品公告",
+     "University World News"
+    ],
+    "candidates": 235
+   }
+  }
+ ],
+ "specials": [],
+ "models": []
+}
