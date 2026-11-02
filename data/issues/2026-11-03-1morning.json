@@ -1,0 +1,201 @@
+{
+ "key": "2026-11-03-1morning",
+ "date": "2026-11-03",
+ "edition": "morning",
+ "createdAt": "2026-11-03T06:54:08+08:00",
+ "headline": "Anthropic 称或将触及自我加速门槛",
+ "items": [
+  {
+   "cat": "policy",
+   "title": "新进展：Anthropic 称可能即将触及 AI 自我加速门槛",
+   "body": "Anthropic 11/2 公开的修订版招股书写道，内部估计显示公司可能很快达到其《负责任扩展政策》里「AI 大幅加速 AI 研发」的门槛，目前还没有哪个模型被正式认定越线；公司表示不打算让 Claude 在缺少人类监督的情况下自主研发下一代模型，正考虑修改政策确保人类掌控。同一份文件显示，三季度营收约 170 亿美元（二季度 116 亿），净亏损收窄到 233 亿美元，经营亏损 5.67 亿。",
+   "score": 8,
+   "tier": "lead",
+   "summary": "Claude 的开发方首次在正式文件里说：AI 可能快能大幅自己推动自己进步了。",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/"
+    },
+    {
+     "name": "The Star（路透社）",
+     "url": "https://www.thestar.com.my/tech/tech-news/2026/11/02/anthropic039s-quarterly-loss-shrinks-revenue-jumps-ahead-of-blockbuster-ipo"
+    },
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/anthropic-grows-revenue-twelvefold-but-posts-23-billion-loss"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "ChatGPT 的「聊天」和「工作」标签将合二为一",
+   "body": "OpenAI 发邮件通知用户，ChatGPT 桌面版里分开的 Chat 和 Work 两个标签会合并：在同一个对话里从一个想法开始，直接让它用你上传的文件和插件去做网站、做演示文稿或完成网页任务；Codex 仍是桌面 App 里单独的入口。先给部分用户试用收集反馈，再全面推开，时间未定。9to5Mac 还报道旧版 ChatGPT Classic 应用将被淘汰。",
+   "score": 7,
+   "tier": "must",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/"
+    },
+    {
+     "name": "9to5Mac",
+     "url": "https://9to5mac.com/2026/11/02/openai-is-retiring-chatgpt-classic-app-will-soon-combine-chat-and-work-tabs-in-new-app"
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "英国永居改「挣分制」，标准等待期翻倍到 10 年",
+   "body": "英国内政大臣 11/2 在议会公布「挣得定居」方案：拿永居的标准等待期从 5 年改为 10 年；年薪超过约 5 万英镑、特定公共服务岗位可缩短到 5 年，年薪超过约 12.5 万英镑或顶尖人才签证 3 年，违规或领取公共福利的最长要等 20 年。12 月的移民规则修订开始落地，2027 年陆续实施。打算毕业后留英工作、长期定居的留学生，规划要重新算。",
+   "score": 7,
+   "tier": "must",
+   "sources": [
+    {
+     "name": "EIN（英国移民法律新闻）",
+     "url": "https://www.ein.org.uk/news/home-secretary-confirms-major-changes-indefinite-leave-remain-rules-under-earned-settlement"
+    },
+    {
+     "name": "@ukhomeoffice（X）",
+     "url": "https://x.com/ukhomeoffice/status/2117318477648420982"
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "英国「高潜力人才」签证将放宽到全球前 150 名校",
+   "body": "英国 2026 年预算提出，高潜力人才（HPI）签证的合格院校从约 80 所扩大到全球前 150 所，每年 8000 人的名额也按比例上调。持这个签证毕业后可在英国留两年（博士三年），不需要雇主担保。新名单和生效日期还没公布。",
+   "score": 6,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "The PIE News",
+     "url": "https://thepienews.com/uk-to-raise-hpi-visa-cap-as-eligibility-expands-to-top-150-universities/"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "Grok Bot 用量被突然收紧",
+   "body": "万圣节周末不少 Grok Bot 用户发现每周额度一夜间被占满；马斯克 11/1 在 X 上承认是有意为之，原因是运行成本相对收入「高得不可持续」，但没说之后各档额度怎么定。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/11/02/elon-musk-throttles-grok-bot-limits-due-to-unsustainably-high-costs/"
+    },
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/spacexsi-apparently-cuts-grok-bot-quotas-weeks-after-musk-called-it-his-fastest-growing-product/"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "Claude 旧模型今天起也给文字加隐形水印",
+   "body": "Anthropic 的文字水印此前只在 Opus 5.5 等新模型上，11/3 起扩展到 Mythos 5、Opus 4.7、Opus 4.6 和 Sonnet 4.6，更早的模型未来几个月陆续加入。水印是用词上的统计规律，肉眼看不出，只有 Anthropic 的检测工具能判断文字「很可能经过 Claude」，用它写作业要心里有数。",
+   "score": 4,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Techweez",
+     "url": "https://techweez.com/2026/11/02/anthropic-is-bringing-text-watermarking-to-more-claude-models/"
+    },
+    {
+     "name": "PhoneWorld",
+     "url": "https://www.phoneworld.com.pk/claude-watermark-expands-older-models-november-3/"
+    }
+   ]
+  },
+  {
+   "cat": "research",
+   "title": "OpenAI 推出生活助手评测 LifeVal",
+   "body": "OpenAI 发布新评测 LifeVal，用找托儿、办政务、理财这类真实日常任务来衡量 AI 帮人办事的能力，并表示会拿它来改进模型。",
+   "score": 4,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "OpenAI 官网",
+     "url": "https://openai.com/index/lifeval"
+    },
+    {
+     "name": "@OpenAI（X）",
+     "url": "https://x.com/OpenAI/status/2117307611338997846"
+    }
+   ]
+  }
+ ],
+ "watch": [
+  "iOS 27.3 测试版北京时间 11/4 推出，国行 Apple Intelligence 开测",
+  "Kimi K3.1 Pro 完整权重 11 月 4 日前开源",
+  "星舰第 15 次试飞（据报约 11/12，尝试塔架捕获飞船）"
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI 官网",
+   "ChatGPT 与 Codex 更新日志（OpenAI）",
+   "OpenAI API 更新日志",
+   "Anthropic 新闻页",
+   "Claude 发布说明",
+   "Claude Code 更新日志",
+   "Claude Code 每周摘要",
+   "Google DeepMind 博客",
+   "Google AI 栏目",
+   "Google Research 博客",
+   "Meta AI 博客",
+   "英伟达博客",
+   "英伟达新闻中心",
+   "xAI 新闻页",
+   "Apple Newsroom",
+   "Apple 开发者版本发布",
+   "Apple 开发者新闻",
+   "MacRumors",
+   "9to5Mac",
+   "SpaceX 官网更新",
+   "SpaceX 发射日程（Launch Library）",
+   "Hugging Face 博客",
+   "Mistral 新闻",
+   "EdSurge",
+   "Inside Higher Ed",
+   "英国签证与移民局（GOV.UK）",
+   "ICEF Monitor",
+   "The PIE News",
+   "雅思官方（IELTS）",
+   "教育部（工作动态）",
+   "中国教育报",
+   "TechCrunch AI",
+   "The Verge AI",
+   "Ars Technica AI",
+   "Wired AI",
+   "MIT Technology Review AI",
+   "The Decoder",
+   "量子位",
+   "The Robot Report",
+   "IEEE Spectrum 机器人",
+   "TechCrunch 机器人",
+   "Waymo 官方博客",
+   "Electrek",
+   "TechCrunch 交通",
+   "The Verge 交通",
+   "IEEE Spectrum 半导体",
+   "IEEE Spectrum 生物医学",
+   "STAT 神经科学",
+   "Techmeme",
+   "Hacker News 首页（≥100 分）",
+   "Hugging Face 每日论文（前 12）",
+   "AI News Radar（中转站）",
+   "Follow Builders（AI 圈人物 X）",
+   "Google 新闻关键词搜索（22 组）",
+   "X 官方账号与关键人物（经 Grok，21 个账号）",
+   "ChatGPT 发布说明（经 Grok）",
+   "CNBC",
+   "The Star（路透社）",
+   "EIN（英国移民法律新闻）",
+   "@ukhomeoffice（X）",
+   "Techweez",
+   "AI 公司教育产品公告"
+  ],
+  "candidates": 247
+ }
+}

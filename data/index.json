@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-01T22:54:34+00:00",
+ "generatedAt": "2026-11-02T22:54:08+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -321,6 +321,14 @@
    "headline": "Claude Code 不再帮你复刻现成游戏",
    "updatedAt": "2026-11-02T07:02:00+08:00",
    "count": 1,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-11-03",
+   "headline": "Anthropic 称或将触及自我加速门槛",
+   "updatedAt": "2026-11-03T06:54:08+08:00",
+   "count": 7,
    "specials": [],
    "models": []
   }

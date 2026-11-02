@@ -1,12 +1,38 @@
 {
- "date": "2026-11-02",
- "headline": "Claude Code 不再帮你复刻现成游戏",
- "updatedAt": "2026-11-02T07:02:00+08:00",
- "count": 1,
+ "date": "2026-11-03",
+ "headline": "Anthropic 称或将触及自我加速门槛",
+ "updatedAt": "2026-11-03T06:54:08+08:00",
+ "count": 7,
  "lead": {
-  "cat": "product",
-  "title": "Claude Code 不再帮人复刻现成游戏",
-  "summary": "用 Claude Code 做「照着某款游戏抄一个」会被拒，原创不受影响。"
+  "cat": "policy",
+  "title": "新进展：Anthropic 称可能即将触及 AI 自我加速门槛",
+  "summary": "Claude 的开发方首次在正式文件里说：AI 可能快能大幅自己推动自己进步了。"
  },
- "items": []
+ "items": [
+  {
+   "cat": "product",
+   "title": "ChatGPT 的「聊天」和「工作」标签将合二为一",
+   "tier": "must"
+  },
+  {
+   "cat": "policy",
+   "title": "英国永居改「挣分制」，标准等待期翻倍到 10 年",
+   "tier": "must"
+  },
+  {
+   "cat": "policy",
+   "title": "英国「高潜力人才」签证将放宽到全球前 150 名校",
+   "tier": "brief"
+  },
+  {
+   "cat": "product",
+   "title": "Grok Bot 用量被突然收紧",
+   "tier": "brief"
+  },
+  {
+   "cat": "product",
+   "title": "Claude 旧模型今天起也给文字加隐形水印",
+   "tier": "brief"
+  }
+ ]
 }
