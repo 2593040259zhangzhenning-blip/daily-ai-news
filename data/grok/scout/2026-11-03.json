@@ -1,0 +1,163 @@
+{
+  "date": "2026-11-03",
+  "generatedAt": "2026-11-03T06:19:30+08:00",
+  "by": "Grok Bot",
+  "x": {
+    "ok": true,
+    "error": null,
+    "checked": [
+      "@OpenAI",
+      "@OpenAIDevs",
+      "@ChatGPTapp",
+      "@AnthropicAI",
+      "@claudeai",
+      "@GoogleDeepMind",
+      "@GeminiApp",
+      "@AIatMeta",
+      "@nvidia",
+      "@SpaceX",
+      "@xai",
+      "@MistralAI",
+      "@ukhomeoffice",
+      "@IELTSOfficial",
+      "@sama",
+      "@gdb",
+      "@OfficialLoganK",
+      "@demishassabis",
+      "@karpathy",
+      "@elonmusk",
+      "@bcherny"
+    ],
+    "posts": [
+      {
+        "account": "@OpenAI",
+        "official": true,
+        "postedAt": "2026-11-02T17:27:26.000Z",
+        "url": "https://x.com/OpenAI/status/2117307611338997846",
+        "summary": "发布生活助手基准 LifeVal：按用户反馈测找托儿、办政务、理财等日常任务，并用来改进模型。",
+        "watch": "OpenAI/ChatGPT",
+        "links": [
+          "https://openai.com/index/lifeval/"
+        ]
+      },
+      {
+        "account": "@ukhomeoffice",
+        "official": true,
+        "postedAt": "2026-11-02T18:10:37.000Z",
+        "url": "https://x.com/ukhomeoffice/status/2117318477648420982",
+        "summary": "宣布 Earned Settlement：常规定居由 5 年改为 10 年，高收入与合规路径可 5 年，非法入境最长 30 年。",
+        "watch": "留学与签证政策",
+        "links": []
+      }
+    ],
+    "buzz": [
+      {
+        "title": "Anthropic 修订 S-1：称内部估计可能即将触及 RSP「AI 显著加速研发」门槛，并考虑加强人工把关",
+        "accounts": [
+          "@MTSlive",
+          "@theobearman",
+          "@peterwildeford"
+        ],
+        "urls": [
+          "https://x.com/MTSlive/status/2117285761641001040",
+          "https://x.com/theobearman/status/2117277210570604945"
+        ],
+        "watch": "Anthropic/Claude",
+        "confirmed": true
+      },
+      {
+        "title": "SemiAnalysis 发布 GDPx 代理基准：Opus 5.5 居首约 12%，Gemini 4 Carbon、GPT-6 Astra 紧随其后",
+        "accounts": [
+          "@SemiAnalysis_"
+        ],
+        "urls": [
+          "https://x.com/SemiAnalysis_/status/2117075900575477855"
+        ],
+        "watch": "AI 全行业（国外）",
+        "confirmed": true
+      },
+      {
+        "title": "传 Anthropic 官网 HTML 已露出 Claude Mythos 5.5，官方尚未确认",
+        "accounts": [
+          "@glitch_catAI",
+          "@godofprompt"
+        ],
+        "urls": [
+          "https://x.com/glitch_catAI/status/2117217657653190907",
+          "https://x.com/godofprompt/status/2117186071989559712"
+        ],
+        "watch": "Anthropic/Claude",
+        "confirmed": false
+      },
+      {
+        "title": "开源项目 Open Duet 在 GitHub 破 6.5k star，自称 Claude Duet 自托管平替",
+        "accounts": [
+          "@alextalksai",
+          "@marcusyul"
+        ],
+        "urls": [
+          "https://x.com/alextalksai/status/2117282806782992875",
+          "https://x.com/marcusyul/status/2117265330473206144"
+        ],
+        "watch": "AI 全行业（国外）",
+        "confirmed": false
+      },
+      {
+        "title": "Starship Flight 15 瞄准约 11 月 12 日双塔架捕获，Booster 22 与 Ship 42 静火已完成",
+        "accounts": [
+          "@NoPainNoWayne",
+          "@runthenumberz"
+        ],
+        "urls": [
+          "https://x.com/NoPainNoWayne/status/2117244600846856606",
+          "https://x.com/runthenumberz/status/2117028544304062655"
+        ],
+        "watch": "SpaceX",
+        "confirmed": false
+      },
+      {
+        "title": "Anthropic 隐形水印今日起扩至 Mythos 5、Opus 4.7/4.6、Sonnet 4.6 等较旧模型",
+        "accounts": [
+          "@Parlons_Cyber"
+        ],
+        "urls": [
+          "https://x.com/Parlons_Cyber/status/2117194099631493402"
+        ],
+        "watch": "Anthropic/Claude",
+        "confirmed": true
+      }
+    ]
+  },
+  "chatgptReleaseNotes": {
+    "ok": true,
+    "error": null,
+    "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    "entries": [
+      {
+        "date": "2026-10-30",
+        "title": "Account switching on iOS and Android",
+        "summary": "ChatGPT 的 iOS 和 Android 应用开始支持同时保持最多两个账号的登录，可在设置中切换而无需退出，各账号的聊天、记忆、设置和订阅相互独立。"
+      },
+      {
+        "date": "2026-10-29",
+        "title": "More Work and Codex usage on Pro and Business Premium Plans",
+        "summary": "Pro 与 Business Premium 的 Work 和 Codex 用量上调，Pro 100 与 Pro 500 翻倍，并取消此前宣布的 Pro 200 削减，较低额度的 Pro 200 用户自 10 月 29 日起也翻倍至同一上限。"
+      },
+      {
+        "date": "2026-10-28",
+        "title": "Texting your dot",
+        "summary": "美国 Pro 用户开始内测通过 iMessage 或 RCS 给自己的 dot 发短信，dot 也会主动发来可能相关的更新，且不会读取其他短信对话。"
+      },
+      {
+        "date": "2026-10-28",
+        "title": "API credits for eligible ChatGPT Pro and Business plans",
+        "summary": "符合条件的 ChatGPT Pro 和 Business 订阅者可激活促销 API 额度，用于在关联的 API 组织中开发应用和智能体，该额度与 ChatGPT 用量额度分开计算。"
+      },
+      {
+        "date": "2026-10-27",
+        "title": "iCloud Mail and Calendar plugins in ChatGPT",
+        "summary": "iCloud 用户现可将邮件和日历连接到 ChatGPT，用来查找邮件、浏览收件箱、查看日程并更新日历事件，所有套餐的网页、桌面应用和 iOS 均可使用。"
+      }
+    ]
+  }
+}
