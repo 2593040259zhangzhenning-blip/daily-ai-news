@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-02",
+  "issue": "2026-11-02-1morning",
+  "generatedAt": "2026-11-02T09:10:00+08:00",
+  "by": "Grok Bot",
+  "ok": true,
+  "error": null,
+  "missed": [
+    {
+      "title": "Anthropic 把文字水印扩到 Mythos 5、Opus 4.7/4.6、Sonnet 4.6，11 月 3 日起生效",
+      "why": "第一层 Anthropic/Claude：周五客户邮件称自 11/3 起给上述旧款模型加上与 Opus 5.5 同类的不可见选词水印（不可关闭，Bedrock 可能晚几天）；The Decoder 10/31、Mashable 11/2 等多家报道，并指出 Opus 4.6/Sonnet 4.6 在改 sampling 参数时可绕过。当期未收。",
+      "watch": "Anthropic/Claude",
+      "layer": 1,
+      "severity": "中",
+      "happenedAt": "2026-10-31",
+      "urls": [
+        "https://the-decoder.com/anthropics-watermark-rollout-leaves-a-loophole-on-two-older-claude-models/",
+        "https://sea.mashable.com/tech/56556/anthropic-expands-text-watermarking-to-older-claude-versions-beginning-november-3"
+      ]
+    },
+    {
+      "title": "xAI 自 11 月 7 日起默认给 Grok API 文本加不可见水印，管理员可按模型退出",
+      "why": "第二层海外 AI（xAI）：官方文档写明 11/7 起 grok-4.7/4.6/4.5/4.3 与 grok-4.20 各变体默认加水印，响应头 x-watermark 可查，团队管理员可在 Console 按法律例外退出；TokenPost 10/31 美东傍晚（北京 11/1 清晨）等多家报道。当期未收。",
+      "watch": "xAI/Grok",
+      "layer": 2,
+      "severity": "中",
+      "happenedAt": "2026-11-01",
+      "urls": [
+        "https://docs.x.ai/developers/advanced-api-usage/watermarking",
+        "https://www.tokenpost.com/news/technology/45622"
+      ]
+    }
+  ],
+  "doubts": []
+}
