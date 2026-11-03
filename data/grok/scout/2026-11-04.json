@@ -1,0 +1,206 @@
+{
+  "date": "2026-11-04",
+  "generatedAt": "2026-11-04T06:20:59+08:00",
+  "by": "Grok Bot",
+  "x": {
+    "ok": true,
+    "error": null,
+    "checked": [
+      "@OpenAI",
+      "@OpenAIDevs",
+      "@ChatGPTapp",
+      "@AnthropicAI",
+      "@claudeai",
+      "@GoogleDeepMind",
+      "@GeminiApp",
+      "@AIatMeta",
+      "@nvidia",
+      "@SpaceX",
+      "@xai",
+      "@MistralAI",
+      "@ukhomeoffice",
+      "@IELTSOfficial",
+      "@sama",
+      "@gdb",
+      "@OfficialLoganK",
+      "@demishassabis",
+      "@karpathy",
+      "@elonmusk",
+      "@bcherny"
+    ],
+    "posts": [
+      {
+        "account": "@OpenAI",
+        "official": true,
+        "postedAt": "2026-11-03T18:56:45.000Z",
+        "url": "https://x.com/OpenAI/status/2117692475775258785",
+        "summary": "介绍 ChatGPT 与 Codex 在机械、电气与仿真等物理工程上的进展，并与行业伙伴试跑新工作流。",
+        "watch": "OpenAI/ChatGPT",
+        "links": [
+          "https://openai.com/index/accelerating-engineering-for-the-physical-world/"
+        ]
+      },
+      {
+        "account": "@OpenAI",
+        "official": true,
+        "postedAt": "2026-11-03T02:29:35.000Z",
+        "url": "https://x.com/OpenAI/status/2117444048227123277",
+        "summary": "宣布下一轮内部安全冲刺，并与 Cathedral Systems 合作；漏洞赏金最高可至约 17.2 万美元。",
+        "watch": "OpenAI/ChatGPT",
+        "links": [
+          "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai/"
+        ]
+      },
+      {
+        "account": "@OpenAIDevs",
+        "official": true,
+        "postedAt": "2026-11-03T00:09:30.000Z",
+        "url": "https://x.com/OpenAIDevs/status/2117408792346509663",
+        "summary": "发布自研 Git 后端 Pando：单仓吞吐大增，推送延迟约降八成，日服务近 PB 级 Git 数据。",
+        "watch": "OpenAI/ChatGPT",
+        "links": [
+          "https://openai.com/index/scaling-git-at-openai/"
+        ]
+      },
+      {
+        "account": "@gdb",
+        "official": false,
+        "postedAt": "2026-11-03T01:54:46.000Z",
+        "url": "https://x.com/gdb/status/2117435285021810921",
+        "summary": "称 Pando 可扩到超大 monorepo 且不改开发体验，正在考虑对外提供，欢迎有意向者联系。",
+        "watch": "OpenAI/ChatGPT",
+        "links": []
+      },
+      {
+        "account": "@AnthropicAI",
+        "official": true,
+        "postedAt": "2026-11-03T20:10:08.000Z",
+        "url": "https://x.com/AnthropicAI/status/2117710942826123294",
+        "summary": "发布 FlashProve：可用密码学证明核验某回复是否来自指定模型，并开源相关代码。",
+        "watch": "Anthropic/Claude",
+        "links": [
+          "https://www.anthropic.com/research/provable-inference",
+          "https://github.com/anthropics/FlashProve"
+        ]
+      },
+      {
+        "account": "@bcherny",
+        "official": false,
+        "postedAt": "2026-11-03T18:59:33.000Z",
+        "url": "https://x.com/bcherny/status/2117693181651542387",
+        "summary": "宣布 Claude 团队与企业版可由管理员预配插件，成员首次使用时自动连接，无需逐个登录。",
+        "watch": "Anthropic/Claude",
+        "links": []
+      },
+      {
+        "account": "@MistralAI",
+        "official": true,
+        "postedAt": "2026-11-03T17:30:00.000Z",
+        "url": "https://x.com/MistralAI/status/2117670644506861900",
+        "summary": "宣布 Large 4（约 1.05T 开源权重、百万上下文）上线 Open Math OS，供获批团队使用。",
+        "watch": "AI 全行业（国外）",
+        "links": []
+      },
+      {
+        "account": "@ukhomeoffice",
+        "official": true,
+        "postedAt": "2026-11-03T09:43:43.000Z",
+        "url": "https://x.com/ukhomeoffice/status/2117553300761358460",
+        "summary": "补充定居四项硬条件：无犯罪记录、英语达 A-Level 外语水平、无欠税、持续缴国民保险。",
+        "watch": "留学与签证政策",
+        "links": []
+      },
+      {
+        "account": "@elonmusk",
+        "official": false,
+        "postedAt": "2026-11-03T17:11:25.000Z",
+        "url": "https://x.com/elonmusk/status/2117665964862939320",
+        "summary": "称 Grok Bot 可调研本地医生、电话联系并代为预约就诊。",
+        "watch": "AI 全行业（国外）",
+        "links": []
+      }
+    ],
+    "buzz": [
+      {
+        "title": "The Information：Anthropic 向 IPO 投资者称 15 人芯片团队已用 Claude 做自研芯片设计",
+        "accounts": [
+          "@Techmeme",
+          "@kdnbmb"
+        ],
+        "urls": [
+          "https://x.com/Techmeme/status/2117623287283114277",
+          "https://x.com/kdnbmb/status/2117638769956344191"
+        ],
+        "watch": "Anthropic/Claude",
+        "confirmed": true
+      },
+      {
+        "title": "传 Codex 用量里出现 gpt-6.2-astra，Tibo 发「Le GPT Fat」，官方未确认发布",
+        "accounts": [
+          "@thsottiaux",
+          "@theaidesk_",
+          "@Layton_Gott"
+        ],
+        "urls": [
+          "https://x.com/thsottiaux/status/2117489367417803042",
+          "https://x.com/theaidesk_/status/2117692429424034005"
+        ],
+        "watch": "OpenAI/ChatGPT",
+        "confirmed": false
+      },
+      {
+        "title": "传 Revolut 约 2000 名工程师改用自托管 GLM 写代码，成本约降九成",
+        "accounts": [
+          "@guilleflorvs",
+          "@cgtwts"
+        ],
+        "urls": [
+          "https://x.com/guilleflorvs/status/2117379073785696395",
+          "https://x.com/cgtwts/status/2117597483698458751"
+        ],
+        "watch": "AI 全行业（国外）",
+        "confirmed": true
+      },
+      {
+        "title": "Starship Flight 15 仍瞄准约 11 月 12 日首次双塔架捕获，Booster 22 与 Ship 42 静火已完成",
+        "accounts": [
+          "@RamzeRants",
+          "@NikhilKCAl"
+        ],
+        "urls": [
+          "https://x.com/RamzeRants/status/2117623940906725566",
+          "https://x.com/NikhilKCAl/status/2117618244848644419"
+        ],
+        "watch": "SpaceX",
+        "confirmed": false
+      }
+    ]
+  },
+  "chatgptReleaseNotes": {
+    "ok": true,
+    "error": null,
+    "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    "entries": [
+      {
+        "date": "2026-10-30",
+        "title": "Account switching on iOS and Android",
+        "summary": "ChatGPT 的 iOS 和 Android 应用开始支持同时保持最多两个账号的登录，可在设置中切换而无需退出，各账号的聊天、记忆、设置和订阅相互独立。"
+      },
+      {
+        "date": "2026-10-29",
+        "title": "More Work and Codex usage on Pro and Business Premium Plans",
+        "summary": "Pro 与 Business Premium 的 Work 和 Codex 用量上调，Pro 100 与 Pro 500 翻倍，并取消此前宣布的 Pro 200 削减，较低额度的 Pro 200 用户自 10 月 29 日起也翻倍至同一上限。"
+      },
+      {
+        "date": "2026-10-28",
+        "title": "Texting your dot",
+        "summary": "美国 Pro 用户开始内测通过 iMessage 或 RCS 给自己的 dot 发短信，dot 也会主动发来可能相关的更新，且不会读取其他短信对话。"
+      },
+      {
+        "date": "2026-10-28",
+        "title": "API credits for eligible ChatGPT Pro and Business plans",
+        "summary": "符合条件的 ChatGPT Pro 和 Business 订阅者可激活促销 API 额度，用于在关联的 API 组织中开发应用和智能体，该额度与 ChatGPT 用量额度分开计算。"
+      }
+    ]
+  }
+}
