@@ -1,0 +1,223 @@
+{
+ "key": "2026-11-04-1morning",
+ "date": "2026-11-04",
+ "edition": "morning",
+ "createdAt": "2026-11-04T06:58:00+08:00",
+ "headline": "国行苹果智能开始测试",
+ "items": [
+  {
+   "cat": "product",
+   "title": "国行苹果智能随 iOS 27.3 测试版开测",
+   "body": "苹果北京时间 11/4 凌晨推送 iOS 27.3 首个测试版，国行 iPhone 第一次能用上 Apple Intelligence：先开放实时翻译、写作工具、照片清除、通知和邮件摘要、视觉智能等基础功能，部分功能接入阿里千问；新版 Siri AI 这次不在其中。支持 iPhone 15 Pro 及之后的机型，按计划 12 月随 iOS 27.3 正式版推给所有国行用户。",
+   "score": 8,
+   "tier": "lead",
+   "summary": "国行 iPhone 终于能用苹果 AI 了，先是测试版，正式版 12 月推送。",
+   "sources": [
+    {
+     "name": "Apple 开发者版本发布",
+     "url": "https://developer.apple.com/news/releases?id=11032026a"
+    },
+    {
+     "name": "快科技（新浪）",
+     "url": "https://finance.sina.cn/tech/2026-11-04/detail-inixpmfe6217381.d.html"
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "谷歌：学校关掉 AI，学生账号连搜索也用不了",
+   "body": "谷歌宣布，未来几个月里 K-12 学生账号的 Gemini、Gemini in Classroom 和谷歌搜索都改成默认关闭，由学校管理员逐项打开；理由是搜索和 AI 已经深度绑在一起，所以拒绝 AI 的学校学生也会失去搜索。同时 Classroom 里的分步辅导工具「引导式学习」即日起全球开放，老师能看学生和聊天机器人的对话记录。",
+   "score": 7,
+   "tier": "must",
+   "sources": [
+    {
+     "name": "Engadget",
+     "url": "https://www.engadget.com/2305432/google-says-that-students-in-schools-that-ban-ai-wont-have-access-to-search/"
+    },
+    {
+     "name": "The Verge",
+     "url": "https://www.theverge.com/tech/1025411/google-turn-off-search-ai-features"
+    },
+    {
+     "name": "Ars Technica",
+     "url": "https://arstechnica.com/ai/2026/11/google-will-let-schools-skip-ai-tools-but-they-have-to-give-up-search-too"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "Siri AI 向所有第三方 App 开放",
+   "body": "苹果在 iOS、iPadOS、macOS、visionOS 27.3 测试版里，让任何开发者都能把自家 App 的内容和操作接进新版 Siri AI，比如查快递、订位、下单，还能把多步操作做成一个「技能」。预计几个月后到用户手里，明年春天开放上架；新版 Siri AI 目前不支持中文简体，欧盟也用不了。",
+   "score": 6,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Apple 开发者新闻",
+     "url": "https://developer.apple.com/news?id=gdk2umrf"
+    },
+    {
+     "name": "iPhone in Canada",
+     "url": "https://www.iphoneincanada.ca/2026/11/03/siri-ai-open-all-developers-ios-27-3/"
+    }
+   ]
+  },
+  {
+   "cat": "research",
+   "title": "Anthropic 开源 FlashProve：用密码学证明回答出自哪个模型",
+   "body": "Anthropic 公开研究原型 FlashProve，能为模型的回答生成一份数学证明，别人不用拿到模型权重就能核对这段话是不是那个模型算出来的，用来防止服务商偷换模型。目前只在开源的 Llama 4 Maverick 上演示，限 1024 个 token、开销是正常生成的几十倍，还没用到 Claude 上。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "@AnthropicAI（X）",
+     "url": "https://x.com/AnthropicAI/status/2117710942826123294"
+    },
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity"
+    },
+    {
+     "name": "AlphaSignal",
+     "url": "https://alphasignal.ai/news/anthropic-s-flashprove-cryptographically-proves-which-ai-model-answered-you"
+    }
+   ]
+  },
+  {
+   "cat": "research",
+   "title": "OpenAI：两名员工用 GPT-6 Astra 一周设计出硬件",
+   "body": "OpenAI 介绍 ChatGPT 和 Codex 在机械、电气、仿真工程上的用法：两名员工业余用 GPT-6 和 Astra，不到一周设计出一台连接 Codex 的实体设备，外壳、电路板、固件都由模型完成，但量产细节仍要人反复把关。马自达、Chip Ganassi 赛车队在试用类似流程。这只是原型，不对外出售。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "OpenAI 官网",
+     "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world"
+    },
+    {
+     "name": "Interesting Engineering",
+     "url": "https://interestingengineering.com/ai-robotics/openai-gpt-6-hardware-design-prototype"
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "欧盟法院顾问：Gemini 引用新闻作答或侵权",
+   "body": "欧盟法院佐审官在匈牙利出版商诉谷歌一案中认为，拿新闻训练模型是允许的，但聊天机器人检索新闻、拼成回答展示给用户，在某些情况下可能侵犯出版商权利。意见不具约束力，但法官通常会采纳，终审预计几个月内出，结果会影响欧洲所有 AI 聊天工具怎么用新闻。",
+   "score": 4,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "The Next Web",
+     "url": "https://thenextweb.com/news/google-gemini-eu-copyright-adviser-opinion"
+    },
+    {
+     "name": "Investing.com（路透社）",
+     "url": "https://www.investing.com/news/stock-market-news/googles-use-of-press-by-ai-chatbot-may-infringe-copyright-rules-eu-court-adviser-says-4994030"
+    }
+   ]
+  },
+  {
+   "cat": "biz",
+   "title": "英伟达要求云服务商少接中国客户",
+   "body": "据 The Information 和《金融时报》报道，英伟达口头要求合作的云服务商在新合同里减少来自中国公司的业务，并披露实际使用芯片的终端客户。起因是美国出口管制管不到「远程租用算力」，中国 AI 公司可以在海外数据中心租用英伟达芯片。",
+   "score": 4,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/nvidia-pushes-cloud-customers-to-cut-back-on-china-business"
+    },
+    {
+     "name": "Bloomberg",
+     "url": "https://www.bloomberg.com/news/articles/2026-11-03/nvidia-tells-data-center-clients-to-trim-china-business-ft-says"
+    }
+   ]
+  }
+ ],
+ "watch": [
+  "星舰第 15 次试飞（约 11/12，首次尝试双塔架捕获）",
+  "Kimi K3.1 Pro 完整权重按计划 11 月 4 日开源",
+  "国行苹果智能 12 月随 iOS 27.3 正式版推送"
+ ],
+ "updates": [
+  {
+   "product": "Claude Code",
+   "text": "网页或命令行工具要把你的账号邮箱发到网上前会先问你；新建云端定时任务带上你没选的连接器时会提醒",
+   "date": "2026-11-03",
+   "sources": [
+    {
+     "name": "Claude Code 更新日志",
+     "url": "https://code.claude.com/docs/en/changelog"
+    }
+   ]
+  }
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI 官网",
+   "ChatGPT 与 Codex 更新日志（OpenAI）",
+   "OpenAI API 更新日志",
+   "Anthropic 新闻页",
+   "Claude 发布说明",
+   "Claude Code 更新日志",
+   "Claude Code 每周摘要",
+   "Google DeepMind 博客",
+   "Google AI 栏目",
+   "Google Research 博客",
+   "Meta AI 博客",
+   "英伟达博客",
+   "英伟达新闻中心",
+   "xAI 新闻页",
+   "Apple Newsroom",
+   "Apple 开发者版本发布",
+   "Apple 开发者新闻",
+   "MacRumors",
+   "9to5Mac",
+   "SpaceX 官网更新",
+   "SpaceX 发射日程（Launch Library）",
+   "Hugging Face 博客",
+   "Mistral 新闻",
+   "EdSurge",
+   "Inside Higher Ed",
+   "英国签证与移民局（GOV.UK）",
+   "ICEF Monitor",
+   "The PIE News",
+   "雅思官方（IELTS）",
+   "教育部（工作动态）",
+   "中国教育报",
+   "TechCrunch AI",
+   "The Verge AI",
+   "Ars Technica AI",
+   "Wired AI",
+   "MIT Technology Review AI",
+   "The Decoder",
+   "量子位",
+   "The Robot Report",
+   "IEEE Spectrum 机器人",
+   "TechCrunch 机器人",
+   "Waymo 官方博客",
+   "Electrek",
+   "TechCrunch 交通",
+   "The Verge 交通",
+   "IEEE Spectrum 半导体",
+   "IEEE Spectrum 生物医学",
+   "STAT 神经科学",
+   "Techmeme",
+   "Hacker News 首页（≥100 分）",
+   "Hugging Face 每日论文（前 12）",
+   "AI News Radar（中转站）",
+   "Follow Builders（AI 圈人物 X）",
+   "Google 新闻关键词搜索（22 组）",
+   "X 官方账号与关键人物（经 Grok，21 个账号）",
+   "ChatGPT 发布说明（经 Grok）",
+   "快科技（新浪）",
+   "Engadget",
+   "iPhone in Canada",
+   "Interesting Engineering",
+   "AlphaSignal",
+   "The Next Web",
+   "AI 公司教育产品公告"
+  ],
+  "candidates": 307
+ }
+}

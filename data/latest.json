@@ -1,37 +1,37 @@
 {
- "date": "2026-11-03",
- "headline": "Anthropic 称或将触及自我加速门槛",
- "updatedAt": "2026-11-03T06:54:08+08:00",
+ "date": "2026-11-04",
+ "headline": "国行苹果智能开始测试",
+ "updatedAt": "2026-11-04T06:58:00+08:00",
  "count": 7,
  "lead": {
-  "cat": "policy",
-  "title": "新进展：Anthropic 称可能即将触及 AI 自我加速门槛",
-  "summary": "Claude 的开发方首次在正式文件里说：AI 可能快能大幅自己推动自己进步了。"
+  "cat": "product",
+  "title": "国行苹果智能随 iOS 27.3 测试版开测",
+  "summary": "国行 iPhone 终于能用苹果 AI 了，先是测试版，正式版 12 月推送。"
  },
  "items": [
   {
-   "cat": "product",
-   "title": "ChatGPT 的「聊天」和「工作」标签将合二为一",
+   "cat": "policy",
+   "title": "谷歌：学校关掉 AI，学生账号连搜索也用不了",
    "tier": "must"
   },
   {
-   "cat": "policy",
-   "title": "英国永居改「挣分制」，标准等待期翻倍到 10 年",
-   "tier": "must"
-  },
-  {
-   "cat": "policy",
-   "title": "英国「高潜力人才」签证将放宽到全球前 150 名校",
+   "cat": "product",
+   "title": "Siri AI 向所有第三方 App 开放",
    "tier": "brief"
   },
   {
-   "cat": "product",
-   "title": "Grok Bot 用量被突然收紧",
+   "cat": "research",
+   "title": "Anthropic 开源 FlashProve：用密码学证明回答出自哪个模型",
    "tier": "brief"
   },
   {
-   "cat": "product",
-   "title": "Claude 旧模型今天起也给文字加隐形水印",
+   "cat": "research",
+   "title": "OpenAI：两名员工用 GPT-6 Astra 一周设计出硬件",
+   "tier": "brief"
+  },
+  {
+   "cat": "policy",
+   "title": "欧盟法院顾问：Gemini 引用新闻作答或侵权",
    "tier": "brief"
   }
  ]

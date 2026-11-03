@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-02T22:54:08+00:00",
+ "generatedAt": "2026-11-03T22:54:09+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -328,6 +328,14 @@
    "date": "2026-11-03",
    "headline": "Anthropic 称或将触及自我加速门槛",
    "updatedAt": "2026-11-03T06:54:08+08:00",
+   "count": 7,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-11-04",
+   "headline": "国行苹果智能开始测试",
+   "updatedAt": "2026-11-04T06:58:00+08:00",
    "count": 7,
    "specials": [],
    "models": []
