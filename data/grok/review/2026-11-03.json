@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-03",
+  "issue": "2026-11-03-1morning",
+  "generatedAt": "2026-11-03T09:04:48+08:00",
+  "by": "Grok Bot",
+  "ok": true,
+  "error": null,
+  "missed": [
+    {
+      "title": "Anthropic Messages API 上线 message threads 公测，长会话首字延迟约降 35%",
+      "why": "第一层 Anthropic/Claude：官方平台发布说明与 Claude 官网文 11/2 宣布公测，服务端暂存会话，后续只传新消息；多数 Claude Code 用户默认开启，50 万–100 万 token 请求中位 TTFT 约降 35%，价格与额度不变。The Next Web、Unite.AI 同日报道。当期未收。",
+      "watch": "Anthropic/Claude",
+      "layer": 1,
+      "severity": "中",
+      "happenedAt": "2026-11-02",
+      "urls": [
+        "https://claude.com/resources/articles/message-threads",
+        "https://platform.claude.com/docs/en/release-notes/overview",
+        "https://thenextweb.com/news/anthropic-message-threads-beta-claude-api-agents"
+      ]
+    },
+    {
+      "title": "OpenAI 推出 Grid Protectors：未来算力园区承诺电网紧张时削峰",
+      "why": "第一层 OpenAI/ChatGPT：官方 11/2 宣布全国性 Grid Protectors，与公用事业协商在电网承压时降低园区用电；佐治亚 Effingham 试点称最高约 1000 兆瓦柔性需求响应。The Verge、Axios 同日报道。当期未收。",
+      "watch": "OpenAI/ChatGPT",
+      "layer": 1,
+      "severity": "中",
+      "happenedAt": "2026-11-02",
+      "urls": [
+        "https://openai.com/index/grid-protectors-program",
+        "https://www.theverge.com/ai-artificial-intelligence/1024604/openai-data-center-grid-protection-program",
+        "https://www.axios.com/2026/11/02/openai-data-center-power-cuts"
+      ]
+    }
+  ],
+  "doubts": []
+}
