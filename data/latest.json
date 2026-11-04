@@ -1,37 +1,27 @@
 {
- "date": "2026-11-04",
- "headline": "国行苹果智能开始测试",
- "updatedAt": "2026-11-04T06:58:00+08:00",
- "count": 7,
+ "date": "2026-11-05",
+ "headline": "ChatGPT 能直接做动图了",
+ "updatedAt": "2026-11-05T07:02:00+08:00",
+ "count": 4,
  "lead": {
   "cat": "product",
-  "title": "国行苹果智能随 iOS 27.3 测试版开测",
-  "summary": "国行 iPhone 终于能用苹果 AI 了，先是测试版，正式版 12 月推送。"
+  "title": "ChatGPT 能把文字和照片做成动图",
+  "summary": "在 ChatGPT 里一句话或一张照片就能做出 GIF 动图，还能逐帧改。"
  },
  "items": [
   {
    "cat": "policy",
-   "title": "谷歌：学校关掉 AI，学生账号连搜索也用不了",
-   "tier": "must"
+   "title": "新进展：英国 HPI 签证 2026 名单公布，内地 8 所",
+   "tier": "brief"
+  },
+  {
+   "cat": "research",
+   "title": "Anthropic 用 Claude 解析出细菌里的 vault 粒子结构",
+   "tier": "brief"
   },
   {
    "cat": "product",
-   "title": "Siri AI 向所有第三方 App 开放",
-   "tier": "brief"
-  },
-  {
-   "cat": "research",
-   "title": "Anthropic 开源 FlashProve：用密码学证明回答出自哪个模型",
-   "tier": "brief"
-  },
-  {
-   "cat": "research",
-   "title": "OpenAI：两名员工用 GPT-6 Astra 一周设计出硬件",
-   "tier": "brief"
-  },
-  {
-   "cat": "policy",
-   "title": "欧盟法院顾问：Gemini 引用新闻作答或侵权",
+   "title": "Claude 旧模型的文字水印被指容易绕过",
    "tier": "brief"
   }
  ]

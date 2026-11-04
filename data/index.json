@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-03T22:54:09+00:00",
+ "generatedAt": "2026-11-04T22:54:08+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -337,6 +337,14 @@
    "headline": "国行苹果智能开始测试",
    "updatedAt": "2026-11-04T06:58:00+08:00",
    "count": 7,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-11-05",
+   "headline": "ChatGPT 能直接做动图了",
+   "updatedAt": "2026-11-05T07:02:00+08:00",
+   "count": 4,
    "specials": [],
    "models": []
   }

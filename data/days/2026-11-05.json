@@ -1,0 +1,154 @@
+{
+ "date": "2026-11-05",
+ "issues": [
+  {
+   "key": "2026-11-05-1morning",
+   "date": "2026-11-05",
+   "edition": "morning",
+   "createdAt": "2026-11-05T07:02:00+08:00",
+   "headline": "ChatGPT 能直接做动图了",
+   "items": [
+    {
+     "cat": "product",
+     "title": "ChatGPT 能把文字和照片做成动图",
+     "body": "OpenAI 11/4 推出图像模型 Images 2.6，ChatGPT 和 Codex 的网页版、桌面和手机 App 开始陆续支持生成 GIF：写一句描述或上传一张照片就能出动图，生成后还能调播放速度、逐帧检查和修改，再直接分享。以前要在 ChatGPT 里做动图得绕好几步，现在一步完成；报道没有提到哪些订阅档位有使用上限。",
+     "score": 7,
+     "tier": "lead",
+     "summary": "在 ChatGPT 里一句话或一张照片就能做出 GIF 动图，还能逐帧改。",
+     "sources": [
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6"
+      },
+      {
+       "name": "The Next Web",
+       "url": "https://thenextweb.com/news/chatgpt-animated-gifs-images-2-6-openai"
+      },
+      {
+       "name": "The Decoder",
+       "url": "https://the-decoder.com/chatgpt-can-now-turn-text-prompts-and-photos-into-animated-gifs-with-openais-images-2-6-model"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "新进展：英国 HPI 签证 2026 名单公布，内地 8 所",
+     "body": "英国签证与移民局公布新一年的高潜力人才（HPI）签证合格院校名单，共 82 所，适用于 2026 年 11 月 1 日到 2027 年 10 月 31 日之间拿到的学位。内地入选清华、北大、复旦、上海交大、浙大、南大、中国科大、哈工大 8 所，香港 5 所、新加坡 2 所。预算里说的「扩大到全球前 150 名校」这份名单还没体现，仍要等后续公布。",
+     "score": 6,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "英国签证与移民局（GOV.UK）",
+       "url": "https://www.gov.uk/government/publications/high-potential-individual-visa-global-universities-list/high-potential-individual-visa-global-universities-list-2026"
+      },
+      {
+       "name": "Vanguard",
+       "url": "https://www.vanguardngr.com/2026/11/full-list-africa-missing-as-uk-releases-2026-list-of-universities-for-graduate-work-visa/"
+      }
+     ]
+    },
+    {
+     "cat": "research",
+     "title": "Anthropic 用 Claude 解析出细菌里的 vault 粒子结构",
+     "body": "Anthropic 生物学团队发文介绍，他们和 Claude 协作，第一次在细菌中解析出 vault 粒子（一种桶状的蛋白复合体，过去主要在复杂细胞里研究）的三维结构，并公开了人和模型分工的全过程。这是 Claude 参与真实科研的又一个案例。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Anthropic 官网",
+       "url": "https://www.anthropic.com/research/investigating-vault-particles-with-claude"
+      },
+      {
+       "name": "@AnthropicAI（X）",
+       "url": "https://x.com/AnthropicAI/status/2118073665296228863"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "Claude 旧模型的文字水印被指容易绕过",
+     "body": "11/3 Anthropic 刚把文字水印扩展到 Mythos 5、Opus 4.7 等旧模型，The Decoder 随后报道，这几款旧模型上的水印很容易被绕过。水印能不能可靠认出「经过 Claude 的文字」，直接关系到学校会不会拿它来查作业。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "The Decoder",
+       "url": "https://the-decoder.com/anthropics-text-watermark-is-easy-to-bypass-on-several-older-claude-models"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "据 The Information 报道，OpenAI 或于本周五（11/7）发布新一代模型，尚未确认",
+    "星舰第 15 次试飞（不早于 11/12，首次尝试双塔架捕获）"
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI 官网",
+     "ChatGPT 与 Codex 更新日志（OpenAI）",
+     "OpenAI API 更新日志",
+     "Anthropic 新闻页",
+     "Claude 发布说明",
+     "Claude Code 更新日志",
+     "Claude Code 每周摘要",
+     "Google DeepMind 博客",
+     "Google AI 栏目",
+     "Google Research 博客",
+     "Meta AI 博客",
+     "英伟达博客",
+     "英伟达新闻中心",
+     "xAI 新闻页",
+     "Apple Newsroom",
+     "Apple 开发者版本发布",
+     "Apple 开发者新闻",
+     "MacRumors",
+     "9to5Mac",
+     "SpaceX 官网更新",
+     "SpaceX 发射日程（Launch Library）",
+     "Hugging Face 博客",
+     "Mistral 新闻",
+     "EdSurge",
+     "Inside Higher Ed",
+     "英国签证与移民局（GOV.UK）",
+     "ICEF Monitor",
+     "The PIE News",
+     "雅思官方（IELTS）",
+     "教育部（工作动态）",
+     "中国教育报",
+     "TechCrunch AI",
+     "The Verge AI",
+     "Ars Technica AI",
+     "Wired AI",
+     "MIT Technology Review AI",
+     "The Decoder",
+     "量子位",
+     "The Robot Report",
+     "IEEE Spectrum 机器人",
+     "TechCrunch 机器人",
+     "Waymo 官方博客",
+     "Electrek",
+     "TechCrunch 交通",
+     "The Verge 交通",
+     "IEEE Spectrum 半导体",
+     "IEEE Spectrum 生物医学",
+     "STAT 神经科学",
+     "Techmeme",
+     "Hacker News 首页（≥100 分）",
+     "Hugging Face 每日论文（前 12）",
+     "AI News Radar（中转站）",
+     "Follow Builders（AI 圈人物 X）",
+     "Google 新闻关键词搜索（22 组）",
+     "X 官方账号与关键人物（经 Grok，21 个账号）",
+     "ChatGPT 发布说明（经 Grok）",
+     "The Next Web",
+     "Unite.AI",
+     "Vanguard",
+     "AI 公司教育产品公告"
+    ],
+    "candidates": 301
+   }
+  }
+ ],
+ "specials": [],
+ "models": []
+}
