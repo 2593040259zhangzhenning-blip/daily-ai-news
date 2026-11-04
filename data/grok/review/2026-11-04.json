@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-04",
+  "issue": "2026-11-04-1morning",
+  "generatedAt": "2026-11-04T09:08:00+08:00",
+  "by": "Grok Bot",
+  "ok": true,
+  "error": null,
+  "missed": [
+    {
+      "title": "OpenAI 启动下一轮内部安全冲刺，联合 Cathedral，关键漏洞赏金大幅上调",
+      "why": "第一层 OpenAI：官方 11/2 文与 11/3 @OpenAI 宣布下一轮内部安全冲刺，引入 Cathedral；关键赏金逾四倍，含奖金最高约 17.2 万美元。当期未收。",
+      "watch": "OpenAI/ChatGPT",
+      "layer": 1,
+      "severity": "中",
+      "happenedAt": "2026-11-02",
+      "urls": [
+        "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+        "https://x.com/OpenAI/status/2117444048227123277",
+        "https://www.gadgets360.com/ai/news/openai-announces-new-security-initiative-with-cathedral-researchers-12276476"
+      ]
+    },
+    {
+      "title": "OpenAI 公开自研 Git 后端 Pando：推送延迟约降八成，日均近 PB 级流量",
+      "why": "第一层 OpenAI：官方与开发者账号宣布为 Codex/智能体并行开发做的 Git 后端 Pando，推送延迟约降 80%，日服务近 1 PB。The New Stack 等同日报道。当期未收。",
+      "watch": "OpenAI/ChatGPT",
+      "layer": 1,
+      "severity": "中",
+      "happenedAt": "2026-11-02",
+      "urls": [
+        "https://openai.com/index/scaling-git-at-openai/",
+        "https://x.com/i/status/2117408792346509663",
+        "https://thenewstack.io/openai-pando-git-backend/"
+      ]
+    },
+    {
+      "title": "Claude Team/Enterprise 可由管理员预配插件，成员首次使用自动连接",
+      "why": "第一层 Anthropic/Claude：@bcherny 11/3 宣布 Team/Enterprise 管理员可预配插件，成员首次使用自动连接。帮助中心有组织插件分发说明。当期更新未收。",
+      "watch": "Anthropic/Claude",
+      "layer": 1,
+      "severity": "中",
+      "happenedAt": "2026-11-03",
+      "urls": [
+        "https://x.com/i/status/2117693181651542387",
+        "https://support.claude.com/en/articles/13837433-manage-plugins-for-your-organization"
+      ]
+    }
+  ],
+  "doubts": [
+    {
+      "item": "谷歌：学校关掉 AI，学生账号连搜索也用不了",
+      "problem": "标题把「拒用 AI」直接等同失去搜索。谷歌澄清 Gemini 与 Search 可分别打开，可只开 Search；但 Search 仍带 AI Overview，没有真正无 AI 的校园搜索。",
+      "urls": [
+        "https://searchenginewatch.com/google-schools-gemini-search-ai-controls/",
+        "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/",
+        "https://arstechnica.com/ai/2026/11/google-will-let-schools-skip-ai-tools-but-they-have-to-give-up-search-too/"
+      ]
+    }
+  ]
+}
