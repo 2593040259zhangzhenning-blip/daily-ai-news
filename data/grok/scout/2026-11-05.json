@@ -1,0 +1,160 @@
+{
+  "date": "2026-11-05",
+  "generatedAt": "2026-11-05T06:23:30+08:00",
+  "by": "Grok Bot",
+  "x": {
+    "ok": true,
+    "error": null,
+    "checked": [
+      "@OpenAI",
+      "@OpenAIDevs",
+      "@ChatGPTapp",
+      "@AnthropicAI",
+      "@claudeai",
+      "@GoogleDeepMind",
+      "@GeminiApp",
+      "@AIatMeta",
+      "@nvidia",
+      "@SpaceX",
+      "@xai",
+      "@MistralAI",
+      "@ukhomeoffice",
+      "@IELTSOfficial",
+      "@sama",
+      "@gdb",
+      "@OfficialLoganK",
+      "@demishassabis",
+      "@karpathy",
+      "@elonmusk",
+      "@bcherny"
+    ],
+    "posts": [
+      {
+        "account": "@AnthropicAI",
+        "official": true,
+        "postedAt": "2026-11-04T20:11:28.000Z",
+        "url": "https://x.com/AnthropicAI/status/2118073665296228863",
+        "summary": "生物学团队用 Claude 解析出细菌生命中首个 vault 粒子三维结构，并分享全流程协作细节。",
+        "watch": "Anthropic/Claude",
+        "links": [
+          "https://www.anthropic.com/research/investigating-vault-particles-with-claude"
+        ]
+      },
+      {
+        "account": "@MistralAI",
+        "official": true,
+        "postedAt": "2026-11-04T10:24:20.000Z",
+        "url": "https://x.com/MistralAI/status/2117925908572991748",
+        "summary": "演示 Mistral Large 4 带领多智能体发现、复现并修补一则 Django CVE，视频加速展示排障流程。",
+        "watch": "AI 全行业（国外）",
+        "links": []
+      },
+      {
+        "account": "@elonmusk",
+        "official": false,
+        "postedAt": "2026-11-04T15:04:01.000Z",
+        "url": "https://x.com/elonmusk/status/2117996293188718856",
+        "summary": "转发并确认 Starlink Mobile 将建美国全国卫星加地面手机网络，2027 年起部署。",
+        "watch": "SpaceX",
+        "links": []
+      },
+      {
+        "account": "@elonmusk",
+        "official": false,
+        "postedAt": "2026-11-04T15:02:28.000Z",
+        "url": "https://x.com/elonmusk/status/2117995905525907769",
+        "summary": "称早期 Starlink 用户可免费更换新一代碟形天线套件。",
+        "watch": "SpaceX",
+        "links": [
+          "https://starlink.com/support/article/1f3e61e1-e601-86b7-7cc6-28c8cceadb61"
+        ]
+      },
+      {
+        "account": "@elonmusk",
+        "official": false,
+        "postedAt": "2026-11-04T15:00:14.000Z",
+        "url": "https://x.com/elonmusk/status/2117995339320070525",
+        "summary": "称 Grok Bot 可调研购物意向、比价下单、跟踪物流，并代办不需要的退货。",
+        "watch": "AI 全行业（国外）",
+        "links": []
+      }
+    ],
+    "buzz": [
+      {
+        "title": "传闻：OpenAI 或于本周五发布新一代 Astra、Sol 与网络安全专用模型（The Information）",
+        "accounts": [
+          "@haider1",
+          "@TekonBurns",
+          "@compounded_mind"
+        ],
+        "urls": [
+          "https://x.com/haider1/status/2118012483600568402",
+          "https://x.com/TekonBurns/status/2118074516220019016"
+        ],
+        "watch": "OpenAI/ChatGPT",
+        "confirmed": false
+      },
+      {
+        "title": "OpenAI 展示 ChatGPT 与 Codex 助力 CAD、电路与仿真等物理工程（官方帖略早于本窗口，今日仍在讨论）",
+        "accounts": [
+          "@gdb",
+          "@EvanKirstel",
+          "@ohpreis"
+        ],
+        "urls": [
+          "https://x.com/gdb/status/2117781797555851515",
+          "https://x.com/OpenAI/status/2117692475775258785"
+        ],
+        "watch": "OpenAI/ChatGPT",
+        "confirmed": true
+      },
+      {
+        "title": "Mistral Large 4（约 1T）已可在 Hugging Face Inference Endpoint 按小时租用",
+        "accounts": [
+          "@ngxson"
+        ],
+        "urls": [
+          "https://x.com/ngxson/status/2118026977323958291"
+        ],
+        "watch": "AI 全行业（国外）",
+        "confirmed": true
+      },
+      {
+        "title": "Starship Flight 15 仍瞄准不早于 11 月 12 日首次双塔架捕获助推器与飞船，静火已完成、待 FAA 许可",
+        "accounts": [
+          "@ARealRocketMan",
+          "@carpenterastro",
+          "@DigitalAssetsUS"
+        ],
+        "urls": [
+          "https://x.com/ARealRocketMan/status/2117955034126356655",
+          "https://x.com/carpenterastro/status/2118043093924786368"
+        ],
+        "watch": "SpaceX",
+        "confirmed": false
+      }
+    ]
+  },
+  "chatgptReleaseNotes": {
+    "ok": true,
+    "error": null,
+    "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    "entries": [
+      {
+        "date": "2026-10-30",
+        "title": "Account switching on iOS and Android",
+        "summary": "iOS 与 Android 应用可同时保持最多两个账号登录，在设置里切换而无需退出，各账号的聊天、记忆、设置和订阅相互独立。"
+      },
+      {
+        "date": "2026-10-30",
+        "title": "API credits for eligible ChatGPT Pro and Business plans",
+        "summary": "符合条件的 Pro 与 Business 订阅者可激活促销 API 额度，在关联的 API 组织里开发应用和智能体，与 ChatGPT 用量分开计算。"
+      },
+      {
+        "date": "2026-10-29",
+        "title": "More Work and Codex usage on Pro and Business Premium Plans",
+        "summary": "Pro 与 Business Premium 的 Work 和 Codex 用量上调，Pro 100 与 Pro 500 翻倍，并取消此前宣布的 Pro 200 削减，较低额度的 Pro 200 也翻倍至同一上限。"
+      }
+    ]
+  }
+}
