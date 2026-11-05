@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-05",
+  "issue": "2026-11-05-1morning",
+  "generatedAt": "2026-11-05T09:23:49+08:00",
+  "by": "Grok Bot",
+  "ok": true,
+  "error": null,
+  "missed": [
+    {
+      "title": "SpaceX 选定高通为 Starlink Mobile 美国地面 5G 建网供应商，2027 年起部署",
+      "why": "第一层 SpaceX：高通 11/4 官方新闻稿与 CNBC、RCR Wireless、Mobile World Live 等多家报道；Dragonwing 基站平台支撑 Starlink Mobile 全国地面网，计划数万站点、2027 年起部署，与卫星互补。当期未收。",
+      "watch": "SpaceX",
+      "layer": 1,
+      "severity": "高",
+      "happenedAt": "2026-11-04",
+      "urls": [
+        "https://www.qualcomm.com/news/releases/2026/11/spacex-selects-qualcomm-to-accelerate-starlink-mobile-s-nationwi",
+        "https://www.businesswire.com/news/home/20261104680757/en/SpaceX-Selects-Qualcomm-to-Accelerate-Starlink-Mobiles-Nationwide-5G-Network",
+        "https://www.cnbc.com/2026/11/04/spacex-strikes-deal-with-qualcomm-for-mobile-network-infrastructure.html"
+      ]
+    },
+    {
+      "title": "OpenAI 用即将发布的网络模型管线，一次跑出 948 个 Linux 本地提权漏洞并生成补丁",
+      "why": "第一层 OpenAI/ChatGPT：官方 11/4 发文《A thousand fewer paths to root》，自主管线用即将上线的网络模型动态复现 1724 个漏洞、产出 948 个 LPE 利用与候选补丁，API 花费约 121 万美元；属安全能力重大公开结果。当期未收。",
+      "watch": "OpenAI/ChatGPT",
+      "layer": 1,
+      "severity": "中",
+      "happenedAt": "2026-11-04",
+      "urls": [
+        "https://openai.com/index/a-thousand-fewer-paths-to-root/"
+      ]
+    },
+    {
+      "title": "Anthropic Messages API 上线 message threads 公测，长会话首字延迟约降 35%",
+      "why": "第一层 Anthropic/Claude：官方 11/2 宣布公测，服务端暂存会话后续只传新消息；多数 Claude Code 用户默认开启，50 万–100 万 token 请求中位 TTFT 约降 35%。The Next Web 等同日报道。11/3、11/4、11/5 当期均未收。",
+      "watch": "Anthropic/Claude",
+      "layer": 1,
+      "severity": "中",
+      "happenedAt": "2026-11-02",
+      "urls": [
+        "https://claude.com/resources/articles/message-threads",
+        "https://platform.claude.com/docs/en/release-notes/overview",
+        "https://thenextweb.com/news/anthropic-message-threads-beta-claude-api-agents"
+      ]
+    }
+  ],
+  "doubts": [
+    {
+      "item": "Claude 旧模型的文字水印被指容易绕过",
+      "problem": "标题和正文把「易绕过」笼统扣在 Mythos 5、Opus 4.7 等上；The Decoder 原文写的是 Opus 4.6 / Sonnet 4.6 在改 sampling 参数时可躲开水印，Mythos 5 / Opus 4.7 未写同样限制；且 11/4 更新称 Opus 4.6 延期到 11/16 才加水印，与「11/3 已扩到这几款」不完全一致。",
+      "urls": [
+        "https://the-decoder.com/anthropics-text-watermark-is-easy-to-bypass-on-several-older-claude-models"
+      ]
+    }
+  ]
+}
