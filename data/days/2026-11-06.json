@@ -1,0 +1,224 @@
+{
+ "date": "2026-11-06",
+ "issues": [
+  {
+   "key": "2026-11-06-1morning",
+   "date": "2026-11-06",
+   "edition": "morning",
+   "createdAt": "2026-11-06T07:05:00+08:00",
+   "headline": "Claude 能接入银行账户管钱了",
+   "items": [
+    {
+     "cat": "product",
+     "title": "Claude 推出个人理财：可直连银行账户",
+     "score": 7,
+     "tier": "lead",
+     "summary": "Claude 能接上你的银行卡和投资账户，帮你看余额、分析开销；目前仅限美国。",
+     "body": "Anthropic 11/5 开始测试「Personal Finance」：通过 Plaid 把银行、信用卡、贷款和投资账户连到 Claude，在一个页面看余额和开销，再直接问它关于自己钱的问题。Pro、Max、Ultra 订阅可用，但只在美国开放，国内账户暂时接不上。这是 Claude 第一次直接读取用户的金融数据，隐私和安全会是接下来大家盯的点。",
+     "sources": [
+      {
+       "name": "Claude 发布说明",
+       "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1027652/anthropic-claude-plaid-personal-finance"
+      },
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "新进展：谷歌松口，学校关 Gemini 也能留搜索",
+     "score": 7,
+     "tier": "must",
+     "body": "前天报道谷歌要求学校「关 AI 就连搜索一起关」，引来学校反弹后，谷歌澄清：学校可以不开 Gemini 应用、照样保留搜索；但搜索里的 AI 概览等 AI 功能不能单独关掉。也就是说，学生账号用搜索时仍然会看到 AI 生成的答案，DuckDuckGo 等对手已趁机向学校推销。",
+     "sources": [
+      {
+       "name": "Ars Technica",
+       "url": "https://arstechnica.com/ai/2026/11/google-schools-can-keep-search-while-skipping-gemini-but-ai-search-is-non-negotiable"
+      },
+      {
+       "name": "Search Engine Watch",
+       "url": "https://searchenginewatch.com/google-schools-gemini-search-ai-controls/"
+      },
+      {
+       "name": "Wired",
+       "url": "https://www.wired.com/story/google-is-forcing-ai-overviews-in-classrooms-schools-are-searching-for-a-way-out"
+      }
+     ]
+    },
+    {
+     "cat": "research",
+     "title": "新进展：METR 称 Anthropic 研发提速近一倍",
+     "score": 6,
+     "tier": "brief",
+     "body": "独立评测机构 METR 发布对 Anthropic 的评估，美联社报道称，借助 AI 辅助，Anthropic 模型的进步速度已接近原来的两倍。METR 同时抱怨，Anthropic 把报告里「最有说服力」的证据大量涂黑，读者只能更多依赖它的判断。这呼应了 11/3 Anthropic 自己说的「可能即将触及自我加速门槛」。",
+     "sources": [
+      {
+       "name": "ABC News（美联社）",
+       "url": "https://abcnews.com/Technology/wireStory/anthropic-rapidly-accelerating-ai-development-amid-slowdown-calls-137885082"
+      },
+      {
+       "name": "TechXplore",
+       "url": "https://techxplore.com/news/2026-11-anthropic-rapidly-ai-slowdown-group.html"
+      }
+     ]
+    },
+    {
+     "cat": "model",
+     "title": "OpenAI 发布网络安全专用模型 GPT-6 Cyber",
+     "score": 6,
+     "tier": "brief",
+     "body": "OpenAI 11/5 推出 GPT-6 Cyber，能找漏洞、在授权的测试环境里复现并给出修补方案；官方强调它更守边界，越界去攻击范围外系统的比例约 0.07%。目前只开放给通过审核的安全客户，普通 ChatGPT 用户用不上。",
+     "sources": [
+      {
+       "name": "OpenAI 官网",
+       "url": "https://openai.com/index/introducing-gpt-6-cyber/"
+      },
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1027599/openai-gpt-6-cyber-launch"
+      },
+      {
+       "name": "Windows Report",
+       "url": "https://windowsreport.com/openai-launches-gpt-6-cyber-access-currently-limited-to-approved-daybreak-red-customers/"
+      }
+     ]
+    },
+    {
+     "cat": "model",
+     "title": "谷歌视频模型 Gemini Omni 1.2 Flash 上线",
+     "score": 5,
+     "tier": "brief",
+     "body": "谷歌发布视频生成模型 Gemini Omni 1.2 Flash，单段视频最长 15 秒，价格比上一版低约三成，主打又快又便宜。",
+     "sources": [
+      {
+       "name": "Google DeepMind 博客",
+       "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips"
+      },
+      {
+       "name": "The Decoder",
+       "url": "https://the-decoder.com/googles-gemini-omni-1-2-flash-stretches-ai-video-clips-to-15-seconds-and-cuts-pricing-by-30-percent"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "Meta 的 Muse 能语音聊天、和虚拟形象视频",
+     "score": 4,
+     "tier": "brief",
+     "body": "Meta 给 Muse 助手加上更有表情的语音模式，美国用户还能和自己的 Muse AI 虚拟形象视频通话，追赶 ChatGPT 的语音体验。",
+     "sources": [
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/tech/1028015/meta-muse-ai-voice-mode-expressive-avatar"
+      },
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/11/05/meta-says-us-users-can-now-video-chat-with-their-muse-ai-avatar"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "澳洲就学生签证「真实学生」审核征求改革意见",
+     "score": 4,
+     "tier": "brief",
+     "body": "澳大利亚学生签证拒签率高、新入学人数下滑，政府开始就「真实学生（GS）测试」和资金证明要求的改革征求意见，申请澳洲留学的审核标准可能调整。",
+     "sources": [
+      {
+       "name": "ICEF Monitor",
+       "url": "https://monitor.icef.com/2026/11/amidst-high-visa-refusal-rates-and-falling-commencements-australian-government-opens-consultation-on-reforms-to-genuine-student-test-and-financial-requirements"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "据 The Information 报道，OpenAI 或于本周五（11/7）发布新一代模型，尚未确认",
+    "星舰第 15 次试飞（不早于 11/12，首次尝试双塔架捕获，待 FAA 许可）"
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI 官网",
+     "ChatGPT 与 Codex 更新日志（OpenAI）",
+     "OpenAI API 更新日志",
+     "Anthropic 新闻页",
+     "Claude 发布说明",
+     "Claude Code 更新日志",
+     "Claude Code 每周摘要",
+     "Google DeepMind 博客",
+     "Google AI 栏目",
+     "Google Research 博客",
+     "Meta AI 博客",
+     "英伟达博客",
+     "英伟达新闻中心",
+     "xAI 新闻页",
+     "Apple Newsroom",
+     "Apple 开发者版本发布",
+     "Apple 开发者新闻",
+     "MacRumors",
+     "9to5Mac",
+     "SpaceX 官网更新",
+     "SpaceX 发射日程（Launch Library）",
+     "Hugging Face 博客",
+     "Mistral 新闻",
+     "EdSurge",
+     "Inside Higher Ed",
+     "英国签证与移民局（GOV.UK）",
+     "ICEF Monitor",
+     "The PIE News",
+     "雅思官方（IELTS）",
+     "教育部（工作动态）",
+     "中国教育报",
+     "TechCrunch AI",
+     "The Verge AI",
+     "Ars Technica AI",
+     "Wired AI",
+     "MIT Technology Review AI",
+     "The Decoder",
+     "量子位",
+     "The Robot Report",
+     "IEEE Spectrum 机器人",
+     "TechCrunch 机器人",
+     "Waymo 官方博客",
+     "Electrek",
+     "TechCrunch 交通",
+     "The Verge 交通",
+     "IEEE Spectrum 半导体",
+     "IEEE Spectrum 生物医学",
+     "STAT 神经科学",
+     "Techmeme",
+     "Hacker News 首页（≥100 分）",
+     "Hugging Face 每日论文（前 12）",
+     "AI News Radar（中转站）",
+     "Follow Builders（AI 圈人物 X）",
+     "Google 新闻关键词搜索（22 组）",
+     "X 官方账号与关键人物（经 Grok，21 个账号）",
+     "ChatGPT 发布说明（经 Grok）",
+     "ChatGPT 发布说明（搜索）",
+     "@OpenAI",
+     "@AnthropicAI",
+     "@claudeai",
+     "@GoogleDeepMind",
+     "@AIatMeta",
+     "@nvidia",
+     "@SpaceX",
+     "@xai",
+     "AP",
+     "ABC News",
+     "Search Engine Watch",
+     "Windows Report",
+     "Implicator",
+     "教育产品公告搜索"
+    ],
+    "candidates": 431
+   }
+  }
+ ],
+ "specials": [],
+ "models": []
+}

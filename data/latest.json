@@ -1,27 +1,37 @@
 {
- "date": "2026-11-05",
- "headline": "ChatGPT 能直接做动图了",
- "updatedAt": "2026-11-05T07:02:00+08:00",
- "count": 4,
+ "date": "2026-11-06",
+ "headline": "Claude 能接入银行账户管钱了",
+ "updatedAt": "2026-11-06T07:05:00+08:00",
+ "count": 7,
  "lead": {
   "cat": "product",
-  "title": "ChatGPT 能把文字和照片做成动图",
-  "summary": "在 ChatGPT 里一句话或一张照片就能做出 GIF 动图，还能逐帧改。"
+  "title": "Claude 推出个人理财：可直连银行账户",
+  "summary": "Claude 能接上你的银行卡和投资账户，帮你看余额、分析开销；目前仅限美国。"
  },
  "items": [
   {
    "cat": "policy",
-   "title": "新进展：英国 HPI 签证 2026 名单公布，内地 8 所",
-   "tier": "brief"
+   "title": "新进展：谷歌松口，学校关 Gemini 也能留搜索",
+   "tier": "must"
   },
   {
    "cat": "research",
-   "title": "Anthropic 用 Claude 解析出细菌里的 vault 粒子结构",
+   "title": "新进展：METR 称 Anthropic 研发提速近一倍",
+   "tier": "brief"
+  },
+  {
+   "cat": "model",
+   "title": "OpenAI 发布网络安全专用模型 GPT-6 Cyber",
+   "tier": "brief"
+  },
+  {
+   "cat": "model",
+   "title": "谷歌视频模型 Gemini Omni 1.2 Flash 上线",
    "tier": "brief"
   },
   {
    "cat": "product",
-   "title": "Claude 旧模型的文字水印被指容易绕过",
+   "title": "Meta 的 Muse 能语音聊天、和虚拟形象视频",
    "tier": "brief"
   }
  ]
