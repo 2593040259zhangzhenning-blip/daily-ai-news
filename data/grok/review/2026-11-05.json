@@ -1,14 +1,26 @@
 {
   "date": "2026-11-05",
   "issue": "2026-11-05-1morning",
-  "generatedAt": "2026-11-05T09:23:49+08:00",
+  "generatedAt": "2026-11-05T09:33:19+08:00",
   "by": "Grok Bot",
   "ok": true,
   "error": null,
   "missed": [
     {
+      "title": "Google Classroom 全球上线教师可布置 Guided Learning 作业",
+      "why": "第一层 AI 与教育 / Google：Workspace Updates 与 blog.google 双官方 11/3–11/4；教师可把 Guided Learning 嵌进任意作业、对齐课堂材料，并看班级与个人洞察；Education Fundamentals/Standard/Plus，Extended rollout 自 11/3。与当期已有「K-12 搜索默认」不是同一条。当期未收。",
+      "watch": "AI与教育",
+      "layer": 1,
+      "severity": "高",
+      "happenedAt": "2026-11-04",
+      "urls": [
+        "https://workspaceupdates.googleblog.com/2026/11/educators-can-now-add-guided-learning-to-assignments-in-Google-Classroom-to-help-students-get-extra-support.html",
+        "https://blog.google/products-and-platforms/products/education/guided-learning-uk-japan/"
+      ]
+    },
+    {
       "title": "SpaceX 选定高通为 Starlink Mobile 美国地面 5G 建网供应商，2027 年起部署",
-      "why": "第一层 SpaceX：高通 11/4 官方新闻稿与 CNBC、RCR Wireless、Mobile World Live 等多家报道；Dragonwing 基站平台支撑 Starlink Mobile 全国地面网，计划数万站点、2027 年起部署，与卫星互补。当期未收。",
+      "why": "第一层 SpaceX：高通 11/4 官方新闻稿与 CNBC、BusinessWire 等多家报道；Dragonwing 基站平台支撑 Starlink Mobile 全国地面网，计划数万站点、2027 年起部署，与卫星互补。当期未收。",
       "watch": "SpaceX",
       "layer": 1,
       "severity": "高",
