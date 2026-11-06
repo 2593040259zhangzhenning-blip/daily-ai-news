@@ -1,37 +1,27 @@
 {
- "date": "2026-11-06",
- "headline": "Claude 能接入银行账户管钱了",
- "updatedAt": "2026-11-06T07:05:00+08:00",
- "count": 7,
+ "date": "2026-11-07",
+ "headline": "加拿大学签名额稳在 15 万",
+ "updatedAt": "2026-11-07T07:05:00+08:00",
+ "count": 4,
  "lead": {
-  "cat": "product",
-  "title": "Claude 推出个人理财：可直连银行账户",
-  "summary": "Claude 能接上你的银行卡和投资账户，帮你看余额、分析开销；目前仅限美国。"
+  "cat": "policy",
+  "title": "加拿大新国际学生目标定在 15 万并延到 2029",
+  "summary": "加拿大每年新来国际学生的目标约 15 万人，这个上限要一直保持到 2029 年。"
  },
  "items": [
   {
-   "cat": "policy",
-   "title": "新进展：谷歌松口，学校关 Gemini 也能留搜索",
-   "tier": "must"
-  },
-  {
-   "cat": "research",
-   "title": "新进展：METR 称 Anthropic 研发提速近一倍",
-   "tier": "brief"
-  },
-  {
-   "cat": "model",
-   "title": "OpenAI 发布网络安全专用模型 GPT-6 Cyber",
-   "tier": "brief"
-  },
-  {
-   "cat": "model",
-   "title": "谷歌视频模型 Gemini Omni 1.2 Flash 上线",
+   "cat": "product",
+   "title": "iOS 27.3 首个公测版上线",
    "tier": "brief"
   },
   {
    "cat": "product",
-   "title": "Meta 的 Muse 能语音聊天、和虚拟形象视频",
+   "title": "Meta 给 Muse 助手加入协作「空间」",
+   "tier": "brief"
+  },
+  {
+   "cat": "research",
+   "title": "OpenAI 推出湿实验评测，看 AI 能否做实验",
    "tier": "brief"
   }
  ]

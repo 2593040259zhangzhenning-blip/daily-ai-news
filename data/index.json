@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-05T22:53:13+00:00",
+ "generatedAt": "2026-11-06T22:52:17+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -353,6 +353,14 @@
    "headline": "Claude 能接入银行账户管钱了",
    "updatedAt": "2026-11-06T07:05:00+08:00",
    "count": 7,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-11-07",
+   "headline": "加拿大学签名额稳在 15 万",
+   "updatedAt": "2026-11-07T07:05:00+08:00",
+   "count": 4,
    "specials": [],
    "models": []
   }
