@@ -1,0 +1,124 @@
+{
+ "key": "2026-11-08-1morning",
+ "date": "2026-11-08",
+ "edition": "morning",
+ "createdAt": "2026-11-08T07:08:00+08:00",
+ "headline": "黄仁勋卷入间谍风波",
+ "items": [
+  {
+   "cat": "policy",
+   "title": "美方备忘录称黄仁勋与疑似中国间谍关系密切",
+   "score": 5,
+   "tier": "lead",
+   "summary": "美国情报备忘录把英伟达 CEO 和一名疑似中国间谍扯上关系，国会要他当面说明。",
+   "body": "据英国《金融时报》报道，一份美国情报备忘录称，曾任 Megaspeed 高管的一名女子被中方招募来接近黄仁勋，两人关系一度很亲密；美国众议院几位委员会主席已要求黄仁勋向国会说明情况。英伟达否认了相关报道。这件事发生在美国收紧对华芯片出口的背景下，可能让英伟达在华盛顿的处境更难。",
+   "sources": [
+    {
+     "name": "CNBC",
+     "url": "https://www.cnbc.com/2026/11/05/nvidia-jensen-huang-china-spy-congress.html"
+    },
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/"
+    },
+    {
+     "name": "The Verge",
+     "url": "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy"
+    },
+    {
+     "name": "ABC News（美联社）",
+     "url": "https://abc7news.com/story/nvidia-denies-report-ceo-was-allegedly-targeted-chinese-spy-plot/20000206/"
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "Meta AI 和 Muse 记性变好，不再半途放弃",
+   "score": 4,
+   "tier": "brief",
+   "body": "Meta 把用 Muse Wonder 训练的新模型推给所有 Muse 和 Meta AI 用户，主打「主动记忆」：能记住以前聊过的内容，长任务遇到阻碍时也更少中途放弃。扎克伯格称新版遗忘关键信息的概率降到原来的约四成。这是 Meta 一周内第三次给 Muse 加功能。",
+   "sources": [
+    {
+     "name": "NewsBytes",
+     "url": "https://www.newsbytesapp.com/news/science/meta-ai-muse-get-memory-and-focus-upgrade/story"
+    },
+    {
+     "name": "The Hans India",
+     "url": "https://www.thehansindia.com/tech/meta-ai-gets-better-memory-can-now-handle-tasks-without-giving-up-1140191"
+    }
+   ]
+  }
+ ],
+ "watch": [
+  "星舰第 15 次试飞定在美国时间 11/13（北京时间 11/14 早上），首次尝试助推器和飞船都用发射塔接住"
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI 官网",
+   "ChatGPT 与 Codex 更新日志（OpenAI）",
+   "OpenAI API 更新日志",
+   "Anthropic 新闻页",
+   "Claude 发布说明",
+   "Claude Code 更新日志",
+   "Claude Code 每周摘要",
+   "Google DeepMind 博客",
+   "Google AI 栏目",
+   "Google Research 博客",
+   "Meta AI 博客",
+   "英伟达博客",
+   "英伟达新闻中心",
+   "xAI 新闻页",
+   "Apple Newsroom",
+   "Apple 开发者版本发布",
+   "Apple 开发者新闻",
+   "MacRumors",
+   "9to5Mac",
+   "SpaceX 官网更新",
+   "SpaceX 发射日程（Launch Library）",
+   "Hugging Face 博客",
+   "Mistral 新闻",
+   "EdSurge",
+   "Inside Higher Ed",
+   "英国签证与移民局（GOV.UK）",
+   "ICEF Monitor",
+   "The PIE News",
+   "雅思官方（IELTS）",
+   "教育部（工作动态）",
+   "中国教育报",
+   "TechCrunch AI",
+   "The Verge AI",
+   "Ars Technica AI",
+   "Wired AI",
+   "MIT Technology Review AI",
+   "The Decoder",
+   "量子位",
+   "The Robot Report",
+   "IEEE Spectrum 机器人",
+   "TechCrunch 机器人",
+   "Waymo 官方博客",
+   "Electrek",
+   "TechCrunch 交通",
+   "The Verge 交通",
+   "IEEE Spectrum 半导体",
+   "IEEE Spectrum 生物医学",
+   "STAT 神经科学",
+   "Techmeme",
+   "Hacker News 首页（≥100 分）",
+   "Hugging Face 每日论文（前 12）",
+   "AI News Radar（中转站）",
+   "Follow Builders（AI 圈人物 X）",
+   "Google 新闻关键词搜索（22 组）",
+   "ChatGPT 发布说明（搜索）",
+   "@OpenAI",
+   "@AnthropicAI",
+   "@claudeai",
+   "CNBC",
+   "Bloomberg",
+   "Financial Times",
+   "ABC News（美联社）",
+   "NewsBytes",
+   "教育产品公告搜索"
+  ],
+  "candidates": 264
+ }
+}

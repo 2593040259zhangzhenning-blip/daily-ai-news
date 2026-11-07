@@ -1,27 +1,17 @@
 {
- "date": "2026-11-07",
- "headline": "加拿大学签名额稳在 15 万",
- "updatedAt": "2026-11-07T07:05:00+08:00",
- "count": 4,
+ "date": "2026-11-08",
+ "headline": "黄仁勋卷入间谍风波",
+ "updatedAt": "2026-11-08T07:08:00+08:00",
+ "count": 2,
  "lead": {
   "cat": "policy",
-  "title": "加拿大新国际学生目标定在 15 万并延到 2029",
-  "summary": "加拿大每年新来国际学生的目标约 15 万人，这个上限要一直保持到 2029 年。"
+  "title": "美方备忘录称黄仁勋与疑似中国间谍关系密切",
+  "summary": "美国情报备忘录把英伟达 CEO 和一名疑似中国间谍扯上关系，国会要他当面说明。"
  },
  "items": [
   {
    "cat": "product",
-   "title": "iOS 27.3 首个公测版上线",
-   "tier": "brief"
-  },
-  {
-   "cat": "product",
-   "title": "Meta 给 Muse 助手加入协作「空间」",
-   "tier": "brief"
-  },
-  {
-   "cat": "research",
-   "title": "OpenAI 推出湿实验评测，看 AI 能否做实验",
+   "title": "Meta AI 和 Muse 记性变好，不再半途放弃",
    "tier": "brief"
   }
  ]
