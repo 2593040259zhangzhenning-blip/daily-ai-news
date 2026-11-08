@@ -1,17 +1,22 @@
 {
- "date": "2026-11-08",
- "headline": "黄仁勋卷入间谍风波",
- "updatedAt": "2026-11-08T07:08:00+08:00",
- "count": 2,
+ "date": "2026-11-09",
+ "headline": "英伟达董事会调查黄仁勋",
+ "updatedAt": "2026-11-09T07:02:00+08:00",
+ "count": 3,
  "lead": {
-  "cat": "policy",
-  "title": "美方备忘录称黄仁勋与疑似中国间谍关系密切",
-  "summary": "美国情报备忘录把英伟达 CEO 和一名疑似中国间谍扯上关系，国会要他当面说明。"
+  "cat": "biz",
+  "title": "新进展：英伟达董事会对黄仁勋展开独立调查",
+  "summary": "黄仁勋向全员承认与涉谍女子有私情，董事会请外部力量独立调查。"
  },
  "items": [
   {
    "cat": "product",
-   "title": "Meta AI 和 Muse 记性变好，不再半途放弃",
+   "title": "Claude Code「不再询问」可能把密码传上 GitHub",
+   "tier": "brief"
+  },
+  {
+   "cat": "product",
+   "title": "传闻：苹果要让 Siri 明年变成智能体",
    "tier": "brief"
   }
  ]

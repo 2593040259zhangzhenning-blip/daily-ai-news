@@ -1,0 +1,140 @@
+{
+ "date": "2026-11-09",
+ "issues": [
+  {
+   "key": "2026-11-09-1morning",
+   "date": "2026-11-09",
+   "edition": "morning",
+   "createdAt": "2026-11-09T07:02:00+08:00",
+   "headline": "英伟达董事会调查黄仁勋",
+   "items": [
+    {
+     "cat": "biz",
+     "title": "新进展：英伟达董事会对黄仁勋展开独立调查",
+     "score": 7,
+     "tier": "lead",
+     "summary": "黄仁勋向全员承认与涉谍女子有私情，董事会请外部力量独立调查。",
+     "body": "前天报道美方备忘录称黄仁勋与一名疑似中国间谍关系密切；英伟达董事会随后发声明，宣布对此展开独立调查，并称目前没有理由认为公司机密外泄。黄仁勋在给全体员工的信里承认了这段私人关系，表示承担全部责任，承认自己辜负了董事会、股东和员工。全球最重要的 AI 芯片公司掌门人陷入调查，加上国会要求说明，英伟达在华盛顿的处境更被动。",
+     "sources": [
+      {
+       "name": "英伟达新闻中心（董事会声明）",
+       "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors"
+      },
+      {
+       "name": "英伟达新闻中心（黄仁勋致全员信）",
+       "url": "https://nvidianews.nvidia.com/news/a-message-to-our-company"
+      },
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy"
+      },
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1029562/nvidia-investigating-jensen-huang-relationship-chinese-spy"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "Claude Code「不再询问」可能把密码传上 GitHub",
+     "score": 6,
+     "tier": "brief",
+     "body": "安全公司 Apiiro 发现，在 Claude Code 里对一条命令点「是，且不再询问」时，整条命令（包括里面夹带的密码、API 密钥）会被存进项目里的权限设置文件；项目一公开推到 GitHub，这些密钥也跟着公开，他们在 GitHub 上找到 1122 个这样的文件。用 Claude Code 的话，记得把项目里的 .claude 本地设置文件加进 .gitignore，别在命令里直接写密钥。",
+     "sources": [
+      {
+       "name": "Apiiro",
+       "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "传闻：苹果要让 Siri 明年变成智能体",
+     "score": 4,
+     "tier": "brief",
+     "body": "据彭博社 Mark Gurman 报道，苹果新 CEO John Ternus 嫌 AI 进度太慢，催软件主管 Federighi 别只做 Siri 小修小补，最早明年让 Siri 能像智能体一样替你在 App 里办事，对标 ChatGPT 和 Meta 的 Muse。苹果尚未证实。",
+     "sources": [
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic"
+      },
+      {
+       "name": "9to5Mac",
+       "url": "https://9to5mac.com/2026/11/08/apple-working-on-agentic-siri-ai-next-year-report"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "@OpenAIDevs 发视频预告美国时间 11/9（北京时间 11/10）有新发布，内容未说；X 上有人猜是 GPT-6.2 Sol，未经确认",
+    "星舰第 15 次试飞：SpaceX 官网定在美国时间 11/13（北京时间 11/14 早上），首次尝试用发射塔接住飞船"
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI 官网",
+     "ChatGPT 与 Codex 更新日志（OpenAI）",
+     "OpenAI API 更新日志",
+     "Anthropic 新闻页",
+     "Claude 发布说明",
+     "Claude Code 更新日志",
+     "Claude Code 每周摘要",
+     "Google DeepMind 博客",
+     "Google AI 栏目",
+     "Google Research 博客",
+     "Meta AI 博客",
+     "英伟达博客",
+     "英伟达新闻中心",
+     "xAI 新闻页",
+     "Apple Newsroom",
+     "Apple 开发者版本发布",
+     "Apple 开发者新闻",
+     "MacRumors",
+     "9to5Mac",
+     "SpaceX 官网更新",
+     "SpaceX 发射日程（Launch Library）",
+     "Hugging Face 博客",
+     "Mistral 新闻",
+     "EdSurge",
+     "Inside Higher Ed",
+     "英国签证与移民局（GOV.UK）",
+     "ICEF Monitor",
+     "The PIE News",
+     "雅思官方（IELTS）",
+     "教育部（工作动态）",
+     "中国教育报",
+     "TechCrunch AI",
+     "The Verge AI",
+     "Ars Technica AI",
+     "Wired AI",
+     "MIT Technology Review AI",
+     "The Decoder",
+     "量子位",
+     "The Robot Report",
+     "IEEE Spectrum 机器人",
+     "TechCrunch 机器人",
+     "Waymo 官方博客",
+     "Electrek",
+     "TechCrunch 交通",
+     "The Verge 交通",
+     "IEEE Spectrum 半导体",
+     "IEEE Spectrum 生物医学",
+     "STAT 神经科学",
+     "Techmeme",
+     "Hacker News 首页（≥100 分）",
+     "Hugging Face 每日论文（前 12）",
+     "AI News Radar（中转站）",
+     "Follow Builders（AI 圈人物 X）",
+     "Google 新闻关键词搜索（22 组）",
+     "X 官方账号与关键人物（经 Grok，21 个账号）",
+     "ChatGPT 发布说明（经 Grok）",
+     "Apiiro",
+     "Financial Times",
+     "教育产品公告搜索"
+    ],
+    "candidates": 178
+   }
+  }
+ ],
+ "specials": [],
+ "models": []
+}
