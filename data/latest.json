@@ -1,22 +1,39 @@
 {
- "date": "2026-11-09",
- "headline": "英伟达董事会调查黄仁勋",
- "updatedAt": "2026-11-09T07:02:00+08:00",
- "count": 3,
+ "date": "2026-11-10",
+ "headline": "Claude Fable 5.2 登顶",
+ "updatedAt": "2026-11-10T07:00:00+08:00",
+ "count": 5,
  "lead": {
-  "cat": "biz",
-  "title": "新进展：英伟达董事会对黄仁勋展开独立调查",
-  "summary": "黄仁勋向全员承认与涉谍女子有私情，董事会请外部力量独立调查。"
+  "cat": "model",
+  "title": "Claude Fable 5.2：综合排名第 1",
+  "summary": "Claude App Pro 起（$20 / 月）",
+  "model": "claude-fable-5-2",
+  "date": "2026-11-10"
  },
  "items": [
   {
-   "cat": "product",
-   "title": "Claude Code「不再询问」可能把密码传上 GitHub",
+   "cat": "model",
+   "title": "Claude Fable 5.2 上线，综合排名第一",
+   "tier": "lead"
+  },
+  {
+   "cat": "model",
+   "title": "Meta 发布最小最省的 Muse Ember",
+   "tier": "brief"
+  },
+  {
+   "cat": "research",
+   "title": "OpenAI 上线「控制室」，可随时叫停模型任务",
    "tier": "brief"
   },
   {
    "cat": "product",
-   "title": "传闻：苹果要让 Siri 明年变成智能体",
+   "title": "苹果开卖 50 美元的 AI 加量包",
+   "tier": "brief"
+  },
+  {
+   "cat": "product",
+   "title": "特斯拉无人出租车开进圣安东尼奥",
    "tier": "brief"
   }
  ]

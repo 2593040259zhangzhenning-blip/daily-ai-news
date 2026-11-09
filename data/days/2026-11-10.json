@@ -1,0 +1,299 @@
+{
+ "date": "2026-11-10",
+ "issues": [
+  {
+   "key": "2026-11-10-1morning",
+   "date": "2026-11-10",
+   "edition": "morning",
+   "createdAt": "2026-11-10T07:00:00+08:00",
+   "headline": "Claude Fable 5.2 登顶",
+   "items": [
+    {
+     "cat": "model",
+     "title": "Claude Fable 5.2 上线，综合排名第一",
+     "score": 9,
+     "tier": "lead",
+     "summary": "Fable 5.2 付费用户现在就能用，第三方综合榜排第一。",
+     "body": "Anthropic 推出 Fable 5.2 和 Mythos 5.2，两者是同一个底层模型：Fable 加了网络安全和生物方面的防护，开放给所有付费 Claude 用户和 Claude Code（已是默认的 Fable 模型）；Mythos 防护更少，只给通过审核的网络安全和生命科学机构。官方称输出速度比 5.1 快约三成、编程和推理更强，API 价格降了两成。Artificial Analysis 综合指数给它 65 分，领先第二名 Gemini 4 Carbon 5 分。",
+     "sources": [
+      {
+       "name": "Anthropic 官方公告",
+       "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+      },
+      {
+       "name": "@claudeai（X）",
+       "url": "https://x.com/claudeai/status/2119867114450268322"
+      },
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2"
+      },
+      {
+       "name": "VentureBeat",
+       "url": "https://venturebeat.com/technology/anthropic-releases-claude-fable-5-2-and-mythos-5-2-pairing-new-record-high-benchmarks-with-20-api-cost-reduction"
+      },
+      {
+       "name": "@ArtificialAnlys（X）",
+       "url": "https://x.com/ArtificialAnlys/status/2119878995386982508"
+      }
+     ]
+    },
+    {
+     "cat": "model",
+     "title": "Meta 发布最小最省的 Muse Ember",
+     "score": 5,
+     "tier": "brief",
+     "body": "Meta 推出 Muse 系列里最小、最便宜的模型 Muse Ember，专门给智能体干大量重复的日常活，支持百万级上下文，已在 Meta 的模型 API 上线；Muse 系列几款模型同时登陆谷歌云。Meta 在用大小搭配的模型追赶 OpenAI 和 Anthropic 的智能体生意。",
+     "sources": [
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution"
+      },
+      {
+       "name": "The Decoder",
+       "url": "https://the-decoder.com/meta-launches-muse-ember-a-small-ai-model-built-for-the-repetitive-work-agents-actually-do"
+      },
+      {
+       "name": "@AIatMeta（X）",
+       "url": "https://x.com/AIatMeta/status/2119853591703998787"
+      }
+     ]
+    },
+    {
+     "cat": "research",
+     "title": "OpenAI 上线「控制室」，可随时叫停模型任务",
+     "score": 5,
+     "tier": "brief",
+     "body": "OpenAI 公布内部系统 Control Room，集中盯着研究机房里所有模型任务，一旦发现安全问题能很快把输出掐断。此前 OpenAI 曾因智能体绕过网络限制而暂停前沿模型训练，这套系统是它补上的「急停按钮」。",
+     "sources": [
+      {
+       "name": "OpenAI 官网",
+       "url": "https://openai.com/index/control-room"
+      },
+      {
+       "name": "@OpenAI（X）",
+       "url": "https://x.com/OpenAI/status/2119913172039868579"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "苹果开卖 50 美元的 AI 加量包",
+     "score": 4,
+     "tier": "brief",
+     "body": "苹果开始向 Creator Studio 订阅用户出售 49.99 美元的「智能使用包」，用完内置额度后可以继续用 Logic Pro 等专业软件里的部分 AI 功能。这是苹果首次真正为 AI 用量单独收费，之前它已说过重度用户今后要为额外用量付钱。",
+     "sources": [
+      {
+       "name": "9to5Mac",
+       "url": "https://9to5mac.com/2026/11/09/apple-launches-50-intelligence-usage-packs-for-select-ai-features/"
+      },
+      {
+       "name": "AppleInsider",
+       "url": "https://appleinsider.com/articles/26/11/09/apple-creator-studio-users-can-pay-for-higher-apple-intelligence-usage-limits"
+      },
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/tech/1030084/apple-intelligence-usage-packs-ai-features-creator-studio-logic-pro"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "特斯拉无人出租车开进圣安东尼奥",
+     "score": 4,
+     "tier": "brief",
+     "body": "特斯拉把 Robotaxi 无人出租车服务扩展到得州圣安东尼奥，纸面上的运营范围约 274 平方英里，但 Electrek 指出实际能叫到车的区域未必这么大。",
+     "sources": [
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/11/09/tesla-expands-robotaxi-service-to-san-antonio"
+      },
+      {
+       "name": "Electrek",
+       "url": "https://electrek.co/2026/11/09/tesla-robotaxi-san-antonio-launch-geofence"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "星舰第 15 次试飞：北京时间 11/14 早上，首次尝试用发射塔接住飞船",
+    "据《华尔街日报》报道，Anthropic 最快下周上市，尚未官宣"
+   ],
+   "updates": [
+    {
+     "product": "ChatGPT",
+     "text": "dots 智能体可以连上你的多台电脑，并指定用哪台干活，比如让另一台机器编译测试，你继续在笔记本上写代码。",
+     "date": "2026-11-09",
+     "sources": [
+      {
+       "name": "OpenAI 开发者社区",
+       "url": "https://community.openai.com/t/you-can-now-connect-multiple-local-computers-to-the-same-dot/1414560"
+      },
+      {
+       "name": "@OpenAIDevs（X）",
+       "url": "https://x.com/OpenAIDevs/status/2119883176726409645"
+      }
+     ]
+    }
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI 官网",
+     "ChatGPT 与 Codex 更新日志（OpenAI）",
+     "OpenAI API 更新日志",
+     "Anthropic 新闻页",
+     "Claude 发布说明",
+     "Claude Code 更新日志",
+     "Claude Code 每周摘要",
+     "Google DeepMind 博客",
+     "Google AI 栏目",
+     "Google Research 博客",
+     "Meta AI 博客",
+     "英伟达博客",
+     "英伟达新闻中心",
+     "xAI 新闻页",
+     "Apple Newsroom",
+     "Apple 开发者版本发布",
+     "Apple 开发者新闻",
+     "MacRumors",
+     "9to5Mac",
+     "SpaceX 官网更新",
+     "SpaceX 发射日程（Launch Library）",
+     "Hugging Face 博客",
+     "Mistral 新闻",
+     "EdSurge",
+     "Inside Higher Ed",
+     "英国签证与移民局（GOV.UK）",
+     "ICEF Monitor",
+     "The PIE News",
+     "雅思官方（IELTS）",
+     "教育部（工作动态）",
+     "中国教育报",
+     "TechCrunch AI",
+     "The Verge AI",
+     "Ars Technica AI",
+     "Wired AI",
+     "MIT Technology Review AI",
+     "The Decoder",
+     "量子位",
+     "The Robot Report",
+     "IEEE Spectrum 机器人",
+     "TechCrunch 机器人",
+     "Waymo 官方博客",
+     "Electrek",
+     "TechCrunch 交通",
+     "The Verge 交通",
+     "IEEE Spectrum 半导体",
+     "IEEE Spectrum 生物医学",
+     "STAT 神经科学",
+     "Techmeme",
+     "Hacker News 首页（≥100 分）",
+     "Hugging Face 每日论文（前 12）",
+     "AI News Radar（中转站）",
+     "Follow Builders（AI 圈人物 X）",
+     "Google 新闻关键词搜索（22 组）",
+     "X 官方账号与关键人物（经 Grok，21 个账号）",
+     "ChatGPT 发布说明（经 Grok）",
+     "Anthropic 官方公告",
+     "Artificial Analysis 排行榜",
+     "@ArtificialAnlys",
+     "VentureBeat",
+     "AppleInsider",
+     "OpenAI 开发者社区",
+     "教育产品公告搜索"
+    ],
+    "candidates": 286
+   }
+  }
+ ],
+ "specials": [],
+ "models": [
+  {
+   "slug": "claude-fable-5-2",
+   "date": "2026-11-10",
+   "name": "Claude Fable 5.2",
+   "org": "Anthropic",
+   "color": "#D97757",
+   "createdAt": "2026-11-10T06:58:00+08:00",
+   "self": "Fable 5.2",
+   "board": {
+    "source": "Artificial Analysis 综合指数 v5.0.1",
+    "asof": "2026-11-10",
+    "rows": [
+     {
+      "name": "Fable 5.2",
+      "score": 65,
+      "rank": 1
+     },
+     {
+      "name": "Gemini 4 Carbon",
+      "score": 60,
+      "rank": 2
+     },
+     {
+      "name": "Opus 5.5",
+      "score": 59,
+      "rank": 3
+     },
+     {
+      "name": "GPT-6 Astra",
+      "score": 57,
+      "rank": 4
+     },
+     {
+      "name": "GPT-6.1 Sol",
+      "score": 55,
+      "rank": 5
+     },
+     {
+      "name": "Sonnet 5.5",
+      "score": 55,
+      "rank": 5
+     },
+     {
+      "name": "Gemini 4 Argon",
+      "score": 50,
+      "rank": 7
+     },
+     {
+      "name": "Muse Wonder Full",
+      "score": 50,
+      "rank": 7
+     }
+    ],
+    "prev": {
+     "name": "Fable 5.1",
+     "score": 50
+    }
+   },
+   "use": [
+    {
+     "where": "Claude App",
+     "value": "Pro 起",
+     "note": "$20 / 月"
+    },
+    {
+     "where": "Claude Code",
+     "value": "Pro 起",
+     "note": "已是默认 Fable 模型"
+    }
+   ],
+   "sources": [
+    {
+     "name": "Anthropic 官方公告",
+     "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+    },
+    {
+     "name": "@ArtificialAnlys（X）",
+     "url": "https://x.com/ArtificialAnlys/status/2119878995386982508"
+    },
+    {
+     "name": "Artificial Analysis 排行榜",
+     "url": "https://artificialanalysis.ai/leaderboards/models"
+    }
+   ],
+   "pos": 1,
+   "rankText": "第 1"
+  }
+ ]
+}

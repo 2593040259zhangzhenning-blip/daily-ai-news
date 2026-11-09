@@ -1,0 +1,87 @@
+{
+ "slug": "claude-fable-5-2",
+ "date": "2026-11-10",
+ "name": "Claude Fable 5.2",
+ "org": "Anthropic",
+ "color": "#D97757",
+ "createdAt": "2026-11-10T06:58:00+08:00",
+ "self": "Fable 5.2",
+ "board": {
+  "source": "Artificial Analysis 综合指数 v5.0.1",
+  "asof": "2026-11-10",
+  "rows": [
+   {
+    "name": "Fable 5.2",
+    "score": 65,
+    "rank": 1
+   },
+   {
+    "name": "Gemini 4 Carbon",
+    "score": 60,
+    "rank": 2
+   },
+   {
+    "name": "Opus 5.5",
+    "score": 59,
+    "rank": 3
+   },
+   {
+    "name": "GPT-6 Astra",
+    "score": 57,
+    "rank": 4
+   },
+   {
+    "name": "GPT-6.1 Sol",
+    "score": 55,
+    "rank": 5
+   },
+   {
+    "name": "Sonnet 5.5",
+    "score": 55,
+    "rank": 5
+   },
+   {
+    "name": "Gemini 4 Argon",
+    "score": 50,
+    "rank": 7
+   },
+   {
+    "name": "Muse Wonder Full",
+    "score": 50,
+    "rank": 7
+   }
+  ],
+  "prev": {
+   "name": "Fable 5.1",
+   "score": 50
+  }
+ },
+ "use": [
+  {
+   "where": "Claude App",
+   "value": "Pro 起",
+   "note": "$20 / 月"
+  },
+  {
+   "where": "Claude Code",
+   "value": "Pro 起",
+   "note": "已是默认 Fable 模型"
+  }
+ ],
+ "sources": [
+  {
+   "name": "Anthropic 官方公告",
+   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+  },
+  {
+   "name": "@ArtificialAnlys（X）",
+   "url": "https://x.com/ArtificialAnlys/status/2119878995386982508"
+  },
+  {
+   "name": "Artificial Analysis 排行榜",
+   "url": "https://artificialanalysis.ai/leaderboards/models"
+  }
+ ],
+ "pos": 1,
+ "rankText": "第 1"
+}
