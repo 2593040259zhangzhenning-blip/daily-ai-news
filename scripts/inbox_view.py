@@ -22,9 +22,9 @@
   「功能更新候选」：产品更新日志（Claude Code、Claude 应用、ChatGPT / Codex、OpenAI API）里的条目，单独成一节，
   不会再出现在下面按对象分的组里；是否写进当期的 updates 由定时任务按 watchlist.md 判断（只要用户能感觉到的变化）。
   时间前面的 ~ 表示来源没给发布时间，用的是「收件箱第一次发现它的时间」。
-  「Grok 侦察」（2026-10-30 起）：Grok Bot 每天 06:15 前后写的 data/grok/scout/<日期>.json，X 上的官方账号帖子、关键人物帖子、
-  X 上热议的事。[一手·Grok] 是官方账号的帖子，可以当出处（做头条或必看还要再有一个非 Grok 的来源）；[线索·Grok] 只用来发现事件。
-  ChatGPT 发布说明也由 Grok 读，出现在「功能更新候选」里。
+  「Grok 线索」（2026-11-10 起只是可选的额外线索）：Grok Bot 当天写了 data/grok/scout/<日期>.json 才有这一节，
+  没写不算异常、不报警。里面全部只当线索（[线索·Grok…]），必须另外找到原文才能收；
+  X 官方账号和 ChatGPT 发布说明由早间任务自己查，不靠它。
 """
 import shutil
 import subprocess
@@ -229,7 +229,7 @@ def grok_lines(sc):
     posts = sorted(sc["x"]["posts"], key=lambda p: (not p["official"], -(p["postedAt"].timestamp() if p["postedAt"] else 0)))
     for p in posts:
         PRINTED[0] += 1
-        kind = "一手·Grok" if p["official"] else "线索·Grok"
+        kind = "线索·Grok·官方帖" if p["official"] else "线索·Grok·个人"
         r = "[%s] %s · %s · %s%s\n    %s" % (kind, grok_time(p["postedAt"]), p["account"],
                                            ("%s · " % p["watch"]) if p["watch"] else "", p["summary"], p["url"])
         if p["links"]:
@@ -283,10 +283,8 @@ def main():
         if gn:
             names.append("Google 新闻关键词搜索（%d 组）" % len(gn))
         if scout and scout["x"]["ok"]:
-            names.append("X 官方账号与关键人物（经 Grok，%d 个账号）" % len(scout["x"]["checked"]) if scout["x"]["checked"]
-                         else "X 官方账号与关键人物（经 Grok）")
-        if scout and scout["chatgptReleaseNotes"]["ok"]:
-            names.append("ChatGPT 发布说明（经 Grok）")
+            names.append("X 线索（Grok 当天的侦察，%d 个账号）" % len(scout["x"]["checked"]) if scout["x"]["checked"]
+                         else "X 线索（Grok 当天的侦察）")
         print(json.dumps(names, ensure_ascii=False))
         return 0
 
@@ -321,15 +319,11 @@ def main():
     if gn_all and len(gn_bad) * 2 >= len(gn_all):
         print("⚠ 谷歌新闻 %d 组里有 %d 组这次没抓到（%s）：关注对象的媒体报道会明显变少，第一层对象要用搜索逐个补查。" % (
             len(gn_all), len(gn_bad), gn_bad[0].get("error") or "未知"))
+    # Grok 只是可选的额外线索：没来、没查成都不算异常，这里只留一句说明，不打「⚠」
     if not scout:
-        print("⚠ Grok 侦察：%s。X 部分照旧用 site:x.com 搜索，ChatGPT 发布说明照旧用 WebFetch 读。" % "；".join(scout_probs))
-    else:
-        if not scout["x"]["ok"]:
-            print("⚠ Grok 侦察这次没查成 X（%s）：X 部分照旧用 site:x.com 搜索。" % scout["x"]["error"])
-        if not scout["chatgptReleaseNotes"]["ok"]:
-            print("⚠ Grok 这次没读到 ChatGPT 发布说明（%s）：照旧用 WebFetch 读。" % scout["chatgptReleaseNotes"]["error"])
-        if scout_probs:
-            print("（Grok 侦察文件有格式问题，已丢掉不合格的条目：%s）" % "；".join(scout_probs))
+        print("（%s，不影响：X 官方账号和 ChatGPT 发布说明本来就由你自己查。）" % "；".join(scout_probs))
+    elif scout_probs:
+        print("（Grok 侦察文件有格式问题，已丢掉不合格的条目：%s）" % "；".join(scout_probs))
     bad = [s for s in status.get("sources", []) if not s["ok"] and s.get("failStreak", 0) >= 3]
     if bad:
         print("⚠ 连续失败 3 次以上的源（这些源当前没有数据，需要手动查）：" +
@@ -352,11 +346,11 @@ def main():
 
     if scout:
         x = scout["x"]
-        print("## Grok 侦察 · X（Grok Bot 北京时间 %s 写入；官方帖 %d 条、个人帖 %d 条、热议 %d 件）\n" % (
+        print("## Grok 线索 · X（额外线索，全部要另找原文核实；Grok Bot 北京时间 %s 写入；官方帖 %d 条、个人帖 %d 条、热议 %d 件）\n" % (
             grok_time(scout["generatedAt"]), sum(p["official"] for p in x["posts"]),
             sum(not p["official"] for p in x["posts"]), len(x["buzz"])))
         rows = grok_lines(scout)
-        print("\n".join(rows) if rows else ("（Grok 查了，过去 24 小时关注对象在 X 上没有值得看的新帖）" if x["ok"] else "（X 没查成，见开头的 ⚠）"))
+        print("\n".join(rows) if rows else ("（Grok 说过去 24 小时关注对象在 X 上没有值得看的新帖；照常自己查）" if x["ok"] else "（Grok 这次没查成 X）"))
         print()
 
     rn = scout["chatgptReleaseNotes"] if scout else None
@@ -366,16 +360,14 @@ def main():
         for e in rn["entries"]:
             if e["date"] >= recent:
                 PRINTED[0] += 1
-                rn_rows.append("[一手·Grok] %s（仅日期） · ChatGPT 发布说明 · %s%s\n    %s" % (
+                rn_rows.append("[线索·Grok] %s（仅日期） · ChatGPT 发布说明 · %s%s\n    %s" % (
                     e["date"][5:], e["title"], ("——" + e["summary"]) if e["summary"] else "", rn["url"]))
     print("## 功能更新候选（产品更新日志，共 %d 条%s；工程细节居多，只挑用户能感觉到的变化写进 updates）\n" % (
-        len(cl) + len(rn_rows), "，含 Grok 读的 ChatGPT 发布说明 %d 条" % len(rn_rows) if rn and rn["ok"] else ""))
+        len(cl) + len(rn_rows), "，含 Grok 转述的 ChatGPT 发布说明 %d 条（线索，自己打开页面核对）" % len(rn_rows) if rn_rows else ""))
     for i in cl:
         print(line(i, args.urls))
     for r in rn_rows:
         print(r)
-    if rn and rn["ok"] and not rn_rows:
-        print("（Grok 读了 ChatGPT 发布说明，最近 3 天没有新条目）")
     if not cl and not rn_rows:
         print("（这段时间更新日志类来源没有新条目）")
     print()

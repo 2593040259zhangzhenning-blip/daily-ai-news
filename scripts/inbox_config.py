@@ -146,6 +146,12 @@ SOURCES = [
     dict(id="anthropic-news", name="Anthropic 新闻页", type="page_links", url="https://www.anthropic.com/news",
          link_re=r"^https://www\.anthropic\.com/news/[a-z0-9\-]+$", fix_relative="https://www.anthropic.com",
          enrich=True, tier=1, role="primary", region="intl", watch=["Anthropic/Claude"]),
+    # 2026-11-10 新增：新闻页只列 /news/ 下的文章，研究文章在 /research/ 下，之前一直没盯
+    # （10-24、11-05 上稿的三篇 Anthropic 研究都是靠别的来源发现的）。同一个站、同一种读法；
+    # 还没在 Actions 上跑过，第一次运行后看 source-status.json 确认。
+    dict(id="anthropic-research", name="Anthropic 研究页", type="page_links", url="https://www.anthropic.com/research",
+         link_re=r"^https://www\.anthropic\.com/research/[a-z0-9\-]+$", enrich=True,
+         tier=1, role="primary", region="intl", watch=["Anthropic/Claude"]),
     dict(id="claude-notes", name="Claude 发布说明", type="release_notes",
          url="https://support.claude.com/en/articles/12138966-release-notes",
          tier=1, role="primary", region="intl", watch=["Anthropic/Claude"], kind="changelog"),
@@ -156,7 +162,8 @@ SOURCES = [
          url="https://code.claude.com/docs/en/changelog.md", link="https://code.claude.com/docs/en/changelog",
          label="Claude Code", take=15, tier=1, role="primary", region="intl", watch=["Anthropic/Claude"],
          kind="changelog", limit=15),
-    dict(id="claude-code-weekly", name="Claude Code 每周摘要", type="changelog_update",
+    # 2026-11-10 停用：摘要页 9 月 11 日那周之后再没更新过，接入以来一条新内容都没出；逐版本的更新日志已经覆盖
+    dict(id="claude-code-weekly", name="Claude Code 每周摘要", type="changelog_update", enabled=False,
          url="https://code.claude.com/docs/en/whats-new.md", link="https://code.claude.com/docs/en/whats-new",
          label="Claude Code 每周摘要", range_dates=True, take=4, stale_days=60, tier=1, role="primary", region="intl",
          watch=["Anthropic/Claude"], kind="changelog", limit=4),

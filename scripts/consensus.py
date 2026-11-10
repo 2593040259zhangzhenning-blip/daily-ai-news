@@ -82,6 +82,14 @@ def _time(it):
     return _pt(it.get("eventAt")) or _pt(it.get("publishedAt")) or _pt(it.get("firstSeen"))
 
 
+def _event_flags(its):
+    """事件的提示标记：至少一半条目带才算。以前是「有一条带就算」，十几家在报的大事只要有一家标题带 stock、
+    或有一条来自 MacRumors，整件事就被标成「融资/人事/股价、传闻类」（2026-11-10 的 Claude Fable 5.2 发布就是这样），
+    还会因此进不了圈外候选。"""
+    cnt = Counter(f for it in its for f in set(it.get("flags", [])))
+    return sorted(f for f, c in cnt.items() if c * 2 >= len(its))
+
+
 def cluster(items, threshold=0.55, max_gap_hours=72):
     """返回事件列表（按来源数从多到少）。items 是 items.json 里的条目。"""
     docs = [(it, _tokens(it["title"])) for it in items if it.get("kind") != "changelog"]
@@ -151,7 +159,7 @@ def cluster(items, threshold=0.55, max_gap_hours=72):
             official=bool(official), primary_n=len(primary), items=len(its),
             watch=watch, topics=topics,
             layer=min((it.get("layer", 0) or 9) for it in its) if any(it.get("layer") for it in its) else 0,
-            flags=sorted({f for it in its for f in it.get("flags", [])}),
+            flags=_event_flags(its),
             first=min(ts) if ts else None, last=max(ts) if ts else None,
             outlet_names=sorted(o for o in outlets if not o.startswith("编辑:")),
             editor_names=sorted(o[3:] for o in outlets if o.startswith("编辑:")),

@@ -1,21 +1,17 @@
 #!/usr/bin/env python3
-"""Grok Bot 写进仓库的两种文件：读取、校验、检查。
+"""Grok Bot 的侦察文件：读取、校验、检查。
 
-Grok Bot（用户的另一个 AI 助手，xAI 出品，能原生实时读 X）每天跑两个例程，把结果提交到 main：
+2026-11-10 起 Signal 不再依赖 Grok：早间任务自己查 X 官方账号、自己读 ChatGPT 发布说明。
+Grok Bot（用户的另一个 AI 助手，能原生实时读 X）如果当天写了侦察文件，inbox_view.py 把它多列成一节「额外线索」；
+没写也不算异常、不报警。里面的东西全部只当线索，必须另外找到原文才能收，格式不对的条目直接丢掉。
 
-  data/grok/scout/<北京日期>.json   侦察（每天 06:15 前后）：X 上关注对象的官方账号和关键人物过去 24 小时的帖子，
-                                     X 上热议的事，外加 ChatGPT 发布说明（help.openai.com 拦机房 IP，Grok 用真浏览器读）。
-                                     早间任务通过 inbox_view.py 读。
-  data/grok/review/<北京日期>.json  独立查漏（每天 09:00 前后）：读当天这期，找关注清单里该收没收的大事、已发条目里可疑的事实。
-                                     只给周六复盘（weekly_review.py）用，不上网页、早间任务也不读。
+  data/grok/scout/<北京日期>.json   X 上关注对象的官方账号和关键人物过去 24 小时的帖子、X 上热议的事、ChatGPT 发布说明。
 
-这些文件是 Grok 写的，Claude 只当线索和一手链接的来源，不盲信：格式不对的条目直接丢掉，丢了几条会打印出来。
+「独立查漏」（data/grok/review/）已停用：它只进周复盘，三周里没人处理过，旧文件留作记录，程序不再读。
 
 用法：
   python3 scripts/grok_io.py check data/grok/scout/2026-10-30.json     # 校验一个文件（Grok 提交前可以自己跑）
-  python3 scripts/grok_io.py check data/grok/review/2026-10-30.json
   python3 scripts/grok_io.py example scout                             # 打印一份格式示例
-  python3 scripts/grok_io.py example review
 """
 import json
 import re
@@ -60,22 +56,6 @@ EXAMPLES = {
             "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
             "entries": [{"date": "2026-10-29", "title": "页面上的原标题", "summary": "一句中文：用户能感觉到什么变化"}]
         }
-    },
-    "review": {
-        "date": "2026-10-30",
-        "issue": "2026-10-30-1morning",
-        "generatedAt": "2026-10-30T09:00:00+08:00",
-        "by": "Grok Bot",
-        "ok": True,
-        "error": None,
-        "missed": [
-            {"title": "漏掉的事，一句中文", "why": "为什么按关注清单该收（对象/领域、有几家在报）",
-             "watch": "英伟达", "layer": 1, "severity": "高",
-             "happenedAt": "2026-10-29", "urls": ["https://nvidianews.nvidia.com/news/example"]}
-        ],
-        "doubts": [
-            {"item": "当期某条的标题（原样）", "problem": "哪里可能不对，一句中文", "urls": ["https://example.com/source"]}
-        ]
     },
 }
 
@@ -178,79 +158,38 @@ def clean_scout(doc):
     return out, probs
 
 
-def clean_review(doc):
-    probs = []
-    if not isinstance(doc, dict):
-        return None, ["顶层不是 JSON 对象"]
-    out = {"date": doc.get("date") if DATE_RE.match(str(doc.get("date", ""))) else None,
-           "issue": _s(doc.get("issue"), 40), "generatedAt": parse_time(doc.get("generatedAt")),
-           "ok": bool(doc.get("ok", True)), "error": _s(doc.get("error"), 200), "missed": [], "doubts": []}
-    if not out["date"]:
-        probs.append("date 缺失或不是 YYYY-MM-DD")
-    bad = 0
-    for m in doc.get("missed") or []:
-        t = _s(m.get("title"), 120) if isinstance(m, dict) else None
-        if not (t and _urls(m.get("urls"))):
-            bad += 1
-            continue
-        lay = m.get("layer") if m.get("layer") in (0, 1, 2, 3) else None
-        out["missed"].append({"title": t, "why": _s(m.get("why"), 200) or "", "watch": _s(m.get("watch"), 30) or "",
-                              "layer": lay, "severity": m.get("severity") if m.get("severity") in ("高", "中") else "中",
-                              "happenedAt": _s(m.get("happenedAt"), 30) or "", "urls": _urls(m.get("urls"), 3)})
-    if bad:
-        probs.append("missed 丢掉 %d 条（缺 title 或没有链接）" % bad)
-    bad = 0
-    for d in doc.get("doubts") or []:
-        it, pb = (_s(d.get("item"), 80), _s(d.get("problem"), 200)) if isinstance(d, dict) else (None, None)
-        if not (it and pb):
-            bad += 1
-            continue
-        out["doubts"].append({"item": it, "problem": pb, "urls": _urls(d.get("urls"), 3)})
-    if bad:
-        probs.append("doubts 丢掉 %d 条（缺 item 或 problem）" % bad)
-    return out, probs
-
-
-def load_file(path, kind):
+def load_file(path, kind="scout"):
     try:
         doc = json.loads(Path(path).read_text(encoding="utf-8"))
     except FileNotFoundError:
         return None, ["文件不存在"]
     except (OSError, json.JSONDecodeError) as e:
         return None, ["读不了或不是合法 JSON：%s" % e]
-    return (clean_scout if kind == "scout" else clean_review)(doc)
+    return clean_scout(doc)
 
 
-def latest_scout(now=None, max_age_hours=30, root=GROK):
-    """找最近一份侦察文件（今天，没有就昨天），太旧的不要。返回 (scout, 问题列表, 文件路径)。"""
+def latest_scout(now=None, max_age_hours=12, root=GROK):
+    """找今天的侦察文件。返回 (scout, 问题列表, 文件路径)；没有可用的就是 (None, 原因, 路径)。
+
+    只认 12 小时内写的：以前放宽到 30 小时，结果昨天 06:15 的文件到今天 06:50 永远算「新」，
+    Grok 没来的日子（2026-11-06）早间读的是前一天那份，还当成当天查过。昨天的文件只在刚过零点时才可能用上。"""
     now = now or datetime.now(UTC)
     for back in (0, 1):
         day = (now.astimezone(BJ) - timedelta(days=back)).strftime("%Y-%m-%d")
         p = root / "scout" / ("%s.json" % day)
         if not p.exists():
             continue
-        sc, probs = load_file(p, "scout")
+        sc, probs = load_file(p)
         if sc is None:
             return None, probs, p
         gen = sc.get("generatedAt")
-        if gen and (now - gen).total_seconds() > max_age_hours * 3600:
-            return None, ["最近一份侦察文件是 %s 写的，已超过 %d 小时" % (gen.astimezone(BJ).strftime("%m-%d %H:%M"), max_age_hours)], p
+        if not gen:
+            return None, ["侦察文件没写 generatedAt，分不清是不是今天的"], p
+        age = (now - gen).total_seconds() / 3600
+        if age > max_age_hours or age < -1:
+            return None, ["最近一份 Grok 侦察文件是 %s 写的，已超过 %d 小时，不用" % (gen.astimezone(BJ).strftime("%m-%d %H:%M"), max_age_hours)], p
         return sc, probs, p
-    return None, ["没有今天或昨天的侦察文件（Grok 例程可能没跑，或还没提交）"], None
-
-
-def files_between(kind, since, root=GROK):
-    """since（含）以来每天的文件：返回 [(日期, 清洗结果或 None, 问题列表)]，按日期排。"""
-    out = []
-    for p in sorted((root / kind).glob("*.json")):
-        day = p.stem
-        if not DATE_RE.match(day):
-            continue
-        if datetime.strptime(day, "%Y-%m-%d").replace(tzinfo=BJ) < since:
-            continue
-        doc, probs = load_file(p, kind)
-        out.append((day, doc, probs))
-    return out
+    return None, ["今天没有 Grok 侦察文件"], None
 
 
 def main(argv):
@@ -259,18 +198,17 @@ def main(argv):
         return 0
     if len(argv) >= 2 and argv[0] == "check":
         p = Path(argv[1])
-        kind = "review" if "review" in p.parts else "scout"
-        doc, probs = load_file(p, kind)
+        if "review" in p.parts:
+            print("查漏文件已停用（2026-11-10），不用再写，也不再校验。")
+            return 0
+        doc, probs = load_file(p)
         if doc is None:
             print("不合格：" + "；".join(probs))
             return 1
-        if kind == "scout":
-            print("侦察文件可读：X %s，帖子 %d 条、热议 %d 条，查了 %d 个账号；ChatGPT 发布说明 %s，%d 条。" % (
-                "成功" if doc["x"]["ok"] else "失败（%s）" % doc["x"]["error"], len(doc["x"]["posts"]), len(doc["x"]["buzz"]),
-                len(doc["x"]["checked"]), "成功" if doc["chatgptReleaseNotes"]["ok"] else "失败（%s）" % doc["chatgptReleaseNotes"]["error"],
-                len(doc["chatgptReleaseNotes"]["entries"])))
-        else:
-            print("查漏文件可读：漏报 %d 条、可疑 %d 条。" % (len(doc["missed"]), len(doc["doubts"])))
+        print("侦察文件可读：X %s，帖子 %d 条、热议 %d 条，查了 %d 个账号；ChatGPT 发布说明 %s，%d 条。" % (
+            "成功" if doc["x"]["ok"] else "失败（%s）" % doc["x"]["error"], len(doc["x"]["posts"]), len(doc["x"]["buzz"]),
+            len(doc["x"]["checked"]), "成功" if doc["chatgptReleaseNotes"]["ok"] else "失败（%s）" % doc["chatgptReleaseNotes"]["error"],
+            len(doc["chatgptReleaseNotes"]["entries"])))
         if probs:
             print("有问题（已自动丢掉不合格的条目）：" + "；".join(probs))
             return 1

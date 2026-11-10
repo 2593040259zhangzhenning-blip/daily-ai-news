@@ -24,6 +24,7 @@
 """
 import argparse
 import concurrent.futures as cf
+import gzip
 import hashlib
 import html as htmlmod
 import json
@@ -144,6 +145,32 @@ def _polite_wait(host):
 
 
 BACKOFF = (4, 12, 30)      # 429/5xx 重试前等几秒，一次比一次久
+RUN_BUDGET_SEC = 360       # 整次抓取的总时限：到点后还没抓的源记失败，已抓到的照常写文件
+MAX_BODY = 30 * 1024 * 1024
+_DEADLINE = [None]         # run() 开始时设；2026-11-07 有一次卡满 10 分钟被 Actions 取消，整次作废
+
+
+def _read_body(r, timeout):
+    """一块一块读，给单个请求也设一个总时长：对方一点点挤数据时 r.read() 可以无限拖下去。
+    有的服务器不管你要没要都返回 gzip（DeepMind 订阅源约五次里有一次），这里认出来解压。"""
+    t0, parts, size = time.time(), [], 0
+    while True:
+        chunk = r.read1(65536)
+        if not chunk:
+            break
+        parts.append(chunk)
+        size += len(chunk)
+        if size > MAX_BODY:
+            raise FetchError("返回内容太大（超过 %d MB）" % (MAX_BODY // 1024 // 1024))
+        if time.time() - t0 > max(timeout * 2, 60):
+            raise FetchError("超时：读了 %d 秒还没读完" % (time.time() - t0))
+    data = b"".join(parts)
+    if data[:2] == b"\x1f\x8b":
+        try:
+            data = gzip.decompress(data)
+        except (OSError, EOFError) as e:
+            raise FetchError("gzip 解压失败：%s" % str(e)[:80])
+    return data
 
 
 def http_get(url, accept="*/*", timeout=30, retries=None):
@@ -155,13 +182,15 @@ def http_get(url, accept="*/*", timeout=30, retries=None):
     if retries is None:
         retries = 3 if host.endswith("google.com") else 1
     for attempt in range(retries + 1):
+        if _DEADLINE[0] and time.time() > _DEADLINE[0]:
+            raise FetchError("超过本次抓取的总时限（%d 秒），这个源跳过" % RUN_BUDGET_SEC)
         try:
             _polite_wait(host)
             req = urllib.request.Request(url, headers={
                 "User-Agent": C.USER_AGENT, "Accept": accept,
                 "Accept-Language": "en-US,en;q=0.8,zh-CN;q=0.6"})
             with urllib.request.urlopen(req, timeout=timeout) as r:
-                return r.status, r.read(), r.headers.get("Content-Type", ""), r.geturl()
+                return r.status, _read_body(r, timeout), r.headers.get("Content-Type", ""), r.geturl()
         except urllib.error.HTTPError as e:
             if e.code in (429, 500, 502, 503, 504) and attempt < retries:
                 time.sleep(BACKOFF[min(attempt, len(BACKOFF) - 1)])
@@ -480,7 +509,7 @@ def fetch_page_links(src, ctx):
                                 dateOnly=bool(d) and pub == day_end(d, now)))
     if len(new_seen) > 400:
         new_seen = dict(list(new_seen.items())[-400:])
-    return dict(entries=entries, fetched=len(links), http=status,
+    return dict(entries=entries, fetched=len(links), http=status, last_link_at=max(new_seen.values(), default=None),
                 state_update={"pages": {src["id"]: {"seen": new_seen, "baselined": True}}})
 
 
@@ -922,6 +951,7 @@ def run(sources, out_dir, dry=False):
     state = load_json(out_dir / "state.json", {"pages": {}})
     prev_status = {s["id"]: s for s in load_json(out_dir / "source-status.json", {}).get("sources", [])}
     ctx = {"now": now, "state": state}
+    _DEADLINE[0] = time.time() + RUN_BUDGET_SEC
 
     results = {}
     with cf.ThreadPoolExecutor(max_workers=8) as ex:
@@ -979,6 +1009,13 @@ def run(sources, out_dir, dry=False):
             days = src.get("stale_days", C.STALE_DAYS)
             if nd and (now - nd).days >= days:
                 st["stale"] = "最新一条是 %d 天前，确认是源没更新还是解析出了问题" % (now - nd).days
+        elif ok and r.get("last_link_at"):
+            # 页面监测类、文章又不带日期的源：抓取一直成功，但页面上的链接很久没变过，多半抓到的是空壳
+            # （Meta AI 博客从 2026-10-17 接入起一直是同样 10 个旧链接，一条都没产出过，状态却始终是成功）
+            ld = parse_dt(r["last_link_at"])
+            days = src.get("stale_days", C.STALE_DAYS)
+            if ld and (now - ld).days >= days:
+                st["stale"] = "页面上的链接已经 %d 天没变过，多半抓到的是空壳或固定推荐位" % (now - ld).days
         statuses.append(st)
     # 这次没跑的源（--only 调试时）保留上次的状态
     ran = {s["id"] for s in statuses}
