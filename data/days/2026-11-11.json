@@ -1,0 +1,190 @@
+{
+ "date": "2026-11-11",
+ "issues": [
+  {
+   "key": "2026-11-11-1morning",
+   "date": "2026-11-11",
+   "edition": "morning",
+   "createdAt": "2026-11-11T07:00:00+08:00",
+   "headline": "Claude 长出整套办公工具",
+   "items": [
+    {
+     "cat": "product",
+     "title": "Claude 推出表格、白板和会议助手",
+     "score": 8,
+     "tier": "lead",
+     "summary": "付费用户现在就能在 Claude 里做表格、画白板，Claude 开始抢办公软件的活。",
+     "body": "Anthropic 一口气给 Claude 加了几样办公工具：Claude Sheets（多标签表格，可导出 Excel）和 Claude Whiteboards（白板）面向所有付费用户公测，网页、桌面和手机都能用；原来的 Claude Dashboards 改名 Claude Data 正式上线；Claude Meetings 能以标明身份的参会者加入 Google Meet 会议，边开会边整理计划和任务，目前只给团队版和企业版公测。Adobe、Atlassian、HubSpot 的整套应用也能以插件形式直接在 Claude 里运行。对你来说，在 Claude 里整理数据、做表、画思路图不必再切到别的软件。",
+     "sources": [
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks"
+      },
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now"
+      },
+      {
+       "name": "The Decoder",
+       "url": "https://the-decoder.com/anthropic-turns-claude-into-a-full-workspace-with-plugins-spreadsheets-whiteboards-and-soon-meeting-notes"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "ChatGPT 里开始有认证商家和商家智能体",
+     "score": 6,
+     "tier": "brief",
+     "body": "OpenAI 推出 Businesses in ChatGPT 公测：商家可以认领自己在 ChatGPT 里的认证主页、更新资料，看 ChatGPT 提到自己多少次；符合条件的美国电商和在线服务商家还能上线自己的「商家智能体」，替自己回答顾客问题。OpenAI 称不会把用户的聊天内容交给商家，下单仍跳转商家官网。ChatGPT 正在往「搜索加黄页」的方向走，以后问商品时会更常碰到商家自己的 AI。",
+     "sources": [
+      {
+       "name": "OpenAI 官网",
+       "url": "https://openai.com/index/introducing-businesses-chatgpt"
+      },
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1030552/openai-chatgpt-business-agents-hub"
+      },
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/11/10/openai-rolls-out-new-business-profiles-making-chatgpt-just-a-little-bit-more-like-google"
+      }
+     ]
+    },
+    {
+     "cat": "model",
+     "title": "Gemini 4 Carbon 正式上线，先给 Ultra 用户",
+     "score": 5,
+     "tier": "brief",
+     "body": "10 月底预览的 Gemini 4 Carbon 开始在 Gemini App、AI 模式和 Antigravity 里推送，只给 AI Ultra 订阅用户，AI Pro 及以上仍用 Gemini 4 Argon。谷歌同时预告了 Antigravity 的「/swarm」功能，让多个智能体一起干活。它在综合榜上仍排第二，落后于前天发布的 Claude Fable 5.2。",
+     "sources": [
+      {
+       "name": "Google DeepMind 博客",
+       "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available"
+      },
+      {
+       "name": "9to5Google",
+       "url": "https://9to5google.com/2026/11/10/gemini-app-4-carbon/"
+      },
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout"
+      }
+     ]
+    },
+    {
+     "cat": "biz",
+     "title": "新进展：特朗普称 FBI 在查黄仁勋事件",
+     "score": 5,
+     "tier": "brief",
+     "body": "特朗普表示联邦调查局正在调查黄仁勋与疑似中国间谍的关系，并称黄仁勋告诉他事先完全不知道对方身份；英伟达董事会的独立董事也再次发表声明。事件已从董事会内部调查升级到联邦层面，英伟达对华业务和在华盛顿的处境更受关注。",
+     "sources": [
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/11/10/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline"
+      },
+      {
+       "name": "英伟达新闻中心（独立董事声明）",
+       "url": "https://nvidianews.nvidia.com/news/statement-from-the-independent-members-of-the-nvidia-board"
+      },
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang"
+      }
+     ]
+    },
+    {
+     "cat": "research",
+     "title": "DeepMind 用 AI 证明 Signal 加密协议安全",
+     "score": 4,
+     "tier": "brief",
+     "body": "谷歌 DeepMind 发布 AlphaProof Code，用 AI 对复杂软件做形式化验证，也就是用数学证明代码没有漏洞，而不只是靠测试；它已经验证了 Signal 和 WhatsApp 所用的加密协议是安全的。AI 写的代码越来越多，能自动证明代码正确的工具会越来越重要。",
+     "sources": [
+      {
+       "name": "Google DeepMind 博客",
+       "url": "https://deepmind.google/blog/introducing-alphaproof-code"
+      },
+      {
+       "name": "Wired",
+       "url": "https://www.wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    "星舰第 15 次试飞：北京时间 11/14 早上（待确认），首次尝试用发射塔接住飞船",
+    "Anthropic 已启动上市路演，官方给出每股 70–78 美元的定价区间，挂牌日期待定"
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI 官网",
+     "ChatGPT 与 Codex 更新日志（OpenAI）",
+     "OpenAI API 更新日志",
+     "Anthropic 新闻页",
+     "Claude 发布说明",
+     "Claude Code 更新日志",
+     "Claude Code 每周摘要",
+     "Google DeepMind 博客",
+     "Google AI 栏目",
+     "Google Research 博客",
+     "Meta AI 博客",
+     "英伟达博客",
+     "英伟达新闻中心",
+     "xAI 新闻页",
+     "Apple Newsroom",
+     "Apple 开发者版本发布",
+     "Apple 开发者新闻",
+     "MacRumors",
+     "9to5Mac",
+     "SpaceX 官网更新",
+     "SpaceX 发射日程（Launch Library）",
+     "Hugging Face 博客",
+     "Mistral 新闻",
+     "EdSurge",
+     "Inside Higher Ed",
+     "英国签证与移民局（GOV.UK）",
+     "ICEF Monitor",
+     "The PIE News",
+     "雅思官方（IELTS）",
+     "教育部（工作动态）",
+     "中国教育报",
+     "TechCrunch AI",
+     "The Verge AI",
+     "Ars Technica AI",
+     "Wired AI",
+     "MIT Technology Review AI",
+     "The Decoder",
+     "量子位",
+     "The Robot Report",
+     "IEEE Spectrum 机器人",
+     "TechCrunch 机器人",
+     "Waymo 官方博客",
+     "Electrek",
+     "TechCrunch 交通",
+     "The Verge 交通",
+     "IEEE Spectrum 半导体",
+     "IEEE Spectrum 生物医学",
+     "STAT 神经科学",
+     "Techmeme",
+     "Hacker News 首页（≥100 分）",
+     "Hugging Face 每日论文（前 12）",
+     "AI News Radar（中转站）",
+     "Follow Builders（AI 圈人物 X）",
+     "Google 新闻关键词搜索（22 组）",
+     "X 官方账号与关键人物（经 Grok，21 个账号）",
+     "ChatGPT 发布说明（经 Grok）",
+     "TechStartups",
+     "The Next Web",
+     "9to5Google",
+     "AI Weekly",
+     "Artificial Analysis 排行榜",
+     "教育产品公告搜索",
+     "New York RAISE Act 搜索"
+    ],
+    "candidates": 345
+   }
+  }
+ ],
+ "specials": [],
+ "models": []
+}

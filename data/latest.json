@@ -1,39 +1,32 @@
 {
- "date": "2026-11-10",
- "headline": "Claude Fable 5.2 登顶",
- "updatedAt": "2026-11-10T07:00:00+08:00",
+ "date": "2026-11-11",
+ "headline": "Claude 长出整套办公工具",
+ "updatedAt": "2026-11-11T07:00:00+08:00",
  "count": 5,
  "lead": {
-  "cat": "model",
-  "title": "Claude Fable 5.2：综合排名第 1",
-  "summary": "Claude App Pro 起（$20 / 月）",
-  "model": "claude-fable-5-2",
-  "date": "2026-11-10"
+  "cat": "product",
+  "title": "Claude 推出表格、白板和会议助手",
+  "summary": "付费用户现在就能在 Claude 里做表格、画白板，Claude 开始抢办公软件的活。"
  },
  "items": [
   {
-   "cat": "model",
-   "title": "Claude Fable 5.2 上线，综合排名第一",
-   "tier": "lead"
+   "cat": "product",
+   "title": "ChatGPT 里开始有认证商家和商家智能体",
+   "tier": "brief"
   },
   {
    "cat": "model",
-   "title": "Meta 发布最小最省的 Muse Ember",
+   "title": "Gemini 4 Carbon 正式上线，先给 Ultra 用户",
+   "tier": "brief"
+  },
+  {
+   "cat": "biz",
+   "title": "新进展：特朗普称 FBI 在查黄仁勋事件",
    "tier": "brief"
   },
   {
    "cat": "research",
-   "title": "OpenAI 上线「控制室」，可随时叫停模型任务",
-   "tier": "brief"
-  },
-  {
-   "cat": "product",
-   "title": "苹果开卖 50 美元的 AI 加量包",
-   "tier": "brief"
-  },
-  {
-   "cat": "product",
-   "title": "特斯拉无人出租车开进圣安东尼奥",
+   "title": "DeepMind 用 AI 证明 Signal 加密协议安全",
    "tier": "brief"
   }
  ]
