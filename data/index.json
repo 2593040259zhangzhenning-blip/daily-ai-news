@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-10T22:54:17+00:00",
+ "generatedAt": "2026-11-26T17:11:33+00:00",
  "dates": [
   {
    "date": "2026-09-22",
@@ -398,6 +398,14 @@
    "headline": "Claude 长出整套办公工具",
    "updatedAt": "2026-11-11T07:00:00+08:00",
    "count": 5,
+   "specials": [],
+   "models": []
+  },
+  {
+   "date": "2026-11-27",
+   "headline": "SpaceX 获批建太空算力星座",
+   "updatedAt": "2026-11-27T01:06:53+08:00",
+   "count": 10,
    "specials": [],
    "models": []
   }

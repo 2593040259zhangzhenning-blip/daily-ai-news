@@ -1,0 +1,247 @@
+{
+ "date": "2026-11-27",
+ "issues": [
+  {
+   "key": "2026-11-27-1morning",
+   "date": "2026-11-27",
+   "edition": "morning",
+   "createdAt": "2026-11-27T01:06:53+08:00",
+   "headline": "SpaceX 获批建太空算力星座",
+   "items": [
+    {
+     "cat": "policy",
+     "title": "美 FCC 批准 SpaceX 部署百万颗太空 AI 卫星",
+     "body": "美国联邦通信委员会（FCC）有条件批准 SpaceX 部署最多 100 万颗名为 Starmind 的太阳能轨道数据中心卫星，这是美国监管机构首次放行太空 AI 算力星座。卫星以激光链路为主、无线电频段为备，获批运行高度上限为 1002 公里，SpaceX 须在 2033 年 11 月前发射首星、2040 年前完成全部部署。FCC 驳回了亚马逊、Viasat 及美国天文学会的反对意见，但要求在 600 公里以上部署前补交轨道碎片方案。",
+     "score": 8,
+     "tier": "lead",
+     "summary": "美监管首次放行太空算力，SpaceX 获准部署最多百万颗太阳能 AI 卫星。",
+     "sources": [
+      {
+       "name": "TechCrunch",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfOTzj1iARKETYJcDAfcvFEnVv7Dm8BfbHlYlO439rCct7OmmsmxVHKZE6g1cVoLnGTsPu0UzQ3W89tR5B5vut7bi5JEEk4RteHfGyjHxx577OEeRYs2MWrjtoXdady6rbhojr-UV6nAKj2_iZil16C_Oh4ZColQrSNhLyt_QLU99-Phu-Hu2sBrE-Sa8Bpghl"
+      },
+      {
+       "name": "CNN",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9FH3uUA1p73MvtMPyF5yoiSPMWgSiQBv10qLrT7fxFiH8P7ZEDz9tZ_RNXnw2qBehBvdXyrQZUSeaJLaJPZX06n0VMoVi-lmsZv1K-irw4oDfLagsF9BE8XxEdS6tcb5A9AfCyqxNzyr0eKq1_rlzgD6Oion9sUs3Tb8BlIcTVkioPX_dQoM"
+      },
+      {
+       "name": "Quartz",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGw11HeJSccn4jVHPjjfPWjKmAcNXYFCBtf_m_xdZzMhjoxVkaHUF_tAAJiPyMjokIMhDZRZeem2wmZnViaNcBgdJtqSooHjHluGSeNFQKR7NK0PIoHac7WWlgyPOPg9cxUHGI6y4PrRnlo9hNNU1XysqIOn8PA6BQV-lP2GT0"
+      }
+     ]
+    },
+    {
+     "cat": "product",
+     "title": "ChatGPT 额度双收紧：GPT-6.2 耗额快四成",
+     "body": "OpenAI 负责 Codex 与 ChatGPT 的工程主管 Thibault Sottiaux 在 X 宣布，已修复 GPT-6.2 上线时的计费错误，修复后相同任务消耗额度增加，使用 GPT-6.2 Astra 和 Sol 触达上限的速度分别比上周快 40% 和 25%；官方不追收差额，并向 Go、Plus、Pro 和 Business 订阅用户赠送一次额度重置。与此同时，OpenAI 已向小批 Pro 用户推送 Chat 与 Work 合并界面并共享单一额度，12 月将扩大推送范围，重度用户将更快触顶，但 Instant 模型仍不计入限额。",
+     "score": 7,
+     "tier": "must",
+     "sources": [
+      {
+       "name": "Business Insider",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJjR3n2ITSLw_ogVXt5xSW19H3MLhPsUg2ATKE1RwXENgwjbUkSIn5guKPqLWeUQ3Hu9ArxkKqb0HkCyQfaEF3WiJ-gbPUwB36OJ8LBZkeSGCU2O5bzVd4bOVBtUbjiDB1A_7z4xnKx0pBTagbk1QG1QZ17VM7lPDzGbjM2duIc3qI_vwuCddXrIubDOFpfgqCFA"
+      },
+      {
+       "name": "TechCrunch",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVhtrdQRmCwDyLyS5PNeVhpkM_liQ-Z_5IKK34wqtVlMYG1OIHNkrKbDz_YpOg0WKKtYtdxgQXCVgYW6-W_uHCSLBMq_riJjMzGvhKGIYaxDqEtJ6OZXtYxVARoOd8ceIpXHEj2Q54d8KJB7Q66kEYycLnvRyGh5doaAiAGDgystO3arNEeuy2Pb1kkqFSLs7z4Q1Yn9aOaYJPvlWsiKnmGLn1Zp78mdn8"
+      },
+      {
+       "name": "TechRadar",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEo-5Xn1dTyvZnjfvXgByCNmF7n9RDF59-GoRdwwto4xT3Z-hDBNU7odPN78dEPHVNsWjj5EJPvTtg68AIbUuYd_w1bAeHmQe9z-ZF6AUvDCkIlis8G-Hes4OR5IIwNYL2jeF5wbJzqSkGzQ93iAXP1hW4H30whOn3upd0o1xachef1px61NXRhIHtKQ0PEPtwsL7ZwDj29qxKi3rmf860aerVTXDmbjDDx-5-DJcoIey-cY-UOZOnmv1Avjw5p47SrQvBd5RBkR3nV5c5hxO6nygaE3ZERbX5tIjXxK7c7Ddpu5_IEw97wlCWyJsunZMO2pGmg-n-dDlQZ3qLP-AxC02P90ndGkhapC8OYM89xbE98UuCZBy_lZQJNpuBzgZAoCnXfdOTd5o6fQi_9O8oGzfVPW7UIUi686kh_WeMs2Tcxy3mWFhZReiM"
+      }
+     ]
+    },
+    {
+     "cat": "biz",
+     "title": "英伟达据报暂停向东南亚四国出货 AI 服务器",
+     "body": "据《金融时报》援引知情人士报道，英伟达已通知戴尔、超微等服务器制造伙伴，停止向马来西亚、新加坡、泰国和印度尼西亚发运搭载英伟达芯片的 AI 服务器，暂停时长尚不明确。此前美国商务部 11 月 19 日生效的新出口管制要求向上述四国及巴西出口先进 AI 芯片须申请许可，并给东南亚云服务商 90 天申领牌照以封堵中企租用海外算力渠道。多家银行已暂停对关联中企的东南亚数据中心融资，二级市场亦出现大批转售的 B300 芯片。",
+     "score": 7,
+     "tier": "must",
+     "sources": [
+      {
+       "name": "Forbes",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2Bl8GF0fWaFArGgrb9saKAmVNEX4_246GkWKZkQudQO3o6xn22qUhKQxKmcW9NtgVRNtHBEwgxbFuL5_w0U1G60JVa08VVlmHONpx5awQp2GT5XaMKeZzWVuwxxUlxmQlkRG_zeYbnQ5NMy1D4K8VQjmmLSLBmK-T1boXP9YivVrX19oYeR0Ng4fOJ3e72F9sacEKOVunjqXOitGpT2sptkw5Mvtmm75FtjQa3C9xG6x16iM6KUcWYn4ovpz9D9SN_aw"
+      },
+      {
+       "name": "The Decoder",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmtvkpEKShZvE_efHPiCz3KfB4ohQPfqZ5zxfN9RFnEn9BuU1EXXVy9GkrJHdudp2AT-KTk8xVqG4RSGPM7mOCwNVPd3Yx60X0hYM8tsXOIodruc3CKUX5Cnr5Hci4dxdiRU3CfxAnr6Ylu12a3rImgMdQzW93AQAi3T1shwE9EOSApJPme-5O_ZljThCnYh67gfJjFdzWFR4n0ItJAPikJ-DLFDiR88hBvcZ7Te-9ODuRYXShYRR7FG3-"
+      },
+      {
+       "name": "Bangkok Post（路透社）",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAiEwMrF0mNLnwpIucAXuul4aMdZYK8WoqicifTfA0-09kdSGePQC1DmXLo6ehZ8SofxKvmDIYb4X4ShIXPTI3S2LDW9QT4DEK2Z8SCC1ONnkL5UPKMVaCbeC6r-UiBZgCQCf7tyQG8bMMuIBTtK3lqygZiiNMpOItoPLv3hX0dM8KA8aRSwRnOqUTTZxtOmLN6f0wNA93FB2o"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "英国学生签证拒签率创十年新高，申请量降 16%",
+     "body": "英国内政部发布截至 2026 年 9 月的年度入境签证统计，据 The PIE News 引述分析显示，英国担保学生签证滚动拒签率升至 6.4%，较去年同期 3.1% 翻倍，创 2015 年以来新高（不含中国申请人则达 8.2%）。今年三季度秋季入学高峰期，主申请人提交的学生签证申请同比下降 16% 至 23.03 万份，获批数降 17%，而在决定前撤回申请的数量同比暴增超 370%。罗素大学集团表示正密切关注拒签率骤升。",
+     "score": 7,
+     "tier": "must",
+     "sources": [
+      {
+       "name": "英国签证与移民局（GOV.UK）",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFqc1uWQzj7HHkPtvpVWzKi-tORIw8Cdkf4jbl9dc8NxMGRwT27cAbgJV8ujjUaJrphkLWxhMOg7rDYRFwULleBsm7ydETVWjXy9FR4-kB4F1lip3c2u4qI9mzlOjtiluWz89MLX4XVQx4d4eo9JK50GRPVDk34GBQ3iSiEl0aiPy1Jhcs-THV8ztJasFhicUd45evpA6ABkXPq4wExhM"
+      },
+      {
+       "name": "The PIE News",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhceIGqIPVP5wZhgvzKxr-EMgvhgXL2nwwaGbKrSlJdHGlmlETtw8_lwiqGVKkxSGm_7BzI7OQ0_oR_s63tS0TylNnVvSUbCy2DTlD6HhSjJkKD0SB-QygiWLTsg298xUxs7QfHaynpayk0pUSeOfQyf0ftGV89MIWfSGRytTZSd3_WQOQJ1Fip4va6S5E7uOu5lfJSeC1qsLo"
+      }
+     ]
+    },
+    {
+     "cat": "china",
+     "title": "路透：智谱 GLM-5.5 与 Kimi K4 或延期至明年",
+     "body": "据路透社援引知情人士报道，受 OpenAI 与 Anthropic 加强防模型蒸馏措施以及美国 11 月 19 日海外算力管制双重挤压，智谱原定 11 月发布的约 3 万亿参数旗舰模型 GLM-5.5 已错过窗口，可能推迟至 2027 年一季度或更晚。报道还称，月之暗面预计若失去海外算力，主要模型发布间隔将从半年拉长至一年以上，Kimi K4 或延至明年中旬，且正转向谷歌和 Meta 模型做蒸馏并寻找欧洲算力；两家公司均未回应。",
+     "score": 6,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "路透社",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3BuLjEHeiOcmKYSnUheNBC63VW6N2-zmPawNTCh4yhfb9mGU2udPp-MTTC9KBclXhtj1Yj6pAdytq-fL3BFNA3XD0SLFjHRHoc_8orj-Sq3pS8MRjLnO36o6VMo8eFYd_2ZRftx5SbqVTsRErlWuK-oxpM27_oWE6bmu3Tzbh8OnJ8qT1PbagTbFTYtjzA7RI9s0VWDwb8uzbDvrKhpZKoIKNFUrEyAzRY_pnBC6QUWFbmvBIOViT-wCS3PLvcnrVx-aR"
+      },
+      {
+       "name": "The Decoder",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4rtqpIHMrezWVqOwkAQB2pVDKPHymEcPWw_Rz3cgsHhmq1vXNuYXIxLduMcwwsJcdTmE3NwgeGohe2X3p5PfvbldbrrYvooz_6O492PePb8GSfcdX9yjCD1tHqwpkCB_19tqpKxW3B3qx0EreBumvI5nT4TY5WvQ1197H8nQhgVW7-bb1Z9QQ3froj60hMP7bptQM6gQtsiXMmVr6vtr2FIzsKg1LfEh0Mrrwgu5e9bWzdKjme-7ty0BG7S9gfpeyCZo"
+      }
+     ]
+    },
+    {
+     "cat": "biz",
+     "title": "SAP 据报拟因 AI 转型裁员至少 1 万人",
+     "body": "据彭博社援引知情人士报道，德国软件巨头 SAP 正筹划面向 AI 时代的业务重组，拟削减至少 1 万个岗位，约占其逾 11 万名全球员工的 9%，重点涉及产品、工程和销售部门。最终裁员规模仍待与劳方谈判后敲定，SAP 尚未证实裁员计划，仅回应称会持续评估组织架构以匹配战略和客户需求。",
+     "score": 6,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "CNA（路透社）",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhk0YvFIbxDby0sM8qM459COsyXSYnfAr_VzMQT7VBtV-uUsso5SrlBCa5Pc8msek7cOs6weLichmLSq0-EnXM1p9UM9Y8vOJ8h0Xn5-QKHTECaky9eVbzmOdAthhmvtK80t3bS3ui1JNzPqcd_ZbBB-g972WqkENeVom5MTR9nBwNHumwvHy_t8Og01taAseuLRrBvZhGzv2Secp1AX7NEoxRUYEtg1wR1D4BAc0"
+      },
+      {
+       "name": "TNW",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3SQ6cd-w613L5Il_EAzEUn8d2iW4_zou0C3xyNxJ9l_LWUViIcw8q0vAg5QRyp1EzVXabRuCf4TF-EpeGuUPT8mOnWps9jGi8U6pcQYZ78-qhCG8VedVNYKT7FqpS0E9WEDdq56ORBuf8zlStDZQ-Ya_X5k2tbBAT8Nj2W44"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "42 州检方阻击 Character.AI 拍卖用户聊天",
+     "body": "美国 42 个州及华盛顿特区的总检察长联名向破产法院提出异议，要求叫停已申请破产保护的 Character.AI 在 12 月 1 日拍卖平台及超 2100 万美国账号的私密聊天记录，其中包含逾 210 万未成年人账号和大量敏感心理与私密对话。检方指出，目前唯一披露的竞标方系 11 月中旬刚注册的新壳公司，且拟议条款未要求买方遵守原隐私政策或响应用户删除请求。",
+     "score": 6,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "科罗拉多州总检察长办公室",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwbIQBO7dB0D5g-cY_2MtBZCBoAR0mRJK3On5gzg1xyI4grQmd7w7Q4oSwHr_MvmycJbr40sQs4mNKk_JpFOliO3RguAxICLyH_LO4AvV1I93ckyrPfXCwYqD4tWrl3GUdtFLzgAEHNQil9KJ2y16snAHbjXdzqm1THXrQwbJto2_teM_6b1jz-e6NuopC1HeG4FIB2Q_9frI3rI3YwdvmVD4"
+      },
+      {
+       "name": "TechCrunch",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEet1rP-Z4gRjdXb-NnyT2Hogx0klNjqrJviKpw-01T0KctL2qCMYgXFMS0PF2CAbq8QYW8h7w__CFRaTSbLCxSP9vrAEtY-uzienKKGr1pBurnBOXL4BgeqJDk3nlnFhVl4mTiRr72MLnD1GSmCkO8txGDnfA9MNnva7wx968103O33KRx9oJSHACpzAGeA3jW6gc_41dlQXeZEtyH0w"
+      }
+     ]
+    },
+    {
+     "cat": "policy",
+     "title": "韩国监管就 iPhone 16 AI 广告启动对苹果审查",
+     "body": "韩国公平交易委员会（KFTC）调查人员已向苹果及苹果韩国发出审查报告并启动审议程序，指其在 iPhone 16 宣传的 9 项 Apple Intelligence 功能中有 4 项未按宣称交付，例如原称 2025 年 4 月初提供韩语支持的个人情境 Siri 直到 2026 年 10 月才上线。韩媒估算最高罚款可达约 5000 万美元，苹果回应不同意报告结论并将提交陈述。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "The Korea Times",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTMFCc-SBT95z99TrpJQIXH_vNysmYuN_ZUGDegMg7mEtu6KP_QPcPt6dILp3Ah-MgceMpgRY0MceVYTAD7Pd3zdzAyARR82VITM4DWfXLInnVGVdOTf9V0veD8SXyOnQ65or7U9vvTADU4aSDsLUQvfSjlig7EFLcLcDBzOujVSaOpLadfjKdBLsfj-K2weInGsb3q1FzXTM96zEAFz0b0ztd4QP9NjncgdigGKvX1RDW2g"
+      },
+      {
+       "name": "MacRumors",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0AFmH4UBDfDi99elPsADeT3Uv6xzP2IvoVWgk7uVgU44wCRQNR8J03nIfw7QmY18iHAQKufDFICPcwiPCWtNJlrCrykTPmGTjSEFvcWCWFUb_hCbJFITPcsD2aknXgxreEtPAGKz26shi1VL1GDREKHcan4Ni9Z2Vk3HxJ49l7nrfrRzFfawdQyw"
+      }
+     ]
+    },
+    {
+     "cat": "research",
+     "title": "微软披露黑客滥用 AI 框架 ARTEX 自动化渗透",
+     "body": "微软威胁情报团队发布报告称，自 7 月开源 AI 渗透测试框架 ARTEX 发布以来，Storm-0940、Salt Typhoon 等国家级背景及逐利黑客团伙已将其集成到攻击链中，用于自动化侦察、窃取凭证和利用 Web 漏洞。设定目标后，ARTEX 可在数分钟内从信息收集推进至获取持久化高权限，迫使防御方转向机器速度行为特征检测。",
+     "score": 5,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Microsoft Security Blog",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2NoTtkm4Cbbg3VYwMtRqnjLdCAs0unDG6bDbukbhzccoTdCyQUFt_v9cwOPcrJ6GcjKY4jnf3qgzc_Cdfj3_KD1IWIbb3bR48Wzi3vn1rxTnbUTfVUxlwdRchLITBggoY-9-l9kf7KaVfeKoy_qp6gg_8vPHUCZF23xk451HvsQpWVjN_RmaYzd7lpkxMZMIvau_i7Q1Cg0lbxknYiYdxLmjy20ZOHvei1JC1fpIYmfF3ZbyB_KBzrX_r"
+      },
+      {
+       "name": "The Decoder",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEi1Hhq7B6_3FNPO_fkBmXKwwmb2p_eE3jyHiEehCFqXTQcl00jneEgvDzy-4RSuNA72UAfu2wS65Bak_UDg_NcA2UUF-rLp8la5l90g-1ikyEqAi6O_QfXJQb62ZHEDaROb3RJsS3zf4bgzALMy2aUjiuRQnaKoPlqz1DXLddnA7w1VV67TYNcEBCJLm8Xg3TukQ5-eMzMK9aN7_A8LztfnAy6cSYuPwKLbd5QIw"
+      }
+     ]
+    },
+    {
+     "cat": "research",
+     "title": "DeepMind 推出质谱分析技能，加速小分子鉴定",
+     "body": "谷歌 DeepMind 为 Google Antigravity 推出 Mass Spec Skills，帮助分析化学家利用 AI 智能体解析串联质谱数据并结合 RDKit 校验分子结构。该工具即使搭配轻量级模型也能达到前沿检索精度，将原本需要数天至数月的小分子结构鉴定与文献比对缩短至数小时，有助于加速天然产物与药物发现流程。",
+     "score": 4,
+     "tier": "brief",
+     "sources": [
+      {
+       "name": "Google DeepMind 博客",
+       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHrw2rdBTWRS40-g1Rsmc7lidekHd2hK7ytd1a1YrVM7gEb8EWyQtm4acgOKvKanKFegP9oXBM66tt9QP4vI92JXlovP3X4QrdbKVf-RQ0euqK_VrS5ZbIcYJQJXCPHq0za00FbwUV4qGuo_9ejo0GBgacOIKxmTwA4B4BWMIyixNWl4w"
+      }
+     ]
+    }
+   ],
+   "scan": {
+    "checked": [
+     "OpenAI 官网",
+     "ChatGPT 发布说明（OpenAI Help Center）",
+     "ChatGPT 与 Codex 更新日志（learn.chatgpt.com）",
+     "OpenAI API 更新日志",
+     "Anthropic 新闻与研究页",
+     "Claude 发布说明（Claude Help Center）",
+     "Claude Code 更新日志",
+     "Google DeepMind 博客",
+     "Google Blog",
+     "Meta AI 博客",
+     "英伟达新闻中心",
+     "Apple Newsroom",
+     "xAI / SpaceXSI 文档",
+     "Mistral 文档",
+     "SpaceX 官网",
+     "Hugging Face 博客",
+     "多邻国博客",
+     "雅思官方（IELTS）",
+     "英国签证与移民局（GOV.UK）",
+     "教育部官网",
+     "中国教育报",
+     "X 官方账号搜索（site:x.com）",
+     "TechCrunch AI",
+     "The Verge AI",
+     "Ars Technica AI",
+     "Wired AI",
+     "The Decoder",
+     "MacRumors",
+     "9to5Mac",
+     "量子位",
+     "机器之心",
+     "36氪",
+     "EdSurge",
+     "Inside Higher Ed",
+     "ICEF Monitor",
+     "The PIE News",
+     "Techmeme",
+     "Hacker News",
+     "Artificial Analysis 排行榜",
+     "Microsoft Security Blog",
+     "教育产品公告搜索",
+     "Reuters / Bloomberg / FT 相关新闻搜索"
+    ],
+    "candidates": 168
+   },
+   "watch": [
+    "英伟达 CEO 黄仁勋国会听证会：美东 12/1 出席众议院三委员会闭门问询，12/3 出席参议院银行委员会出口管制公开听证会",
+    "Character.AI 破产资产拍卖定于美东 12/1 举行，42 州总检察长已申请法院叫停涉及 2100 万用户聊天记录的交易",
+    "谷歌 Gemini 4 Argon 与 Carbon API 优惠价将于 12/1 结束并翻倍至 $4/$20；OpenAI 计划 12 月全面推行 ChatGPT 与 Codex 共享额度"
+   ]
+  }
+ ],
+ "specials": [],
+ "models": []
+}
