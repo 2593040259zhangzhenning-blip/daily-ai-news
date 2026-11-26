@@ -8,7 +8,7 @@
 
 ## 一句话
 
-Signal 是张振宁（Zhenning）给**自己**用的 AI 新闻简报：每天早上一期（2026-10-17 起，之前是早晚两次），由 Claude 定时任务从 AI 圈的噪音里筛出值得看的消息，打分分档后发布到网页、iPhone 小组件和 Mac 桌面小组件。
+Signal 是给**一位中文读者**用的 AI 新闻简报：每天早上一期（2026-10-17 起，之前是早晚两次），由 GitHub Actions 调用 Gemini API 检索、打分分档后发布到网页、iPhone 小组件和 Mac 桌面小组件。
 
 - 网址：https://2593040259zhangzhenning-blip.github.io/daily-ai-news/
 - 仓库名仍是 `daily-ai-news`（最早叫「AI 每日情报」「每日AI资讯」），改名为 Signal 时**故意没改仓库名**，因为网址、手机小组件、Mac 小组件都写死了这个地址。不要提议改仓库名，除非用户主动要求。
@@ -16,7 +16,7 @@ Signal 是张振宁（Zhenning）给**自己**用的 AI 新闻简报：每天早
 
 ## 读者是谁
 
-只有一个读者：用户本人。中国的大学生，在用 Claude、ChatGPT 等 AI 工具，关心 AI 与教育（教学、语言学习、留学、学生使用 AI）。打分时这两类加权，见 README.md。全部内容用中文。
+读者关注自己在用的 AI 工具（如 Claude、ChatGPT），以及 AI 与教育（教学、语言学习、留学、学生使用 AI）。打分时这两类加权，见 README.md。全部内容用中文。
 
 ## 核心产品逻辑（不要随意改动）
 
@@ -58,7 +58,7 @@ Signal 是张振宁（Zhenning）给**自己**用的 AI 新闻简报：每天早
 ## 系统怎么运转
 
 ```
-定时任务（Claude）──检索、打分、写 JSON──▶ scripts/add_issue.py 校验写入
+GitHub Actions + Gemini API ──检索、打分、写 JSON──▶ scripts/add_issue.py 校验写入
         │                                         │
         └──git push 到 main ──▶ GitHub Actions 同步到 gh-pages ──▶ GitHub Pages
                                                   │
@@ -71,21 +71,17 @@ Grok Bot 06:10 侦察 X 和 ChatGPT 发布说明 ──▶ data/grok/scout/ ─�
 Grok Bot 09:00 独立查漏 ──▶ data/grok/review/ ──▶ 每周六复盘第四节（不上网页）
 ```
 
-- **定时任务**（运行在 Claude 的「定时任务」里）：
+- **定时任务**（`.github/workflows/signal-auto.yml` 调用 `scripts/generate_issue.py`）：
   - Signal · 早间：每天北京时间 06:50
-  - Signal · 晚间：2026-10-17 已删除（用户决定只保留早间）
-  - Signal · 专题：不定时，手动触发并附上活动名
-  - 两个任务都设为自动批准，模型用 Opus（用户 2026-10-01 决定保留 Opus，不换 Sonnet）。
-  - 通知（2026-10-18 起）：早间任务正常完成不推送，最终回复只写「已发布」；只有没能发布时才用 PushNotification 推送。专题任务不受影响。
-  - 提示词原文备份在 `tasks/`。实际生效的是定时任务里的版本；改提示词时，定时任务和 `tasks/` 里的文件要一起改。
-  - 2026-10-17 起早间任务的流程：先读 `watchlist.md`，再 `python3 scripts/inbox_view.py` 读收件箱（平时 `--hours 30`，昨天没跑成时 `--hours 48`），然后用搜索核实、补背景、查漏；输出最前面有「共识事件」和「圈外候选」两节（第 5 步 g）。圈外位的写法是标题开头加「圈外：」，每天最多 1 条，没有够格的就不收。收件箱读不到或太旧时，输出开头有「⚠」，任务退回到纯搜索流程，并在最终回复那一行里带一句「信源异常」。
-  - 2026-10-18 起早间任务多一步 5f：从 `inbox_view.py` 的「功能更新候选」一节（更新日志类来源，条目带 `kind: "changelog"`）和 ChatGPT 发布说明里挑用户可见的变化写进 `updates`。更新日志类来源在 `inbox_config.py` 里用三种解析器：`changelog_update`（Claude Code 的 `<Update>` 块，抓 `.md` 版）、`changelog_api`（OpenAI API 的 Markdown）、`changelog_codex`（learn.chatgpt.com 的页面，跳过 GitHub 发版镜像）。
-  - ChatGPT 发布说明（help.openai.com）对机房 IP 一律返回 Cloudflare 人机验证，抓取脚本读不到。2026-10-30 起由 Grok 用浏览器读进侦察文件，Grok 没读到时早间任务才用网页读取工具直接读。
-  - 2026-10-30 起早间任务第 5 步 a 用 `inbox_view.py --fresh`：GitHub 的每小时触发常掉队，开跑时在本机现抓一遍（复制 `data/inbox/` 到 `/tmp/signal-inbox` 再抓，不提交，不和机器人打架），失败自动退回仓库里的收件箱并标「⚠」。`--checked --fresh` 复用同一份。AI HOT 不接（它的使用规则不允许公开镜像）。
-- **Grok Bot**（2026-10-30 起）：两个例程只往 `data/grok/` 写文件，格式、Claude 怎么用、Grok 那边的设置和提示词原文都在 `grok.md`。校验和读取在 `scripts/grok_io.py`。Grok 停了 Signal 照样出（inbox_view 开头标「⚠」，退回原做法）。
-- **收件箱**：`.github/workflows/inbox.yml` 每小时两次（:17 和 :47，2026-10-30 加了 :47，因为 GitHub 定时触发常掉队）跑 `scripts/fetch_inbox.py`，按 `scripts/inbox_config.py` 里的信源清单（2026-10-24 起 78 项，3 项停用，约 75 个在跑）抓取，把最近 48 小时的候选写进 `data/inbox/items.json`，每个源的成功与否和条数写进 `source-status.json`，页面变动监测的记忆在 `state.json`。另有 `events-log.json`（共识中档以上的事件，每周复盘用）。这些文件由机器人每小时提交到 main，**不要手改**。每周六另一个工作流 `weekly-review.yml` 把复盘报告写进 `data/reviews/`。加源、删源、改关键词规则都在 `inbox_config.py`；已停用的源把 `enabled=False`。工作流在 Actions 页面的运行摘要里也会列出各源抓取情况。
+  - Signal · 晚间：2026-10-17 原版已删除（只保留早间；新迁移的 `signal-auto.yml` 可按需开关）
+  - Signal · 专题：可随发刊自动产出，也保留手动触发流程
+  - 自动发刊使用官方 `google-genai` SDK 的 Interactions API，默认 `gemini-4-neon` / `high`，通过原生 Google Search Grounding 检索。密钥从 `GEMINI_API_KEY` 读取，GitHub Actions 使用同名仓库 Secret。
+  - `tasks/` 保留原 Claude 定时任务提示词备份。新脚本每次运行时读取 `README.md`、`sources.md`、`specials.md`、`models.md` 和近期发刊记录。
+  - 2026-10-17 起原早间流程已接入 `watchlist.md`、`scripts/inbox_view.py`（收件箱）与 `updates`（功能更新），2026-10-30 起接入 Grok Bot 侦察文件（`data/grok/scout/`），后续可逐步整合进 `generate_issue.py`。
+- **Grok Bot**（2026-10-30 起）：两个例程只往 `data/grok/` 写文件，格式、使用规则和提示词原文都在 `grok.md`。校验和读取在 `scripts/grok_io.py`。Grok 停了 Signal 照样出（`inbox_view` 开头标「⚠」，退回原做法）。
+- **收件箱**：`.github/workflows/inbox.yml` 每小时两次（:17 和 :47）跑 `scripts/fetch_inbox.py`，按 `scripts/inbox_config.py` 里的信源清单（约 75 个在跑）抓取，把最近 48 小时的候选写进 `data/inbox/items.json`，每个源的成功与否和条数写进 `source-status.json`，页面变动监测的记忆在 `state.json`。另有 `events-log.json`（共识中档以上的事件，每周复盘用）。这些文件由机器人每小时提交到 main，**不要手改**。每周六另一个工作流 `weekly-review.yml` 把复盘报告写进 `data/reviews/`。
 - **数据**：`data/issues/<日期>-1morning.json`、`-2evening.json`（只有 10-17 之前有）是原始数据，永久保存；`data/specials/`、`data/models/` 是专题和新模型卡；`index.json`、`days/`、`latest.json` 都由脚本重建，**不要手改**。当天新写了模型卡时，`latest.json` 的头条换成「XX：综合排名第几」，两个小组件点开直接跳到那张卡（`?d=日期&m=slug`；专题是 `&s=slug`）。
-- **发布**：网站从 `gh-pages` 分支发布。原因是自动化推送到 main 不会触发 Pages 重建，所以 `.github/workflows/pages.yml` 在每次推送和每 15 分钟把 gh-pages 同步到 main 并按需重新发布。
+- **发布**：网站从 `gh-pages` 分支发布。自动发刊工作流推送 `main` 后会立即同步 `gh-pages` 并请求 Pages 重建。`.github/workflows/pages.yml` 处理其他推送，并每 15 分钟检查一次作为兜底。可在 `Actions → Signal 自动发刊 → Run workflow` 勾选 `dry_run` 检查生成和校验流程。
 - **iPhone 小组件**（Scriptable）：手机里只粘贴了一次 `widget/loader.js`，它每次从网站拉 `widget/daily-ai-news-widget.js` 来运行。所以改 widget 文件，手机自动跟着变；改 loader.js 则需要用户重新粘贴。
 - **Mac 小组件**（Übersicht）：`mac-widget/daily-ai-news.jsx`，用户电脑上通过 GitHub Desktop 拉取更新。它会读取系统原生小组件的窗口位置，自动吸附到原生小组件的网格（每格 180，小组件 343 = 2×2 格），不写死坐标，这是用户特别要求的。位置是锁定的（2026-10-02 用户要求）：只有按住 ⌥ Option 才能拖动，摆好后不再自动挪；只有第一次出现时自动找空位。
 
@@ -98,9 +94,9 @@ Grok Bot 09:00 独立查漏 ──▶ data/grok/review/ ──▶ 每周六复�
 
 ## 改东西时注意
 
-- 改信源 → `scripts/inbox_config.py`（收件箱抓什么）、`sources.md`（出处规则和搜索补漏）、`watchlist.md`（关注什么）三处对应，早晚任务提示词里提到的来源名也要跟着改。
-- 改数据格式 → 同时改 `add_issue.py` 校验、网页、两个小组件、定时任务提示词（连同 `tasks/` 备份），五处要一致。（`updates` 是例外：只进校验、网页和提示词，小组件先不显示。）
-- 改 Grok 文件格式或 Grok 的分工 → `scripts/grok_io.py`（校验）、`grok.md`（格式和提示词原文）、Grok Bot 里的两个例程（用户在 Grok 里改，给他可直接粘贴的新提示词）、早间任务提示词里讲 Grok 的几句，四处一致。
+- 改信源 → `scripts/inbox_config.py`（收件箱抓什么）、`sources.md`（出处规则和搜索补漏）、`watchlist.md`（关注什么）三处对应。
+- 改数据格式 → 同时核对 `add_issue.py` 校验、网页、两个小组件和 `generate_issue.py` 的生成规则。（`updates` 是例外：只进校验、网页和生成规则，小组件先不显示。）
+- 改 Grok 文件格式或 Grok 的分工 → `scripts/grok_io.py`（校验）、`grok.md`（格式和提示词原文）、Grok Bot 里的两个例程四处一致。
 - 改分类颜色或名称 → 网页、Scriptable 小组件、Mac 小组件三处同步。
 - 推送后确认 GitHub Actions 跑成功、网站已更新，再告诉用户「上线了」。
 - main 上每小时有机器人提交（只动 `data/inbox/`），本地提交前先 `git pull --rebase`；定时任务的推送被拒绝时也是先 `git pull --rebase` 再推。

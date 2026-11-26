@@ -1,0 +1,110 @@
+name: Signal 自动发刊
+
+on:
+  schedule:
+    - cron: "50 22 * * *" # 北京时间 06:50
+    - cron: "18 13 * * *" # 北京时间 21:18
+  workflow_dispatch:
+    inputs:
+      edition:
+        description: 发刊档期
+        type: choice
+        options: [morning, evening]
+        default: morning
+      model:
+        description: Gemini 模型
+        type: string
+        default: gemini-4-neon
+      thinking_level:
+        description: 思考档位
+        type: choice
+        options: [high, medium, low, xhigh]
+        default: high
+      dry_run:
+        description: 生成预览并校验
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: signal-auto
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      published: ${{ steps.push.outputs.published }}
+      notification: ${{ steps.issue.outputs.notification }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: 安装依赖并离线验证 SDK 接口
+        run: |
+          python3 -m pip install -r requirements.txt
+          python3 -B -m unittest discover -s tests
+      - name: 检索、生成并校验
+        id: issue
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ inputs.model || 'gemini-4-neon' }}
+          GEMINI_THINKING_LEVEL: ${{ inputs.thinking_level || 'high' }}
+          EDITION: ${{ inputs.edition || (github.event.schedule == '18 13 * * *' && 'evening' || 'morning') }}
+          DRY_RUN: ${{ inputs.dry_run || false }}
+        run: |
+          args=(--edition "$EDITION")
+          if [[ "$DRY_RUN" == true ]]; then
+            args+=(--dry-run)
+          fi
+          python3 scripts/generate_issue.py "${args[@]}"
+      - name: 提交并推送发刊数据
+        id: push
+        if: ${{ !inputs.dry_run && steps.issue.outputs.subject != '' }}
+        env:
+          SUBJECT: ${{ steps.issue.outputs.subject }}
+        run: |
+          git add -- data/
+          if git diff --cached --quiet -- data/; then
+            exit 0
+          fi
+          git -c user.name='Signal Bot' -c user.email='signal-bot@users.noreply.github.com' commit -m "$SUBJECT"
+          git push origin HEAD:refs/heads/main
+          echo 'published=true' >> "$GITHUB_OUTPUT"
+
+  refresh-pages:
+    needs: generate
+    if: ${{ needs.generate.outputs.published == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    concurrency:
+      group: pages-refresh
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: 同步 gh-pages 并立即请求发布
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          git fetch --no-tags origin main
+          head=$(git rev-parse FETCH_HEAD)
+          pages_head=$(git ls-remote origin refs/heads/gh-pages | cut -f1)
+          git push --force-with-lease="refs/heads/gh-pages:$pages_head" origin "$head:refs/heads/gh-pages"
+          gh api -X POST "repos/$REPO/pages/builds" --jq .status
+      - name: 发送发刊通知
+        env:
+          NOTIFY_WEBHOOK_URL: ${{ secrets.NOTIFY_WEBHOOK_URL }}
+          MESSAGE: ${{ needs.generate.outputs.notification }}
+        run: |
+          python3 -B -c 'import json, os; from scripts.generate_issue import send_notification; send_notification(json.loads(os.environ["MESSAGE"]))'
