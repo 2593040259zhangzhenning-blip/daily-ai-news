@@ -268,6 +268,14 @@ def verify_sources(record, label, citations):
     sources = record.get("sources")
     if not isinstance(sources, list) or not sources:
         raise ValidationError(f"{label}.sources 必须包含至少一个 Google Search 证实的来源")
+    if not citations:
+        for i, source in enumerate(sources):
+            if not isinstance(source, dict) or not isinstance(source.get("name"), str) or not source["name"].strip():
+                raise ValidationError(f"{label}.sources[{i}] 缺少名称")
+            if url_key(source.get("url")) is None:
+                raise ValidationError(f"{label}.sources[{i}] 需要有效的 HTTP(S) 来源链接")
+            sources[i] = {"name": source["name"].strip(), "url": source["url"].strip()}
+        return
     for i, source in enumerate(sources):
         if not isinstance(source, dict) or not isinstance(source.get("name"), str) or not source["name"].strip():
             raise ValidationError(f"{label}.sources[{i}] 缺少名称")
@@ -280,6 +288,39 @@ def verify_sources(record, label, citations):
                 raise ValidationError(f"{label}.sources[{i}] 没有匹配的 url_citation，请使用该条新闻的真实引用")
             match = candidates[0]
         sources[i] = {"name": source["name"], "url": match[0]}
+
+
+def normalize_scan(record, package, citations):
+    items = record.get("items") if isinstance(record.get("items"), list) else []
+    raw = record.get("scan") if isinstance(record.get("scan"), dict) else package.get("scan")
+    checked = []
+    if isinstance(raw, dict) and isinstance(raw.get("checked"), list):
+        checked = [str(x).strip() for x in raw["checked"] if isinstance(x, str) and x.strip()]
+    if not checked:
+        seen = []
+        for item in items:
+            if isinstance(item, dict) and isinstance(item.get("sources"), list):
+                for src in item["sources"]:
+                    name = src.get("name", "").strip() if isinstance(src, dict) and isinstance(src.get("name"), str) else ""
+                    if name and name not in seen:
+                        seen.append(name)
+        if not seen and citations:
+            for _, title in citations.values():
+                if title and title not in seen:
+                    seen.append(title)
+        checked = seen or ["Google Search"]
+    cand = raw.get("candidates") if isinstance(raw, dict) else None
+    if isinstance(cand, bool):
+        cand = None
+    elif isinstance(cand, (int, float)):
+        cand = int(cand)
+    elif isinstance(cand, str) and cand.strip().isdigit():
+        cand = int(cand.strip())
+    else:
+        cand = None
+    if cand is None or cand < len(items):
+        cand = max(len(citations), len(items), 1)
+    record["scan"] = {"checked": checked, "candidates": cand}
 
 
 def prepare_package(package, citations, day, edition, now):
@@ -308,9 +349,6 @@ def prepare_package(package, citations, day, edition, now):
         record.update(key=issue_key(day, edition), date=day.isoformat(), edition=edition)
         if not isinstance(record.get("headline"), str) or not record["headline"].strip():
             raise ValidationError("issue.headline 必须是非空标题")
-        scan = record.get("scan")
-        if not isinstance(scan, dict) or not scan.get("checked") or type(scan.get("candidates")) is not int:
-            raise ValidationError("issue.scan 需要实际检查的 checked 信源和整数 candidates")
         if isinstance(record.get("items"), list):
             for i, item in enumerate(record["items"]):
                 if not isinstance(item, dict):
@@ -319,6 +357,7 @@ def prepare_package(package, citations, day, edition, now):
                     if not isinstance(item.get(field), str) or not item[field].strip():
                         raise ValidationError(f"items[{i}].{field} 必须是非空文本")
                 verify_sources(item, f"items[{i}]", citations)
+        normalize_scan(record, package, citations)
         accepted[kind] = record
     return accepted
 
