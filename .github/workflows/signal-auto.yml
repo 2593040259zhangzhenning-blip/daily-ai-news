@@ -3,7 +3,6 @@ name: Signal 自动发刊
 on:
   schedule:
     - cron: "50 22 * * *" # 北京时间 06:50
-    - cron: "18 13 * * *" # 北京时间 21:18
   workflow_dispatch:
     inputs:
       edition:
@@ -57,7 +56,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ inputs.model || 'gemini-4-neon' }}
           GEMINI_THINKING_LEVEL: ${{ inputs.thinking_level || 'high' }}
-          EDITION: ${{ inputs.edition || (github.event.schedule == '18 13 * * *' && 'evening' || 'morning') }}
+          EDITION: ${{ inputs.edition || 'morning' }}
           DRY_RUN: ${{ inputs.dry_run || false }}
         run: |
           args=(--edition "$EDITION")

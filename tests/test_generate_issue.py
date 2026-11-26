@@ -77,6 +77,39 @@ def response(text, *, searched=True, url=SOURCE_URL):
     return SimpleNamespace(status="completed", output_text=text, steps=steps, usage=SimpleNamespace(**USAGE))
 
 
+class SchemaTests(unittest.TestCase):
+    def test_full_response_schema_serializes(self):
+        response_format = json.loads(json.dumps(signal.RESPONSE_FORMAT))
+        self.assertEqual(response_format["mime_type"], "application/json")
+        root = response_format["schema"]
+        self.assertEqual(root["required"], ["status"])
+        issue_schema = root["properties"]["issue"]
+        fields = issue_schema["properties"]
+        self.assertTrue({"key", "date", "edition", "headline", "items", "scan", "watch", "updates"} <= fields.keys())
+        self.assertTrue({"key", "date", "edition", "headline", "items", "scan"} <= set(issue_schema["required"]))
+        self.assertEqual(fields["scan"]["required"], ["checked", "candidates"])
+        item = fields["items"]["items"]
+        self.assertIn("summary", item["properties"])
+        self.assertTrue({"cat", "title", "body", "score", "tier", "sources"} <= set(item["required"]))
+        special_schema = root["properties"]["special"]
+        self.assertTrue({"title", "highlights", "sources"} <= set(special_schema["required"]))
+        model_schema = root["properties"]["model"]
+        self.assertTrue({"self", "board", "use", "sources"} <= set(model_schema["required"]))
+        model_fields = model_schema["properties"]
+        self.assertEqual(model_fields["board"]["required"], ["source", "asof", "rows"])
+        self.assertEqual(model_fields["board"]["properties"]["rows"]["items"]["required"], ["name", "score"])
+        self.assertEqual(model_fields["use"]["items"]["required"], ["where", "value"])
+        for record in (item, special_schema, model_schema, fields["updates"]["items"]):
+            with self.subTest(required=record["required"]):
+                source_array = record["properties"]["sources"]
+                self.assertEqual(source_array["minItems"], 1)
+                source = source_array["items"]
+                self.assertEqual(source["required"], ["name", "url"])
+                self.assertEqual(source["properties"]["name"]["type"], "string")
+                self.assertEqual(source["properties"]["url"]["type"], "string")
+                self.assertFalse(source["additionalProperties"])
+
+
 class GenerationTests(unittest.TestCase):
     def setUp(self):
         self.folder = Path(self.enterContext(TemporaryDirectory(dir=ROOT, prefix=".signal-test-")))
@@ -145,6 +178,32 @@ class GenerationTests(unittest.TestCase):
         latest = json.loads((self.folder / "data" / "latest.json").read_text())
         self.assertEqual(latest["lead"]["model"], "test-model")
 
+    def test_model_card_uses_board_ties_and_preserves_optional_fields(self):
+        card = model()
+        card["date"] = "2026-11-24"
+        card["color"] = "#D97757"
+        card["sibling"] = "Model C"
+        card["board"]["rows"][2]["score"] = 57
+        card["board"]["prev"] = {"name": "Previous Model", "score": 47}
+        self.create.return_value = response(json.dumps({"status": "publish", "issue": issue(), "model": card}))
+        self.generate("--edition", "morning", "--dry-run")
+        saved = json.loads((signal.TMP / "signal-dry-run-preview.json").read_text())["model"]
+        self.assertEqual(saved["rankText"], "并列第 2")
+        self.assertEqual([row["rank"] for row in saved["board"]["rows"]][:4], [1, 2, 2, 4])
+        self.assertEqual(saved["date"], "2026-11-24")
+        for field in ("color", "sibling", "use", "sources"):
+            self.assertEqual(saved[field], card[field])
+        self.assertEqual(saved["board"]["prev"], card["board"]["prev"])
+
+    def test_model_outside_top_five_is_rejected(self):
+        card = model()
+        card["board"]["rows"][1]["score"] = 40
+        self.create.return_value = response(json.dumps({"status": "publish", "issue": issue(), "model": card}))
+        with self.assertRaisesRegex(signal.SignalError, "两次自动修复"):
+            self.generate("--edition", "morning", "--dry-run")
+        self.assertIn("没进前 5", self.stderr.getvalue())
+        self.assertIn("model 字段键名=", self.stderr.getvalue())
+
     def test_invalid_json_then_validator_stderr_then_success(self):
         bad = issue()
         bad["items"][0]["tier"] = "must"
@@ -204,9 +263,9 @@ class GenerationTests(unittest.TestCase):
         self.assertEqual(json.loads(lines[1].removeprefix("notification=")).splitlines(),
                          ["今日头条：模型更新", "打开 Signal 看全文"])
 
-    def test_fake_link_rejected_and_annotation_can_repair_missing_url(self):
+    def test_non_http_link_rejected_and_annotation_can_repair_missing_url(self):
         bad = issue()
-        bad["items"][0]["sources"][0]["url"] = "https://example.com/invented"
+        bad["items"][0]["sources"][0]["url"] = "javascript:void(0)"
         good = issue()
         good["items"][0]["sources"] = [{"name": "测试信源", "citationTitle": "测试来源标题"}]
         self.create.side_effect = [
@@ -214,9 +273,67 @@ class GenerationTests(unittest.TestCase):
             response(json.dumps({"status": "publish", "issue": good})),
         ]
         self.generate("--edition", "morning", "--dry-run")
-        self.assertIn("没有匹配的 url_citation", self.create.call_args.kwargs["input"])
+        self.assertIn("需要有效的 HTTP(S) 来源链接", self.create.call_args.kwargs["input"])
+        self.assertIn('items[0].sources[0] 字段键名=["name", "url"]', self.stderr.getvalue())
         saved = json.loads((signal.TMP / "signal-dry-run-preview.json").read_text())
         self.assertEqual(saved["issue"]["items"][0]["sources"], [SOURCE])
+
+    def test_source_aliases_and_fallback_names(self):
+        citations = {signal.url_key(SOURCE_URL): (SOURCE_URL, "引用标题")}
+        cases = (
+            ({"source": {"title": " 标题 ", "url": SOURCE_URL}}, citations, "标题"),
+            ({"sources": [{"site": "站点", "url": SOURCE_URL}]}, citations, "站点"),
+            ({"sources": [{"publisher": "发布方", "url": SOURCE_URL}]}, citations, "发布方"),
+            ({"sources": [{"source": "来源名", "url": SOURCE_URL}]}, citations, "来源名"),
+            ({"sources": [{"url": SOURCE_URL}]}, citations, "引用标题"),
+            ({"sources": [{"url": SOURCE_URL}]}, {}, "example.com"),
+            ({"source": SOURCE_URL}, citations, "example.com"),
+        )
+        for record, evidence, name in cases:
+            with self.subTest(record=record):
+                signal.verify_sources(record, "items[0]", evidence)
+                self.assertEqual(record, {"sources": [{"name": name, "url": SOURCE_URL}]})
+
+    def test_trailing_slash_matches_but_unannotated_link_can_publish(self):
+        morning = issue()
+        extra = "https://other.example.com/announcement"
+        morning["items"][0]["sources"] = [{"url": SOURCE_URL + "/"}, {"url": extra}]
+        self.create.return_value = response(json.dumps({"status": "publish", "issue": morning}))
+        self.generate("--edition", "morning", "--dry-run")
+        self.assertEqual(self.create.call_count, 1)
+        saved = json.loads((signal.TMP / "signal-dry-run-preview.json").read_text())
+        self.assertEqual(saved["issue"]["items"][0]["sources"], [
+            {"name": "测试来源标题", "url": SOURCE_URL},
+            {"name": "other.example.com", "url": extra},
+        ])
+        self.assertIn("WARNING items[0].sources[1]", self.stderr.getvalue())
+        self.assertNotIn("WARNING items[0].sources[0]", self.stderr.getvalue())
+
+    def test_missing_scan_uses_normalized_source_names(self):
+        morning = issue()
+        morning.pop("scan")
+        item = morning["items"][0]
+        item.pop("sources")
+        item["source"] = {"publisher": "实查信源", "url": SOURCE_URL}
+        self.create.return_value = response(json.dumps({"status": "publish", "issue": morning}))
+        self.generate("--edition", "morning", "--dry-run")
+        saved = json.loads((signal.TMP / "signal-dry-run-preview.json").read_text())["issue"]
+        self.assertEqual(saved["scan"], {"checked": ["实查信源"], "candidates": 1})
+
+    def test_source_diagnostic_redacts_and_truncates_preview(self):
+        marker = "test-only-sensitive-marker"
+        source = {"token": marker, "url": "javascript:" + "x" * 400}
+        with self.assertRaises(signal.ValidationError) as failure:
+            signal.verify_sources({"sources": [source]}, "items[0]", {})
+        with patch.dict(os.environ, GEMINI_API_KEY=marker):
+            signal.validation_detail(failure.exception)
+        diagnostic = self.stderr.getvalue().strip()
+        self.assertIn('items[0].sources[0] 字段键名=["token", "url"]', diagnostic)
+        preview = diagnostic.split("预览=", 1)[1]
+        self.assertIn("[REDACTED]", preview)
+        self.assertNotIn(marker, preview)
+        self.assertEqual(len(preview), 300)
+        self.assertTrue(preview.endswith("…"))
 
     def test_default_and_overrides_forward_thinking_search_and_log_usage(self):
         self.create.return_value = response(json.dumps({"status": "publish", "issue": issue()}))
@@ -276,6 +393,7 @@ class SdkTests(unittest.TestCase):
         self.assertEqual(request["model"], "gemini-4-neon")
         self.assertEqual(request["generation_config"], {"thinking_level": "high"})
         self.assertEqual(request["tools"], [{"type": "google_search"}])
+        self.assertEqual(request["response_format"], signal.RESPONSE_FORMAT)
         self.assertEqual(interaction.output_text, text)
         searched, citations = signal.search_evidence(interaction)
         self.assertTrue(searched)
