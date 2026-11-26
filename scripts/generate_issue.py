@@ -384,8 +384,9 @@ def publish(records, temp, force):
 def summary(records, edition, backfill):
     lines = []
     if model := records.get("model"):
-        changes = "、".join(row["label"] + row["value"] for row in model["summary"])
-        lines.append(f"新模型：{model['name']}，比 {model['prev']} {changes}")
+        use = model["use"][0]
+        note = f"（{use['note']}）" if use.get("note") else ""
+        lines.append(f"新模型：{model['name']}，综合排名{model['rankText']}（{use['where']} {use['value']}{note}）")
     if special := records.get("special"):
         lines.append(f"专题：{special['title']}")
     if issue := records.get("issue"):

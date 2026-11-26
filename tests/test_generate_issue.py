@@ -51,14 +51,20 @@ def special():
 def model():
     return {
         "slug": "test-model", "date": DAY.isoformat(),
-        "name": "Test Model", "org": "测试公司", "prev": "Test Model 1",
-        "headline": "测试结论",
-        "summary": [{"label": "出错", "value": "少 3 成"}, {"label": "价格", "value": "降 2 成"}],
-        "abilities": [
-            {"name": "代码", "bench": "Test A", "prev": 60, "now": 70},
-            {"name": "写作", "bench": "Test B", "prev": 60, "now": 72},
-        ],
-        "price": {"now": 8, "prev": 10, "fx": 6.7},
+        "name": "Test Model", "org": "测试公司", "self": "Test Model",
+        "board": {
+            "source": "Artificial Analysis 综合指数 v4.3",
+            "asof": DAY.isoformat(),
+            "rows": [
+                {"name": "Top Model", "score": 60},
+                {"name": "Test Model", "score": 57},
+                {"name": "Model C", "score": 55},
+                {"name": "Model D", "score": 53},
+                {"name": "Model E", "score": 51},
+                {"name": "Model F", "score": 49},
+            ],
+        },
+        "use": [{"where": "Test App", "value": "Pro 起", "note": "$20 / 月"}],
         "sources": [SOURCE.copy()],
     }
 
@@ -160,7 +166,7 @@ class GenerationTests(unittest.TestCase):
         daily = json.loads((data / "days" / f"{DAY}.json").read_text())
         self.assertEqual(len(daily["issues"]), 1)
         self.assertEqual(daily["specials"][0]["slug"], "test-event")
-        self.assertEqual(daily["models"][0]["price"]["yuan"], 0.21)
+        self.assertEqual(daily["models"][0]["rankText"], "第 2")
         latest = json.loads((data / "latest.json").read_text())
         self.assertEqual(latest["lead"]["model"], "test-model")
 
