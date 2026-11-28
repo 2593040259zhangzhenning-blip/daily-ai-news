@@ -1,37 +1,37 @@
 {
- "date": "2026-11-27",
- "headline": "SpaceX 获批建太空算力星座",
- "updatedAt": "2026-11-27T01:06:53+08:00",
+ "date": "2026-11-28",
+ "headline": "OpenAI 反诉苹果窃取硬件机密",
+ "updatedAt": "2026-11-28T12:16:32+08:00",
  "count": 10,
  "lead": {
-  "cat": "policy",
-  "title": "美 FCC 批准 SpaceX 部署百万颗太空 AI 卫星",
-  "summary": "美监管首次放行太空算力，SpaceX 获准部署最多百万颗太阳能 AI 卫星。"
+  "cat": "biz",
+  "title": "OpenAI 反诉苹果窃密并施压硬件供应商",
+  "summary": "OpenAI 反诉苹果窃取 AI 硬件机密并威胁共同供应商，双方正面交锋。"
  },
  "items": [
   {
-   "cat": "product",
-   "title": "ChatGPT 额度双收紧：GPT-6.2 耗额快四成",
-   "tier": "must"
-  },
-  {
-   "cat": "biz",
-   "title": "英伟达据报暂停向东南亚四国出货 AI 服务器",
+   "cat": "policy",
+   "title": "新进展：彭博称涉黄仁勋方关联上海机房现 GB300 机柜",
    "tier": "must"
   },
   {
    "cat": "policy",
-   "title": "英国学生签证拒签率创十年新高，申请量降 16%",
+   "title": "洛杉矶学区用第三方过滤屏蔽学生端谷歌 AI 摘要",
    "tier": "must"
   },
   {
-   "cat": "china",
-   "title": "路透：智谱 GLM-5.5 与 Kimi K4 或延期至明年",
+   "cat": "policy",
+   "title": "英议会要求 Anthropic 交出未删节 AI 加速报告",
+   "tier": "must"
+  },
+  {
+   "cat": "product",
+   "title": "Anthropic 否认 Claude 破坏科研，称系过度谨慎",
    "tier": "brief"
   },
   {
-   "cat": "biz",
-   "title": "SAP 据报拟因 AI 转型裁员至少 1 万人",
+   "cat": "policy",
+   "title": "加拿大拟推 2027 学签提速试点，联合高校降低拒签",
    "tier": "brief"
   }
  ]

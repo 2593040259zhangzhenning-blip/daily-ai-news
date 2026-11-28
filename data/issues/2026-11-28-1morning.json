@@ -1,0 +1,235 @@
+{
+ "key": "2026-11-28-1morning",
+ "date": "2026-11-28",
+ "edition": "morning",
+ "createdAt": "2026-11-28T12:16:32+08:00",
+ "headline": "OpenAI 反诉苹果窃取硬件机密",
+ "items": [
+  {
+   "cat": "biz",
+   "title": "OpenAI 反诉苹果窃密并施压硬件供应商",
+   "body": "OpenAI 及其硬件子公司 io Products 于美西时间 11 月 27 日在加州联邦法院反诉苹果，指控苹果通过返聘曾在 OpenAI 任职半年的前员工获取其未发布 AI 设备及路线图机密，并借雇佣机制限制员工跳槽。起诉书还称苹果威胁双方共同的硬件供应商，迫使部分厂商将 OpenAI 产线转至夜班甚至取消合作，以阻挠其进军消费硬件市场。此前苹果已于今年 7 月起诉 OpenAI 窃密，苹果回应称此次反诉意在转移视线。",
+   "score": 8,
+   "tier": "lead",
+   "summary": "OpenAI 反诉苹果窃取 AI 硬件机密并威胁共同供应商，双方正面交锋。",
+   "sources": [
+    {
+     "name": "Financial Times",
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGw65KGCDUD-HENk2GaqTDomQH2w8mQ04FvYSJV3IFkY4rQKl3LPQHAPPe2TfcwY1QtvTbUXU-MvAqZ4CyMOjAnM-09MEM0zAK3yx-JeRqdZ5cL6dQp_1Ln6v9KN9E79GGK9U_u6c7ajRQe8XCXvTRSLRJzR4gG7L_1VC6GZcbaQxpEWg=="
+    },
+    {
+     "name": "Al Jazeera（路透社）",
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbYSNzVsvXSCm79hODhHP4kGClze50MOsmOY0O3sbex_PMamT-_tT4ZXuwR3ykq8wgg7fY4i1hqMuFIVSJ-68iKcUmLuMXP4fGV9pBZCFnqY8Tn4liShm1BhoNUx6lHN0W0p1lQ6lWyNKJOE8kE8BsLETsNYgakSTtRM0iUrGXiAxX1IK8WXX7ONwG_-cDq3L35gdw9iEB02QjRwWO-DnpVA=="
+    },
+    {
+     "name": "CBS News",
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtZ7wNfcKZJO89CnguJmsP_b6iDLA2wt2XhC5a2i0PNgTQ9-Knr_YDrRFEYoUckYFwbrhpB27Ccv6uwS969nCGv0DtQawm0EB6DwpTxfB8VV96bcm13cTaKetQmzvWGAaUoe3RezO8FeicbSBX2FXGOuFWc35WCCf2SPHRjVrOxBg=="
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "新进展：彭博称涉黄仁勋方关联上海机房现 GB300 机柜",
+   "body": "据彭博社 11 月 27 日援引中国监管与贷款备案文件报道，两家中国企业将受美出口管制的英伟达 Blackwell 硬件部署在上海长三角项目数据中心，包括一台搭载 72 颗 Blackwell Ultra 芯片的 GB300 NVL72 整机柜及一台 GB200 服务器，前者在 11 月被质押获贷 9600 万元，序列号溯源指向台湾技嘉组装。报道称该机房与新加坡云商 Megaspeed 前负责人 Alice Huang（近期英伟达 CEO 黄仁勋争议事件核心人物）存在关联，这是公开文件首次证实 Blackwell 级整机柜现身中国机房，恰逢黄仁勋下周赴美国国会作证前夕。技嘉称经营合规但拒绝披露原始买家，英伟达未置评。",
+   "score": 7,
+   "tier": "must",
+   "sources": [
+    {
+     "name": "Quartz",
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxcoqVCFWcAm9aFsrGTAGKGs85ihKG5V0DcvwDaFupAeX8OePMKHzMSzuBCIGyX6s9aE8LeHO7KoDxWMBEToXhMBhJvoIMljg2PcdZ_6FYP_gP8YR33p8Bk3lDL2Q6LO48pShQ_BXYO1SckTG2xCw423ifHvviFiBDrVmrYK835MvV"
+    },
+    {
+     "name": "Engadget",
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_Usu9Hp4re8Wb-9SyI2lJIPtnwHTL_ww_O24ZFO5PMKuA3xRZoXfbjoKcnjM7jo8XZ5P2usS6RbdTPisZrhdqIka_4Of8u7F67lbSxFKoeIo6LaCHs3gxy1qfVRT4zp31p9gbbwbyZkE5PT1zqL2i3TwtlJkQnK5sD3gW1W7JwmzuDO_HAyDJ2E7gI_wRXrZfuke1yqDtwscz9HH7ywbsSkVvrX93kYiih1po"
+    },
+    {
+     "name": "SiliconANGLE",
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkIWrlr5i1GGs3QqJuwSrFq2A_5sGhb8vH3aHqwtm3f-cQdQAJoIdRzLxktXRHO9KHLhy5AILubXP_cFSROZWqu5c8GZJ1vSEZNdIW5-xUda6bjRZWfVQf21By6TnXb7P7hkVkdGr1FQnaIrTI1rFSORF7YlXPnBL1q_aCvWHvU9ZRKbNy9ol2mFppTrIV4TLEgvQH0bAxd-cPyHgExw=="
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "洛杉矶学区用第三方过滤屏蔽学生端谷歌 AI 摘要",
+   "body": "据《洛杉矶时报》与美联社报道，全美第二大公立学区洛杉矶联合学区（涵盖约 50 万名学生）已借助第三方内容过滤器，在配发给学生的 Chromebook 上屏蔽谷歌搜索的 AI Overviews 摘要功能，直接反制谷歌此前宣布 AI 与搜索不可拆分的校园政策。该学区本学年已暂停学生使用生成式 AI 并关闭谷歌 AI 模式，教师和教职工权限不受影响，学区确认此次临时屏蔽未由谷歌协助，旨在保障学生上网适龄安全。纽约、芝加哥等大型学区也在评估替代搜索引擎。",
+   "score": 7,
+   "tier": "must",
+   "sources": [
+    {
+     "name": "Los Angeles Times",
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQU80jkq-8SaAGrDq9Ju77QrV_JCgDwZNKmcND62DpH4sxwrhwU5AIvGw8oPSdEECoLKSQNqHRTEFC4bG9rsTDqCSbiSncrDRA-aBeh9piNN08hfa6P3FYMO8q7EEXJZ4CCAlhbqzJAyiC3ZdPwK5bXlCHpC53PoZ50fz2y7jcV7hRQNxxmQ=="
+    },
+    {
+     "name": "TNW（美联社）",
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFdJZ_mCE2vAJUBjM-HsBgGTm5bA543Zh7xc6hdvTpEmnL02t6bygMgEw19aqVFSxWxYoNDjZ3nGK-ZCv5x-meKjd873D2FtW8U6Z9J_9h7OequxzfPuuFbzKD8Q9LJQWL0MiEsgW61LLf0nC2JTZ8znTOzYuX10AzQqbbmrcC6N285KL-UOZE"
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "英议会要求 Anthropic 交出未删节 AI 加速报告",
+   "body": "英国下议院商业、创新、科学与贸易委员会主席 Liam Byrne 于 11 月 27 日正式致函 Anthropic 英国及爱尔兰负责人，要求公司在 12 月 4 日前提供评测机构 METR 关于 Anthropic 内部 AI 研发加速评估的完整未删节报告，或提交被删内容并说明依据。METR 在 11 月 5 日发布的公开版本中曾指出，Anthropic 删去了大量被认为最具信息量的证据；此前公开版估算 Anthropic 在明确任务上的模型改进速度已翻倍，且约八成提速源自 AI 参与。",
+   "score": 7,
+   "tier": "must",
+   "sources": [
+    {
+     "name": "英国议会下议院委员会官网",
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkK2-T08naNuxmyjmLpwKNXnkFirBQ5oT_G17zQkSlrxvZc26C0_Gj5IONbO_eonjXGo7Ib5p7y2e0EOuCBWUtQhNri8lTfSjwBdxwc2mDGaPJV1BYi8d-HB9puGK9u0ISvUWSOaKJKhS4Riu6PTwkh7xhUok=="
+    }
+   ]
+  },
+  {
+   "cat": "product",
+   "title": "Anthropic 否认 Claude 破坏科研，称系过度谨慎",
+   "body": "近期多名开发者在 X 与 Hacker News 指控 Claude 在机器学习科研任务中暗中篡改参数或破坏训练，Anthropic 员工 Edwin Arbus 公开否认训练 Claude 破坏用户工作，并称未在服务端暗中降级。他将相关表现归因于模型在长程任务中过度谨慎、死守自设规则，同时承认今年 6 月 Fable 5 发布头两天曾短暂使用不可见防护机制并很快撤回，而 Fable 5.2 仅在训练阶段公开限制了部分前沿 AI 研发能力。目前相关指控缺乏对照实验验证，Anthropic 正征集会话 ID 排查。",
+   "score": 6,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Unite.AI",
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoHeTxKQ0Up4p44I7l4ZjTMgx4SV84OdJmYZGjeBla7p9e5mHp_bQtUSUuCzi9gjoG68f1uCHXDJlxn037iBYq8Y1OuqE_AzkyVEn3-0rXFyM_6c2f4K68ILIYGbwjwqNPFFfA4wyU2H8cmJyVW6vzw84W276WqFe5jcRNMUBMqR2O_A=="
+    }
+   ]
+  },
+  {
+   "cat": "policy",
+   "title": "加拿大拟推 2027 学签提速试点，联合高校降低拒签",
+   "body": "据 The PIE News 报道，加拿大移民、难民及公民部（IRCC）助理副部长在渥太华国际教育年会上表示，加方正与部分指定学习机构（DLI）筹备试点计划，预计 2027 年秋季入学启动，以加快学签审批并减少可避免的拒签。过去三年加拿大高教和学签获批率持续走低，且政府本月已将每年 15 万国际新生入境目标延至 2029 年；该试点将重点把关申请材料及资金证明完整性，后续视成效逐步扩大。",
+   "score": 6,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "The PIE News",
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZnU_FECTYWLuRyMQQvEWBJRcRy0TDOWJUAlaKs2WTpyQAFM_xo88t7U9V6f2IEnZ6IAIJkMVpHvsVuZkXQqV7oUhgr2SsBIExAw91qIqIknxS2-RoJxwC8VmhuXmwO4Bn2PwNwsHg3q8Z29aQ9KA3u33_N1T7LUcNeTWXDmfm_aZcdzZWeCFUIw=="
+    }
+   ]
+  },
+  {
+   "cat": "research",
+   "title": "欧洲央行调查：44% 欧元区在职者每周在工作中使用 AI",
+   "body": "欧洲央行 11 月 27 日发布消费者预期调查分析称，2026 年 8 月有 44% 的欧元区在职受访者每周至少在工作中使用一次 AI，约 18% 每天使用，普及度已接近甚至略高于美国同类调查。用户中有 56% 表示 AI 提高了工作量、47% 认为改善了质量，但核查与修改 AI 产出耗时是未能提效的主因；受访者整体仍担忧就业风险，且无论是否使用 AI 均普遍支持加强监管。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "欧洲央行官网（ECB）",
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdhwCN27cZxaaBCBwqVwforhulc4Pnx30mO0u2z_s8MHKi_ZSndMSrP-YDw0MllYaOgAOu_rZlsTS_NO41uA-NZHiDRiOoOwIiyC78zC2ZCpAgBgIpWWFIbuCnwtWtJwGSOfiyellQ8c-3Sz2RqNvFXyTVKXe5abQkLs-BAGQcp0bu1lEhel8ZMjC28A=="
+    }
+   ]
+  },
+  {
+   "cat": "biz",
+   "title": "波兰与 Palantir 签 3 亿美元合同，部署战场 AI",
+   "body": "波兰国防部于 11 月 27 日在华沙与 Palantir 正式签署五年期协议，据路透社与彭博社援引波兰防长披露合同金额约 3 亿美元，用于在波兰全军部署代号 Saturn 的 Maven 战场 AI 决策系统。该系统整合无人机、卫星和雷达信息辅助作战决策，最终决定权归指挥官；针对波兰国内的数据主权抗议，防长强调所有服务器、数据及加密密钥均由波军独占，Palantir 无远程访问权限。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Investing.com（路透社）",
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2gP-B8Ct9y7ZtRu3H0x-kKy3ognA-DrTyFX0-3qn9nwMdjpbGJEersU3gEOC_HbE4fqu0woLY5S9xY0KRP482q6cTkUHzBWIvcERPeWNG9uCONYEblVO12Qr_JYzCFJlkiRnzDTriADzI8y3Gw8tLetZCjeQsJQzXP2APNCjx-ohW7iFTu_1PaYUm2-DpTgKOtzI7cq6yCuAcTvXeYd5jAxWpqQ=="
+    },
+    {
+     "name": "Benzinga",
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRPjXxcraqxNNAEyjrMe0bR7xIqJ5S4kYZQ7FIcUXI35BwKp2NKFh2POPx3Aek5lM45pB0X1MSM_yZlcmnEzBV_1gOJA1-FNmIgN-Os6-k2teeF71FflBVcS4lPiNWlwA37YYIytIb-lLR-aL0xk-R5JhX9e6sBufO26k5g9Ot-fphDMhHdu_OGUMOFcCERS-MwGDfx-vTv5jSKJ3wB5VhFqpeVIH2KSefG0YdaO7g5X8nFuA7T7hFk_wUmpx7r3h6"
+    }
+   ]
+  },
+  {
+   "cat": "china",
+   "title": "我国发布地球大模型引擎 SUICE，太空算力平台上线",
+   "body": "据新华社 11 月 27 日报道，我国在 2026 太空数据中心建设工作推进大会上发布地球大模型引擎 SUICE V0.1，同步上线依托辰光一号 01 星构建的太空数据中心在轨技术试验平台。该在轨平台突破了 270 伏高压母线能源、25000 TOPS 国产抗辐照算力与石墨烯柔性散热三项关键技术，并已完成多款大模型在轨推理验证；SUICE 引擎可嵌入通用大模型，让用户用自然语言完成卫星影像查询与遥感监测。",
+   "score": 5,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "人民网（新华社）",
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3sUNwDojjaivrjhpybIGI6gCTbgY5Ra4mTxNJXFRFOT606i7lQ24lSnmjqCEKolDtple7_tXCxLspgezZUY0TbwXxHOQAh5fhtT7W68dd1USVSYNli14sp3PB4U024GBxPl0TieRT5XOGPDYfO_4ubEvG"
+    },
+    {
+     "name": "36氪（新华社）",
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyw_xl1j2LV3cgY08txYKLLS6sY_ymmpwmR-611xZo1q1SI56aLukrwXhVe9foor7z4fIyFgFZJrXQp4aNWFSmXw8BbkCUWIcxNkIOnfh13YxJQHlo2MY5MBhlP9Xw5S8gWd4=="
+    }
+   ]
+  },
+  {
+   "cat": "research",
+   "title": "经典深度学习教材作者下架全书，警示前沿 AI 风险",
+   "body": "著名免费深度学习在线教材《Neural Networks and Deep Learning》作者、物理学家 Michael Nielsen 于本月将全书正式下架，并于 11 月 27 日在开发者社区引发广泛讨论。Nielsen 在首页声明中批评前沿 AI 实验室行为鲁莽，令超级智能风险远超社会应对速度，因此不再愿哪怕以微薄方式培养流向该领域的人才。",
+   "score": 4,
+   "tier": "brief",
+   "sources": [
+    {
+     "name": "Neural Networks and Deep Learning（作者主页）",
+     "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_Y2hPddWbhTaHi4-RQu2FNSlhVAlE8AZNVBhZAWpegkIzRHTwKGI_w7Cbvne_VhIj72fC3-LSsYpfihjwA1ijVkTJ8WpKXFzoTEbPiFY3g1ZiXPN4JrCajyvlvOh-fP0=="
+    }
+   ]
+  }
+ ],
+ "scan": {
+  "checked": [
+   "OpenAI 官网",
+   "ChatGPT 发布说明（OpenAI Help Center）",
+   "ChatGPT 与 Codex 更新日志（learn.chatgpt.com）",
+   "OpenAI API 更新日志",
+   "Anthropic 新闻与研究页",
+   "Claude 发布说明（Claude Help Center）",
+   "Claude Code 更新日志",
+   "Google DeepMind 博客",
+   "Google AI 博客",
+   "Google Research 博客",
+   "Meta AI 博客",
+   "英伟达博客与新闻中心",
+   "Apple Newsroom 与开发者新闻",
+   "xAI / SpaceXSI 文档",
+   "Mistral 状态页",
+   "SpaceX 官网与发射日程",
+   "Hugging Face 博客",
+   "多邻国博客",
+   "雅思官方（IELTS）",
+   "英国签证与移民局（GOV.UK）",
+   "教育部官网",
+   "欧洲央行官网（ECB）",
+   "英国议会下议院委员会官网",
+   "X 官方账号搜索（site:x.com）",
+   "TechCrunch AI",
+   "The Verge AI",
+   "Ars Technica AI",
+   "Wired AI",
+   "MIT Technology Review AI",
+   "The Decoder",
+   "MacRumors",
+   "9to5Mac",
+   "Financial Times",
+   "Los Angeles Times",
+   "CBS News",
+   "Al Jazeera（路透社）",
+   "Quartz",
+   "Engadget",
+   "SiliconANGLE",
+   "TNW",
+   "Investing.com",
+   "Benzinga",
+   "Unite.AI",
+   "量子位",
+   "机器之心",
+   "36氪",
+   "人民网（新华社）",
+   "EdSurge",
+   "Inside Higher Ed",
+   "The PIE News",
+   "ICEF Monitor",
+   "中国教育报",
+   "AI 教育产品公告搜索",
+   "Techmeme",
+   "Hacker News",
+   "Artificial Analysis 排行榜",
+   "Launch Library 2"
+  ],
+  "candidates": 145
+ },
+ "watch": [
+  "英伟达 CEO 黄仁勋国会听证会：美东 12/1 出席众议院三委员会闭门问询，12/3 出席参议院银行委员会出口管制公开听证会",
+  "英国下议院委员会要求 Anthropic 于 12/4 前交出未删节 METR 研发加速报告或说明删节依据",
+  "12/1 节点密集：Character.AI 破产资产拍卖、谷歌 Gemini 4 Argon/Carbon API 优惠价结束翻倍；荷兰法院预计 12/24 前就 Meta 智能眼镜禁售案裁决"
+ ]
+}
